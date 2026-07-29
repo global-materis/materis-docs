@@ -25,6 +25,7 @@ export default defineConfig({
               items: [
                 { text: 'Introducción', link: '/signal-scope/' },
                 { text: 'Instalación y activación', link: '/signal-scope/instalacion' },
+                { text: 'Primeros pasos', link: '/signal-scope/primeros-pasos' },
               ],
             },
           ],
@@ -62,6 +63,7 @@ export default defineConfig({
               items: [
                 { text: 'Introduction', link: '/en/signal-scope/' },
                 { text: 'Installation and activation', link: '/en/signal-scope/installation' },
+                { text: 'First steps', link: '/en/signal-scope/first-steps' },
               ],
             },
           ],
