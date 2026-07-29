@@ -10,9 +10,8 @@ SignalScope se distribuye por la **Microsoft Store**:
 
 **[Obtener SignalScope en Microsoft Store](https://apps.microsoft.com/store/detail/9NPZ6VTKF989)**
 
-Instalar desde la Store tiene dos ventajas: el paquete va **firmado por
-Microsoft** —sin avisos de seguridad al instalar— y las **actualizaciones
-llegan solas**, como las de cualquier otra app de la tienda.
+Se instala como cualquier app de la tienda y las **actualizaciones llegan
+solas**.
 
 ## Primer arranque
 
