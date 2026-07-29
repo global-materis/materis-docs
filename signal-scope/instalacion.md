@@ -4,39 +4,20 @@ SignalScope se instala en **Windows 10 u 11 (64 bits)**, no pide permisos de
 administrador y no necesita drivers ni programas adicionales. Tus datos viven en
 tu perfil de usuario y **sobreviven a actualizaciones y reinstalaciones**.
 
-## Instalar desde Microsoft Store (recomendado)
+## Instalar
 
-SignalScope está en la **Microsoft Store**:
+SignalScope se distribuye por la **Microsoft Store**:
 
 **[Obtener SignalScope en Microsoft Store](https://apps.microsoft.com/store/detail/9NPZ6VTKF989)**
 
-Es la vía recomendada: el paquete va **firmado por Microsoft** (sin avisos de
-seguridad al instalar) y la Store **se encarga sola de las actualizaciones** —
-no tienes que descargar nada cuando salga una versión nueva.
-
-## Instalador directo (alternativa)
-
-Si prefieres no usar la Store, descarga el instalador desde la página de
-[**Releases**](https://github.com/global-materis/signal-scopes-releases/releases):
-
-- `SignalScope_x.y.z_x64-setup.exe` — el instalador recomendado por esta vía.
-- También hay un paquete `.msi`, útil si tu organización instala por políticas.
-
-Ejecuta el instalador y sigue los pasos. No requiere administrador: se instala
-en tu perfil de usuario.
-
-::: details Windows muestra un aviso de SmartScreen, ¿es normal?
-Sí, con el instalador directo. Ese `.exe` no lleva firma de código, así que la
-primera vez Windows puede mostrar *"Windows protegió tu equipo"*. Haz clic en
-**Más información → Ejecutar de todas formas**. Descárgalo siempre desde la
-página oficial de Releases. La versión de Microsoft Store no muestra este aviso.
-:::
+Instalar desde la Store tiene dos ventajas: el paquete va **firmado por
+Microsoft** —sin avisos de seguridad al instalar— y las **actualizaciones
+llegan solas**, como las de cualquier otra app de la tienda.
 
 ## Primer arranque
 
 Abre SignalScope. Lo primero que verás es el splash y, enseguida, la
-**pantalla de licencia**. La licencia funciona igual en ambos canales: es la
-misma app.
+**pantalla de licencia**.
 
 Los datos (proyectos recientes, preferencias, caché) se guardan en
 `%APPDATA%\SignalScope`. Si vienes de una versión portable antigua, la app
@@ -123,13 +104,7 @@ liberarlo.
 
 ## Actualizaciones
 
-Depende del canal por el que instalaste:
-
-- **Microsoft Store**: no haces nada. La Store actualiza la app sola, como
-  cualquier otra app de la tienda.
-- **Instalador directo**: al arrancar, SignalScope comprueba si hay una versión
-  nueva. Si la hay, verás un punto de aviso junto a **Novedades** y en el número
-  de versión del pie; desde Novedades se descarga el instalador nuevo, que **se
-  instala encima** de la versión actual.
-
-En ambos casos tus proyectos, preferencias y licencia se conservan.
+No tienes que hacer nada: la **Microsoft Store actualiza la app sola**. Tus
+proyectos, preferencias y licencia se conservan en cada actualización. El
+historial de cambios de cada versión se puede consultar dentro de la app, en la
+vista **Novedades**.

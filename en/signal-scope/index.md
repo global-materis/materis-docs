@@ -139,6 +139,8 @@ _Existing: `ss-desktop/docs/screenshots/SignalScope-Welcome.png`._
 
 ## Getting started
 
+SignalScope is available on the
+[**Microsoft Store**](https://apps.microsoft.com/store/detail/9NPZ6VTKF989).
 First time? The trial gives you **full access for 30 days**, with no email and no
 connection required.
 
