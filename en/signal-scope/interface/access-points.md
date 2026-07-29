@@ -1,0 +1,66 @@
+# Access points
+
+Your base stations. **One row = one AP**, with the state of the whole sector.
+
+::: info 🖼️ Image pending — `public/signal-scope/tabla-ap.png`
+Screenshot of the **AP table**: State, SSID, connected stations, frequency and
+channel.
+
+_Existing: `ss-desktop/docs/screenshots/SignalScope-Visor-AP.png`._
+:::
+
+## State: the sector's verdict
+
+The **State** column is the AP's own diagnosis, combining three axes:
+
+- **Channel load** — *Operational* (< 50 % air time in use), *High load*
+  (50–69 %), *Saturated* (≥ 70 %).
+- **Radio health** — CPU and memory: *Attention* or *Critical*.
+- **Sector latency** — its stations' spikes (the Peaks column).
+
+Two details of the criteria:
+
+- **The sustained average is judged, not the instant.** Opening an AP's web UI
+  spikes its CPU for a few seconds; that does not paint it red. The tooltip
+  shows both numbers — "air in use 85 % (sustained 62 %)" — so the verdict
+  always squares with what you see.
+- Repeated short spikes are not saturation: that pattern has its own label,
+  **Unstable**.
+
+An AP with no reading shows **"—"**, not a green: without a measurement there
+is no verdict. The State tooltip uses the same diagnosis format as the
+stations: the fact and its context, with the causes.
+
+## The Stations cell: three gestures
+
+Next to the number of connected clients (what the AP reports about itself)
+there are three distinct controls:
+
+| Control | What it does |
+|---|---|
+| The **number** (link) | Filters the stations table to this AP's — *"who hangs off here?"* |
+| The **radar** | **Asks the AP** which stations it has and adds to **Others** the ones the project didn't know. It does not depend on registered networks, so it discovers antennas in segments the scan cannot reach — useful to learn about a new install without scanning. |
+| The **ping** | Opens the continuous Ping with this AP's **registered** stations pre-selected. The title says how many before opening. |
+
+The stations table has the reverse trip: its AP column jumps to this row.
+
+## The other columns
+
+| Column | What it shows |
+|---|---|
+| **Session** | Connection state, same as stations. |
+| **SSID** | The network name the AP broadcasts. |
+| **Peaks** | `3/14` = how many of its online stations have latency spikes. Lights amber when the majority (and at least 3) have them — the pattern that betrays a sector problem rather than a single client. With fewer than 3 stations online it shows "—". |
+| **Thr. TX / RX** | The AP's **aggregate** traffic, all its stations together. Mind the direction: here **TX is what goes down** to the clients. It answers "busy with what?" when the air comes up high. |
+| **Frequency / Channel** | To spot overlaps between your own APs. |
+| **Firmware · MAC · Model · TX Power · Uptime** | Device identity and context. |
+
+As in every table: its own search box, sorting by header, hideable columns,
+and **clicking the name** isolates that AP (another click undoes it).
+
+::: tip The diagnosis does not prescribe
+When a sector shows spikes, the diagnosis delivers the fact and the triage —
+channel, load or weak links — but it does not prescribe "change the
+frequency": three different causes produce the same picture, and the call is
+yours, with the context the app brings you.
+:::

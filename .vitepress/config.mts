@@ -28,6 +28,15 @@ export default defineConfig({
                 { text: 'Primeros pasos', link: '/signal-scope/primeros-pasos' },
               ],
             },
+            {
+              text: 'La interfaz',
+              items: [
+                { text: 'Panorama', link: '/signal-scope/interfaz/' },
+                { text: 'Estaciones', link: '/signal-scope/interfaz/estaciones' },
+                { text: 'Puntos de acceso', link: '/signal-scope/interfaz/puntos-de-acceso' },
+                { text: 'Detectados y Otros', link: '/signal-scope/interfaz/detectados-y-otros' },
+              ],
+            },
           ],
         },
         outline: { level: [2, 3], label: 'En esta página' },
@@ -64,6 +73,15 @@ export default defineConfig({
                 { text: 'Introduction', link: '/en/signal-scope/' },
                 { text: 'Installation and activation', link: '/en/signal-scope/installation' },
                 { text: 'First steps', link: '/en/signal-scope/first-steps' },
+              ],
+            },
+            {
+              text: 'The interface',
+              items: [
+                { text: 'Overview', link: '/en/signal-scope/interface/' },
+                { text: 'Stations', link: '/en/signal-scope/interface/stations' },
+                { text: 'Access points', link: '/en/signal-scope/interface/access-points' },
+                { text: 'Detected and Others', link: '/en/signal-scope/interface/detected-and-others' },
               ],
             },
           ],
