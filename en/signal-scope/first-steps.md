@@ -8,11 +8,9 @@ the project, register your networks, scan, and sign in to the radios.
 On the welcome screen, create a project: you choose its **name and where to
 save it**, and it is created as a **`.sscope`** file.
 
-That file is your whole network: devices, credentials (encrypted), references,
-snapshots and history. **Everything autosaves** — there is no save button — and
-you can move it, back it up or open it with a double click like any other file.
-Next time, the welcome screen offers it under **Recents** with a summary of its
-state.
+That file is your whole network — devices, encrypted credentials, references,
+snapshots and history — and it **autosaves** as you work. Next time, the
+welcome screen offers it under **Recents** with a summary of its state.
 
 ::: info 🖼️ Image pending — `public/signal-scope/crear-proyecto.png`
 Screenshot of the **create project** dialog (name + location), or the Projects
@@ -25,9 +23,8 @@ In the scan panel, networks are registered as **CIDR ranges** (for example
 `192.168.1.0/24`) and shown as chips you can toggle on and off: the scan only
 sweeps the ones that are on.
 
-A new project starts with none, but the app **suggests your own PC's
-networks** — they appear as chips with a `+` and a dotted border; one click
-registers them. You can also type your own. The widest range accepted is `/16`.
+A new project starts with none: add your network segment — or any others you
+manage — by typing it into the field. The widest range accepted is `/16`.
 
 ## 3. Scan
 

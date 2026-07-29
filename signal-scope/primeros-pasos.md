@@ -9,11 +9,9 @@ radios.
 En la pantalla de bienvenida, crea un proyecto: eliges su **nombre y dónde
 guardarlo**, y se crea como un archivo **`.sscope`**.
 
-Ese archivo es tu red completa: equipos, credenciales (cifradas), referencias,
-snapshots e historial. **Todo se autoguarda** — no hay botón de guardar — y
-puedes moverlo, respaldarlo o abrirlo con doble clic como cualquier archivo.
-La próxima vez, la bienvenida te lo ofrece en **Recientes** con un resumen de
-su estado.
+Ese archivo es tu red completa —equipos, credenciales cifradas, referencias,
+snapshots e historial— y **se autoguarda** mientras trabajas. La próxima vez,
+la bienvenida te lo ofrece en **Recientes** con un resumen de su estado.
 
 ::: info 🖼️ Imagen pendiente — `public/signal-scope/crear-proyecto.png`
 Captura del diálogo de **crear proyecto** (nombre + ubicación), o de la vista
@@ -26,10 +24,8 @@ En el panel de escaneo, las redes se registran como **máscaras CIDR** (por
 ejemplo `192.168.1.0/24`) y se muestran como chips que puedes encender o
 apagar: el escaneo recorre solo las encendidas.
 
-Un proyecto nuevo nace sin ninguna, pero la app te **sugiere las redes de tu
-propia PC** — aparecen como chips con `+` y borde punteado; un clic las
-registra. También puedes escribir la tuya a mano. El rango más amplio admitido
-es `/16`.
+Un proyecto nuevo nace sin ninguna: añade tu segmento de red —u otros que
+gestiones— escribiéndolo en el campo. El rango más amplio admitido es `/16`.
 
 ## 3. Escanea
 
