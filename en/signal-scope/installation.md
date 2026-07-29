@@ -4,28 +4,41 @@ SignalScope installs on **Windows 10 or 11 (64-bit)**, requires no administrator
 rights and needs no drivers or additional software. Your data lives in your user
 profile and **survives updates and reinstalls**.
 
-## Download
+## Install from Microsoft Store (recommended)
 
-Download the installer from the
+SignalScope is on the **Microsoft Store**:
+
+**[Get SignalScope on the Microsoft Store](https://apps.microsoft.com/store/detail/9NPZ6VTKF989)**
+
+This is the recommended path: the package is **signed by Microsoft** (no
+security warnings at install time) and the Store **handles updates on its own**
+— nothing to download when a new version ships.
+
+## Direct installer (alternative)
+
+If you prefer not to use the Store, download the installer from the
 [**Releases**](https://github.com/global-materis/signal-scopes-releases/releases)
 page:
 
-- `SignalScope_x.y.z_x64-setup.exe` — the recommended installer.
+- `SignalScope_x.y.z_x64-setup.exe` — the recommended installer for this path.
 - An `.msi` package is also available, useful if your organization deploys
   through policies.
 
+Run the installer and follow the steps. No administrator rights needed: it
+installs into your user profile.
+
 ::: details Windows shows a SmartScreen warning — is that normal?
-Yes. The direct installer does not carry a code-signing certificate yet, so the
-first time Windows may show *"Windows protected your PC"*. Click **More info →
-Run anyway**. Always download from the official Releases page.
+Yes, with the direct installer. That `.exe` does not carry a code-signing
+certificate, so the first time Windows may show *"Windows protected your PC"*.
+Click **More info → Run anyway**. Always download from the official Releases
+page. The Microsoft Store version does not show this warning.
 :::
 
-## Install
+## First launch
 
-1. Run the installer and follow the steps. No administrator rights needed: it
-   installs into your user profile.
-2. When it finishes, open SignalScope. The first thing you will see is the
-   splash and, right after, the **license screen**.
+Open SignalScope. The first thing you will see is the splash and, right after,
+the **license screen**. Licensing works the same on both channels: it is the
+same app.
 
 App data (recent projects, preferences, cache) is stored in
 `%APPDATA%\SignalScope`. If you come from an old portable version, the app
@@ -112,7 +125,13 @@ Uninstalling the app does **not** free the slot. If the machine is gone
 
 ## Updates
 
-On startup, SignalScope checks whether a newer version exists. If so, you will
-see a notification dot next to **What's new** and on the version number in the
-footer. From What's new you download the new installer, which **installs on
-top** of the current version: your projects, preferences and license are kept.
+It depends on the channel you installed from:
+
+- **Microsoft Store**: you do nothing. The Store updates the app on its own,
+  like any other Store app.
+- **Direct installer**: on startup, SignalScope checks whether a newer version
+  exists. If so, you will see a notification dot next to **What's new** and on
+  the version number in the footer; from What's new you download the new
+  installer, which **installs on top** of the current version.
+
+In both cases your projects, preferences and license are kept.
