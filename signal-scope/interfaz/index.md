@@ -8,6 +8,8 @@ Esta sección la recorre por partes:
 - [Puntos de acceso](./puntos-de-acceso) — tus estaciones base.
 - [Detectados y Otros](./detectados-y-otros) — la cola del escaneo y el
   inventario de equipos ajenos.
+- [Mapa de cobertura](./mapa) — la otra vista principal: nodos, sectores y
+  estaciones sobre el mapa.
 
 ::: info 🖼️ Imagen pendiente — `public/signal-scope/monitor-general.png`
 Captura del **panel completo**: panel de escaneo, contadores y el inicio de la

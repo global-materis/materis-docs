@@ -8,6 +8,8 @@ through it in parts:
 - [Access points](./access-points) — your base stations.
 - [Detected and Others](./detected-and-others) — the scan queue and the
   inventory of third-party devices.
+- [Coverage map](./map) — the other main view: nodes, sectors and stations on
+  the map.
 
 ::: info 🖼️ Image pending — `public/signal-scope/monitor-general.png`
 Screenshot of the **full panel**: scan panel, counters and the top of the
