@@ -63,9 +63,10 @@ quality:
 - **Another device** (amber) — that IP is now held by a different device: you
   lost track of yours. A scan finds it again at its new address.
 
-If you also enable the matching notice in Preferences, the service sentinel
-alerts you when a watched device stops answering — meant for a node's router,
-whose outage explains that of every radio hanging off it.
+If you also enable the matching notice in Preferences, the
+[service sentinel](../sentinel) alerts you when a watched device stops
+answering — meant for a node's router, whose outage explains that of every
+radio hanging off it.
 
 ### Remove means it
 
