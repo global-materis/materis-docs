@@ -179,6 +179,20 @@ mudarte de máquina, libera el cupo en la vieja y activa en la nueva.
 Nada se borra. La app vuelve a la pantalla de licencia y, al renovar o
 activar, todo sigue donde estaba.
 
+**¿Envía notificaciones por WhatsApp o correo?**
+La app de escritorio no, y es a propósito: está pensada para **monitoreo
+local** — los avisos del centinela llegan al escritorio de Windows, donde
+estás trabajando. Mandarte un WhatsApp estando frente a la PC no aporta, y
+una PC no está siempre encendida, así que prometería una vigilancia que no
+puede cumplir. Ese tipo de avisos está pensado para una futura **edición
+para servidores** (Linux), que sí vigila 24/7 — ahí avisar al celular tiene
+sentido.
+
+**¿Hay versión web?**
+Para la app de escritorio no está en los planes. La futura edición para
+servidores será una **aplicación web** por naturaleza — se administrará desde
+el navegador.
+
 **Voy a formatear mi PC, ¿pierdo acceso a mis proyectos?**
 No, si haces dos cosas **antes** de formatear:
 

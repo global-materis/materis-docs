@@ -180,6 +180,18 @@ machines, release the slot on the old one and activate on the new one.
 Nothing is deleted. The app returns to the license screen and, once you renew
 or activate, everything is right where it was.
 
+**Does it send WhatsApp or email notifications?**
+The desktop app does not, on purpose: it is built for **local monitoring** —
+the sentinel's notices reach the Windows desktop, where you are working.
+Sending you a WhatsApp while you sit in front of the PC adds nothing, and a
+PC is not always on, so it would promise a watch it cannot keep. That kind
+of notice is planned for a future **server edition** (Linux), which does
+watch 24/7 — there, alerting your phone makes sense.
+
+**Is there a web version?**
+Not planned for the desktop app. The future server edition will be a **web
+application** by nature — managed from the browser.
+
 **I am going to format my PC — do I lose access to my projects?**
 No, as long as you do two things **before** formatting:
 
