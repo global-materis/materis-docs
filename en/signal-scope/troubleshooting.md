@@ -149,9 +149,13 @@ No. It is read-only by design: no path exists in the app to modify a device.
 
 **Does it work with radios other than Ubiquiti airMAX?**
 Today the app manages **Ubiquiti airMAX** radios. The rest of your network's
-devices (MikroTik, ONUs, switches) can be registered under **Others**, with a
-name and basic availability watch. **MikroTik** support is planned for future
-versions.
+devices (ONUs, switches, routers) can be registered under **Others**, with a
+name and basic availability watch.
+
+**Do you support MikroTik?**
+Not yet, but **yes in future versions**: it is on the roadmap. In the
+meantime, your MikroTiks can live under **Others** — with their own name,
+availability watch and a sentinel alert if they stop answering.
 
 **Does it support Ubiquiti LTU?**
 Not yet — LTU runs a firmware different from airOS and compatibility is under
