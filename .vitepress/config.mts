@@ -42,6 +42,7 @@ export default defineConfig({
               items: [
                 { text: 'Semáforo y diagnóstico', link: '/signal-scope/diagnostico' },
                 { text: 'Centinela y calificación', link: '/signal-scope/centinela' },
+                { text: 'Historial, snapshots y reportes', link: '/signal-scope/snapshots' },
               ],
             },
           ],
@@ -96,6 +97,7 @@ export default defineConfig({
               items: [
                 { text: 'Traffic light and diagnostics', link: '/en/signal-scope/diagnostics' },
                 { text: 'Sentinel and network score', link: '/en/signal-scope/sentinel' },
+                { text: 'History, snapshots and reports', link: '/en/signal-scope/snapshots' },
               ],
             },
           ],
