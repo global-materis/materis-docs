@@ -59,6 +59,12 @@ trabaje el proyecto completo existe el **código de transferencia**:
 
 Mover tu proyecto a una PC nueva es exactamente el mismo flujo.
 
+::: warning Formatear también cuenta como cambiar de PC
+Al formatear, la llave local se pierde con Windows y tu propia PC pasa a ser
+"una PC nueva": el proyecto pedirá el código de transferencia. **Anótalo
+antes de formatear** — sin él, el archivo no se abre.
+:::
+
 ::: tip Si el código se filtró
 **Regenerar el código** invalida el anterior en el acto: los archivos que ya
 compartiste dejan de poder desbloquearse con el código viejo.

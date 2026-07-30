@@ -59,6 +59,12 @@ colleague's) to work the full project there is the **transfer code**:
 
 Moving your project to a new PC is exactly the same flow.
 
+::: warning Formatting also counts as changing PCs
+When you format, the local key is lost with Windows and your own PC becomes
+"a new PC": the project will ask for the transfer code. **Write it down
+before formatting** — without it, the file does not open.
+:::
+
 ::: tip If the code leaked
 **Regenerating the code** invalidates the previous one on the spot: files you
 already shared can no longer be unlocked with the old code.

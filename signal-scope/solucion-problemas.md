@@ -138,7 +138,8 @@ modificar un equipo.
 **¿Funciona con radios que no sean Ubiquiti airMAX?**
 Hoy la app gestiona radios **Ubiquiti airMAX**. Los demás equipos de tu red
 (MikroTik, ONUs, switches) pueden registrarse en **Otros**, con nombre y
-vigilancia básica de disponibilidad.
+vigilancia básica de disponibilidad. El soporte para **MikroTik** está en los
+planes de próximas versiones.
 
 **¿Soporta Ubiquiti LTU?**
 Todavía no — LTU usa un firmware distinto de airOS y la compatibilidad está
@@ -162,3 +163,18 @@ mudarte de máquina, libera el cupo en la vieja y activa en la nueva.
 **¿Qué pasa con mis proyectos si mi licencia vence?**
 Nada se borra. La app vuelve a la pantalla de licencia y, al renovar o
 activar, todo sigue donde estaba.
+
+**Voy a formatear mi PC, ¿pierdo acceso a mis proyectos?**
+No, si haces dos cosas **antes** de formatear:
+
+1. **Anota el código de transferencia** de cada proyecto (**Compartir
+   proyecto**). Al formatear, la llave que protege tus credenciales se pierde
+   con Windows, así que tu propia PC pasa a ser "una PC nueva" para el
+   proyecto: al abrirlo te pedirá ese código una vez, y con él recuperas todo.
+   **Sin el código, el archivo no se abre** — ese es justamente el blindaje
+   que lo protege si cae en manos ajenas.
+2. **Libera la licencia** (vista Licencia → "Liberar licencia") para que el
+   cupo no quede ocupado por la instalación vieja.
+
+Y lo de siempre: el `.sscope` es un archivo — respáldalo en otro disco antes
+de formatear, como harías con cualquier documento importante.

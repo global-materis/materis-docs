@@ -139,7 +139,8 @@ No. It is read-only by design: no path exists in the app to modify a device.
 **Does it work with radios other than Ubiquiti airMAX?**
 Today the app manages **Ubiquiti airMAX** radios. The rest of your network's
 devices (MikroTik, ONUs, switches) can be registered under **Others**, with a
-name and basic availability watch.
+name and basic availability watch. **MikroTik** support is planned for future
+versions.
 
 **Does it support Ubiquiti LTU?**
 Not yet — LTU runs a firmware different from airOS and compatibility is under
@@ -163,3 +164,18 @@ machines, release the slot on the old one and activate on the new one.
 **What happens to my projects if my license expires?**
 Nothing is deleted. The app returns to the license screen and, once you renew
 or activate, everything is right where it was.
+
+**I am going to format my PC — do I lose access to my projects?**
+No, as long as you do two things **before** formatting:
+
+1. **Write down each project's transfer code** (**Share project**). When you
+   format, the key protecting your credentials is lost with Windows, so your
+   own PC becomes "a new PC" for the project: opening it will ask for that
+   code once, and with it you recover everything. **Without the code, the
+   file does not open** — that is precisely the shielding that protects it if
+   it falls into the wrong hands.
+2. **Release the license** (License view → "Release license") so the slot is
+   not left taken by the old install.
+
+And the usual: the `.sscope` is a file — back it up to another drive before
+formatting, as you would with any important document.
