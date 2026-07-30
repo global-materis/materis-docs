@@ -46,6 +46,17 @@ ocultarlo para que decidas — la salida de fondo es habilitar HTTPS o SSH en
 el equipo.
 :::
 
+::: details Uso una laptop por WiFi y las sesiones parpadean o las lecturas son irregulares
+Todo lo que la app mide viaja por la conexión de tu propia PC. Si el WiFi de
+la laptop pierde paquetes o se reasocia, las sesiones caen y los vigilados
+salen "Sin respuesta" — síntomas idénticos a un problema de la red que
+monitoreas, pero cuyo origen es tu conexión.
+
+**La recomendación es cablear la laptop** a la red de gestión mientras
+monitoreas. Las métricas que reportan los propios radios (señal, latencia del
+enlace) no se contaminan — pero llegar a leerlas depende de tu conexión.
+:::
+
 ::: details Una estación aparece "Ausente" pero responde al ping
 "Ausente" significa que la **sesión** se perdió, no necesariamente el equipo:
 una sesión web caducada por el radio produce exactamente eso. La app

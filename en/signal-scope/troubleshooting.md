@@ -48,6 +48,17 @@ hiding it so you can decide — the underlying fix is enabling HTTPS or SSH on
 the device.
 :::
 
+::: details I use a laptop over WiFi and sessions flicker or readings are irregular
+Everything the app measures travels through your own PC's connection. If the
+laptop's WiFi drops packets or reassociates, sessions fall and watched
+devices show "No answer" — symptoms identical to a problem in the network you
+monitor, but whose origin is your connection.
+
+**The recommendation is to wire the laptop** to the management network while
+monitoring. The metrics the radios themselves report (signal, link latency)
+are not contaminated — but reaching them depends on your connection.
+:::
+
 ::: details A station shows "Absent" but answers ping
 "Absent" means the **session** was lost, not necessarily the device: a web
 session expired by the radio produces exactly that. The app retries the

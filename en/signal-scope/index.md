@@ -132,6 +132,10 @@ _Existing: `ss-desktop/docs/screenshots/SignalScope-Welcome.png`._
 
 - **Windows 10 or 11** (64-bit).
 - **Network access to the radios** from the computer running the app.
+  **Recommended: a wired connection.** On a laptop over WiFi the app works,
+  but everything it measures travels through that connection — if the
+  laptop's WiFi falters, its drops get mistaken for problems in the network
+  you are monitoring.
 - **Radio credentials** (airOS username and password).
 - **No** administrator rights required to install, no Npcap, no other drivers.
 - Internet access **only to activate the license** and to revalidate it
