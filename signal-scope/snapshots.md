@@ -95,4 +95,4 @@ el inicio de la tabla de estaciones.
 
 Un snapshot también se exporta como archivo **`.ssnap`** que otro SignalScope
 abre en modo visor, con la opción de proteger los datos sensibles antes de
-enviarlo. Eso tiene su propia guía: la siguiente.
+enviarlo. Eso tiene su propia guía: [Compartir](./compartir).

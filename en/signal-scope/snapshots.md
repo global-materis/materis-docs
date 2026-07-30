@@ -94,4 +94,4 @@ of the stations table.
 
 A snapshot can also be exported as a **`.ssnap`** file that another
 SignalScope opens in viewer mode, with the option to protect sensitive data
-before sending it. That has its own guide: the next one.
+before sending it. That has its own guide: [Sharing](./sharing).
