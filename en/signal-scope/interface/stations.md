@@ -33,8 +33,9 @@ remembered.
 
 Hovering the signal cell shows the **full multi-variable diagnosis**: state,
 causes in plain words (signal below what its distance should give, noise,
-channel interference, latency, capacity), SNR/CINR and distance. The traffic
-light and diagnostics guide (coming soon) explains how to read each cause.
+channel interference, latency, capacity), SNR/CINR and distance. The
+[traffic light and diagnostics](../diagnostics) guide explains how to read
+each cause.
 
 ## Latency: the average and the peak
 

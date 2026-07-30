@@ -34,8 +34,8 @@ Casi todas son ocultables desde el menú **Columnas**; la elección se recuerda.
 Al pasar el puntero por la celda de señal aparece el **diagnóstico
 multi-variable completo**: estado, causas en palabras (señal bajo lo esperado a
 su distancia, ruido, interferencia del canal, latencia, capacidad), SNR/CINR y
-distancia. La guía de semáforo y diagnóstico (próximamente) explica cómo leer
-cada causa.
+distancia. La guía de [semáforo y diagnóstico](../diagnostico) explica cómo
+leer cada causa.
 
 ## Latencia: la media y el pico
 

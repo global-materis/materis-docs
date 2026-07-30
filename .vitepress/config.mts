@@ -37,6 +37,12 @@ export default defineConfig({
                 { text: 'Detectados y Otros', link: '/signal-scope/interfaz/detectados-y-otros' },
               ],
             },
+            {
+              text: 'Guías',
+              items: [
+                { text: 'Semáforo y diagnóstico', link: '/signal-scope/diagnostico' },
+              ],
+            },
           ],
         },
         outline: { level: [2, 3], label: 'En esta página' },
@@ -82,6 +88,12 @@ export default defineConfig({
                 { text: 'Stations', link: '/en/signal-scope/interface/stations' },
                 { text: 'Access points', link: '/en/signal-scope/interface/access-points' },
                 { text: 'Detected and Others', link: '/en/signal-scope/interface/detected-and-others' },
+              ],
+            },
+            {
+              text: 'Guides',
+              items: [
+                { text: 'Traffic light and diagnostics', link: '/en/signal-scope/diagnostics' },
               ],
             },
           ],
