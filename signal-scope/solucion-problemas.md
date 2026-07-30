@@ -193,6 +193,10 @@ Para la app de escritorio no está en los planes. La futura edición para
 servidores será una **aplicación web** por naturaleza — se administrará desde
 el navegador.
 
+**¿Está disponible para Mac?**
+Aún no — hoy SignalScope es una app para **Windows 10/11**. La compatibilidad
+con macOS está en los planes, sin fecha comprometida.
+
 **Voy a formatear mi PC, ¿pierdo acceso a mis proyectos?**
 No, si haces dos cosas **antes** de formatear:
 

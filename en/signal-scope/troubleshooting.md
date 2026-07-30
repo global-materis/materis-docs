@@ -192,6 +192,10 @@ watch 24/7 — there, alerting your phone makes sense.
 Not planned for the desktop app. The future server edition will be a **web
 application** by nature — managed from the browser.
 
+**Is it available for Mac?**
+Not yet — today SignalScope is a **Windows 10/11** app. macOS compatibility
+is on the roadmap, with no committed date.
+
 **I am going to format my PC — do I lose access to my projects?**
 No, as long as you do two things **before** formatting:
 
