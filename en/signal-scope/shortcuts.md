@@ -15,6 +15,7 @@ Always available on the panel (and listed inside the app with **F1**):
 | `Ctrl+Space` | Freeze / Resume the tables' refresh |
 | `Ctrl+A` | Register a device by IP |
 | `Ctrl+H` | Save snapshot |
+| `Ctrl+K` | **Global search** for devices (see below) |
 | `Ctrl+F` | Native on-screen search (highlights, does not filter) |
 | `Ctrl+↓` / `Ctrl+↑` | Jump to the next / previous table |
 | `Esc` | Cascading: clears the focused search box → closes the open modal → clears the state filter and search boxes |
@@ -28,6 +29,26 @@ Two useful clarifications:
 - **`Esc` works in layers**: the first Esc undoes what you were typing, the
   second closes what you were looking at, the third clears the filters. Three
   Esc always bring you back to the full table.
+
+## The global search (Ctrl+K)
+
+The fastest gesture of all when a customer calls: `Ctrl+K`, type their name
+(or IP, or model) and **the app sets the table for you**:
+
+- Pick a **station** → its row is isolated and, in the AP table, its AP — the
+  pair a report gets solved with: is it this customer or their sector?
+- Pick an **AP** → its row isolated and, above, its stations.
+- Pick a device from **Others** → its row in that table.
+
+It finds devices **even when a filter has them hidden** — it searches the
+project, not what is painted. Navigate with `↑↓` and `Enter`; it also works
+inside a snapshot, searching the capture.
+
+::: tip Ctrl+K vs Ctrl+F
+`Ctrl+F` searches on-screen text and only highlights; `Ctrl+K` searches the
+project's **devices** and acts: it filters and moves the focus. They are
+complementary.
+:::
 
 ## One-click filters
 

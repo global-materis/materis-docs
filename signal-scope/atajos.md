@@ -14,6 +14,7 @@ Siempre disponibles en el panel (y listados dentro de la app con **F1**):
 | `Ctrl+Espacio` | Congelar / Reanudar el refresco de las tablas |
 | `Ctrl+A` | Registrar un equipo por IP |
 | `Ctrl+H` | Guardar snapshot |
+| `Ctrl+K` | **Buscador general** de equipos (ver abajo) |
 | `Ctrl+F` | Búsqueda nativa en pantalla (resalta, no filtra) |
 | `Ctrl+↓` / `Ctrl+↑` | Saltar a la tabla siguiente / anterior |
 | `Esc` | En cascada: limpia el buscador con foco → cierra el modal abierto → limpia el filtro de estado y los buscadores |
@@ -27,6 +28,26 @@ Dos aclaraciones útiles:
 - **`Esc` va por capas**: el primer Esc deshace lo que estabas escribiendo,
   el segundo cierra lo que estabas mirando, el tercero limpia los filtros.
   Tres Esc te devuelven siempre a la tabla completa.
+
+## El buscador general (Ctrl+K)
+
+El gesto más rápido de todos cuando un cliente llama: `Ctrl+K`, escribes su
+nombre (o IP, o modelo) y **la app te deja la mesa puesta**:
+
+- Eliges una **estación** → su fila queda aislada y, en la tabla de AP, su
+  AP — la pareja con la que se resuelve un reporte: ¿es este cliente o es su
+  sector?
+- Eliges un **AP** → su fila aislada y, arriba, sus estaciones.
+- Eliges un equipo de **Otros** → su fila en esa tabla.
+
+Encuentra los equipos **aunque un filtro los tenga escondidos** — busca en el
+proyecto, no en lo pintado. Se navega con `↑↓` y `Enter`; también funciona
+dentro de un snapshot, buscando en la captura.
+
+::: tip Ctrl+K vs Ctrl+F
+`Ctrl+F` busca texto en pantalla y solo resalta; `Ctrl+K` busca **equipos**
+del proyecto y acciona: filtra y lleva el foco. Son complementarios.
+:::
 
 ## Filtros de un clic
 
