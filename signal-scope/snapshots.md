@@ -8,8 +8,10 @@ muestro a alguien más.
 
 **Guardar snapshot** (`Ctrl+H`) captura el estado completo del momento:
 estaciones y AP con sus métricas, el veredicto del diagnóstico, las
-referencias que tenías puestas y el estado de sesión de cada equipo. La
-captura queda en el **strip de snapshots**, con su fecha.
+referencias que tenías puestas, el estado de sesión de cada equipo — y
+también tu inventario de **Otros**, con el nombre que les pusiste y si
+respondían a la vigilancia. La captura queda en el **strip de snapshots**,
+con su fecha.
 
 - Un proyecto guarda **hasta 10 snapshots**: al guardar el undécimo, el más
   viejo se elimina solo.
@@ -61,10 +63,13 @@ avisos y enterraría lo que sí importa. La capacidad del enlace sí se compara 
 esa es salud, no consumo.
 :::
 
-## Reportes en PDF y Excel
+## Reportes en PDF, Excel y CSV
 
 El botón **Reporte** exporta lo que está en pantalla — el estado en vivo o, si
-tienes un snapshot en vista, esa captura con su fecha en el encabezado. Cinco
+tienes un snapshot en vista, esa captura con su fecha en el encabezado. Tres
+formatos que dicen exactamente lo mismo (salen de los mismos datos): **PDF**
+para entregar, **Excel** para trabajar, y **CSV** pensado para abrirse con
+doble clic en un Excel en español, sin asistente de importación. Cinco
 alcances:
 
 | Tipo | Qué incluye |

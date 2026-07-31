@@ -114,10 +114,10 @@ Hasta 10 por proyecto.
 en modo visor, de solo lectura. Nunca lleva credenciales.
 
 **Referencia** — la señal "sana" que tú fijas por antena con **Marcar OK**.
-Con referencia, el semáforo juzga el desvío en vez del valor absoluto.
+Con referencia, el eje de señal juzga el desvío en vez del valor absoluto.
 
-**Semáforo** — el color de cada estación (verde / ámbar / rojo) según su
-señal o su desvío contra la referencia. El detalle en
+**Semáforo** — el color de cada estación (verde / ámbar / rojo): el peor eje
+de su diagnóstico, con la señal como eje principal. El detalle en
 [Semáforo y diagnóstico](./diagnostico).
 
 **Centinela** — el sistema de alertas de las fallas que la señal no delata:

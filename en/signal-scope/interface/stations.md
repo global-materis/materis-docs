@@ -13,13 +13,14 @@ reference and latency visible.
 |---|---|
 | **Session** | The connection state to the radio (SSH or HTTP). An HTTP session is painted amber with an open padlock: on that network credentials and metrics travel unencrypted, and it is better to know. |
 | **Signal · local / remote** | The product's core reading. Local = what the station receives; remote (in grey) = what the AP receives from it. Meter bar with the traffic-light color. |
-| **Reference** | The **"Mark OK"** button pins the current signal as that antenna's reference. With a reference, the traffic light judges the drift (Δ dB), not the absolute value. |
+| **Reference** | The **"Mark OK"** button pins the current signal as that antenna's reference. With a reference, the signal axis judges the drift (Δ dB), not the absolute value; to update it, first remove it with the **×**. |
 | **IP** | A link that opens the radio's web UI, plus a **ping** button that opens a terminal with a continuous ping. |
 | **Latency** | The link latency **measured by the radio itself toward its AP** — not a ping from your PC. See below. |
 | **Sessions** | The customer's simultaneous connections, counted by the radio when it works in router mode. Informational: tells a quiet customer from a busy one. |
 | **AP** | Which base station it is associated with. The **name** jumps to that AP's row; the **antenna icon** filters this table to its other clients. |
 | **Link** | airMAX link quality (%), averaged to avoid false criticals. |
 | **Modulation** | The rate the station receives at (`6x`, `8x`… or Mbps depending on firmware). Informational: the story behind a reduced capacity. |
+| **CPU · Free RAM** | The radio's health: how much CPU it uses and how much memory it has **available** (for free RAM, more is better). Deliberately uncolored — the verdict comes from the diagnosis, which also judges the sustained value, not the instant. |
 | **Downlink / Uplink** | The link's estimated capacity according to the AP. **Empty on airOS 6 devices**, which do not compute it: an empty cell tells the truth. |
 | **Air** | The link's air efficiency (%). A low value points at the client that is slowing down the rest of its AP. |
 | **Thr. TX / RX** | That link's traffic right now. Empty on each session's first reading (nothing to compare against yet). |

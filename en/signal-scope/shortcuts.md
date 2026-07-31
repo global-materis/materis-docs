@@ -32,13 +32,18 @@ Two useful clarifications:
 
 ## The global search (Ctrl+K)
 
-The fastest gesture of all when a customer calls: `Ctrl+K`, type their name
-(or IP, or model) and **the app sets the table for you**:
+The fastest gesture of all when a customer calls: `Ctrl+K` (or the
+**magnifier** on the bar, available in the Monitor and the Map), type their
+name — or IP, MAC, SSID, model or manufacturer; MACs and IPs can be typed
+without separators — and **the app sets the table for you**:
 
 - Pick a **station** → its row is isolated and, in the AP table, its AP — the
-  pair a report gets solved with: is it this customer or their sector?
-- Pick an **AP** → its row isolated and, above, its stations.
-- Pick a device from **Others** → its row in that table.
+  pair a report gets solved with: is it this customer or their sector? On the
+  **Map**, its card centered and its link highlighted.
+- Pick an **AP** → its row isolated and, above, its stations. On the **Map**,
+  the view jumps to its node with its sector.
+- Pick a device from **Others** → its row in that table (not offered on the
+  Map: the map does not draw third-party devices).
 
 It finds devices **even when a filter has them hidden** — it searches the
 project, not what is painted. Navigate with `↑↓` and `Enter`; it also works

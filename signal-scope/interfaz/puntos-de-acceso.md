@@ -51,7 +51,9 @@ fila.
 |---|---|
 | **Sesión** | Estado de conexión, igual que en estaciones. |
 | **SSID** | El nombre de red que difunde el AP. |
-| **Picos** | `3/14` = cuántas de sus estaciones en línea tienen picos de latencia. Se enciende en ámbar cuando la mayoría (y al menos 3) los tienen — el patrón que delata un problema del sector, no de un cliente. Con menos de 3 estaciones en línea muestra "—". |
+| **Picos** | `3/14` = cuántas de sus estaciones en línea tienen picos de latencia. Se enciende en ámbar cuando la mayoría (y al menos 3) los tienen — un cliente con picos es ese cliente; la mayoría del sector es el aire compartido. Con menos de 3 estaciones en línea muestra "—". |
+| **Airtime** | El aire ocupado del canal (%), el dato crudo detrás del Estado. |
+| **CPU · RAM libre** | La salud del radio: uso de CPU y memoria **disponible** (en RAM libre, más es mejor). Sin color: el veredicto lo da el Estado, que juzga lo sostenido — abrir la web del AP dispara su CPU unos segundos y eso no es una avería. |
 | **Thr. TX / RX** | Tráfico **agregado** del AP, todas sus estaciones juntas. Ojo con la dirección: aquí **TX es lo que baja** hacia los clientes. Responde "¿ocupado con qué?" cuando el aire sale alto. |
 | **Frecuencia / Canal** | Para detectar solapamientos entre tus propios AP. |
 | **Firmware · MAC · Modelo · TX Power · Uptime** | Identidad y contexto del equipo. |

@@ -49,6 +49,11 @@ one drawer splits in two: the scan's temporary queue and the permanent
 inventory of the devices you do not manage (routers, ONUs, switches), with an
 editable name and optional availability watch.
 
+**And also** — a third report format: **CSV**, ready to open with a double
+click in a Spanish-locale Excel; **CPU and free RAM** columns in the stations
+and AP tables (with **Airtime** as its own column on APs); and the **Others**
+inventory travels inside each capture too, read-only.
+
 **More faithful readings** — M5 and other airOS 6 devices are back in; each
 AP's air usage is no longer read multiplied; a radio that changes IP
 reconnects on its own (its identity is its MAC).

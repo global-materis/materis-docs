@@ -80,9 +80,9 @@ pendientes y el progreso "Conectando… N de M".
 Con las sesiones abiertas, las tablas se refrescan solas: señal en dBm (local y
 remota), semáforo, throughput, distancia, uptime. De aquí en adelante:
 
-- **Marca referencias**: cuando un enlace esté sano, **"Marcar OK"** fija su
-  señal actual como referencia; el semáforo pasará a avisarte cuánto se desvió
-  de ese punto.
+- **Marca referencias**: cuando un enlace esté sano y estable, **"Marcar OK"**
+  fija su señal de ese instante como referencia; la app pasará a juzgar cuánto
+  se desvió de ese punto.
 - **Guarda un snapshot** del estado inicial de la red — te servirá de punto de
   comparación.
 

@@ -8,8 +8,9 @@ someone else.
 
 **Save snapshot** (`Ctrl+H`) captures the complete state of the moment:
 stations and APs with their metrics, the diagnosis verdict, the references you
-had set and each device's session state. The capture lands on the **snapshot
-strip**, with its date.
+had set, each device's session state — and also your **Others** inventory,
+with the names you gave them and whether they answered the watch. The capture
+lands on the **snapshot strip**, with its date.
 
 - A project keeps **up to 10 snapshots**: saving the eleventh silently removes
   the oldest.
@@ -60,11 +61,13 @@ row with notices and bury what does matter. Link capacity is compared — that
 is health, not consumption.
 :::
 
-## PDF and Excel reports
+## PDF, Excel and CSV reports
 
 The **Report** button exports what is on screen — the live state or, if you
-have a snapshot in view, that capture with its date in the header. Five
-scopes:
+have a snapshot in view, that capture with its date in the header. Three
+formats that say exactly the same thing (they come from the same data):
+**PDF** to hand over, **Excel** to work with, and **CSV** meant to open with
+a double click in a Spanish-locale Excel, no import wizard. Five scopes:
 
 | Type | What it includes |
 |---|---|

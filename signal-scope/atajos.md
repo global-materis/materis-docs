@@ -31,14 +31,18 @@ Dos aclaraciones útiles:
 
 ## El buscador general (Ctrl+K)
 
-El gesto más rápido de todos cuando un cliente llama: `Ctrl+K`, escribes su
-nombre (o IP, o modelo) y **la app te deja la mesa puesta**:
+El gesto más rápido de todos cuando un cliente llama: `Ctrl+K` (o la **lupa**
+de la barra, disponible en el Monitor y en el Mapa), escribes su nombre — o
+IP, MAC, SSID, modelo o fabricante; las MAC e IP se pueden teclear sin
+separadores — y **la app te deja la mesa puesta**:
 
 - Eliges una **estación** → su fila queda aislada y, en la tabla de AP, su
   AP — la pareja con la que se resuelve un reporte: ¿es este cliente o es su
-  sector?
-- Eliges un **AP** → su fila aislada y, arriba, sus estaciones.
-- Eliges un equipo de **Otros** → su fila en esa tabla.
+  sector? En el **Mapa**, su tarjeta centrada y su enlace resaltado.
+- Eliges un **AP** → su fila aislada y, arriba, sus estaciones. En el
+  **Mapa**, la vista salta a su nodo con su sector.
+- Eliges un equipo de **Otros** → su fila en esa tabla (en el Mapa no se
+  ofrece: el mapa no dibuja equipos ajenos).
 
 Encuentra los equipos **aunque un filtro los tenga escondidos** — busca en el
 proyecto, no en lo pintado. Se navega con `↑↓` y `Enter`; también funciona

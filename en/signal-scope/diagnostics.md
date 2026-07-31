@@ -5,8 +5,9 @@ The traffic light tells you **which** link to look at; the diagnosis tells you
 
 ## The traffic light
 
-Each station is painted a color according to its signal. There are two modes,
-and the difference matters:
+Each station's color is the verdict of the **full diagnosis** — the worst of
+its seven axes rules (see below). Its main axis, signal, is judged in two
+modes, and the difference matters:
 
 **Without a reference** — the absolute dBm value is judged:
 
@@ -30,14 +31,27 @@ last reading, with the reason in the tooltip.
 
 ## References: compare against your own network
 
-An absolute threshold treats a 400 m link and a 3 km link the same. The
-reference fixes that: when a link is **the way it should be**, click
-**"Mark OK"** — that moment's signal becomes **that** antenna's healthy point,
-and from then on the traffic light tells you how far it has drifted.
+Even without a reference, the app does not judge blindly: it uses the
+**signal expected at each link's distance** (computed by the radio itself)
+and, only as a last resort, the absolute threshold. The reference adds what
+no automatism can know: **how that link was when the installer left it
+right** — its alignment, its cable, its obstacles. It is your criterion, and
+it wins over the other two.
+
+When a link is **the way it should be**, click **"Mark OK"**: that moment's
+signal becomes **that** antenna's healthy point, and from then on the signal
+axis judges the drift against it (Δ dB) instead of the absolute value.
 
 - The reference is **per antenna** and survives reboots and IP changes.
-- The cell shows `ref −58 dBm`; the **×** removes it, and clicking "Mark OK"
-  again updates it (after a realignment, for example).
+- With a reference, the cell shows `ref −58 dBm` and an **×**. To update it
+  (after a realignment, for example), **remove it with the × and click
+  "Mark OK" again** — it is two gestures: while a reference is set, the
+  button is not shown.
+
+::: tip Mark while the link is stable
+"Mark OK" stores the reading **at the instant of the click**, without
+averaging. Marking during a fade pins a bad point as the reference.
+:::
 
 ## Why signal alone is not enough
 

@@ -112,11 +112,11 @@ to 10 per project.
 in read-only viewer mode. It never carries credentials.
 
 **Reference** — the "healthy" signal you pin per antenna with **Mark OK**.
-With a reference, the traffic light judges the drift instead of the absolute
+With a reference, the signal axis judges the drift instead of the absolute
 value.
 
-**Traffic light** — each station's color (green / amber / red) according to
-its signal or its drift against the reference. Details in
+**Traffic light** — each station's color (green / amber / red): the worst
+axis of its diagnosis, with signal as the main axis. Details in
 [Traffic light and diagnostics](./diagnostics).
 
 **Sentinel** — the alert system for the failures the signal does not betray:

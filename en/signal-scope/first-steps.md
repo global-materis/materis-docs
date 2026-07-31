@@ -78,9 +78,9 @@ radios and the "Connecting… N of M" progress.
 With sessions open, the tables refresh on their own: signal in dBm (local and
 remote), traffic light, throughput, distance, uptime. From here on:
 
-- **Set references**: when a link is healthy, **"Mark OK"** pins its current
-  signal as that antenna's reference; the traffic light will then tell you how
-  far it has drifted from that point.
+- **Set references**: when a link is healthy and stable, **"Mark OK"** pins
+  its signal at that instant as the antenna's reference; the app will then
+  judge how far it has drifted from that point.
 - **Save a snapshot** of the network's initial state — it will serve as a point
   of comparison.
 

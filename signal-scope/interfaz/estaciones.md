@@ -14,13 +14,14 @@ referencia y latencia visibles.
 |---|---|
 | **Sesión** | El estado de conexión al radio (SSH o HTTP). Una sesión HTTP se pinta en ámbar con un candado abierto: en esa red las credenciales y métricas viajan sin cifrar, y es mejor saberlo. |
 | **Señal · local / remota** | El dato del producto. Local = lo que la estación recibe; remota (en gris) = lo que el AP recibe de ella. Barra de medición con el color del semáforo. |
-| **Referencia** | El botón **"Marcar OK"** fija la señal actual como referencia de esa antena. Con referencia, el semáforo evalúa cuánto se desvió (Δ dB), no el valor absoluto. |
+| **Referencia** | El botón **"Marcar OK"** fija la señal actual como referencia de esa antena. Con referencia, el eje de señal juzga el desvío (Δ dB), no el valor absoluto; para actualizarla, primero se quita con la **×**. |
 | **IP** | Enlace que abre la web del radio, más un botón de **ping** que abre una terminal con ping continuo. |
 | **Latencia** | La latencia del enlace **medida por el propio radio hacia su AP** — no un ping desde tu PC. Ver abajo. |
 | **Sesiones** | Conexiones simultáneas del cliente, contadas por el radio cuando trabaja en modo router. Informativa: distingue un cliente tranquilo de uno movido. |
 | **AP** | A qué estación base está asociada. El **nombre** salta a la fila de ese AP; el **icono de antena** filtra esta tabla a sus demás clientes. |
 | **Link** | Calidad de enlace airMAX (%), promediada para evitar falsos críticos. |
 | **Modulación** | La tasa a la que la estación recibe (`6x`, `8x`… o Mbps según el firmware). Informativa: cuenta la historia detrás de una capacidad reducida. |
+| **CPU · RAM libre** | La salud del radio: cuánta CPU usa y cuánta memoria le queda **disponible** (en RAM libre, más es mejor). Sin color a propósito — el veredicto lo da el diagnóstico, que además juzga lo sostenido, no el instante. |
 | **Downlink / Uplink** | Capacidad estimada del enlace según el AP. **Vacías en equipos airOS 6**, que no la calculan: una celda vacía dice la verdad. |
 | **Aire** | Eficiencia de aire del enlace (%). Un valor bajo delata al cliente que está frenando al resto de su AP. |
 | **Thr. TX / RX** | Tráfico del momento de ese enlace. Vacío en la primera lectura de cada sesión (aún no hay contra qué comparar). |

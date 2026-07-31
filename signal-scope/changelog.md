@@ -51,6 +51,12 @@ cajón se parte en dos: la cola temporal del escaneo y el inventario
 permanente de los equipos que no gestionas (routers, ONU, switches), con
 nombre editable y vigilancia opcional de disponibilidad.
 
+**Y además** — tercer formato de reporte: **CSV** listo para abrirse con
+doble clic en un Excel en español; columnas de **CPU y RAM libre** en las
+tablas de estaciones y AP (con **Airtime** como columna propia en AP); y el
+inventario de **Otros** viaja también dentro de cada captura, en solo
+lectura.
+
 **Lecturas más fieles** — los M5 y demás equipos con airOS 6 vuelven a
 entrar; el aire ocupado de cada AP ya no se lee multiplicado; un radio que
 cambia de IP se reconecta solo (la identidad es su MAC).

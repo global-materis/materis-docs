@@ -50,7 +50,9 @@ The stations table has the reverse trip: its AP column jumps to this row.
 |---|---|
 | **Session** | Connection state, same as stations. |
 | **SSID** | The network name the AP broadcasts. |
-| **Peaks** | `3/14` = how many of its online stations have latency spikes. Lights amber when the majority (and at least 3) have them — the pattern that betrays a sector problem rather than a single client. With fewer than 3 stations online it shows "—". |
+| **Peaks** | `3/14` = how many of its online stations have latency spikes. Lights amber when the majority (and at least 3) have them — one client with spikes is that client; most of the sector is the shared air. With fewer than 3 stations online it shows "—". |
+| **Airtime** | The channel's air in use (%), the raw figure behind the State. |
+| **CPU · Free RAM** | The radio's health: CPU usage and **available** memory (for free RAM, more is better). Uncolored: the verdict comes from the State, which judges the sustained value — opening the AP's web UI spikes its CPU for a few seconds, and that is not a fault. |
 | **Thr. TX / RX** | The AP's **aggregate** traffic, all its stations together. Mind the direction: here **TX is what goes down** to the clients. It answers "busy with what?" when the air comes up high. |
 | **Frequency / Channel** | To spot overlaps between your own APs. |
 | **Firmware · MAC · Model · TX Power · Uptime** | Device identity and context. |

@@ -5,8 +5,9 @@ guía explica cómo juzga cada uno.
 
 ## El semáforo
 
-Cada estación se pinta de un color según su señal. Hay dos modos, y la
-diferencia importa:
+El color de cada estación es el veredicto del **diagnóstico completo** — el
+peor de sus siete ejes manda (ver abajo). Su eje principal, la señal, se
+juzga en dos modos, y la diferencia importa:
 
 **Sin referencia** — se juzga el valor absoluto en dBm:
 
@@ -30,14 +31,27 @@ Una estación **Ausente** no es una crítica: perdió la sesión y conserva su
 
 ## Referencias: comparar contra tu propia red
 
-Un umbral absoluto trata igual a un enlace de 400 m y a uno de 3 km. La
-referencia lo corrige: cuando un enlace está **como debe estar**, pulsa
-**"Marcar OK"** — la señal de ese momento queda como el punto sano de **esa**
-antena, y desde entonces el semáforo te avisa cuánto se alejó de él.
+Aun sin referencia, la app no juzga a ciegas: usa la **señal esperada a la
+distancia** de cada enlace (la calcula el propio radio) y, solo en último
+recurso, el umbral absoluto. La referencia añade lo que ningún automatismo
+puede saber: **cómo quedó ese enlace cuando el instalador lo dejó bien** — su
+alineación, su cable, sus obstáculos. Es tu criterio, y gana sobre los otros
+dos.
+
+Cuando un enlace está **como debe estar**, pulsa **"Marcar OK"**: la señal de
+ese momento queda como el punto sano de **esa** antena, y desde entonces el
+eje de señal juzga el desvío contra ella (Δ dB) en vez del valor absoluto.
 
 - La referencia es **por antena** y sobrevive a reinicios y cambios de IP.
-- La celda muestra `ref −58 dBm`; la **×** la quita, y volver a "Marcar OK" la
-  actualiza (tras un realineamiento, por ejemplo).
+- Con referencia, la celda muestra `ref −58 dBm` y una **×**. Para
+  actualizarla (tras un realineamiento, por ejemplo), **quítala con la × y
+  vuelve a pulsar "Marcar OK"** — son dos gestos: mientras hay referencia, el
+  botón no se muestra.
+
+::: tip Marca con el enlace estable
+"Marcar OK" guarda la lectura **del instante del clic**, sin promediar. Si
+marcas durante un desvanecimiento, fijas un punto malo como referencia.
+:::
 
 ## Por qué la señal sola no basta
 
