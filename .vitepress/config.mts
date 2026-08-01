@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'Materis Docs',
   cleanUrls: true,
   lastUpdated: true,
+  sitemap: { hostname: 'https://docs.materis.io' },
 
   // Español en la raíz (docs.materis.io/signal-scope),
   // inglés bajo /en/ (docs.materis.io/en/signal-scope).

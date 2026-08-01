@@ -1,0 +1,46 @@
+# Materis Docs
+
+> Documentación oficial de los productos de Materis. Actualmente cubre SignalScope, el monitor de escritorio para operadores WISP con radios Ubiquiti airMAX: escaneo de red sin drivers, señal en dBm en tiempo real, diagnóstico multi-variable de enlaces, centinela de fallas, snapshots y reportes. La app es de solo lectura hacia los radios y los datos del operador viven solo en su equipo. Documentación bilingüe: español en la raíz, inglés bajo /en/.
+
+## SignalScope (Español)
+
+- [Introducción](https://docs.materis.io/signal-scope/): qué es SignalScope, el problema que resuelve, cómo se organizan los equipos (Detectados, Estaciones, AP, Otros) y requisitos.
+- [Instalación y activación](https://docs.materis.io/signal-scope/instalacion): Microsoft Store, la prueba de 30 días, la licencia Full (correo + clave), la ventana offline y cambiar de máquina.
+- [Primeros pasos](https://docs.materis.io/signal-scope/primeros-pasos): crear el proyecto .sscope, registrar redes CIDR, primer escaneo y sesiones (individual y en cascada).
+- [La interfaz — panorama](https://docs.materis.io/signal-scope/interfaz/): el panel, los contadores-filtro, el riel inferior y lo común a las tablas.
+- [Estaciones](https://docs.materis.io/signal-scope/interfaz/estaciones): la tabla principal columna por columna — señal, referencia, latencia (con sonda de ping opcional), puertos Ethernet, CPU/RAM.
+- [Puntos de acceso](https://docs.materis.io/signal-scope/interfaz/puntos-de-acceso): el Estado multi-eje del sector, la celda Estaciones (contador, radar, ping), Picos, Airtime y Puertos.
+- [Detectados y Otros](https://docs.materis.io/signal-scope/interfaz/detectados-y-otros): la cola del escaneo vs. el inventario permanente de equipos ajenos, con vigilancia ICMP.
+- [Mapa de cobertura](https://docs.materis.io/signal-scope/interfaz/mapa): nodos, sectores por banda (azimut/apertura/alcance), estaciones georreferenciadas y el plano congelado en snapshots.
+- [Semáforo y diagnóstico](https://docs.materis.io/signal-scope/diagnostico): los umbrales de señal, las referencias por antena (Marcar OK) y los siete ejes del diagnóstico.
+- [Centinela y calificación](https://docs.materis.io/signal-scope/centinela): los avisos de fallas que la señal no delata, y la nota 0-100 del parque.
+- [Herramientas de diagnóstico](https://docs.materis.io/signal-scope/herramientas): planificador de frecuencias, prueba de velocidad iperf, ping continuo y traceroute.
+- [Atajos y navegación rápida](https://docs.materis.io/signal-scope/atajos): atajos de teclado, el buscador general Ctrl+K y los viajes entre tablas.
+- [Historial, snapshots y reportes](https://docs.materis.io/signal-scope/snapshots): capturas con Δ vs. actual, comparación por causa y reportes PDF/Excel/CSV.
+- [Compartir](https://docs.materis.io/signal-scope/compartir): el .ssnap de solo lectura, la protección de datos sensibles y el código de transferencia del .sscope.
+- [Seguridad y privacidad](https://docs.materis.io/signal-scope/seguridad-privacidad): los datos viven en el equipo, cuándo usa internet la app y el cifrado de credenciales.
+- [Solución de problemas](https://docs.materis.io/signal-scope/solucion-problemas): los tropiezos comunes y las preguntas frecuentes (plataformas, licencia, notificaciones).
+- [Glosario](https://docs.materis.io/signal-scope/glosario): los términos técnicos (AP, dBm, SNR, CINR, CIDR, MAC…) en lenguaje llano.
+- [Novedades por versión](https://docs.materis.io/signal-scope/changelog): el changelog detallado, versión por versión.
+
+## SignalScope (English)
+
+- [Introduction](https://docs.materis.io/en/signal-scope/): what SignalScope is, the problem it solves and how devices are organized.
+- [Installation and activation](https://docs.materis.io/en/signal-scope/installation): Microsoft Store, the 30-day trial and the Full license.
+- [First steps](https://docs.materis.io/en/signal-scope/first-steps): create the project, register networks, first scan and sessions.
+- [The interface](https://docs.materis.io/en/signal-scope/interface/): overview, plus [Stations](https://docs.materis.io/en/signal-scope/interface/stations), [Access points](https://docs.materis.io/en/signal-scope/interface/access-points), [Detected and Others](https://docs.materis.io/en/signal-scope/interface/detected-and-others) and the [Coverage map](https://docs.materis.io/en/signal-scope/interface/map).
+- [Traffic light and diagnostics](https://docs.materis.io/en/signal-scope/diagnostics): thresholds, per-antenna references and the seven axes.
+- [Sentinel and network score](https://docs.materis.io/en/signal-scope/sentinel): failure notices and the network grade.
+- [Diagnostic tools](https://docs.materis.io/en/signal-scope/tools): frequency planner, speed test, continuous ping and traceroute.
+- [Shortcuts and quick navigation](https://docs.materis.io/en/signal-scope/shortcuts): keyboard shortcuts, Ctrl+K and table-to-table trips.
+- [History, snapshots and reports](https://docs.materis.io/en/signal-scope/snapshots): captures, comparison and PDF/Excel/CSV reports.
+- [Sharing](https://docs.materis.io/en/signal-scope/sharing): the read-only .ssnap, data protection and the transfer code.
+- [Security and privacy](https://docs.materis.io/en/signal-scope/security-privacy): local-only data and credential encryption.
+- [Troubleshooting](https://docs.materis.io/en/signal-scope/troubleshooting): common stumbles and FAQ.
+- [Glossary](https://docs.materis.io/en/signal-scope/glossary): technical terms in plain language.
+- [Release notes](https://docs.materis.io/en/signal-scope/changelog): the detailed changelog.
+
+## Optional
+
+- [Sitio de SignalScope](https://signal-scope.materis.io): landing pública del producto, con precios y legales.
+- [Microsoft Store](https://apps.microsoft.com/store/detail/9NPZ6VTKF989): dónde se instala SignalScope.
