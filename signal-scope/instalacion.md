@@ -34,10 +34,7 @@ SignalScope requiere una licencia para funcionar. La pantalla ofrece dos vías,
 | Requiere correo | No | Sí (el del titular) |
 | Equipos | La máquina donde se instaló | Según el cupo de tu licencia |
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/pantalla-licencia.png`
-Captura de la **pantalla de licencia**: el formulario de activación (correo +
-clave) y el botón ámbar "Continuar con la versión de prueba · quedan N días".
-:::
+![La pantalla de licencia: correo y clave para activar la Full, o el botón ámbar de continuar con la versión de prueba](/signal-scope/pantalla-licencia.png)
 
 ## Versión de prueba (30 días)
 

@@ -13,10 +13,7 @@ Ese archivo es tu red completa —equipos, credenciales cifradas, referencias,
 snapshots e historial— y **se autoguarda** mientras trabajas. La próxima vez,
 la bienvenida te lo ofrece en **Recientes** con un resumen de su estado.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/crear-proyecto.png`
-Captura del diálogo de **crear proyecto** (nombre + ubicación), o de la vista
-Proyectos con un proyecto en Recientes.
-:::
+![El diálogo de crear proyecto: nombre, ubicación y la ruta del archivo .sscope que se creará](/signal-scope/crear-proyecto.png)
 
 ## 2. Registra tus redes
 
@@ -38,10 +35,7 @@ Todo lo que responde aparece en la tabla **Detectados** con su IP, MAC y
 fabricante, y una columna de **Sugerencia** que adelanta qué parece ser cada
 equipo: "Radio Ubiquiti", "Equipo MikroTik · no es airMAX", etcétera.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/escaneo-detectados.png`
-Captura del **panel de escaneo** con los chips de redes y la tabla
-**Detectados** con hallazgos y su columna Sugerencia.
-:::
+![La tabla Detectados tras el escaneo: cada hallazgo con su IP, MAC, fabricante y la Sugerencia que adelanta qué es — con el botón de Iniciar sesión en los radios Ubiquiti](/signal-scope/escaneo-detectados.jpg)
 
 ::: details Un equipo dice "MAC no alcanzable", ¿qué significa?
 Está detrás de un router (fuera de tu red local), y a esa distancia el escaneo
@@ -72,10 +66,7 @@ Lo que no sea un radio tuyo —un MikroTik, una ONU— se marca con **"No es un
 radio"** y pasa al inventario de **Otros**, como se explica en la
 [introducción](./#como-se-organizan-tus-equipos).
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/sesion-cascada.png`
-Captura del modal de **Sesión en cascada**: credenciales, la cola de radios
-pendientes y el progreso "Conectando… N de M".
-:::
+![La sesión en cascada: protocolo, credenciales únicas y la cola de radios conectándose uno a uno](/signal-scope/sesion-cascada.png)
 
 ## Ya estás monitoreando
 

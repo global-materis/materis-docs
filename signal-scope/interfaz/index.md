@@ -11,12 +11,7 @@ Esta sección la recorre por partes:
 - [Mapa de cobertura](./mapa) — la otra vista principal: nodos, sectores y
   estaciones sobre el mapa.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/monitor-general.png`
-Captura del **panel completo**: panel de escaneo, contadores y el inicio de la
-tabla de estaciones.
-
-_Existente: `ss-desktop/docs/screenshots/SignalScope-Monitor.png`._
-:::
+![El panel completo: redes registradas y acciones arriba, los contadores del parque, el historial de snapshots y la tabla de estaciones en vivo](/signal-scope/monitor-en-vivo.jpg)
 
 ## El panel de arriba
 

@@ -94,11 +94,7 @@ of 80 Mbps"*. The cause tells you **where to look** — the cable, the channel,
 the alignment — before climbing to the roof.
 :::
 
-::: info 🖼️ Image pending — `public/signal-scope/diagnostico-tooltip.png`
-Screenshot of a station's **diagnosis tooltip** with 2–3 causes visible.
-
-_Existing: `ss-desktop/docs/screenshots/SignalScope-Station-Diagnostic.png`._
-:::
+![A critical station's diagnosis tooltip: SNR, latency, distance and port in the header, and below the causes — signal below expected, low link quality and downlink well below expected](/signal-scope/diagnostico.png)
 
 ## The AP is judged differently
 

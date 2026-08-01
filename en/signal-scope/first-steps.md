@@ -12,10 +12,7 @@ That file is your whole network — devices, encrypted credentials, references,
 snapshots and history — and it **autosaves** as you work. Next time, the
 welcome screen offers it under **Recents** with a summary of its state.
 
-::: info 🖼️ Image pending — `public/signal-scope/crear-proyecto.png`
-Screenshot of the **create project** dialog (name + location), or the Projects
-view with a project under Recents.
-:::
+![The create project dialog: name, location and the path of the .sscope file to be created](/signal-scope/crear-proyecto.png)
 
 ## 2. Register your networks
 
@@ -37,10 +34,7 @@ Everything that responds shows up in the **Detected** table with its IP, MAC
 and manufacturer, plus a **Suggestion** column hinting at what each device
 looks like: "Ubiquiti radio", "MikroTik device · not airMAX", and so on.
 
-::: info 🖼️ Image pending — `public/signal-scope/escaneo-detectados.png`
-Screenshot of the **scan panel** with the network chips and the **Detected**
-table with findings and their Suggestion column.
-:::
+![The Detected table after a scan: each finding with its IP, MAC, manufacturer and the Suggestion hinting what it is — with the Sign in button on Ubiquiti radios](/signal-scope/escaneo-detectados.jpg)
 
 ::: details A device says "MAC unreachable" — what does that mean?
 It sits behind a router (outside your local network), and from that distance
@@ -70,10 +64,7 @@ Anything that is not one of your radios — a MikroTik, an ONU — gets marked
 **"Not a radio"** and moves to the **Others** inventory, as explained in the
 [introduction](./#how-your-devices-are-organized).
 
-::: info 🖼️ Image pending — `public/signal-scope/sesion-cascada.png`
-Screenshot of the **Cascade session** modal: credentials, the queue of pending
-radios and the "Connecting… N of M" progress.
-:::
+![The cascade session: protocol, one set of credentials and the queue of radios connecting one by one](/signal-scope/sesion-cascada.png)
 
 ## You are now monitoring
 

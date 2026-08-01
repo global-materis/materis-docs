@@ -95,12 +95,7 @@ debajo de lo esperado: 23 de 80 Mbps"*. La causa te dice **dónde mirar** — el
 cable, el canal, la alineación — antes de subir al techo.
 :::
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/diagnostico-tooltip.png`
-Captura del **tooltip de diagnóstico** de una estación con 2–3 causas
-visibles.
-
-_Existente: `ss-desktop/docs/screenshots/SignalScope-Station-Diagnostic.png`._
-:::
+![El tooltip de diagnóstico de una estación crítica: SNR, latencia, distancia y puerto en la cabecera, y debajo las causas — señal bajo la esperada, calidad de enlace baja y downlink muy por debajo de lo esperado](/signal-scope/diagnostico.png)
 
 ## El AP se juzga distinto
 

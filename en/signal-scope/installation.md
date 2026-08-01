@@ -33,10 +33,7 @@ full access to every feature**:
 | Needs an email | No | Yes (the license holder's) |
 | Devices | The machine it was installed on | Up to your license's device quota |
 
-::: info 🖼️ Image pending — `public/signal-scope/pantalla-licencia.png`
-Screenshot of the **license screen**: the activation form (email + key) and the
-amber button "Continue with the trial · N days left".
-:::
+![The license screen: email and key to activate the Full license, or the amber button to continue with the trial](/signal-scope/pantalla-licencia.png)
 
 ## Trial (30 days)
 

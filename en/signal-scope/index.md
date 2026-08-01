@@ -9,13 +9,7 @@ that tells you instantly which links are healthy and which need attention.
 
 It is **strictly read-only**: it never changes your radios' configuration.
 
-::: info 🖼️ Image pending — `public/signal-scope/monitor-en-vivo.png`
-Wide screenshot of the **live monitor**: the stations table with signal in dBm,
-traffic light, throughput and distance. This is the image that sells the product
-at a glance.
-
-_A usable screenshot already exists at `ss-desktop/docs/screenshots/SignalScope-Monitor.png`._
-:::
+![The live monitor: the stations table with signal in dBm, traffic light, latency, model and AP, with the network counters and snapshot history on top](/signal-scope/monitor-en-vivo.jpg)
 
 ## The problem it solves
 
@@ -63,12 +57,7 @@ metrics into an understandable state and a plain-language explanation.
 | 🏅 **Scores the network** | A grade for the whole fleet, downloadable as an image. |
 | 🤝 **Shares without exposing** | A snapshot strips sensitive names and IPs; the other operator opens it in viewer mode. |
 
-::: info 🖼️ Image pending — `public/signal-scope/diagnostico.png`
-Screenshot of a **station diagnosis**: the panel explaining expected vs. actual
-signal, noise/SNR, link quality and throughput.
-
-_Existing: `ss-desktop/docs/screenshots/SignalScope-Station-Diagnostic.png`._
-:::
+![A critical station's diagnosis: signal 9 dB below expected at its distance, low link quality and downlink well below expected](/signal-scope/diagnostico.png)
 
 ## What it does **not** do
 
@@ -121,12 +110,7 @@ drop out of monitoring without you noticing.
    light, the diagnosis and the sentinel work on that data.
 6. **Record and share**: snapshots, reports and the project file itself.
 
-::: info 🖼️ Image pending — `public/signal-scope/bienvenida.png`
-Screenshot of the **welcome screen**: recent projects, create/open project. It
-illustrates step 2.
-
-_Existing: `ss-desktop/docs/screenshots/SignalScope-Welcome.png`._
-:::
+![The welcome screen: recent projects and reports with their station summaries, and the entries for What's new, License and Preferences](/signal-scope/bienvenida.jpg)
 
 ## Requirements
 

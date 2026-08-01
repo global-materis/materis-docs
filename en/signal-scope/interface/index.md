@@ -11,12 +11,7 @@ through it in parts:
 - [Coverage map](./map) — the other main view: nodes, sectors and stations on
   the map.
 
-::: info 🖼️ Image pending — `public/signal-scope/monitor-general.png`
-Screenshot of the **full panel**: scan panel, counters and the top of the
-stations table.
-
-_Existing: `ss-desktop/docs/screenshots/SignalScope-Monitor.png`._
-:::
+![The full panel: registered networks and actions on top, the network counters, the snapshot history and the live stations table](/signal-scope/monitor-en-vivo.jpg)
 
 ## The top panel
 

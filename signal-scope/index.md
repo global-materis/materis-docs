@@ -11,13 +11,7 @@ atención.
 Es **estrictamente de solo lectura**: nunca modifica la configuración de tus
 radios.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/monitor-en-vivo.png`
-Captura ancha del **monitor en vivo**: la tabla de estaciones con señal en dBm,
-semáforo, throughput y distancia. Es la imagen que define el producto de un
-vistazo.
-
-_Ya existe una captura utilizable en `ss-desktop/docs/screenshots/SignalScope-Monitor.png`._
-:::
+![El monitor en vivo: la tabla de estaciones con su señal en dBm, semáforo, latencia, modelo y AP, con los contadores del parque y el historial de snapshots arriba](/signal-scope/monitor-en-vivo.jpg)
 
 ## El problema que resuelve
 
@@ -64,12 +58,7 @@ crudas del radio a un estado entendible y a una explicación en palabras.
 | 🏅 **Califica la red** | Una nota del parque completo, descargable como imagen. |
 | 🤝 **Comparte sin exponer** | Un snapshot recorta nombres e IPs sensibles; el otro operador lo abre en modo visor. |
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/diagnostico.png`
-Captura del **diagnóstico de una estación**: el detalle que explica señal
-esperada vs. real, ruido/SNR, calidad de enlace y throughput.
-
-_Existente: `ss-desktop/docs/screenshots/SignalScope-Station-Diagnostic.png`._
-:::
+![El diagnóstico de una estación crítica: señal 9 dB por debajo de la esperada a su distancia, calidad de enlace baja y downlink muy por debajo de lo esperado](/signal-scope/diagnostico.png)
 
 ## Qué **no** hace
 
@@ -120,12 +109,7 @@ fuera del monitoreo sin que te enteres.
    el diagnóstico y el centinela trabajan sobre esos datos.
 6. **Registras y compartes**: snapshots, reportes y el archivo del proyecto.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/bienvenida.png`
-Captura de la **pantalla de bienvenida**: proyectos recientes, crear/abrir
-proyecto. Sirve para ilustrar el punto 2.
-
-_Existente: `ss-desktop/docs/screenshots/SignalScope-Welcome.png`._
-:::
+![La bienvenida: proyectos y reportes recientes con su resumen de estaciones, y los accesos a Novedades, Licencia y Preferencias](/signal-scope/bienvenida.jpg)
 
 ## Requisitos
 

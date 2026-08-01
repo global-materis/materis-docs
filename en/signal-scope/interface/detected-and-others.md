@@ -33,10 +33,7 @@ mistake.
 unresolved reappears on the next scan. When the queue reaches zero, the table
 disappears from view: its job is done.
 
-::: info 🖼️ Image pending — `public/signal-scope/tabla-detectados.png`
-Screenshot of **Detected** with varied findings: a Ubiquiti radio, a device
-from another manufacturer and one showing "MAC unreachable".
-:::
+![The Detected table after a scan: IP, MAC and manufacturer for each finding, the Suggestion telling Ubiquiti radios apart from unmanageable devices, and the Sign in / Not a radio buttons](/signal-scope/escaneo-detectados.jpg)
 
 ## Others: the third-party inventory
 

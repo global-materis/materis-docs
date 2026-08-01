@@ -31,10 +31,7 @@ radio Ubiquiti, donde descartar casi siempre sería un error.
 el siguiente escaneo. Cuando la cola queda en cero, la tabla desaparece de la
 vista: su trabajo terminó.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/tabla-detectados.png`
-Captura de **Detectados** con hallazgos variados: un radio Ubiquiti, un equipo
-de otro fabricante y uno con "MAC no alcanzable".
-:::
+![La tabla Detectados tras un escaneo: IP, MAC y fabricante de cada hallazgo, la Sugerencia que distingue radios Ubiquiti de equipos no gestionables, y los botones de Iniciar sesión y No es un radio](/signal-scope/escaneo-detectados.jpg)
 
 ## Otros: el inventario de equipos ajenos
 
