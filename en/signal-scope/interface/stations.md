@@ -50,10 +50,18 @@ The cell shows **two numbers**:
 The tooltip carries the detail: average, peak with its age, and the share of
 time spent over the threshold.
 
-::: tip Your PC's ping does not measure the same thing
-This column is measured by the radio over its wireless hop. A ping from your
-computer also crosses your local network and everything in between — the two
-numbers need not match.
+And there is an optional third number: with **"Medir también con ping
+propio"** (Preferences → *Sonda de red*, off by default), the cell adds the
+ping **from SignalScope** to each online station, with its loss — the cell
+then reads `2 ms / 57 ms`.
+
+::: tip Two measurements that need not match — and that is the point
+The radio's latency measures the air hop alone; the ping from SignalScope
+crosses the whole path (PC → switch → AP → air → radio). Contrasting them is
+pure diagnosis: **if they drift far apart, the bottleneck is not in that
+station's air**. One detail when reading the ping: its average only counts
+the packets that came back — which is why it always travels with the loss
+next to it.
 :::
 
 ## Ports: the RJ45 connector
@@ -71,6 +79,11 @@ The icon summarizes the station's Ethernet port state:
 
 100 Mbps is deliberately not flagged as a problem: many installs use Cat5 on
 purpose. What does warn is **degradation against the device's own history**:
-the app learns the top speed that device has ever negotiated and, if one day it
-negotiates less, the icon points it out. If the change was legitimate (the
-cable was replaced), one click accepts the new speed as normal.
+the app learns the top speed that device has ever negotiated and, if one day
+it negotiates less, an amber **`↓`** appears. If the change was legitimate
+(the cable was replaced), clicking the `↓` accepts that speed as the new
+normal — except at 10 Mbps, which is never an installation decision and
+cannot be signed off as normal.
+
+The column also exists in the [AP table](./access-points), where degradation
+weighs even more.

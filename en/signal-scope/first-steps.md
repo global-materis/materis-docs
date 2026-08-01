@@ -23,8 +23,10 @@ In the scan panel, networks are registered as **CIDR ranges** (for example
 `192.168.1.0/24`) and shown as chips you can toggle on and off: the scan only
 sweeps the ones that are on.
 
-A new project starts with none: add your network segment — or any others you
-manage — by typing it into the field. The widest range accepted is `/16`.
+A new project starts with none, and the app **offers your own PC's networks**
+as chips with a `+` and a dotted border: one click registers the one you
+want — nothing is added without your click. Other segments you manage are
+typed by hand into the field. The widest range accepted is `/16`.
 
 ## 3. Scan
 

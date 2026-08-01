@@ -24,8 +24,10 @@ En el panel de escaneo, las redes se registran como **máscaras CIDR** (por
 ejemplo `192.168.1.0/24`) y se muestran como chips que puedes encender o
 apagar: el escaneo recorre solo las encendidas.
 
-Un proyecto nuevo nace sin ninguna: añade tu segmento de red —u otros que
-gestiones— escribiéndolo en el campo. El rango más amplio admitido es `/16`.
+Un proyecto nuevo nace sin ninguna, y la app te **ofrece las redes de tu
+propia PC** como chips con `+` y borde punteado: un clic registra la que
+quieras — nada se añade sin tu clic. Otros segmentos que gestiones se
+escriben a mano en el campo. El rango más amplio admitido es `/16`.
 
 ## 3. Escanea
 

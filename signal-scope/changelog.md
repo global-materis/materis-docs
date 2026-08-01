@@ -53,9 +53,13 @@ nombre editable y vigilancia opcional de disponibilidad.
 
 **Y además** — tercer formato de reporte: **CSV** listo para abrirse con
 doble clic en un Excel en español; columnas de **CPU y RAM libre** en las
-tablas de estaciones y AP (con **Airtime** como columna propia en AP); y el
+tablas de estaciones y AP (con **Airtime** como columna propia en AP); la
+columna **Puertos llega también a los AP** (la degradación del cable de un AP
+estrangula a su sector entero); una **sonda de ping opcional** que acompaña a
+la latencia del radio para contrastar el aire contra el camino completo; el
 inventario de **Otros** viaja también dentro de cada captura, en solo
-lectura.
+lectura; y **Ayuda → "Cómo se calibran los umbrales"**, el detrás de cámaras
+de los límites de la app.
 
 **Lecturas más fieles** — los M5 y demás equipos con airOS 6 vuelven a
 entrar; el aire ocupado de cada AP ya no se lee multiplicado; un radio que

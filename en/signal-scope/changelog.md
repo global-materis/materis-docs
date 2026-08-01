@@ -51,8 +51,12 @@ editable name and optional availability watch.
 
 **And also** — a third report format: **CSV**, ready to open with a double
 click in a Spanish-locale Excel; **CPU and free RAM** columns in the stations
-and AP tables (with **Airtime** as its own column on APs); and the **Others**
-inventory travels inside each capture too, read-only.
+and AP tables (with **Airtime** as its own column on APs); the **Ports column
+reaches the APs too** (a degraded AP cable strangles its whole sector); an
+optional **ping probe** alongside the radio's latency to contrast the air
+against the full path; the **Others** inventory travels inside each capture
+too, read-only; and **Help → "Cómo se calibran los umbrales"**, the behind
+the scenes of the app's limits.
 
 **More faithful readings** — M5 and other airOS 6 devices are back in; each
 AP's air usage is no longer read multiplied; a radio that changes IP

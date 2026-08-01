@@ -75,7 +75,9 @@ sesión: aún no hay contra qué comparar.
 Miden cosas distintas. La columna la mide **el radio sobre su tramo aéreo**;
 tu ping recorre además tu red local y todo el camino intermedio, y lo
 responde la CPU del radio, que atiende el ICMP al final. Ninguno está
-"mal" — no tienen por qué coincidir.
+"mal" — no tienen por qué coincidir. Si quieres ver ambos lado a lado,
+enciende **"Medir también con ping propio"** (Preferencias → Sonda de red):
+la celda muestra las dos mediciones, y el contraste es diagnóstico.
 :::
 
 ::: details El centinela no avisó de una caída de madrugada

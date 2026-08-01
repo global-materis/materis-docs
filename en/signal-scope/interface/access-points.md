@@ -54,6 +54,7 @@ The stations table has the reverse trip: its AP column jumps to this row.
 | **Airtime** | The channel's air in use (%), the raw figure behind the State. |
 | **CPU · Free RAM** | The radio's health: CPU usage and **available** memory (for free RAM, more is better). Uncolored: the verdict comes from the State, which judges the sustained value — opening the AP's web UI spikes its CPU for a few seconds, and that is not a fault. |
 | **Thr. TX / RX** | The AP's **aggregate** traffic, all its stations together. Mind the direction: here **TX is what goes down** to the clients. It answers "busy with what?" when the air comes up high. |
+| **Ports** | The AP's Ethernet port, the same RJ45 connector as in [Stations](./stations#ports-the-rj45-connector). Here the strong case is **degradation**: an AP negotiating 100 Mbps where it used to give 1000 looks perfect in RF — and strangles its whole sector. The amber `↓` betrays it against its own history. |
 | **Frequency / Channel** | To spot overlaps between your own APs. |
 | **Firmware · MAC · Model · TX Power · Uptime** | Device identity and context. |
 

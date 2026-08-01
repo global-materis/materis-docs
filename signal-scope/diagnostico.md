@@ -115,3 +115,8 @@ reales. Algunos —los de latencia en particular— siguen en calibración de
 campo y pueden ajustarse entre versiones; el tooltip siempre muestra los
 valores medidos, así que puedes juzgar con tu propio criterio además del de la
 app.
+
+La propia app cuenta cómo se fijaron: **Ayuda → "Cómo se calibran los
+umbrales"** resume el método detrás de cada límite, con casos reales — y la
+invitación a reportar los tuyos a **support@materis.io**, que es de donde
+salen los ajustes.

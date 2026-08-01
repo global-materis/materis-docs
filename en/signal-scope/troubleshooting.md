@@ -77,7 +77,9 @@ is nothing to compare against yet.
 They measure different things. The column is measured by **the radio over its
 wireless hop**; your ping also crosses your local network and everything in
 between, and is answered by the radio's CPU, which serves ICMP last. Neither
-is "wrong" — they need not match.
+is "wrong" — they need not match. To see both side by side, turn on **"Medir
+también con ping propio"** (Preferences → Sonda de red): the cell shows both
+measurements, and the contrast is diagnosis.
 :::
 
 ::: details The sentinel did not warn about an outage at dawn

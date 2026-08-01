@@ -55,6 +55,7 @@ fila.
 | **Airtime** | El aire ocupado del canal (%), el dato crudo detrás del Estado. |
 | **CPU · RAM libre** | La salud del radio: uso de CPU y memoria **disponible** (en RAM libre, más es mejor). Sin color: el veredicto lo da el Estado, que juzga lo sostenido — abrir la web del AP dispara su CPU unos segundos y eso no es una avería. |
 | **Thr. TX / RX** | Tráfico **agregado** del AP, todas sus estaciones juntas. Ojo con la dirección: aquí **TX es lo que baja** hacia los clientes. Responde "¿ocupado con qué?" cuando el aire sale alto. |
+| **Puertos** | El puerto Ethernet del AP, el mismo conector RJ45 de [Estaciones](./estaciones#puertos-el-conector-rj45). Aquí el caso fuerte es la **degradación**: un AP negociando 100 Mbps donde antes daba 1000 se ve perfecto en RF — y estrangula a todo su sector. El `↓` ámbar lo delata contra su propio historial. |
 | **Frecuencia / Canal** | Para detectar solapamientos entre tus propios AP. |
 | **Firmware · MAC · Modelo · TX Power · Uptime** | Identidad y contexto del equipo. |
 

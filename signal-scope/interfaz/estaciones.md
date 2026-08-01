@@ -50,10 +50,17 @@ La celda muestra **dos números**:
 El tooltip trae el detalle: media, pico con su antigüedad y el porcentaje del
 tiempo sobre el umbral.
 
-::: tip El ping de tu PC no mide lo mismo
-Esta columna la mide el radio sobre su tramo aéreo. Un ping desde tu
-computadora recorre además tu red local y todo el camino intermedio — por eso
-ambos números no tienen por qué coincidir.
+Y hay un tercer número opcional: con **"Medir también con ping propio"**
+(Preferencias → *Sonda de red*, apagado de fábrica), la celda suma el ping
+**desde SignalScope** hasta cada estación en línea, con su pérdida — la celda
+pasa a leerse `2 ms / 57 ms`.
+
+::: tip Dos mediciones que no tienen por qué coincidir — y ese es el punto
+La latencia del radio mide solo el tramo aéreo; el ping desde SignalScope
+recorre el camino completo (PC → switch → AP → aire → radio). Contrastarlas
+es diagnóstico puro: **si se separan mucho, el cuello no está en el aire de
+esa estación**. Un detalle al leer el ping: su media promedia solo los
+paquetes que volvieron — por eso siempre va acompañada de la pérdida.
 :::
 
 ## Puertos: el conector RJ45
@@ -72,5 +79,10 @@ El icono resume el estado del puerto Ethernet de la estación:
 Los 100 Mbps no se marcan como problema a propósito: muchas instalaciones usan
 Cat5 deliberadamente. Lo que sí avisa es la **degradación contra su propio
 historial**: la app aprende la velocidad máxima que ese equipo ha negociado y,
-si un día negocia menos, el icono lo señala. Si el cambio fue legítimo (se
-cambió el cable), un clic acepta la nueva velocidad como normal.
+si un día negocia menos, aparece un **`↓` ámbar**. Si el cambio fue legítimo
+(se cambió el cable), el clic sobre el `↓` acepta esa velocidad como la nueva
+normal — salvo a 10 Mbps, que nunca es una decisión de instalación y no se
+puede firmar como normal.
+
+La columna existe también en la [tabla de AP](./puntos-de-acceso), donde la
+degradación pesa aún más.
