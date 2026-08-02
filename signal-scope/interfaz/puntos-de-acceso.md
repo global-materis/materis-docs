@@ -2,12 +2,7 @@
 
 Tus estaciones base. **Una fila = un AP**, con el estado del sector completo.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/tabla-ap.png`
-Captura de la **tabla de AP**: Estado, SSID, estaciones conectadas, frecuencia
-y canal.
-
-_Existente: `ss-desktop/docs/screenshots/SignalScope-Visor-AP.png`._
-:::
+![La tabla de AP: Estado por sector (Operativo, Inestable, Carga alta), SSID, frecuencia y canal, estaciones conectadas, Picos, Airtime y CPU](/signal-scope/tabla-ap.png)
 
 ## Estado: el veredicto del sector
 

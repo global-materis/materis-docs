@@ -2,12 +2,7 @@
 
 Your base stations. **One row = one AP**, with the state of the whole sector.
 
-::: info 🖼️ Image pending — `public/signal-scope/tabla-ap.png`
-Screenshot of the **AP table**: State, SSID, connected stations, frequency and
-channel.
-
-_Existing: `ss-desktop/docs/screenshots/SignalScope-Visor-AP.png`._
-:::
+![The AP table: per-sector State (Operational, Unstable, High load), SSID, frequency and channel, connected stations, Peaks, Airtime and CPU](/signal-scope/tabla-ap.png)
 
 ## State: the sector's verdict
 

@@ -38,10 +38,7 @@ la configuración del radio.
 Los ajustes del planificador sobreviven al cierre: la herramienta está hecha
 para entrar, elegir un canal, ir a comprobarlo a la tabla y volver.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/planificador-frecuencias.png`
-Captura del **planificador**: carriles de ocupación, la tira del espectro con
-un focus activo y los chips de canales sugeridos.
-:::
+![El planificador de frecuencias en la banda de 5 GHz: el espectro ocupado por AP con un canal de 40 MHz escogido, la tira libre/ocupado, los canales sugeridos y la lista de AP agrupada por nodo](/signal-scope/planificador-frecuencias.png)
 
 ::: tip El plan es tan bueno como sus lecturas
 Los AP sin sesión aparecen atenuados dentro de su nodo: si tres de los seis

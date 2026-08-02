@@ -15,12 +15,7 @@ scanning, no sessions, no touching your network.
 The `.ssnap` **carries no secrets by design**: it never contains radio
 credentials or keys. That is why opening it asks for nothing.
 
-::: info 🖼️ Image pending — `public/signal-scope/visor-ssnap.png`
-Screenshot of the **`.ssnap` viewer**: the "Shared snapshot · read-only"
-banner over the tables.
-
-_Existing: `ss-desktop/docs/screenshots/SignalScope-Visor.png`._
-:::
+![The .ssnap viewer: the "Shared snapshot · read-only" banner, the capture's counters and the tables in Historical mode, with the Report button available](/signal-scope/visor-ssnap.jpg)
 
 ### Protecting sensitive data
 

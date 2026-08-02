@@ -61,10 +61,7 @@ está abierto. Lo que pase con la app cerrada no lo verá — la propia app lo
 recuerda al pie del panel.
 :::
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/centinela-panel.png`
-Captura del **panel del centinela** con 2–3 avisos apilados (idealmente un AP
-caído encabezando con sus estaciones agrupadas).
-:::
+![El panel del centinela: avisos de Sesión caída apilados con el motivo de cada uno, y al pie el recordatorio de que vigila mientras la app está abierta](/signal-scope/centinela-panel.jpg)
 
 ## La calificación de la red
 
@@ -92,7 +89,4 @@ Dos reglas que la hacen defendible frente a quien la reciba:
 La tarjeta agrupa en tres bloques — la red, la salud de los enlaces y la
 disponibilidad — y sale idéntica en cualquier equipo, en tema claro u oscuro.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/calificacion-red.png`
-La **tarjeta de calificación** exportada (el PNG que ve un cliente): nota,
-veredicto, cobertura y los tres bloques.
-:::
+![La tarjeta de calificación lista para compartir: 76 % Red estable, calificado sobre 169 de 189 estaciones, con los bloques de la red, salud de los enlaces y disponibilidad](/signal-scope/calificacion-red.png)

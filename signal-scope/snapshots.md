@@ -30,10 +30,7 @@ la señal de esa estación entre la captura y este instante, si el equipo tiene
 sesión ahora. Es la forma más rápida de responder *"¿este enlace estaba así la
 semana pasada?"*.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/vista-snapshot.png`
-Captura de la **vista de un snapshot**: el banner de captura, sesiones en
-"Histórico" y la columna Δ vs actual con algún desvío visible.
-:::
+![La vista de un snapshot: el strip de capturas, el banner de comparación con los datos en vivo, sesiones en Histórico y el desvío "vs actual" bajo cada señal](/signal-scope/vista-snapshot.jpg)
 
 ## Comparar dos momentos
 
@@ -91,10 +88,7 @@ Dos detalles pensados para que el reporte sea defendible:
 Al generarse, el aviso trae un botón **Abrir** que lanza el archivo
 directamente.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/reporte-pdf.png`
-Un **reporte PDF generado** (primera página): encabezado, resumen del parque y
-el inicio de la tabla de estaciones.
-:::
+![El menú Reporte: los cinco tipos —General, Críticas, Críticas + Atención, Solo estaciones, Solo AP— y los tres formatos PDF, Excel y CSV](/signal-scope/reporte-pdf.png)
 
 ## Y para compartir
 

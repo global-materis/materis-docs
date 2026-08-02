@@ -3,10 +3,7 @@
 La tabla principal. **Una fila = una antena de cliente**, con su estado
 refrescándose en vivo.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/tabla-estaciones.png`
-Captura de la **tabla de estaciones** con varias filas: semáforo, señal,
-referencia y latencia visibles.
-:::
+![La tabla de estaciones en vivo: semáforo por fila, señal local y remota, referencias fijadas, latencia, CPU y RAM libre — con el tooltip de diagnóstico abierto en una fila](/signal-scope/tabla-estaciones.png)
 
 ## Las columnas
 

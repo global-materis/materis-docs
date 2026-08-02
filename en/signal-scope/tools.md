@@ -38,10 +38,7 @@ the radio's configuration.
 The planner's settings survive closing: the tool is made for going in,
 picking a channel, checking it against the table and coming back.
 
-::: info 🖼️ Image pending — `public/signal-scope/planificador-frecuencias.png`
-Screenshot of the **planner**: occupation lanes, the spectrum strip with an
-active focus and the suggested-channel chips.
-:::
+![The frequency planner on the 5 GHz band: the spectrum occupied per AP with a 40 MHz channel selected, the free/occupied strip, the suggested channels and the AP list grouped by node](/signal-scope/planificador-frecuencias.png)
 
 ::: tip The plan is only as good as its readings
 APs without a session appear dimmed inside their node: if three of a tower's

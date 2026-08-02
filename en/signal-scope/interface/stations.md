@@ -2,10 +2,7 @@
 
 The main table. **One row = one customer antenna**, refreshing live.
 
-::: info 🖼️ Image pending — `public/signal-scope/tabla-estaciones.png`
-Screenshot of the **stations table** with several rows: traffic light, signal,
-reference and latency visible.
-:::
+![The live stations table: per-row traffic light, local and remote signal, pinned references, latency, CPU and free RAM — with the diagnosis tooltip open on one row](/signal-scope/tabla-estaciones.png)
 
 ## The columns
 

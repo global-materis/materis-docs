@@ -7,10 +7,7 @@ vivo sigue corriendo de fondo.
 Es un **plano de diseño**, pensado como vista de campo: dónde están tus nodos,
 qué cubre cada AP y cómo están sus estaciones, de un vistazo.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/mapa-cobertura.png`
-Captura del **Mapa de cobertura** con un nodo, 2–3 sectores pintados y
-estaciones con sus enlaces.
-:::
+![El Mapa de cobertura: un nodo con sus sectores pintados por banda, las estaciones con su color de diagnóstico, la tarjeta de una estación con sus métricas y el panel de capas](/signal-scope/mapa-cobertura.jpg)
 
 ## Nodos: el sitio, no el equipo
 

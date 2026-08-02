@@ -15,12 +15,7 @@ escaneo, sin sesiones, sin tocar tu red.
 El `.ssnap` **no lleva secretos por diseño**: nunca contiene credenciales de
 radios ni llaves. Por eso abrirlo no pide nada.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/visor-ssnap.png`
-Captura del **visor de un `.ssnap`**: el banner de "Snapshot compartido · solo
-lectura" sobre las tablas.
-
-_Existente: `ss-desktop/docs/screenshots/SignalScope-Visor.png`._
-:::
+![El visor de un .ssnap: el banner "Snapshot compartido del proyecto · solo lectura", los contadores de la captura y las tablas en modo Histórico, con el botón Reporte disponible](/signal-scope/visor-ssnap.jpg)
 
 ### Proteger los datos sensibles
 

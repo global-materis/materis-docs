@@ -7,10 +7,7 @@ monitoring keeps running in the background.
 It is a **design plan**, meant as a field view: where your nodes are, what
 each AP covers and how its stations are doing, at a glance.
 
-::: info 🖼️ Image pending — `public/signal-scope/mapa-cobertura.png`
-Screenshot of the **coverage map** with one node, 2–3 painted sectors and
-stations with their links.
-:::
+![The coverage map: a node with its sectors painted by band, stations with their diagnosis color, one station's card with its metrics and the layers panel](/signal-scope/mapa-cobertura.jpg)
 
 ## Nodes: the site, not the device
 

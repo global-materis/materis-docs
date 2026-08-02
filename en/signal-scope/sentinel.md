@@ -62,10 +62,7 @@ open. Whatever happens with the app closed it will not see — the app itself
 says so at the bottom of the panel.
 :::
 
-::: info 🖼️ Image pending — `public/signal-scope/centinela-panel.png`
-Screenshot of the **sentinel panel** with 2–3 stacked notices (ideally a
-fallen AP on top with its stations grouped).
-:::
+![The sentinel panel: stacked Session down notices, each with its reason, and at the bottom the reminder that it watches while the app is open](/signal-scope/centinela-panel.jpg)
 
 ## The network score
 
@@ -97,7 +94,4 @@ The card groups into three blocks — the network, link health and
 availability — and comes out identical on any machine, in light or dark
 theme.
 
-::: info 🖼️ Image pending — `public/signal-scope/calificacion-red.png`
-The exported **score card** (the PNG a customer sees): grade, verdict,
-coverage and the three blocks.
-:::
+![The score card ready to share: 76 % Stable network, graded over 169 of 189 stations, with the network, link health and availability blocks](/signal-scope/calificacion-red.png)

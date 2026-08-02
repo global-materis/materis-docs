@@ -28,10 +28,7 @@ station's signal changed between the capture and this instant, if the device
 has a session now. It is the fastest way to answer *"was this link like this
 last week?"*.
 
-::: info 🖼️ Image pending — `public/signal-scope/vista-snapshot.png`
-Screenshot of the **snapshot view**: the capture banner, sessions showing
-"Historical" and the Δ vs current column with some visible drift.
-:::
+![The snapshot view: the capture strip, the banner comparing against live data, sessions showing Historical and the "vs current" drift under each signal](/signal-scope/vista-snapshot.jpg)
 
 ## Comparing two moments
 
@@ -88,10 +85,7 @@ Two details meant to make the report defensible:
 When it is generated, the notice carries an **Open** button that launches the
 file directly.
 
-::: info 🖼️ Image pending — `public/signal-scope/reporte-pdf.png`
-A **generated PDF report** (first page): header, network summary and the top
-of the stations table.
-:::
+![The Report menu: the five types — General, Critical, Critical + Attention, Stations only, APs only — and the three formats PDF, Excel and CSV](/signal-scope/reporte-pdf.png)
 
 ## And for sharing
 
