@@ -113,10 +113,7 @@ El aviso lo lee todo el grupo — con los nombres e IPs de tus clientes dentro.
 Elige la vía de grupo sabiendo quién está en él.
 :::
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/mensajeria.png`
-Captura de **Preferencias → Mensajería**: la vía configurada plegada en una
-línea y el acordeón "Qué se envía" con la tabla de tiempos.
-:::
+![Preferencias → Mensajería: el interruptor de enviar avisos, las tres vías (WhatsApp, Telegram a usuario, Telegram a grupo), el mensaje de prueba y la selección de qué eventos se mandan a este destino](/signal-scope/mensajeria.png)
 
 ::: warning Vigila mientras la app corre
 El centinela no es un servicio en segundo plano: vigila mientras SignalScope

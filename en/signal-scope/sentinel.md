@@ -114,10 +114,7 @@ The whole group reads the notice — with your customers' names and IPs inside.
 Choose the group way knowing who is in it.
 :::
 
-::: info 🖼️ Image pending — `public/signal-scope/mensajeria.png`
-Screenshot of **Preferences → Messaging**: the configured way folded into one
-line and the "Qué se envía" accordion with the timing table.
-:::
+![Preferences → Messaging: the send-notices switch, the three ways (WhatsApp, Telegram to a user, Telegram to a group), the test message and the per-destination event selection](/signal-scope/mensajeria.png)
 
 ::: warning It watches while the app runs
 The sentinel is not a background service: it watches while SignalScope is

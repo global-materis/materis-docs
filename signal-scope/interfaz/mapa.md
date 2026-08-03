@@ -16,6 +16,17 @@ una azotea, el poste. Se registra con **"Registrar nodo"**, colocándolo sobre
 el mapa (y se reubica luego con su botón "Posición" — Enter aplica, Esc lo
 devuelve a donde estaba).
 
+Su **tarjeta** es la central del sitio: las coordenadas, renombrar,
+reubicar, y la lista de **sus AP** — cada uno con su color de sector y su
+frecuencia, para leer de un vistazo qué tiene puesta esa torre. Desde ahí
+también se [planifica un AP que aún no existe](#planificar-un-ap-que-aun-no-existe).
+
+::: warning Borrar un nodo borra su planificación
+Los AP reales sobreviven sin nodo (quedan sin dibujar); los **AP
+planificados no existen fuera de su nodo** — al borrarlo, se borran con él,
+y el diálogo lo avisa.
+:::
+
 ## APs y sus sectores
 
 Un AP se dibuja **cuando lo asignas a un nodo** — sin nodo no tiene posición
@@ -34,6 +45,26 @@ entre tus propios AP saltan a la vista.
 El sector pinta lo que tú declaras (azimut, apertura, alcance). No calcula
 terreno ni línea de vista — la app no promete cobertura que no puede
 verificar.
+:::
+
+## Planificar un AP que aún no existe
+
+En la tarjeta del nodo, **"Añadir AP planificado"** dibuja el sector de un
+equipo **que todavía no está instalado**: eliges su azimut, apertura y
+alcance, y el sector se pinta sobre el mapa **igual que uno real** —
+misma geometría, misma lectura, cuenta en la densidad del plano. Sirve para
+responder, antes de comprar o subir al techo, *¿qué cubriría un AP aquí
+apuntando allá? ¿se solapa con lo que ya tengo?*
+
+El momento para el que existe llega con la instalación: el botón **"Aplicar a
+un AP"** vuelca el plan sobre el equipo **real** — le copia la geometría, lo
+asigna al nodo y elimina el planificado, en una sola operación. Como
+sobrescribe los ajustes de un equipo real y no hay deshacer, pide
+confirmación mostrando exactamente qué se va a pisar.
+
+::: info 🖼️ Imagen pendiente — `public/signal-scope/ap-planificado.png`
+La tarjeta de un **AP planificado**: los controles de azimut, apertura y
+alcance, y el botón "Aplicar a un AP".
 :::
 
 ## Estaciones sobre el mapa

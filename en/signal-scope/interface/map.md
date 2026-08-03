@@ -16,6 +16,17 @@ mast, the pole. You register it with **"Register node"**, placing it on the
 map (and relocate it later with its "Position" button — Enter applies, Esc
 puts it back where it was).
 
+Its **card** is the site's hub: the coordinates, renaming, relocating, and
+the list of **its APs** — each with its sector color and frequency, to read
+at a glance what that tower has on. From there you also
+[plan an AP that does not exist yet](#planning-an-ap-that-does-not-exist-yet).
+
+::: warning Deleting a node deletes its planning
+Real APs survive without a node (they are just not drawn); **planned APs do
+not exist outside their node** — deleting it deletes them too, and the
+dialog says so.
+:::
+
 ## APs and their sectors
 
 An AP is drawn **once you assign it to a node** — without a node it has no
@@ -34,6 +45,26 @@ jump out.
 The sector paints what you declare (azimuth, beamwidth, range). It does not
 compute terrain or line of sight — the app does not promise coverage it
 cannot verify.
+:::
+
+## Planning an AP that does not exist yet
+
+On the node's card, **"Añadir AP planificado"** draws the sector of a device
+**that is not installed yet**: you pick its azimuth, beamwidth and range, and
+the sector is painted on the map **just like a real one** — same geometry,
+same reading, it counts in the plan's density. It answers, before buying or
+climbing to the roof, *what would an AP here, aimed there, cover? Does it
+overlap with what I already have?*
+
+The moment it exists for arrives with the install: the **"Aplicar a un AP"**
+button pours the plan onto the **real** device — it copies the geometry,
+assigns it to the node and removes the planned one, in a single operation.
+Since it overwrites a real device's settings and there is no undo, it asks
+for confirmation showing exactly what will be replaced.
+
+::: info 🖼️ Image pending — `public/signal-scope/ap-planificado.png`
+A **planned AP's** card: the azimuth, beamwidth and range controls, and the
+"Aplicar a un AP" button.
 :::
 
 ## Stations on the map
