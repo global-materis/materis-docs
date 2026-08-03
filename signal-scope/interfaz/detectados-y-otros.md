@@ -57,10 +57,10 @@ exactamente eso — *si responde desde aquí* — y no mide calidad de enlace:
 - **Otro equipo** (ámbar) — esa IP ahora la ocupa otro dispositivo: perdiste
   el rastro del tuyo. Un escaneo lo reencuentra en su dirección nueva.
 
-Si además activas el aviso correspondiente en Preferencias, el
-[centinela de servicio](../centinela) te alerta cuando un equipo vigilado deja
-de responder — pensado para el router de un nodo, cuya caída explica la de
-todos los radios que cuelgan de él.
+Con la vigilancia activa, el [centinela de servicio](../centinela) te alerta
+cuando el equipo deja de responder — pensado para el router de un nodo, cuya
+caída explica la de todos los radios que cuelgan de él. Como toda alerta,
+puede llegarte también por notificación de Windows o al teléfono.
 
 ### Retirar es de verdad
 

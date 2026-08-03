@@ -60,10 +60,13 @@ are not contaminated — but reaching them depends on your connection.
 :::
 
 ::: details A station shows "Absent" but answers ping
-"Absent" means the **session** was lost, not necessarily the device: a web
-session expired by the radio produces exactly that. The app retries the
-reconnection on its own with the stored credentials; the "Absent" chip's
-tooltip shows the reason and when it was last seen.
+"Absent" means the **session** was lost, not necessarily the device — and the
+app makes that distinction for you: absent devices get a periodic ping, and
+the chip tells you which case it is. **"Answers ping but refuses the
+session"** is the signature of an **exhausted** radio (no CPU or memory left
+to open the encrypted session, even though the kernel keeps answering pings);
+**"does not answer ping either"** is a device that is down or unreachable.
+Reconnection is retried on its own with the stored credentials.
 :::
 
 ::: details The Downlink/Uplink columns are empty on some devices
@@ -183,12 +186,12 @@ Nothing is deleted. The app returns to the license screen and, once you renew
 or activate, everything is right where it was.
 
 **Does it send WhatsApp or email notifications?**
-The desktop app does not, on purpose: it is built for **local monitoring** —
-the sentinel's notices reach the Windows desktop, where you are working.
-Sending you a WhatsApp while you sit in front of the PC adds nothing, and a
-PC is not always on, so it would promise a watch it cannot keep. That kind
-of notice is planned for a future **server edition** (Linux), which does
-watch 24/7 — there, alerting your phone makes sense.
+**WhatsApp and Telegram, yes** — the sentinel's alerts can reach your phone,
+choosing which events and with what urgency
+([how to enable it](./sentinel#phone-notices-whatsapp-or-telegram)). The
+honest limit: it watches **while the app is open** — it is not a 24/7
+service; that continuous watch will come with the future **server edition**
+(Linux). Email it does not send.
 
 **Is there a web version?**
 Not planned for the desktop app. The future server edition will be a **web

@@ -49,12 +49,75 @@ does not produce.
 - **Freezing the tables does not stop it**: the sentinel watches the
   background monitoring, not what is painted.
 
-### Switches and notifications
+### Three channels for the same notice
 
-In **Preferences → Alerts** every notice has its own switch (off = that
-condition is not even evaluated). With **system notifications** on, notices
-reach the Windows desktop even with the app minimized, and clicking one takes
-you to the device.
+The sentinel **always watches everything**; what you choose is **what leaves
+the app and through where**:
+
+- **The panel** — every alert, always. Turning an event off in Preferences
+  does not hide it from here.
+- **Windows notifications** — they reach the desktop even with the app
+  minimized, and clicking one takes you to the device. Which events arrive is
+  chosen in **Preferences → Alerts**.
+- **The phone** — WhatsApp or Telegram, with its own event selection (see
+  below). Alerts and Messaging are **independent** settings: you may want
+  everything on the desktop and only the serious ones on the phone.
+
+### Phone notices (WhatsApp or Telegram)
+
+The same alerts can reach your phone, so you learn about an outage **without
+being in front of the screen**. Three ways, all through **CallMeBot**:
+WhatsApp, Telegram to a user or Telegram to a group.
+
+It is enabled in **Preferences → Messaging**:
+
+1. Turn on **"Enviar avisos por mensajería"** and pick the way. Each one asks
+   for its own — WhatsApp: phone and key; Telegram to a user: just your
+   `@username`; Telegram to a group: just the key (the key *is* the group).
+   The **"Cómo obtener estos datos"** link takes you to CallMeBot's
+   instructions: the authorization is granted from your phone, and that step
+   the app cannot do for you.
+2. **Send the test message** — it is not optional: CallMeBot validates
+   nothing until a real send, so without the test you would find out about a
+   bad key the day a link falls and no notice arrives.
+3. Under **"Qué se manda a este destino"**, choose the events.
+
+**What arrives**: one message **per alert type** — not a digest — with the
+project and, for each device, its name, IP and the AP it hangs from. The time
+is that of the **first alert**, not the send: what matters is when the
+customer lost service.
+
+Each type has its wait and its tolerance. The wait is not a delay, it is the
+**grouper**: a power cut takes several APs down seconds apart, and that must
+be a single message — and it also discards passing failures.
+
+| Priority | Events | Wait | Not repeated before |
+|---|---|---|---|
+| 1 | AP down · LAN cable unplugged · Others not answering | 20 s | 1 h |
+| 2 | Session down | 1 min | 4 h |
+| 3 | Radio saturated on an AP | 5 min | 6 h |
+| 4 | LAN at half duplex · Radio saturated | 15 min | 12 h |
+| 5 | Misaligned antenna · A watched device's IP taken by another | 30 min | 24 h |
+
+::: warning The limits, upfront
+- **It watches while the app is open** — the sentinel's same limit, and with
+  notices reaching your phone it is easier to believe it is a background
+  service. It is not.
+- **CallMeBot is a free third-party service**: it can lag or fail. Do not use
+  it as the only alert mechanism for a critical service.
+- **Notices leave through your internet** — if your own link goes down, so do
+  the notices. An irony worth knowing in advance.
+:::
+
+::: tip A Telegram group is an audience
+The whole group reads the notice — with your customers' names and IPs inside.
+Choose the group way knowing who is in it.
+:::
+
+::: info 🖼️ Image pending — `public/signal-scope/mensajeria.png`
+Screenshot of **Preferences → Messaging**: the configured way folded into one
+line and the "Qué se envía" accordion with the timing table.
+:::
 
 ::: warning It watches while the app runs
 The sentinel is not a background service: it watches while SignalScope is

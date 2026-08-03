@@ -48,12 +48,75 @@ solo admite condiciones que fallan en binario y que una red sana no produce.
 - **Congelar las tablas no lo detiene**: el centinela vigila el monitoreo de
   fondo, no lo que está pintado.
 
-### Interruptores y notificaciones
+### Tres canales para el mismo aviso
 
-En **Preferencias → Alertas** cada aviso tiene su interruptor (apagado =
-esa condición ni se evalúa). Con las **notificaciones del sistema** activas,
-los avisos llegan al escritorio de Windows aunque la app esté minimizada, y el
-clic te lleva al equipo.
+El centinela **siempre vigila todo**; lo que tú eliges es **qué sale de la
+app y por dónde**:
+
+- **El panel** — todas las alertas, siempre. Apagar un evento en Preferencias
+  no lo esconde de aquí.
+- **Notificaciones de Windows** — llegan al escritorio aunque la app esté
+  minimizada, y el clic te lleva al equipo. Qué eventos llegan se elige en
+  **Preferencias → Alertas**.
+- **El teléfono** — WhatsApp o Telegram, con su propia selección de eventos
+  (ver abajo). Alertas y Mensajería son ajustes **independientes**: puedes
+  querer todo en el escritorio y solo lo grave en el teléfono.
+
+### Avisos al teléfono (WhatsApp o Telegram)
+
+Las mismas alertas pueden llegarte al teléfono, para enterarte de una caída
+**sin estar delante de la pantalla**. Tres vías, todas mediante **CallMeBot**:
+WhatsApp, Telegram a un usuario o Telegram a un grupo.
+
+Se enciende en **Preferencias → Mensajería**:
+
+1. Activa **"Enviar avisos por mensajería"** y elige la vía. Cada una pide lo
+   suyo — WhatsApp: teléfono y clave; Telegram a usuario: solo tu `@usuario`;
+   Telegram a grupo: solo la clave (la clave *es* el grupo). El enlace **"Cómo
+   obtener estos datos"** lleva a las instrucciones de CallMeBot: la
+   autorización se da desde tu teléfono, y ese paso la app no puede hacerlo
+   por ti.
+2. **Envía el mensaje de prueba** — no es opcional: CallMeBot no valida nada
+   hasta un envío real, así que sin la prueba te enterarías de una clave mal
+   puesta el día que se caiga un enlace y no llegue el aviso.
+3. En **"Qué se manda a este destino"**, elige los eventos.
+
+**Qué llega**: un mensaje **por tipo de alerta** —no un resumen—, con el
+proyecto y, por cada equipo, su nombre, su IP y el AP del que cuelga. La hora
+es la de la **primera alerta**, no la del envío: lo que importa es cuándo se
+quedó el cliente sin servicio.
+
+Cada tipo tiene su espera y su tolerancia. La espera no es un retraso, es el
+**agrupador**: un corte de luz tumba varios AP con segundos de diferencia, y
+eso debe ser un solo mensaje — y de paso descarta las fallas pasajeras.
+
+| Prioridad | Eventos | Espera | No se repite antes de |
+|---|---|---|---|
+| 1 | AP caído · Sin cable LAN · Otros sin respuesta | 20 s | 1 h |
+| 2 | Sesión caída | 1 min | 4 h |
+| 3 | Radio saturado en un AP | 5 min | 6 h |
+| 4 | LAN en half duplex · Radio saturado | 15 min | 12 h |
+| 5 | Antena desalineada · La IP de un vigilado la ocupa otro | 30 min | 24 h |
+
+::: warning Los límites, de frente
+- **Vigila con la app abierta** — el mismo límite del centinela, y con los
+  avisos llegando al teléfono es más fácil creer que es un servicio de fondo.
+  No lo es.
+- **CallMeBot es un servicio gratuito de terceros**: puede tardar o fallar. No
+  lo uses como único mecanismo de alerta de un servicio crítico.
+- **Los avisos salen por tu internet** — si se cae tu propio enlace, también
+  se caen los avisos. Es la ironía que conviene saber de antemano.
+:::
+
+::: tip Un grupo de Telegram es una audiencia
+El aviso lo lee todo el grupo — con los nombres e IPs de tus clientes dentro.
+Elige la vía de grupo sabiendo quién está en él.
+:::
+
+::: info 🖼️ Imagen pendiente — `public/signal-scope/mensajeria.png`
+Captura de **Preferencias → Mensajería**: la vía configurada plegada en una
+línea y el acordeón "Qué se envía" con la tabla de tiempos.
+:::
 
 ::: warning Vigila mientras la app corre
 El centinela no es un servicio en segundo plano: vigila mientras SignalScope

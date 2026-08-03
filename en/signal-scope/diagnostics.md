@@ -109,7 +109,6 @@ networks. Some — latency's in particular — are still being field-calibrated
 and may be adjusted between versions; the tooltip always shows the measured
 values, so you can judge with your own criteria alongside the app's.
 
-The app itself tells how they were set: **Help → "Cómo se calibran los
-umbrales"** sums up the method behind each limit, with real cases — and the
-invitation to report yours to **support@materis.io**, which is where the
-adjustments come from.
+The app itself tells how they were set: **Help → "Cómo se calibra"** sums up
+the method behind each limit, with real cases — and the invitation to report
+yours to **support@materis.io**, which is where the adjustments come from.

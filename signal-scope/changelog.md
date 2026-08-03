@@ -3,10 +3,11 @@
 La vista **Novedades** de la app resume cada versión en titulares; aquí está
 el detalle, con enlaces a la guía de cada función.
 
-## 1.2.0 — Julio 2026
+## 1.2.0 — Agosto 2026
 
 La versión más grande hasta ahora: el monitoreo se completa con mapa,
-alertas, planificación de espectro y herramientas de campo.
+alertas, avisos al teléfono, planificación de espectro y herramientas de
+campo.
 
 **[Mapa de cobertura](./interfaz/mapa)** — la segunda vista principal, par
 del Monitor. Registra tus nodos (el sitio: torre, mástil, poste), asigna sus
@@ -20,6 +21,12 @@ no delata: AP caído (una alerta por nodo, con cuántas estaciones arrastra),
 sesión caída, cable LAN suelto, half duplex, antena desalineada y radio
 saturado. Con las notificaciones de Windows activas, los avisos llegan al
 escritorio aunque la app esté minimizada, y el clic lleva al equipo.
+
+**[Avisos al teléfono](./centinela#avisos-al-telefono-whatsapp-o-telegram)** —
+las fallas que el centinela detecta pueden llegarte por WhatsApp o Telegram
+(vía CallMeBot), para enterarte sin estar delante de la pantalla: eliges qué
+eventos salen por cada vía y cada tipo agrupa y espacia sus mensajes según su
+urgencia.
 
 **[Planificador de frecuencias](./herramientas#planificador-de-frecuencias)**
 — qué tramo del espectro ocupa cada AP, cuánto queda libre y qué canales

@@ -7,13 +7,15 @@ analítica de uso, no hay rastreo.
 
 ## Cuándo usa internet la app
 
-Tres situaciones concretas, y ninguna lleva datos de tu red:
+Cuatro situaciones concretas — y solo la última, **opcional y apagada de
+fábrica**, lleva datos de tu red:
 
 | Situación | Qué viaja |
 |---|---|
 | **Activar y revalidar la licencia Full** | Tu correo, tu clave de licencia y el identificador del equipo (HWID). Solo eso, y solo para eso. La **versión de prueba es 100 % local**: no envía nada. |
 | **Comprobar si hay versión nueva** | Una consulta a un archivo público de versión, como cualquier descarga web. |
 | **El Mapa de cobertura** | Las imágenes del mapa se descargan de proveedores públicos de cartografía (CARTO/OpenStreetMap y, en vista satelital, Esri). Ellos ven lo que ve cualquier servidor web: tu IP y qué zona del mapa pediste — **nunca** las ubicaciones, nombres o métricas de tus equipos, que se quedan en tu proyecto. Si no abres el Mapa, estas peticiones no ocurren. |
+| **Los avisos por mensajería** (si los enciendes) | El texto de cada alerta —nombre del proyecto y, por equipo, su nombre, IP y AP— viaja a los servidores de **CallMeBot**, que lo entregan a tu WhatsApp o Telegram. Tu teléfono y tu clave de CallMeBot se guardan **solo en tu equipo** (sin cifrar: son credenciales de un servicio de mensajería, no de tu red). Apagada la mensajería, nada de esto ocurre. |
 
 La app **no accede a la ubicación de tu dispositivo**: las coordenadas de tus
 nodos las colocas tú, a mano, sobre el mapa.

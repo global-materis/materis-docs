@@ -58,10 +58,13 @@ enlace) no se contaminan — pero llegar a leerlas depende de tu conexión.
 :::
 
 ::: details Una estación aparece "Ausente" pero responde al ping
-"Ausente" significa que la **sesión** se perdió, no necesariamente el equipo:
-una sesión web caducada por el radio produce exactamente eso. La app
-reintenta la reconexión sola con las credenciales guardadas; el tooltip del
-chip "Ausente" muestra el motivo y cuándo se le vio por última vez.
+"Ausente" significa que la **sesión** se perdió, no necesariamente el equipo
+— y la app hace esa distinción por ti: a los ausentes les manda un ping
+periódico, y el chip te dice cuál de los dos casos es. **"Responde al ping
+pero rechaza la sesión"** es la firma de un radio **agotado** (sin CPU o
+memoria para abrir la sesión cifrada, aunque el kernel siga contestando
+pings); **"tampoco responde al ping"** es un equipo caído o sin ruta. La
+reconexión se reintenta sola con las credenciales guardadas.
 :::
 
 ::: details Las columnas Downlink/Uplink están vacías en algunos equipos
@@ -182,13 +185,12 @@ Nada se borra. La app vuelve a la pantalla de licencia y, al renovar o
 activar, todo sigue donde estaba.
 
 **¿Envía notificaciones por WhatsApp o correo?**
-La app de escritorio no, y es a propósito: está pensada para **monitoreo
-local** — los avisos del centinela llegan al escritorio de Windows, donde
-estás trabajando. Mandarte un WhatsApp estando frente a la PC no aporta, y
-una PC no está siempre encendida, así que prometería una vigilancia que no
-puede cumplir. Ese tipo de avisos está pensado para una futura **edición
-para servidores** (Linux), que sí vigila 24/7 — ahí avisar al celular tiene
-sentido.
+**Por WhatsApp y Telegram, sí** — las alertas del centinela pueden llegarte
+al teléfono, eligiendo qué eventos y con qué urgencia
+([cómo encenderlo](./centinela#avisos-al-telefono-whatsapp-o-telegram)). El
+límite honesto: vigila **mientras la app está abierta** — no es un servicio
+24/7; esa vigilancia continua vendrá con la futura **edición para
+servidores** (Linux). Correo no envía.
 
 **¿Hay versión web?**
 Para la app de escritorio no está en los planes. La futura edición para

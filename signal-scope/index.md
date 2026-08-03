@@ -51,6 +51,7 @@ crudas del radio a un estado entendible y a una explicación en palabras.
 | 🚦 **Semáforo por enlace** | Verde / amarillo / rojo por umbrales en dBm, o relativo a la **referencia que fijaste** para esa antena. |
 | 🧠 **Diagnostica** | Explica el estado de cada enlace en lenguaje claro y señala dónde mirar. |
 | 🛎️ **Centinela de servicio** | Avisa de fallas que la señal no delata: cable LAN suelto, half duplex, antena desalineada, radio saturado. |
+| 📱 **Avisos al teléfono** | Las alertas del centinela pueden llegarte por WhatsApp o Telegram, eligiendo qué eventos y con qué urgencia. |
 | 🧾 **Registra lo que no es airMAX** | Los equipos que la app no gestiona —un MikroTik, una ONU, un switch— pueden quedar en tu inventario con nombre propio y vigilancia básica de "¿sigue vivo?". |
 | 📸 **Guarda historial** | Snapshots del estado de la red, con la diferencia (Δ) frente al momento actual. |
 | 📄 **Exporta** | Reportes en PDF y Excel para el cliente o para tu propio registro. |

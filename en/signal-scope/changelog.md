@@ -3,10 +3,10 @@
 The app's **What's new** view sums up each version in headlines; here is the
 detail, with links to each feature's guide.
 
-## 1.2.0 — July 2026
+## 1.2.0 — August 2026
 
 The biggest version so far: monitoring gets completed with a map, alerts,
-spectrum planning and field tools.
+phone notices, spectrum planning and field tools.
 
 **[Coverage map](./interface/map)** — the second main view, peer to the
 Monitor. Register your nodes (the site: tower, mast, pole), assign their APs
@@ -20,6 +20,12 @@ not betray: fallen AP (one alert per node, saying how many stations it drags
 down), dropped session, unplugged LAN cable, half duplex, misaligned antenna
 and saturated radio. With Windows notifications on, notices reach the desktop
 even with the app minimized, and clicking one takes you to the device.
+
+**[Phone notices](./sentinel#phone-notices-whatsapp-or-telegram)** — the
+failures the sentinel detects can reach you on WhatsApp or Telegram (via
+CallMeBot), so you find out without being in front of the screen: you choose
+which events go through each way, and each type groups and spaces its
+messages by urgency.
 
 **[Frequency planner](./tools#frequency-planner)** — which slice of the
 spectrum each AP occupies, how much is free and which channels fit the width

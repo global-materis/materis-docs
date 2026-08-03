@@ -7,13 +7,15 @@ tracking.
 
 ## When the app uses the internet
 
-Three specific situations, and none of them carries your network's data:
+Four specific situations — and only the last one, **optional and off by
+default**, carries your network's data:
 
 | Situation | What travels |
 |---|---|
 | **Activating and revalidating the Full license** | Your email, your license key and the machine identifier (HWID). Only that, and only for that. The **trial is 100 % local**: it sends nothing. |
 | **Checking for a new version** | A request to a public version file, like any web download. |
 | **The coverage Map** | Map images are downloaded from public cartography providers (CARTO/OpenStreetMap and, in satellite view, Esri). They see what any web server sees: your IP and which map area you requested — **never** your devices' locations, names or metrics, which stay in your project. If you don't open the Map, these requests never happen. |
+| **Messaging notices** (if you enable them) | Each alert's text — the project name and, per device, its name, IP and AP — travels to **CallMeBot**'s servers, which deliver it to your WhatsApp or Telegram. Your phone number and CallMeBot key are stored **only on your machine** (unencrypted: they are credentials for a messaging service, not for your network). With messaging off, none of this happens. |
 
 The app **does not access your device's location**: your nodes' coordinates
 are placed by you, by hand, on the map.

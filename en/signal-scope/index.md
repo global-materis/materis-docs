@@ -50,6 +50,7 @@ metrics into an understandable state and a plain-language explanation.
 | 🚦 **Traffic light per link** | Green / amber / red by dBm thresholds, or relative to the **reference you set** for that antenna. |
 | 🧠 **Diagnoses** | Explains each link's state in plain language and points at where to look. |
 | 🛎️ **Service sentinel** | Warns about faults the signal does not reveal: a loose LAN cable, half duplex, a misaligned antenna, a saturated radio. |
+| 📱 **Phone notices** | The sentinel's alerts can reach you on WhatsApp or Telegram, choosing which events and with what urgency. |
 | 🧾 **Keeps track of non-airMAX gear** | Devices the app does not manage — a MikroTik, an ONU, a switch — can stay in your inventory with their own name and a basic "is it still alive?" watch. |
 | 📸 **Keeps history** | Snapshots of the network state, with the difference (Δ) against the present moment. |
 | 📄 **Exports** | PDF and Excel reports for the customer or for your own records. |
