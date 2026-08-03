@@ -51,21 +51,19 @@ verificar.
 
 En la tarjeta del nodo, **"Añadir AP planificado"** dibuja el sector de un
 equipo **que todavía no está instalado**: eliges su azimut, apertura y
-alcance, y el sector se pinta sobre el mapa **igual que uno real** —
-misma geometría, misma lectura, cuenta en la densidad del plano. Sirve para
-responder, antes de comprar o subir al techo, *¿qué cubriría un AP aquí
-apuntando allá? ¿se solapa con lo que ya tengo?*
+alcance, y el sector se pinta sobre el mapa **igual que uno real** — misma
+geometría, misma lectura. Sirve para responder, antes de comprar o subir al
+techo, *¿qué cubriría un AP aquí apuntando allá? ¿se solapa con lo que ya
+tengo?* Es solo dibujo: **no cuenta como equipo ni se diagnostica**, y la
+propia tarjeta lo recuerda.
 
-El momento para el que existe llega con la instalación: el botón **"Aplicar a
-un AP"** vuelca el plan sobre el equipo **real** — le copia la geometría, lo
-asigna al nodo y elimina el planificado, en una sola operación. Como
-sobrescribe los ajustes de un equipo real y no hay deshacer, pide
+El momento para el que existe llega con la instalación: el botón **"Pasar los
+ajustes a un AP…"** vuelca el plan sobre el equipo **real** — le copia la
+geometría, lo asigna al nodo y elimina el planificado, en una sola operación.
+Como sobrescribe los ajustes de un equipo real y no hay deshacer, pide
 confirmación mostrando exactamente qué se va a pisar.
 
-::: info 🖼️ Imagen pendiente — `public/signal-scope/ap-planificado.png`
-La tarjeta de un **AP planificado**: los controles de azimut, apertura y
-alcance, y el botón "Aplicar a un AP".
-:::
+![La tarjeta de un AP planificado: azimut, alcance de diseño y apertura del haz con sus atajos, el color del sector, y los botones de pasar los ajustes a un AP o eliminarlo — con el aviso de que aún no existe y no se diagnostica](/signal-scope/ap-planificado.png)
 
 ## Estaciones sobre el mapa
 

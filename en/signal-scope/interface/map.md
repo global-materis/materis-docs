@@ -52,20 +52,18 @@ cannot verify.
 On the node's card, **"Añadir AP planificado"** draws the sector of a device
 **that is not installed yet**: you pick its azimuth, beamwidth and range, and
 the sector is painted on the map **just like a real one** — same geometry,
-same reading, it counts in the plan's density. It answers, before buying or
-climbing to the roof, *what would an AP here, aimed there, cover? Does it
-overlap with what I already have?*
+same reading. It answers, before buying or climbing to the roof, *what would
+an AP here, aimed there, cover? Does it overlap with what I already have?* It
+is drawing only: **it does not count as a device and is not diagnosed**, and
+the card itself says so.
 
-The moment it exists for arrives with the install: the **"Aplicar a un AP"**
-button pours the plan onto the **real** device — it copies the geometry,
-assigns it to the node and removes the planned one, in a single operation.
-Since it overwrites a real device's settings and there is no undo, it asks
-for confirmation showing exactly what will be replaced.
+The moment it exists for arrives with the install: the **"Pasar los ajustes a
+un AP…"** button pours the plan onto the **real** device — it copies the
+geometry, assigns it to the node and removes the planned one, in a single
+operation. Since it overwrites a real device's settings and there is no undo,
+it asks for confirmation showing exactly what will be replaced.
 
-::: info 🖼️ Image pending — `public/signal-scope/ap-planificado.png`
-A **planned AP's** card: the azimuth, beamwidth and range controls, and the
-"Aplicar a un AP" button.
-:::
+![A planned AP's card: azimuth, design range and beamwidth with its presets, the sector color, and the buttons to pass the settings to an AP or delete it — with the notice that it does not exist yet and is not diagnosed](/signal-scope/ap-planificado.png)
 
 ## Stations on the map
 
