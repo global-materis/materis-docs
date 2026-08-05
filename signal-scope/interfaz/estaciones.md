@@ -81,5 +81,10 @@ si un día negocia menos, aparece un **`↓` ámbar**. Si el cambio fue legítim
 normal — salvo a 10 Mbps, que nunca es una decisión de instalación y no se
 puede firmar como normal.
 
+Dos matices de lectura: el estado **sin cable** se ve aquí y lo avisa el
+centinela, pero **no cambia el color de la fila** — un router apagado de
+noche o un corte por mora no son averías del enlace. Y los **10 Mbps** sí
+ponen la fila en Crítica: ningún airMAX trae ese máximo de fábrica.
+
 La columna existe también en la [tabla de AP](./puntos-de-acceso), donde la
 degradación pesa aún más.

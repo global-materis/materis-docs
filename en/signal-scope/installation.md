@@ -83,6 +83,21 @@ bought with one email and activate with another, the server will reject it.
 - The full status — active license, email, masked key, plan and device quota —
   lives in the **License** view of the welcome screen.
 
+### Renewing
+
+- The license is annual and **the app warns you in advance** of the
+  expiration — on the Welcome screen and in the License view, visible even
+  offline.
+- Next to the notice (and on the license screen, if it already expired) a
+  **"Renovar licencia"** button appears with the amount in sight. It opens in
+  your browser the **payment link Materis already issued** — the same one
+  that reaches you by email; the app creates no charges, it only takes you
+  where to pay.
+- If you already reported your payment, the button is replaced by that
+  confirmation — no insisting on someone who already paid.
+- Between the advance notice and the link's validity there is room to renew
+  **before** any service cut.
+
 ### Moving to another machine
 
 The license takes one slot per machine. To move:

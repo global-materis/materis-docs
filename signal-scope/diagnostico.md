@@ -78,9 +78,14 @@ palabras**, visible al pasar el puntero por la celda de señal.
 4. **Capacidad real vs. esperada.** Si el enlace entrega mucho menos de lo que
    su modulación promete (bajo el 65 %), algo lo frena: saturación o
    modulación degradada.
-5. **Puerto Ethernet.** Sin cable o en half duplex, el problema está en el
-   tramo cableado — no en el aire. La velocidad solo se menciona cuando
-   **limita** lo que la radio podría entregar.
+5. **Puerto Ethernet.** El tramo cableado hasta el conector del radio: el
+   **half duplex** marca Atención y un puerto negociando **10 Mbps** marca
+   Crítica — cable dañado, humedad en el conector o PoE flojo; ningún airMAX
+   trae 10 de fábrica. Un puerto **sin cable no cambia el color**: puede ser
+   el router apagado de noche o un corte por mora, no una avería del enlace —
+   el hecho se ve en la columna Puertos y el centinela avisa del cambio. La
+   velocidad solo se menciona cuando **limita** lo que la radio podría
+   entregar.
 6. **Desbalance entre cadenas.** Las dos polaridades de la antena deberían
    recibir casi lo mismo; una diferencia de 5 dB o más delata **antena rotada,
    polarización cruzada o una cadena dañada** — con la señal total viéndose

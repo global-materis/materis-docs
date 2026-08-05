@@ -16,6 +16,7 @@ Always available on the panel (and listed inside the app with **F1**):
 | `Ctrl+A` | Register a device by IP |
 | `Ctrl+H` | Save snapshot |
 | `Ctrl+K` | **Global search** for devices (see below) |
+| `Ctrl+M` | Switch between Monitor and Map |
 | `Ctrl+F` | Native on-screen search (highlights, does not filter) |
 | `Ctrl+↓` / `Ctrl+↑` | Jump to the next / previous table |
 | `Esc` | Cascading: clears the focused search box → closes the open modal → clears the state filter and search boxes |

@@ -84,6 +84,20 @@ compraste con un correo y activas con otro, el servidor la rechazará.
 - El estado completo —licencia activa, correo, clave enmascarada, plan y cupo de
   equipos— vive en la vista **Licencia** de la pantalla de bienvenida.
 
+### Renovar
+
+- La licencia es anual y **la app te avisa con anticipación** del
+  vencimiento — en la Bienvenida y en la vista Licencia, visible incluso sin
+  conexión.
+- Junto al aviso (y en la pantalla de licencia, si ya venció) aparece
+  **"Renovar licencia"** con el importe a la vista. El botón abre en tu
+  navegador el **enlace de pago que Materis ya emitió** — el mismo que te
+  llega por correo; la app no crea cobros, solo te lleva adonde pagar.
+- Si ya informaste tu pago, el botón se reemplaza por esa confirmación — no
+  se le insiste a quien ya pagó.
+- Entre el aviso anticipado y la vigencia del enlace hay margen para renovar
+  **antes** de cualquier corte del servicio.
+
 ### Cambiar de máquina
 
 La licencia ocupa un cupo por máquina. Para mudarte:

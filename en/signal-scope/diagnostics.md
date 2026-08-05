@@ -77,9 +77,14 @@ words**, shown when hovering the signal cell.
 4. **Real vs. expected capacity.** If the link delivers much less than its
    modulation promises (under 65 %), something is holding it back: saturation
    or degraded modulation.
-5. **Ethernet port.** No cable or half duplex means the problem is in the
-   wired stretch — not in the air. Speed is only mentioned when it **limits**
-   what the radio could deliver.
+5. **Ethernet port.** The wired stretch up to the radio's connector: **half
+   duplex** marks Attention and a port negotiating **10 Mbps** marks
+   Critical — damaged cable, moisture in the connector or loose PoE; no
+   airMAX ships with 10 as its maximum. A port **with no cable does not
+   change the color**: it can be the router turned off at night or a cutoff
+   for non-payment, not a link fault — the fact shows in the Ports column and
+   the sentinel notifies the change. Speed is only mentioned when it
+   **limits** what the radio could deliver.
 6. **Chain imbalance.** The antenna's two polarities should receive almost the
    same; a difference of 5 dB or more betrays a **rotated antenna, crossed
    polarization or a damaged chain** — with the total signal looking normal.

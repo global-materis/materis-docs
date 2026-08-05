@@ -15,6 +15,7 @@ Siempre disponibles en el panel (y listados dentro de la app con **F1**):
 | `Ctrl+A` | Registrar un equipo por IP |
 | `Ctrl+H` | Guardar snapshot |
 | `Ctrl+K` | **Buscador general** de equipos (ver abajo) |
+| `Ctrl+M` | Alternar entre Monitor y Mapa |
 | `Ctrl+F` | Búsqueda nativa en pantalla (resalta, no filtra) |
 | `Ctrl+↓` / `Ctrl+↑` | Saltar a la tabla siguiente / anterior |
 | `Esc` | En cascada: limpia el buscador con foco → cierra el modal abierto → limpia el filtro de estado y los buscadores |

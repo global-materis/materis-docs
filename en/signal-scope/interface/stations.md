@@ -82,5 +82,10 @@ it negotiates less, an amber **`↓`** appears. If the change was legitimate
 normal — except at 10 Mbps, which is never an installation decision and
 cannot be signed off as normal.
 
+Two reading nuances: the **no cable** state shows here and the sentinel
+notifies it, but it **does not change the row's color** — a router turned off
+at night or a cutoff for non-payment are not link faults. And **10 Mbps**
+does put the row in Critical: no airMAX ships with that maximum.
+
 The column also exists in the [AP table](./access-points), where degradation
 weighs even more.
