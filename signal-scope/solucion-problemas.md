@@ -156,10 +156,11 @@ Hoy la app gestiona radios **Ubiquiti airMAX**. Los demás equipos de tu red
 (ONUs, switches, routers) pueden registrarse en **Otros**, con nombre y
 vigilancia básica de disponibilidad.
 
-**¿Dan soporte a MikroTik?**
-Por ahora no, pero **sí en futuras versiones**: está en los planes. Mientras
-tanto, tus MikroTik pueden vivir en **Otros** — con nombre propio, vigilancia
-de disponibilidad y alerta del centinela si dejan de responder.
+**¿Dan soporte a MikroTik o TP-Link?**
+Por ahora no, pero **sí en futuras versiones**: están en los planes — la
+pantalla de compatibilidad de la app ya los marca "pronto". Mientras tanto,
+esos equipos pueden vivir en **Otros** — con nombre propio, vigilancia de
+disponibilidad y alerta del centinela si dejan de responder.
 
 **¿Soporta Ubiquiti LTU?**
 Todavía no — LTU usa un firmware distinto de airOS y la compatibilidad está

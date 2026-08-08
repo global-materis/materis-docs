@@ -47,8 +47,8 @@ The cell shows **two numbers**:
 The tooltip carries the detail: average, peak with its age, and the share of
 time spent over the threshold.
 
-And there is an optional third number: with **"Medir también con ping
-propio"** (Preferences → *Sonda de red*, off by default), the cell adds the
+And there is an optional third number: with **"Also measure with our own
+ping"** (Preferences → *Network probe*, off by default), the cell adds the
 ping **from SignalScope** to each online station, with its loss — the cell
 then reads `2 ms / 57 ms`.
 

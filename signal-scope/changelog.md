@@ -42,8 +42,8 @@ modulación, latencia del enlace y sesiones; el
 
 **[Herramientas de campo](./herramientas)** — ping continuo con estadísticas
 por objetivo (agrupado por sector, minimizable), traceroute con tus radios
-resaltados en la ruta, prueba de velocidad iperf contra tu PC y
-[comparación entre dos capturas](./snapshots#comparar-dos-momentos).
+resaltados en la ruta, prueba de velocidad iperf de máquina a máquina y
+[comparación entre dos capturas](./snapshots#comparar-dos-momentos) (beta).
 
 **[Buscador general — Ctrl+K](./atajos#el-buscador-general-ctrl-k)** —
 escribe el cliente que te reportó y la app te deja su estación y su AP en
@@ -64,9 +64,11 @@ tablas de estaciones y AP (con **Airtime** como columna propia en AP); la
 columna **Puertos llega también a los AP** (la degradación del cable de un AP
 estrangula a su sector entero); una **sonda de ping opcional** que acompaña a
 la latencia del radio para contrastar el aire contra el camino completo; el
-inventario de **Otros** viaja también dentro de cada captura, en solo
-lectura; y **Ayuda → "Cómo se calibran los umbrales"**, el detrás de cámaras
-de los límites de la app.
+**aviso de vencimiento de la licencia con "Renovar licencia"** dentro de la
+app (abre el enlace de pago ya emitido); el inventario de **Otros** viaja
+también dentro de cada captura, en solo lectura; el atajo **Ctrl+M** para
+alternar Monitor y Mapa; y **Ayuda → "Cómo se calibra"**, el detrás de
+cámaras de los límites de la app.
 
 **Lecturas más fieles** — los M5 y demás equipos con airOS 6 vuelven a
 entrar; el aire ocupado de cada AP ya no se lee multiplicado; un radio que

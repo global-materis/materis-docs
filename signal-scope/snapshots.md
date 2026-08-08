@@ -34,8 +34,10 @@ semana pasada?"*.
 
 ## Comparar dos momentos
 
-La herramienta de **comparar snapshots** cruza dos capturas —o una captura
-contra el estado en vivo— y lista altas, bajas y cambios por equipo. Los
+La herramienta de **comparar snapshots** (marcada **beta**: funciona, pero
+qué métricas compara y cómo las presenta puede cambiar en próximas versiones)
+cruza dos capturas —o una captura contra el estado en vivo— y lista altas,
+bajas y cambios por equipo. Los
 cambios salen como chips agrupados por **qué los causa**, que es lo que
 importa al leerlos:
 

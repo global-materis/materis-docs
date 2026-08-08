@@ -48,11 +48,11 @@ planificador te lo deja ver en lugar de esconderlo.
 
 ## Prueba de velocidad (iperf)
 
-Mide el throughput real entre un radio y tu PC. El modelo respeta la regla de
-solo lectura: **SignalScope nunca le ordena nada al radio** — la app levanta
-un servidor compatible con iperf en tu PC y te muestra el comando listo para
-copiar; tú lo ejecutas desde el CLI del radio, y la app pinta el throughput
-en vivo.
+Mide el throughput real **de máquina a máquina**: entre un radio y el puesto
+donde corre SignalScope. El modelo respeta la regla de solo lectura:
+**SignalScope nunca le ordena nada al radio** — la app levanta un servidor
+compatible con iperf y te muestra el comando listo para copiar; tú lo
+ejecutas desde el CLI del radio, y la app pinta el throughput en vivo.
 
 - Windows pedirá **permiso de firewall** la primera vez (diálogo estándar,
   sin administrador).

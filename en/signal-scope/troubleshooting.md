@@ -80,9 +80,9 @@ is nothing to compare against yet.
 They measure different things. The column is measured by **the radio over its
 wireless hop**; your ping also crosses your local network and everything in
 between, and is answered by the radio's CPU, which serves ICMP last. Neither
-is "wrong" — they need not match. To see both side by side, turn on **"Medir
-también con ping propio"** (Preferences → Sonda de red): the cell shows both
-measurements, and the contrast is diagnosis.
+is "wrong" — they need not match. To see both side by side, turn on **"Also
+measure with our own ping"** (Preferences → Network probe): the cell shows
+both measurements, and the contrast is diagnosis.
 :::
 
 ::: details The sentinel did not warn about an outage at dawn
@@ -157,10 +157,11 @@ Today the app manages **Ubiquiti airMAX** radios. The rest of your network's
 devices (ONUs, switches, routers) can be registered under **Others**, with a
 name and basic availability watch.
 
-**Do you support MikroTik?**
-Not yet, but **yes in future versions**: it is on the roadmap. In the
-meantime, your MikroTiks can live under **Others** — with their own name,
-availability watch and a sentinel alert if they stop answering.
+**Do you support MikroTik or TP-Link?**
+Not yet, but **yes in future versions**: they are on the roadmap — the app's
+compatibility strip already marks them "pronto". In the meantime, those
+devices can live under **Others** — with their own name, availability watch
+and a sentinel alert if they stop answering.
 
 **Does it support Ubiquiti LTU?**
 Not yet — LTU runs a firmware different from airOS and compatibility is under

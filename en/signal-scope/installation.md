@@ -89,7 +89,7 @@ bought with one email and activate with another, the server will reject it.
   expiration — on the Welcome screen and in the License view, visible even
   offline.
 - Next to the notice (and on the license screen, if it already expired) a
-  **"Renovar licencia"** button appears with the amount in sight. It opens in
+  **"Renew license"** button appears with the amount in sight. It opens in
   your browser the **payment link Materis already issued** — the same one
   that reaches you by email; the app creates no charges, it only takes you
   where to pay.

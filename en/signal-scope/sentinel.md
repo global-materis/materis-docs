@@ -71,16 +71,16 @@ WhatsApp, Telegram to a user or Telegram to a group.
 
 It is enabled in **Preferences → Messaging**:
 
-1. Turn on **"Enviar avisos por mensajería"** and pick the way. Each one asks
+1. Turn on **"Send alerts by messaging"** and pick the way. Each one asks
    for its own — WhatsApp: phone and key; Telegram to a user: just your
    `@username`; Telegram to a group: just the key (the key *is* the group).
-   The **"Cómo obtener estos datos"** link takes you to CallMeBot's
+   The **"How to get these details"** link takes you to CallMeBot's
    instructions: the authorization is granted from your phone, and that step
    the app cannot do for you.
-2. **Send the test message** — it is not optional: CallMeBot validates
-   nothing until a real send, so without the test you would find out about a
-   bad key the day a link falls and no notice arrives.
-3. Under **"Qué se manda a este destino"**, choose the events.
+2. **Send a test message** — it is not optional: CallMeBot validates nothing
+   until a real send, so without the test you would find out about a bad key
+   the day a link falls and no notice arrives.
+3. Under **"What goes to this destination"**, choose the events.
 
 **What arrives**: one message **per alert type** — not a digest — with the
 project and, for each device, its name, IP and the AP it hangs from. The time

@@ -13,7 +13,7 @@
 - [Detectados y Otros](https://docs.materis.io/signal-scope/interfaz/detectados-y-otros): la cola del escaneo vs. el inventario permanente de equipos ajenos, con vigilancia ICMP.
 - [Mapa de cobertura](https://docs.materis.io/signal-scope/interfaz/mapa): nodos, sectores por banda (azimut/apertura/alcance), estaciones georreferenciadas y el plano congelado en snapshots.
 - [Semáforo y diagnóstico](https://docs.materis.io/signal-scope/diagnostico): los umbrales de señal, las referencias por antena (Marcar OK) y los siete ejes del diagnóstico.
-- [Centinela y calificación](https://docs.materis.io/signal-scope/centinela): los avisos de fallas que la señal no delata, y la nota 0-100 del parque.
+- [Centinela y calificación](https://docs.materis.io/signal-scope/centinela): los avisos de fallas que la señal no delata —en la app, en Windows o al teléfono por WhatsApp/Telegram— y la nota 0-100 del parque.
 - [Herramientas de diagnóstico](https://docs.materis.io/signal-scope/herramientas): planificador de frecuencias, prueba de velocidad iperf, ping continuo y traceroute.
 - [Atajos y navegación rápida](https://docs.materis.io/signal-scope/atajos): atajos de teclado, el buscador general Ctrl+K y los viajes entre tablas.
 - [Historial, snapshots y reportes](https://docs.materis.io/signal-scope/snapshots): capturas con Δ vs. actual, comparación por causa y reportes PDF/Excel/CSV.

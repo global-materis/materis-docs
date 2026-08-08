@@ -40,8 +40,8 @@ and sessions columns; the
 
 **[Field tools](./tools)** — continuous ping with per-target statistics
 (grouped by sector, minimizable), traceroute with your radios highlighted
-along the route, iperf speed test against your PC and
-[snapshot comparison](./snapshots#comparing-two-moments).
+along the route, machine-to-machine iperf speed test and
+[snapshot comparison](./snapshots#comparing-two-moments) (beta).
 
 **[Global search — Ctrl+K](./shortcuts#the-global-search-ctrl-k)** — type the
 customer who called and the app leaves their station and its AP on screen,
@@ -60,9 +60,11 @@ click in a Spanish-locale Excel; **CPU and free RAM** columns in the stations
 and AP tables (with **Airtime** as its own column on APs); the **Ports column
 reaches the APs too** (a degraded AP cable strangles its whole sector); an
 optional **ping probe** alongside the radio's latency to contrast the air
-against the full path; the **Others** inventory travels inside each capture
-too, read-only; and **Help → "Cómo se calibran los umbrales"**, the behind
-the scenes of the app's limits.
+against the full path; the **license expiration notice with "Renew license"**
+inside the app (it opens the already-issued payment link); the **Others**
+inventory travels inside each capture too, read-only; the **Ctrl+M** shortcut
+to switch between Monitor and Map; and **Help → "How calibration works"**,
+the behind the scenes of the app's limits.
 
 **More faithful readings** — M5 and other airOS 6 devices are back in; each
 AP's air usage is no longer read multiplied; a radio that changes IP

@@ -32,8 +32,10 @@ last week?"*.
 
 ## Comparing two moments
 
-The **snapshot compare** tool crosses two captures — or one capture against
-the live state — and lists additions, removals and changes per device. Changes
+The **snapshot compare** tool (marked **beta**: it works, but which metrics
+it compares and how it presents them may change in future versions) crosses
+two captures — or one capture against the live state — and lists additions,
+removals and changes per device. Changes
 come out as chips grouped by **what causes them**, which is what matters when
 reading:
 

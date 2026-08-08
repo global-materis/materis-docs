@@ -48,11 +48,11 @@ lets you see it instead of hiding it.
 
 ## Speed test (iperf)
 
-Measures real throughput between a radio and your PC. The model respects the
-read-only rule: **SignalScope never orders the radio to do anything** — the
-app starts an iperf-compatible server on your PC and shows you the command
-ready to copy; you run it from the radio's CLI, and the app paints the
-throughput live.
+Measures real throughput **machine to machine**: between a radio and the
+seat where SignalScope runs. The model respects the read-only rule:
+**SignalScope never orders the radio to do anything** — the app starts an
+iperf-compatible server and shows you the command ready to copy; you run it
+from the radio's CLI, and the app paints the throughput live.
 
 - Windows will ask for **firewall permission** the first time (standard
   dialog, no administrator).
