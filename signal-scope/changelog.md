@@ -3,6 +3,22 @@
 La vista **Novedades** de la app resume cada versión en titulares; aquí está
 el detalle, con enlaces a la guía de cada función.
 
+## 1.2.2 — Agosto 2026
+
+- **Mensajería ya no deja tu número a la vista**: el resumen del destino
+  enmascara tu teléfono y la clave de tu grupo de Telegram — para que no
+  viajen en una captura de pantalla ni en una sesión compartida.
+
+## 1.2.1 — Agosto 2026
+
+- **El centinela ya no da por resuelta una avería cuando lo que se cayó fue
+  la sesión**: la marca **"Sin medir"** y vuelve a avisar en cuanto el equipo
+  responde. Antes, un nodo inestable podía callar durante horas las antenas
+  desalineadas de sus clientes.
+- **Antena desalineada avisa desde 6 dB** de diferencia entre polaridades, no
+  desde 10 — el límite que recomienda el propio Ubiquiti. Verás avisos de
+  antenas torcidas que antes solo aparecían al abrir su diagnóstico.
+
 ## 1.2.0 — Agosto 2026
 
 La versión más grande hasta ahora: el monitoreo se completa con mapa,

@@ -19,7 +19,7 @@ fallas que **no se ven en el semáforo**.
 | **Sesión caída** | Una estación que estaba en línea deja de responder. |
 | **Sin cable LAN** | El puerto del radio quedó sin cable: el enlace se ve bien, el cliente no navega. |
 | **LAN en half duplex** | El puerto negoció mal: el servicio sale degradado sin que la señal lo muestre. |
-| **Antena desalineada** | Desbalance fuerte entre las dos polaridades: apunte o polarización. |
+| **Antena desalineada** | Desbalance entre las dos polaridades desde **6 dB** — el límite que recomienda el propio Ubiquiti: apunte o polarización. |
 | **Radio saturado** | CPU o memoria del radio al límite: tira paquetes con la señal intacta. |
 | **Equipo vigilado sin respuesta** | Un equipo de [Otros](./interfaz/detectados-y-otros) con la vigilancia activa dejó de responder — pensado para el router de un nodo. |
 
@@ -39,7 +39,9 @@ solo admite condiciones que fallan en binario y que una red sana no produce.
 - **Confirma antes de avisar**: una condición debe sostenerse unos segundos —
   un puerto que parpadea durante un reinicio no amerita una visita.
 - **Una alerta por equipo y condición** mientras dure; al resolverse se marca
-  y se retira sola a los minutos.
+  y se retira sola a los minutos. Y resolver exige **medir**: si lo que se
+  cayó fue la sesión, la avería no se da por resuelta — queda **"Sin medir"**
+  y vuelve a avisar en cuanto el equipo responde.
 - **Causa, no consecuencia**: si cae un AP, se avisa del AP y **se callan**
   sus estaciones — un nodo caído no debe enterrar el panel bajo cincuenta
   avisos.
@@ -80,6 +82,10 @@ Se enciende en **Preferencias → Mensajería**:
    hasta un envío real, así que sin la prueba te enterarías de una clave mal
    puesta el día que se caiga un enlace y no llegue el aviso.
 3. En **"Qué se manda a este destino"**, elige los eventos.
+
+Con el destino configurado, el resumen muestra tu número y la clave
+**enmascarados** — no viajan en una captura de pantalla ni en una sesión
+compartida.
 
 **Qué llega**: un mensaje **por tipo de alerta** —no un resumen—, con el
 proyecto y, por cada equipo, su nombre, su IP y el AP del que cuelga. La hora

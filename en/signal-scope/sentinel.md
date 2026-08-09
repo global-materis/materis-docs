@@ -19,7 +19,7 @@ watches the failures that **do not show on the traffic light**.
 | **Session down** | A station that was online stops responding. |
 | **LAN cable unplugged** | The radio's port lost its cable: the link looks fine, the customer cannot browse. |
 | **LAN at half duplex** | The port negotiated badly: service goes out degraded without the signal showing it. |
-| **Misaligned antenna** | A strong imbalance between the two polarities: aim or polarization. |
+| **Misaligned antenna** | An imbalance between the two polarities from **6 dB** — the limit Ubiquiti itself recommends: aim or polarization. |
 | **Radio saturated** | The radio's CPU or memory at the limit: it drops packets with the signal intact. |
 | **Watched device not answering** | A device from [Others](./interface/detected-and-others) with the watch enabled stopped responding — meant for a node's router. |
 
@@ -40,7 +40,10 @@ does not produce.
 - **It confirms before warning**: a condition must hold for a few seconds — a
   port that blinks during a reboot does not deserve a house call.
 - **One alert per device and condition** while it lasts; once resolved it is
-  marked and retires itself minutes later.
+  marked and retires itself minutes later. And resolving requires
+  **measuring**: if what fell was the session, the fault is not taken as
+  fixed — it stays **"Sin medir"** (not measured) and warns again as soon as
+  the device responds.
 - **Cause, not consequence**: if an AP falls, the AP is alerted and its
   stations are **silenced** — a fallen node must not bury the panel under
   fifty notices.
@@ -81,6 +84,9 @@ It is enabled in **Preferences → Messaging**:
    until a real send, so without the test you would find out about a bad key
    the day a link falls and no notice arrives.
 3. Under **"What goes to this destination"**, choose the events.
+
+With the destination configured, the summary shows your number and the key
+**masked** — they don't travel in a screenshot or a shared session.
 
 **What arrives**: one message **per alert type** — not a digest — with the
 project and, for each device, its name, IP and the AP it hangs from. The time

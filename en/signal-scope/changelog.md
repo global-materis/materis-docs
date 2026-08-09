@@ -3,6 +3,22 @@
 The app's **What's new** view sums up each version in headlines; here is the
 detail, with links to each feature's guide.
 
+## 1.2.2 — August 2026
+
+- **Messaging no longer leaves your number in sight**: the destination
+  summary masks your phone and your Telegram group's key — so they don't
+  travel in a screenshot or a shared session.
+
+## 1.2.1 — August 2026
+
+- **The sentinel no longer marks a fault resolved when what fell was the
+  session**: it marks it **"Sin medir"** (not measured) and warns again as
+  soon as the device responds. Before, an unstable node could silence its
+  clients' misaligned antennas for hours.
+- **Misaligned antenna warns from 6 dB** of difference between polarities,
+  not 10 — the limit Ubiquiti itself recommends. You will see notices for
+  twisted antennas that before only showed when opening their diagnosis.
+
 ## 1.2.0 — August 2026
 
 The biggest version so far: monitoring gets completed with a map, alerts,
