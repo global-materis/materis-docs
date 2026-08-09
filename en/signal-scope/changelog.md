@@ -3,6 +3,12 @@
 The app's **What's new** view sums up each version in headlines; here is the
 detail, with links to each feature's guide.
 
+## 1.2.3 — August 2026
+
+- **The sentinel's notices reach the desktop again** on **Microsoft Store**
+  installs, where Windows was silently discarding them. The sentinel did
+  detect the faults: what wasn't arriving was the notification.
+
 ## 1.2.2 — August 2026
 
 - **Messaging no longer leaves your number in sight**: the destination

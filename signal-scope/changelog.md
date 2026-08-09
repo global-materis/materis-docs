@@ -3,6 +3,13 @@
 La vista **Novedades** de la app resume cada versión en titulares; aquí está
 el detalle, con enlaces a la guía de cada función.
 
+## 1.2.3 — Agosto 2026
+
+- **Los avisos del centinela vuelven a salir al escritorio** en las
+  instalaciones desde **Microsoft Store**, donde Windows los estaba
+  descartando en silencio. El centinela sí detectaba las fallas: lo que no
+  llegaba era la notificación.
+
 ## 1.2.2 — Agosto 2026
 
 - **Mensajería ya no deja tu número a la vista**: el resumen del destino

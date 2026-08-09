@@ -89,6 +89,14 @@ segundo plano. Lo que pase con la app cerrada no lo verá; la propia app lo
 recuerda al pie del panel de alertas.
 :::
 
+::: details Las alertas aparecen en el panel pero no llegan como notificación de Windows
+Dos causas conocidas: en versiones **anteriores a 1.2.3** instaladas desde la
+Microsoft Store, Windows descartaba las notificaciones en silencio — la Store
+actualiza sola, verifica tu versión en **Novedades**. Y si la versión está al
+día, revisa que el evento esté encendido en **Preferencias → Alertas** y que
+Windows no esté en "No molestar".
+:::
+
 ::: details Windows pide permiso de firewall al usar la prueba de velocidad
 Es normal: el servidor de prueba de velocidad **abre un puerto de escucha**
 en tu PC para que el radio se conecte a medir. Solo escucha mientras lo

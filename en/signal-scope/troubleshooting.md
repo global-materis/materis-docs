@@ -91,6 +91,14 @@ service. Whatever happens with the app closed it will not see; the app itself
 says so at the bottom of the alerts panel.
 :::
 
+::: details Alerts show in the panel but never arrive as Windows notifications
+Two known causes: on versions **before 1.2.3** installed from the Microsoft
+Store, Windows silently discarded the notifications — the Store updates on
+its own, check your version under **What's new**. And if the version is
+current, check the event is on under **Preferences → Alerts** and that
+Windows is not in "Do not disturb".
+:::
+
 ::: details Windows asks for firewall permission when using the speed test
 That is normal: the speed test server **opens a listening port** on your PC so
 the radio can connect and measure. It only listens while you keep it on and
