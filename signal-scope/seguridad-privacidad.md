@@ -14,7 +14,7 @@ fábrica**, lleva datos de tu red:
 |---|---|
 | **Activar y revalidar la licencia Full** | Tu correo, tu clave de licencia y el identificador del equipo (HWID). Solo eso, y solo para eso. La **versión de prueba es 100 % local**: no envía nada. |
 | **Comprobar si hay versión nueva** | Una consulta a un archivo público de versión, como cualquier descarga web. |
-| **El Mapa de cobertura** | Las imágenes del mapa se descargan de proveedores públicos de cartografía (CARTO/OpenStreetMap y, en vista satelital, Esri). Ellos ven lo que ve cualquier servidor web: tu IP y qué zona del mapa pediste — **nunca** las ubicaciones, nombres o métricas de tus equipos, que se quedan en tu proyecto. Si no abres el Mapa, estas peticiones no ocurren. |
+| **El Mapa de cobertura** | Las teselas del mapa se descargan de proveedores públicos de cartografía: **OpenFreeMap** (con datos de OpenStreetMap y OpenMapTiles) para los planos de calles; los datos de elevación de **Terrain Tiles** (AWS Open Data) **solo si enciendes el relieve del terreno**, apagado de fábrica; y **Google Maps** en vista satelital, **solo si configuraste tu propia clave**. Ellos ven lo que ve cualquier servidor web: tu IP y qué zona del mapa pediste — **nunca** las ubicaciones, nombres o métricas de tus equipos, que se quedan en tu proyecto. Si no abres el Mapa, estas peticiones no ocurren. |
 | **Los avisos por mensajería** (si los enciendes) | El texto de cada alerta —nombre del proyecto y, por equipo, su nombre, IP y AP— viaja a los servidores de **CallMeBot**, que lo entregan a tu WhatsApp o Telegram. Tu teléfono y tu clave de CallMeBot se guardan **solo en tu equipo** (sin cifrar: son credenciales de un servicio de mensajería, no de tu red). Apagada la mensajería, nada de esto ocurre. |
 
 La app **no accede a la ubicación de tu dispositivo**: las coordenadas de tus
@@ -43,7 +43,18 @@ anclada a tu usuario y tu máquina — nunca en un archivo. Por eso copiar un
 
 En tránsito, **SSH y HTTPS cifran** la sesión con el radio. **HTTP no** — si
 un equipo solo admite ese modo, la app lo marca en ámbar con un candado
-abierto para que la decisión sea tuya, en vez de ocultarlo.
+abierto para que la decisión sea tuya, en vez de ocultarlo. Los equipos
+**RouterOS entran siempre por SSH**, así que ahí la sesión va cifrada siempre.
+
+Dos credenciales más, de servicios que **no son de tu red**, y por eso se
+guardan distinto:
+
+- **La clave de Google Maps** (vista satelital del mapa) vive en el **llavero de
+  Windows** y **nunca sale de tu equipo**.
+- **El teléfono y la clave de CallMeBot** se guardan **sin cifrar** en tu equipo:
+  son credenciales de un servicio de mensajería, no de un radio. La app los
+  muestra **enmascarados** en pantalla para que no viajen en una captura ni en
+  una sesión compartida.
 
 ## Solo lectura, siempre
 

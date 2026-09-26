@@ -14,7 +14,7 @@ default**, carries your network's data:
 |---|---|
 | **Activating and revalidating the Full license** | Your email, your license key and the machine identifier (HWID). Only that, and only for that. The **trial is 100 % local**: it sends nothing. |
 | **Checking for a new version** | A request to a public version file, like any web download. |
-| **The coverage Map** | Map images are downloaded from public cartography providers (CARTO/OpenStreetMap and, in satellite view, Esri). They see what any web server sees: your IP and which map area you requested — **never** your devices' locations, names or metrics, which stay in your project. If you don't open the Map, these requests never happen. |
+| **The coverage Map** | Map tiles are downloaded from public cartography providers: **OpenFreeMap** (with OpenStreetMap and OpenMapTiles data) for the street plans; elevation data from **Terrain Tiles** (AWS Open Data) **only if you turn terrain relief on**, which is off by default; and **Google Maps** in satellite view, **only if you configured your own key**. They see what any web server sees: your IP and which map area you requested — **never** your devices' locations, names or metrics, which stay in your project. If you don't open the Map, these requests never happen. |
 | **Messaging notices** (if you enable them) | Each alert's text — the project name and, per device, its name, IP and AP — travels to **CallMeBot**'s servers, which deliver it to your WhatsApp or Telegram. Your phone number and CallMeBot key are stored **only on your machine** (unencrypted: they are credentials for a messaging service, not for your network). With messaging off, none of this happens. |
 
 The app **does not access your device's location**: your nodes' coordinates
@@ -43,7 +43,18 @@ to another PC does not expose credentials: that is what the
 
 In transit, **SSH and HTTPS encrypt** the session with the radio. **HTTP does
 not** — if a device only accepts that mode, the app marks it amber with an
-open padlock so the decision is yours, instead of hiding it.
+open padlock so the decision is yours, instead of hiding it. **RouterOS devices
+always come in over SSH**, so there the session is always encrypted.
+
+Two more credentials, for services that **are not part of your network**, and
+which is why they are stored differently:
+
+- **The Google Maps key** (the map's satellite view) lives in the **Windows
+  credential store** and **never leaves your machine**.
+- **The CallMeBot phone number and key** are stored **unencrypted** on your
+  machine: they are credentials for a messaging service, not for a radio. The app
+  shows them **masked** on screen so they do not travel in a screenshot or in a
+  shared session.
 
 ## Read-only, always
 

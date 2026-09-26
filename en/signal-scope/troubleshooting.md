@@ -32,11 +32,15 @@ only sees its IP. Not a problem: **signing in** identifies the device fully,
 MAC included.
 :::
 
-::: details A device's IP changed and the app shows the old one
-Scan again: each device's identity is its **MAC**, so the re-scan updates the
-IP without losing name, references or credentials. On **routed** devices (no
-visible MAC) the automatic match is not possible — sign in at the new IP and
-the app recognizes it as it identifies itself.
+::: details A device's IP changed
+The app looks for it on its own: in its AP's station list, in the other APs'
+lists and via ARP on this PC's network. If it finds it, it reconnects at the new
+IP without losing name, baseline or credentials — each device's identity is its
+**MAC**. A scan that sees it at another IP does the same.
+
+If there is no way to find it, the app asks you for the new IP: the Session chip
+turns **violet** and you type the address in the *Connection* tab of its session
+window. See [When the app needs you to step in](./interface/stations#when-the-app-needs-you-to-step-in).
 :::
 
 ## Sessions and monitoring
@@ -62,11 +66,32 @@ are not contaminated — but reaching them depends on your connection.
 ::: details A station shows "Absent" but answers ping
 "Absent" means the **session** was lost, not necessarily the device — and the
 app makes that distinction for you: absent devices get a periodic ping, and
-the chip tells you which case it is. **"Answers ping but refuses the
+the chip's tooltip tells you which case it is. **"Answers ping but refuses the
 session"** is the signature of an **exhausted** radio (no CPU or memory left
-to open the encrypted session, even though the kernel keeps answering pings);
-**"does not answer ping either"** is a device that is down or unreachable.
-Reconnection is retried on its own with the stored credentials.
+to open the session, even though it keeps answering pings); **"does not answer
+ping either"** is a device that is down or unreachable. Reconnection is retried
+on its own with the stored credentials, and the **Log** tab of its session
+window tells each attempt. The chip's other states are in
+[When a device goes absent](./interface/stations#when-a-device-goes-absent).
+:::
+
+::: details Several devices go absent at once and the chip says "No network on this PC"
+The one that lost its network is your PC, not your devices. You get **a single
+notice**, *"This PC lost its network"*, instead of one per device, and the app
+looks for nobody until the network is back. Then the devices reconnect on their
+own.
+:::
+
+::: details A device drops and comes back over and over
+The chip marks it as **Possible cut** and the tooltip says it: it *drops and
+comes back over and over*. It is usually a PPPoE that redials and is rejected,
+as in a cutoff for non-payment — the link is not the problem.
+:::
+
+::: details I swapped a radio and the app asks me whether it is a replacement
+That is expected when the new one carries the **same name** and answers at the
+old one's IP: the app does not assume it, puts them side by side and you decide.
+See [Possible replacement](./interface/stations#possible-replacement).
 :::
 
 ::: details The Downlink/Uplink columns are empty on some devices
@@ -86,9 +111,36 @@ both measurements, and the contrast is diagnosis.
 :::
 
 ::: details The sentinel did not warn about an outage at dawn
-The sentinel watches **while the app is open** — it is not a background
-service. Whatever happens with the app closed it will not see; the app itself
-says so at the bottom of the alerts panel.
+**Closing the window does not stop the watch**: the app stays
+next to the clock and keeps measuring. What does stop it is **"Quit"** in its
+icon menu, or switching the PC off.
+
+If you want it watching from the moment you turn the machine on, enable
+**Preferences → General → "Start with Windows"**: the app opens by itself and
+lands in the Monitor of the project it was watching.
+
+Even so, it is still a program on **your** machine, not a 24/7 service on
+somebody's server.
+:::
+
+::: details After updating I see a duplicated device: one row with a session and another absent, with the same data
+Its session was stored under a **MAC different from the one the device
+reports**. Each row is identified by **its own radio's** MAC, and the
+difference shows — with a notice on the MAC cell.
+
+The fix is two gestures, and the order matters: **remove the absent row** and
+**sign in again** on the one that remains. One row is left.
+:::
+
+::: details I mistyped the password and the app stopped trying
+That is correct, and it protects you: insisting makes the device itself close
+access — **airOS locks it for half a minute after several failed attempts** — and
+ends up locking you out too, terminal included. The notice repeats what the radio
+said, in its own words. Fix the detail and connect again.
+
+If the account of an already registered device stops working, the app pauses
+its session and asks you as **Account rejected**: correct it in the
+*Connection* tab or press **Try again** once you fix it on the device.
 :::
 
 ::: details Alerts show in the panel but never arrive as Windows notifications
@@ -150,9 +202,67 @@ offers to create an **unprotected copy** first, kept in your history. If you
 created it, the full data is there.
 :::
 
-::: details I want to recover a device I discarded with "Not a radio"
-In the **Others** table, click **Remove** on its row and scan again: the
-device reappears in **Detected** as if new, ready to sign in.
+::: details I want to recover a device I sent to References by mistake
+In the **References** table, open its actions (click the Monitoring chip) and press
+**Remove from the project**; then scan again. The device reappears in
+**Detected** as if new, ready to sign in.
+:::
+
+::: details Does the map need a key?
+Not for the streets: they come from **OpenFreeMap**, which serves without a key,
+without registration and without a quota.
+
+The **satellite view** is the only part that asks you for something: your own
+Google key in Preferences — see
+[Base map](./interface/map#satellite-with-your-own-google-key).
+:::
+
+## MikroTik devices (RouterOS)
+
+::: details A single MikroTik left two rows in the tables
+That is correct: a box with **two radios** — the 2.4 GHz one and the 5 GHz one —
+takes **one row per radio**, even though it is a single device and a single
+session. They can be in different modes, so one may land in Access points and the
+other in Stations.
+
+What belongs to the device — CPU, memory, model, firmware, ports — repeats
+identically in both: **they are not two measurements, they are one**. And
+switching off, muting or forgetting takes **the whole box**.
+:::
+
+::: details My MikroTik connects, but several columns come out empty
+Latency, Air, Distance, Sessions, the remote signal and Downlink/Uplink **are not
+published by RouterOS 6**, so they stay empty. It is not a read failure: an empty
+cell tells the truth, and a number that looks like a measurement without being
+one does not.
+
+The full list — and what does arrive — is in
+[Supported devices](./supported-devices#what-you-see-from-a-mikrotik-and-what-you-do-not).
+:::
+
+::: details I can't find the HTTP button when connecting a MikroTik
+It is disabled on purpose. **RouterOS 6 has no REST API** — that arrived in v7 —
+and the `www` port you see open serves WebFig, a browser interface, not something
+you can query. With RouterOS the transport is forced to **SSH**.
+
+If you changed the SSH port on the device, say so in the form: a RouterOS
+device's services may sit on moved ports.
+:::
+
+::: details My MikroTik is not on the Map and I can't find where to set its coordinates
+**RouterOS does not allow writing them to the device**: its GPS package is
+read-only. That is why, and only for these devices, the app lets you **annotate
+the position by hand** from the map — see
+[Annotating the position of a MikroTik](./interface/map#annotating-the-position-of-a-mikrotik).
+
+On airMAX that button does not exist on purpose: there coordinates are registered
+on the radio itself, where they are useful to any tool.
+:::
+
+::: details I signed in to a MikroTik and it told me it has no radio
+A RouterOS router or switch **with no wireless module** produces no radio row:
+there is no signal to measure. Move it to **References**, where it has its
+"is it still alive?" watch and its sentinel alert if it stops answering.
 :::
 
 ## Frequently asked questions
@@ -161,15 +271,21 @@ device reappears in **Detected** as if new, ready to sign in.
 No. It is read-only by design: no path exists in the app to modify a device.
 
 **Does it work with radios other than Ubiquiti airMAX?**
-Today the app manages **Ubiquiti airMAX** radios. The rest of your network's
-devices (ONUs, switches, routers) can be registered under **Others**, with a
-name and basic availability watch.
+Yes: the app also manages **MikroTik devices running RouterOS**, **in
+beta** — tested on fewer models, not unstable. The details are in
+[Supported devices](./supported-devices). The rest of your network's devices
+(ONUs, switches, customer routers) can be registered under **References**, with a
+name and an availability watch.
 
-**Do you support MikroTik or TP-Link?**
-Not yet, but **yes in future versions**: they are on the roadmap — the app's
-compatibility strip already marks them "pronto". In the meantime, those
-devices can live under **Others** — with their own name, availability watch
-and a sentinel alert if they stop answering.
+**Do you support TP-Link?**
+Not yet; it is on the roadmap. In the meantime, those devices can live under
+**References** — with their own name, availability watch and a sentinel alert if
+they stop answering.
+
+**What about RouterOS 7?**
+Unverified. Support was built and tested against **RouterOS 6**; v7 changes quite
+a lot — it has a REST API, new fields — and we do not call it good until we have
+tested it. If you use it, tell us how it went.
 
 **Does it support Ubiquiti LTU?**
 Not yet — LTU runs a firmware different from airOS and compatibility is under
@@ -198,9 +314,10 @@ or activate, everything is right where it was.
 **WhatsApp and Telegram, yes** — the sentinel's alerts can reach your phone,
 choosing which events and with what urgency
 ([how to enable it](./sentinel#phone-notices-whatsapp-or-telegram)). The
-honest limit: it watches **while the app is open** — it is not a 24/7
-service; that continuous watch will come with the future **server edition**
-(Linux). Email it does not send.
+honest limit: it watches **while the app runs on your machine** — closing the
+window does not stop it, but switching the PC off or quitting from the icon
+does. That continuous, independent watch will come with the future **server
+edition** (Linux). Email it does not send.
 
 **Is there a web version?**
 Not planned for the desktop app. The future server edition will be a **web

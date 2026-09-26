@@ -30,11 +30,15 @@ ve su IP. No es un problema: al **iniciar sesión** el equipo se identifica
 completo, MAC incluida.
 :::
 
-::: details Cambió la IP de un equipo y la app muestra la vieja
-Vuelve a escanear: la identidad de cada equipo es su **MAC**, así que el
-re-escaneo actualiza la IP sin perder nombre, referencias ni credenciales. En
-equipos **ruteados** (sin MAC visible) el cruce automático no es posible —
-inicia sesión en la IP nueva y la app lo reconoce al identificarse.
+::: details Cambió la IP de un equipo
+La app lo busca sola: en la lista de estaciones de su AP, en la de los demás AP
+y por ARP en la red de esta PC. Si lo encuentra, se reconecta en la IP nueva
+sin perder nombre, línea base ni credenciales — la identidad de cada equipo es
+su **MAC**. Un escaneo que lo vea en otra IP hace lo mismo.
+
+Si no hay forma de encontrarlo, la app te pide la IP nueva: el chip de Sesión se
+pone **violeta** y escribes la dirección en la pestaña *Conexión* de su ventana
+de sesión. Ver [Cuando la app necesita que intervengas](./interfaz/estaciones#cuando-la-app-necesita-que-intervengas).
 :::
 
 ## Sesiones y monitoreo
@@ -60,11 +64,31 @@ enlace) no se contaminan — pero llegar a leerlas depende de tu conexión.
 ::: details Una estación aparece "Ausente" pero responde al ping
 "Ausente" significa que la **sesión** se perdió, no necesariamente el equipo
 — y la app hace esa distinción por ti: a los ausentes les manda un ping
-periódico, y el chip te dice cuál de los dos casos es. **"Responde al ping
-pero rechaza la sesión"** es la firma de un radio **agotado** (sin CPU o
-memoria para abrir la sesión cifrada, aunque el kernel siga contestando
-pings); **"tampoco responde al ping"** es un equipo caído o sin ruta. La
-reconexión se reintenta sola con las credenciales guardadas.
+periódico, y el tooltip del chip te dice cuál de los dos casos es. **"Responde
+al ping pero rechaza la sesión"** es la firma de un radio **agotado** (sin CPU o
+memoria para abrir la sesión, aunque siga contestando pings); **"tampoco
+responde al ping"** es un equipo caído o sin ruta. La reconexión se reintenta
+sola con las credenciales guardadas, y la pestaña **Log** de su ventana de
+sesión cuenta cada intento. Los demás estados del chip están en
+[Cuando un equipo se ausenta](./interfaz/estaciones#cuando-un-equipo-se-ausenta).
+:::
+
+::: details Varios equipos salen ausentes a la vez y el chip dice "Sin red en esta PC"
+La que perdió la red es tu PC, no tus equipos. Recibes **un solo aviso**,
+*"Esta PC perdió la red"*, en vez de uno por equipo, y la app no busca a nadie
+hasta que la red vuelve. Al volver, los equipos se reconectan solos.
+:::
+
+::: details Un equipo cae y vuelve una y otra vez
+El chip lo marca como **Posible corte** y el tooltip lo dice: *cae y vuelve una
+y otra vez*. Suele ser un PPPoE que vuelve a marcar y es rechazado, como en un
+corte por mora — el enlace no es el problema.
+:::
+
+::: details Cambié un radio por otro y la app me pregunta si es un reemplazo
+Es lo esperado cuando el nuevo lleva el **mismo nombre** y contesta en la IP del
+anterior: la app no lo asume, te los pone lado a lado y decides. Ver
+[Posible reemplazo](./interfaz/estaciones#posible-reemplazo).
 :::
 
 ::: details Las columnas Downlink/Uplink están vacías en algunos equipos
@@ -84,9 +108,36 @@ la celda muestra las dos mediciones, y el contraste es diagnóstico.
 :::
 
 ::: details El centinela no avisó de una caída de madrugada
-El centinela vigila **mientras la app está abierta** — no es un servicio en
-segundo plano. Lo que pase con la app cerrada no lo verá; la propia app lo
-recuerda al pie del panel de alertas.
+**Cerrar la ventana no detiene la vigilancia**: la app se queda junto al reloj
+y sigue midiendo. Lo que sí la detiene es **"Salir"** en el
+menú de su icono, o apagar la PC.
+
+Si quieres que esté vigilando desde que enciendes la máquina, activa
+**Preferencias → General → "Iniciar con Windows"**: la app se abre sola y
+aterriza en el Monitor del proyecto que estaba vigilando.
+
+Aun así, sigue siendo un programa en **tu** máquina, no un servicio 24/7 en el
+servidor de alguien.
+:::
+
+::: details Tras actualizar veo un equipo repetido: una fila con sesión y otra ausente, con los mismos datos
+Su sesión estaba guardada bajo una **MAC distinta de la que el equipo reporta**.
+Cada fila se identifica por la MAC de **su propio radio**, y la diferencia queda
+a la vista — con un aviso en la celda de la MAC.
+
+El arreglo son dos gestos, y el orden importa: **retira la fila ausente** y
+**vuelve a iniciar sesión** en la que queda. Se queda una sola.
+:::
+
+::: details Escribí mal la contraseña y la app dejó de intentarlo
+Es lo correcto, y te protege: insistir hace que el propio equipo cierre el
+acceso —**airOS lo bloquea medio minuto tras varios intentos fallidos**— y acaba
+dejándote fuera también a ti, hasta con tu terminal. El aviso te repite lo que
+dijo el radio, con sus palabras. Corrige el dato y vuelve a conectar.
+
+Si la cuenta de un equipo que ya estaba registrado deja de valer, la app pausa
+su sesión y te lo pide como **Cuenta rechazada**: corrígela en la pestaña
+*Conexión* o pulsa **Reintentar** cuando la arregles en el equipo.
 :::
 
 ::: details Las alertas aparecen en el panel pero no llegan como notificación de Windows
@@ -101,6 +152,53 @@ Windows no esté en "No molestar".
 Es normal: el servidor de prueba de velocidad **abre un puerto de escucha**
 en tu PC para que el radio se conecte a medir. Solo escucha mientras lo
 tengas encendido y deja de hacerlo al apagarlo o cerrar la app.
+:::
+
+## Equipos MikroTik (RouterOS)
+
+::: details Un solo MikroTik me dejó dos filas en las tablas
+Es correcto: una caja con **dos radios** —el de 2,4 GHz y el de 5 GHz— ocupa
+**una fila por radio**, aunque sea un solo equipo y una sola sesión. Pueden
+estar en modos distintos, así que una puede caer en Puntos de acceso y la otra
+en Estaciones.
+
+Lo que es del equipo —CPU, memoria, modelo, firmware, puertos— se repite igual
+en las dos: **no son dos medidas, es una**. Y apagar, silenciar u olvidar se
+lleva **la caja entera**.
+:::
+
+::: details Mi MikroTik entra, pero varias columnas salen vacías
+Latencia, Aire, Distancia, Sesiones, la señal remota y Downlink/Uplink **no las
+publica RouterOS 6**, así que quedan vacías. No es un fallo de lectura: una celda
+vacía dice la verdad, y un número que parece una medición sin serlo, no.
+
+La lista completa —y lo que sí llega— está en
+[Equipos compatibles](./compatibilidad#que-ves-de-un-mikrotik-y-que-no).
+:::
+
+::: details No encuentro el botón de HTTP al conectar un MikroTik
+Está deshabilitado a propósito. **RouterOS 6 no tiene API REST** —eso llegó en
+la v7— y el `www` que se ve abierto es WebFig, una interfaz para navegador, no
+algo consultable. Con RouterOS el transporte se fuerza a **SSH**.
+
+Si cambiaste el puerto de SSH en el equipo, indícalo en el formulario: los
+servicios de un RouterOS pueden estar en puertos movidos.
+:::
+
+::: details Mi MikroTik no sale en el Mapa y no encuentro dónde poner sus coordenadas
+**RouterOS no permite escribirlas en el equipo**: su paquete GPS es de solo
+lectura. Por eso, y solo para estos equipos, la app te deja **anotar la posición
+a mano** desde el mapa — ver
+[Anotar la posición de un MikroTik](./interfaz/mapa#anotar-la-posicion-de-un-mikrotik).
+
+En airMAX ese botón no existe a propósito: ahí las coordenadas se registran en
+el propio radio, que es donde valen para cualquier herramienta.
+:::
+
+::: details Inicié sesión en un MikroTik y me dijo que no tiene radio
+Un router o un switch con RouterOS **sin módulo inalámbrico** no produce ninguna
+fila de radio: no hay señal que medir. Llévalo a **Referentes**, donde tiene su
+vigilancia de "¿sigue vivo?" y su alerta del centinela si deja de responder.
 :::
 
 ## Licencia
@@ -147,10 +245,19 @@ ofrece crear antes una **copia sin proteger**, que queda en tu historial. Si
 la creaste, ahí están los datos completos.
 :::
 
-::: details Quiero recuperar un equipo que descarté con "No es un radio"
-En la tabla **Otros**, pulsa **Retirar** en su fila y vuelve a escanear: el
-equipo reaparece en **Detectados** como si fuera nuevo, listo para iniciar
-sesión.
+::: details Quiero recuperar un equipo que mandé a Referentes por error
+En la tabla **Referentes**, abre sus acciones (clic en el chip de Vigilancia) y pulsa
+**Retirar del proyecto**; luego vuelve a escanear. El equipo reaparece en
+**Detectados** como si fuera nuevo, listo para iniciar sesión.
+:::
+
+::: details ¿El mapa necesita una clave?
+No para las calles: vienen de **OpenFreeMap**, que sirve sin clave, sin registro
+y sin cuota.
+
+La **vista satelital** es la única parte que te pide algo: tu propia clave de
+Google en Preferencias — ver
+[Mapa base](./interfaz/mapa#satelite-con-tu-propia-clave-de-google).
 :::
 
 ## Preguntas frecuentes
@@ -160,15 +267,21 @@ No. Es de solo lectura por diseño: no existe en la app ninguna vía para
 modificar un equipo.
 
 **¿Funciona con radios que no sean Ubiquiti airMAX?**
-Hoy la app gestiona radios **Ubiquiti airMAX**. Los demás equipos de tu red
-(ONUs, switches, routers) pueden registrarse en **Otros**, con nombre y
-vigilancia básica de disponibilidad.
+Sí: la app gestiona también equipos **MikroTik con RouterOS**,
+**en beta** — probado en menos modelos, no inestable. El detalle está en
+[Equipos compatibles](./compatibilidad). Los demás equipos de tu red (ONUs,
+switches, routers de cliente) pueden registrarse en **Referentes**, con nombre y
+vigilancia de disponibilidad.
 
-**¿Dan soporte a MikroTik o TP-Link?**
-Por ahora no, pero **sí en futuras versiones**: están en los planes — la
-pantalla de compatibilidad de la app ya los marca "pronto". Mientras tanto,
-esos equipos pueden vivir en **Otros** — con nombre propio, vigilancia de
-disponibilidad y alerta del centinela si dejan de responder.
+**¿Dan soporte a TP-Link?**
+Todavía no; está en los planes. Mientras tanto, esos equipos pueden vivir en
+**Referentes** — con nombre propio, vigilancia de disponibilidad y alerta del
+centinela si dejan de responder.
+
+**¿Y RouterOS 7?**
+Sin verificar. El soporte se levantó y se probó contra **RouterOS 6**; la v7
+cambia bastante —tiene API REST, campos nuevos— y no la damos por buena hasta
+probarla. Si la usas, cuéntanos cómo te fue.
 
 **¿Soporta Ubiquiti LTU?**
 Todavía no — LTU usa un firmware distinto de airOS y la compatibilidad está
@@ -197,8 +310,9 @@ activar, todo sigue donde estaba.
 **Por WhatsApp y Telegram, sí** — las alertas del centinela pueden llegarte
 al teléfono, eligiendo qué eventos y con qué urgencia
 ([cómo encenderlo](./centinela#avisos-al-telefono-whatsapp-o-telegram)). El
-límite honesto: vigila **mientras la app está abierta** — no es un servicio
-24/7; esa vigilancia continua vendrá con la futura **edición para
+límite honesto: vigila **mientras la app corre en tu máquina** — cerrar la
+ventana no la detiene, pero apagar la PC o salir desde el icono, sí. Esa
+vigilancia continua e independiente vendrá con la futura **edición para
 servidores** (Linux). Correo no envía.
 
 **¿Hay versión web?**

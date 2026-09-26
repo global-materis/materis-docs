@@ -6,12 +6,28 @@ Your base stations. **One row = one AP**, with the state of the whole sector.
 
 ## State: the sector's verdict
 
-The **State** column is the AP's own diagnosis, combining three axes:
+The **State** column is the AP's own diagnosis, combining four axes:
 
 - **Channel load** — *Operational* (< 50 % air time in use), *High load*
   (50–69 %), *Saturated* (≥ 70 %).
 - **Radio health** — CPU and memory: *Attention* or *Critical*.
 - **Sector latency** — its stations' spikes (the Peaks column).
+- **The uplink port** — an AP whose port negotiates **half duplex** moves to
+  *Attention*, and one at **10 Mbps** to *Critical*. See below.
+
+### The uplink cable condemns the whole AP
+
+An access point whose port negotiates at 10 Mbps or in half duplex
+**strangles all of its stations at once** — fifteen slow customers with
+pristine RF and no clue in the signal as to why.
+
+That is why it tints its State like any other device, and the sentinel warns with an
+event of its own, **"LAN at 10 Mbps"**, which you can switch off in
+**Preferences → Alerts**.
+
+**A simply unplugged cable tints nobody**, and that is deliberate: it may
+be the customer's router switched off, not a fault of yours. The fact shows in
+the Ports column, and the sentinel reports the change.
 
 Two details of the criteria:
 
@@ -34,7 +50,7 @@ there are three distinct controls:
 | Control | What it does |
 |---|---|
 | The **number** (link) | Filters the stations table to this AP's — *"who hangs off here?"* |
-| The **radar** | **Asks the AP** which stations it has and adds to **Others** the ones the project didn't know. It does not depend on registered networks, so it discovers antennas in segments the scan cannot reach — useful to learn about a new install without scanning. |
+| The **radar** | **Asks the AP** which stations it has and adds to **Detected** the ones the project didn't know. It does not depend on registered networks, so it discovers antennas in segments the scan cannot reach — useful to learn about a new install without scanning. It works the same on **airMAX and on MikroTik**, and when it finishes it tells you what it found: **how many are new, how many you already had, and which ones the AP sees at a different address**. |
 | The **ping** | Opens the continuous Ping with this AP's **registered** stations pre-selected. The title says how many before opening. |
 
 The stations table has the reverse trip: its AP column jumps to this row.
@@ -43,18 +59,33 @@ The stations table has the reverse trip: its AP column jumps to this row.
 
 | Column | What it shows |
 |---|---|
-| **Session** | Connection state, same as stations. |
+| **Session** | Connection state, same as stations: one click opens the [session window](./stations#the-session-window), with its Actions, Ports, Log and Connection tabs. If the AP goes absent, the chip says [what is going on](./stations#when-a-device-goes-absent). |
 | **SSID** | The network name the AP broadcasts. |
 | **Peaks** | `3/14` = how many of its online stations have latency spikes. Lights amber when the majority (and at least 3) have them — one client with spikes is that client; most of the sector is the shared air. With fewer than 3 stations online it shows "—". |
 | **Airtime** | The channel's air in use (%), the raw figure behind the State. |
 | **CPU · Free RAM** | The radio's health: CPU usage and **available** memory (for free RAM, more is better). Uncolored: the verdict comes from the State, which judges the sustained value — opening the AP's web UI spikes its CPU for a few seconds, and that is not a fault. |
 | **Thr. TX / RX** | The AP's **aggregate** traffic, all its stations together. Mind the direction: here **TX is what goes down** to the clients. It answers "busy with what?" when the air comes up high. |
-| **Ports** | The AP's Ethernet port, the same RJ45 connector as in [Stations](./stations#ports-the-rj45-connector). Here the strong case is **degradation**: an AP negotiating 100 Mbps where it used to give 1000 looks perfect in RF — and strangles its whole sector. The amber `↓` betrays it against its own history. |
+| **Ports** | Every Ethernet port on the AP, the same RJ45 connectors as in [Stations](./stations#ports-one-connector-per-port), and in the [Ports](./stations#ports-the-sentinel-watches) tab of its session window you choose **which ones the sentinel watches**. Here the strong case is **degradation**: an AP negotiating 100 Mbps where it used to give 1000 looks perfect in RF — and strangles its whole sector. The amber `↓` betrays it against its own history. |
 | **Frequency / Channel** | To spot overlaps between your own APs. |
 | **Firmware · MAC · Model · TX Power · Uptime** | Device identity and context. |
 
+::: tip If an AP changes IP
+The app looks for it through the IP its stations declare (airOS) or via ARP on
+this PC's network, reconnects on its own and leaves a notice in the bell:
+*"&lt;AP&gt; changed its IP"*. For an AP that is not normal, so check whether
+its address should be fixed. While an AP is absent, its stations wait for it
+to come back.
+:::
+
 As in every table: its own search box, sorting by header, hideable columns,
 and **clicking the name** isolates that AP (another click undoes it).
+
+::: tip A MikroTik AP has no Airtime and no Peaks
+RouterOS does not publish channel occupancy, and without link latency there is no
+Peaks column either. Its **State** is then resolved with the axes it can measure
+— radio health and the uplink port — and both cells stay empty. Details in
+[Supported devices](../supported-devices#what-you-see-from-a-mikrotik-and-what-you-do-not).
+:::
 
 ::: tip The diagnosis does not prescribe
 When a sector shows spikes, the diagnosis delivers the fact and the triage —

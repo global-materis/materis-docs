@@ -9,7 +9,7 @@ radios.
 En la pantalla de bienvenida, crea un proyecto: eliges su **nombre y dónde
 guardarlo**, y se crea como un archivo **`.sscope`**.
 
-Ese archivo es tu red completa —equipos, credenciales cifradas, referencias,
+Ese archivo es tu red completa —equipos, credenciales cifradas, líneas base,
 snapshots e historial— y **se autoguarda** mientras trabajas. La próxima vez,
 la bienvenida te lo ofrece en **Recientes** con un resumen de su estado.
 
@@ -33,7 +33,11 @@ ping, muestra el progreso por red y puede cancelarse en cualquier momento.
 
 Todo lo que responde aparece en la tabla **Detectados** con su IP, MAC y
 fabricante, y una columna de **Sugerencia** que adelanta qué parece ser cada
-equipo: "Radio Ubiquiti", "Equipo MikroTik · no es airMAX", etcétera.
+equipo: "Radio Ubiquiti", "Equipo MikroTik", etcétera.
+
+Al terminar, la app te **cuenta qué encontró**: cuántos equipos son nuevos y
+cuántos ya estaban en tu proyecto. Un escaneo que no dice nada deja la duda de
+si funcionó.
 
 ![La tabla Detectados tras el escaneo: cada hallazgo con su IP, MAC, fabricante y la Sugerencia que adelanta qué es — con el botón de Iniciar sesión en los radios Ubiquiti](/signal-scope/escaneo-detectados.jpg)
 
@@ -46,8 +50,13 @@ completo, MAC incluida.
 ## 4. Inicia sesión en los radios
 
 Los radios necesitan sesión para reportar sus métricas. Usa las credenciales de
-airOS (las mismas de su interfaz web); la app elige sola el medio de conexión
-(HTTP o SSH).
+su interfaz —las de **airOS** o las de **RouterOS**, según el equipo— y elige su
+**Sistema** en el selector del inicio de sesión: viene preseleccionado por el
+fabricante que delató la MAC, y se cambia de un clic.
+
+- Con **airOS**, la app elige sola el medio de conexión (HTTP o SSH).
+- Con **RouterOS**, el transporte se fuerza a **SSH**: la v6 no tiene API REST.
+  Ver [Equipos compatibles](./compatibilidad).
 
 Dos maneras:
 
@@ -62,20 +71,40 @@ Al conectar, **cada radio reporta su modo y se clasifica solo** en
 credenciales quedan guardadas (cifradas dentro del proyecto) y la app las usa
 para reconectar automáticamente en las próximas sesiones.
 
-Lo que no sea un radio tuyo —un MikroTik, una ONU— se marca con **"No es un
-radio"** y pasa al inventario de **Otros**, como se explica en la
-[introducción](./#como-se-organizan-tus-equipos).
+Lo que no vayas a gestionar —una ONU, un switch, el router del cliente— se baja
+con **"Llevar a Otros…"**, que te pide su nombre y si quieres vigilarlo, como se
+explica en la [introducción](./#como-se-organizan-tus-equipos).
+
+::: warning Si un equipo rechaza tus credenciales, la app deja de intentarlo
+Y es lo correcto: insistir hace que el propio equipo cierre el acceso —airOS lo
+bloquea medio minuto tras varios intentos fallidos— y acaba dejándote fuera
+**también a ti, hasta con tu terminal**. El aviso te repite lo que dijo el radio,
+con sus palabras, para que corrijas el dato bueno.
+:::
 
 ![La sesión en cascada: protocolo, credenciales únicas y la cola de radios conectándose uno a uno](/signal-scope/sesion-cascada.png)
+
+::: info 🖼️ Imagen pendiente — `login-sistema.png`
+El modal de inicio de sesión con el selector **Sistema** (airOS / RouterOS)
+visible, y el botón de HTTP deshabilitado al elegir RouterOS con su motivo en el
+tooltip.
+:::
+
+::: details Un MikroTik con dos radios deja dos filas
+Y es correcto: una caja con su AP de 2,4 GHz y su estación de 5 GHz ocupa **una
+fila por radio**, aunque sea una sola sesión. Lo que es del equipo —CPU,
+memoria, puertos— se repite igual en ambas. El detalle está en
+[Equipos compatibles](./compatibilidad#un-equipo-una-fila-por-radio).
+:::
 
 ## Ya estás monitoreando
 
 Con las sesiones abiertas, las tablas se refrescan solas: señal en dBm (local y
 remota), semáforo, throughput, distancia, uptime. De aquí en adelante:
 
-- **Marca referencias**: cuando un enlace esté sano y estable, **"Marcar OK"**
-  fija su señal de ese instante como referencia; la app pasará a juzgar cuánto
-  se desvió de ese punto.
+- **Marca líneas base**: cuando un enlace esté sano y estable, **"Marcar"**
+  fija su señal de ese instante como línea base; la app pasará a juzgar cuánto
+  bajó respecto a ese punto.
 - **Guarda un snapshot** del estado inicial de la red — te servirá de punto de
   comparación.
 

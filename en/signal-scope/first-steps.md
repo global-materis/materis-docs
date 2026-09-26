@@ -8,7 +8,7 @@ the project, register your networks, scan, and sign in to the radios.
 On the welcome screen, create a project: you choose its **name and where to
 save it**, and it is created as a **`.sscope`** file.
 
-That file is your whole network — devices, encrypted credentials, references,
+That file is your whole network — devices, encrypted credentials, baselines,
 snapshots and history — and it **autosaves** as you work. Next time, the
 welcome screen offers it under **Recents** with a summary of its state.
 
@@ -32,7 +32,11 @@ shows per-network progress and can be cancelled at any time.
 
 Everything that responds shows up in the **Detected** table with its IP, MAC
 and manufacturer, plus a **Suggestion** column hinting at what each device
-looks like: "Ubiquiti radio", "MikroTik device · not airMAX", and so on.
+looks like: "Ubiquiti radio", "MikroTik radio", and so on.
+
+When it finishes, the app **tells you what it found**: how many devices are new
+and how many were already in your project. A scan that says nothing leaves you
+wondering whether it worked.
 
 ![The Detected table after a scan: each finding with its IP, MAC, manufacturer and the Suggestion hinting what it is — with the Sign in button on Ubiquiti radios](/signal-scope/escaneo-detectados.jpg)
 
@@ -44,9 +48,14 @@ identifies itself fully, MAC included.
 
 ## 4. Sign in to the radios
 
-Radios need a session to report their metrics. Use the airOS credentials (the
-same ones as their web interface); the app picks the connection method on its
-own (HTTP or SSH).
+Radios need a session to report their metrics. Use the credentials of their own
+interface — **airOS** or **RouterOS**, depending on the device — and pick its
+**System** in the login selector: it comes preselected from the manufacturer the
+MAC revealed, and changes with one click.
+
+- With **airOS**, the app picks the connection method on its own (HTTP or SSH).
+- With **RouterOS**, the transport is forced to **SSH**: v6 has no REST API. See
+  [Supported devices](./supported-devices).
 
 Two ways:
 
@@ -60,20 +69,40 @@ Upon connecting, **each radio reports its mode and classifies itself** as a
 Credentials are stored (encrypted inside the project) and the app uses them to
 reconnect automatically in future sessions.
 
-Anything that is not one of your radios — a MikroTik, an ONU — gets marked
-**"Not a radio"** and moves to the **Others** inventory, as explained in the
+Anything you will not manage — an ONU, a switch, the customer's router — goes
+down with **"Move to Others…"**, which asks for its name and whether you want to
+watch it, as explained in the
 [introduction](./#how-your-devices-are-organized).
 
+::: warning If a device rejects your credentials, the app stops trying
+And that is the right thing: insisting makes the device itself close access —
+**airOS locks it for half a minute after several failed attempts** — and ends up
+locking **you** out too, terminal included. The notice repeats what the radio
+said, in its own words, so you can fix the right detail.
+:::
+
 ![The cascade session: protocol, one set of credentials and the queue of radios connecting one by one](/signal-scope/sesion-cascada.png)
+
+::: info 🖼️ Image pending — `login-sistema.png`
+The login dialog with the **System** selector (airOS / RouterOS) visible, and the
+HTTP button disabled when RouterOS is picked, with its reason in the tooltip.
+:::
+
+::: details A MikroTik with two radios leaves two rows
+And that is correct: a box with its 2.4 GHz AP and its 5 GHz station takes **one
+row per radio**, even though it is a single session. What belongs to the device —
+CPU, memory, ports — repeats identically in both. The details are in
+[Supported devices](./supported-devices#one-device-one-row-per-radio).
+:::
 
 ## You are now monitoring
 
 With sessions open, the tables refresh on their own: signal in dBm (local and
 remote), traffic light, throughput, distance, uptime. From here on:
 
-- **Set references**: when a link is healthy and stable, **"Mark OK"** pins
-  its signal at that instant as the antenna's reference; the app will then
-  judge how far it has drifted from that point.
+- **Set baselines**: when a link is healthy and stable, **"Mark"** pins
+  its signal at that instant as the antenna's baseline; the app will then
+  judge how far it has dropped from that point.
 - **Save a snapshot** of the network's initial state — it will serve as a point
   of comparison.
 

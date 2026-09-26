@@ -10,8 +10,9 @@ SignalScope se distribuye por la **Microsoft Store**:
 
 **[Obtener SignalScope en Microsoft Store](https://apps.microsoft.com/store/detail/9NPZ6VTKF989)**
 
-Se instala como cualquier app de la tienda y las **actualizaciones llegan
-solas**.
+Se instala como cualquier app de la tienda, y cuando hay una versión nueva la
+propia app te avisa y la instala **desde dentro** — ver
+[Actualizaciones](#actualizaciones).
 
 ## Primer arranque
 
@@ -114,7 +115,81 @@ liberarlo.
 
 ## Actualizaciones
 
-No tienes que hacer nada: la **Microsoft Store actualiza la app sola**. Tus
-proyectos, preferencias y licencia se conservan en cada actualización. El
-historial de cambios de cada versión se puede consultar dentro de la app, en la
+Tus proyectos, preferencias y licencia **se conservan en cada actualización**, y
+el historial de cambios de cada versión se consulta dentro de la app, en la
 vista **Novedades**.
+
+Cuando hay una versión nueva aparece un botón **Actualizar** en dos
+sitios: el pie del rail de la Bienvenida y la barra del Monitor. **Solo
+existe cuando hay algo que actualizar** — un botón permanente se deja de leer;
+uno que aparece se nota.
+
+Al pulsarlo, la app avisa de lo único que importa decidir: **se cerrará por
+completo y dejará de vigilar**. Luego Windows pide su propia confirmación,
+aparece la barra de avance y la app se cierra sola al terminar. **No vuelve a
+abrirse por su cuenta**: hasta que la abras, tu red no está vigilada — por eso
+el momento lo eliges tú.
+
+La comprobación corre cada 6 horas y **no instala nada sola**: lo único que hace
+es que el botón aparezca.
+
+::: info 🖼️ Imagen pendiente — `actualizar.png`
+El modal de actualización desde la Microsoft Store: el aviso de que la app se
+cerrará y dejará de vigilar, y el botón **Actualizar ahora**.
+:::
+
+## Arranque, bandeja y cierre
+
+Tres comportamientos que cambiaron en la v1.3.0 y que **notarás el primer día**.
+
+### Cerrar la ventana no cierra la vigilancia
+
+Con un proyecto abierto, la **X** ya no mata la app: la **esconde junto al reloj**,
+en la barra de tareas, y **sigue midiendo y avisando**. Antes la cerraba —y con
+ella la vigilancia— sin decir nada.
+
+- **La primera vez te lo explica**, y en ese mismo aviso puedes salir del todo:
+  quien de verdad quería cerrar no tiene que ir a buscar el menú de un icono
+  que todavía no sabe que existe.
+- **Sin proyecto abierto, la X cierra de verdad.** La app se queda residente
+  solo cuando tiene algo que hacer.
+- El **icono de la bandeja** es un sitio donde mirar, no solo un atajo: su
+  primera línea dice **qué proyecto está abierto y su estado**, lleva un punto
+  rojo con los avisos pendientes, y desde su menú vuelves al **Monitor** o al
+  **Mapa**, o sales del todo.
+- Si pulsas una **notificación de Windows**, la app se abre **en el equipo que
+  la causó** — no en la pantalla de inicio.
+
+::: tip ¿Y si quiero dejar de vigilar sin cerrar la app?
+**Archivo → Cerrar proyecto.** Y ese proyecto se queda cerrado en el siguiente
+arranque, en vez de reabrirse solo.
+:::
+
+::: info 🖼️ Imagen pendiente — `bandeja.png`
+El menú del icono de bandeja: la cabecera con el nombre del proyecto y su
+estado, los accesos a Monitor y Mapa, y Salir.
+:::
+
+### Iniciar con Windows
+
+En **Preferencias → General → Arranque**, el interruptor **"Iniciar con
+Windows"** hace que la app se abra sola al encender la PC y te deje
+**directamente en el Monitor** de la red que estaba vigilando.
+
+Tres cosas que no hace lo obvio:
+
+- **No se salta nada.** Sale su pantalla de carga de siempre, que es donde se
+  comprueba la licencia y se abre tu proyecto con sus llaves. Lo único que
+  cambia es en qué pantalla aterrizas.
+- **No reabre un proyecto que cerraste a mano.** Entonces te deja en la
+  Bienvenida, con el proyecto a un clic.
+- **Windows puede decir que no.** Si apagaste el arranque desde el
+  Administrador de tareas o desde Configuración → Aplicaciones → Inicio, la app
+  ya no puede volver a encenderlo — solo tú, desde ahí. La casilla te dice cuál
+  de los casos es, en vez de prometer un arranque que no va a ocurrir.
+
+### Los avisos no dependen de qué pantalla mires
+
+Con el proyecto abierto, el centinela vigila **estés donde estés**: en el
+Monitor, en el Mapa, en la pantalla de inicio — que además te dice si está
+vigilando y cuántos equipos— o con la ventana escondida en la bandeja.

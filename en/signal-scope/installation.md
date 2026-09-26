@@ -10,7 +10,9 @@ SignalScope is distributed through the **Microsoft Store**:
 
 **[Get SignalScope on the Microsoft Store](https://apps.microsoft.com/store/detail/9NPZ6VTKF989)**
 
-It installs like any other Store app, and **updates arrive on their own**.
+It installs like any other Store app, and when a new version is out the app
+itself tells you and installs it **from the inside** — see
+[Updates](#updates).
 
 ## First launch
 
@@ -114,7 +116,80 @@ Uninstalling the app does **not** free the slot. If the machine is gone
 
 ## Updates
 
-There is nothing for you to do: the **Microsoft Store updates the app on its
-own**. Your projects, preferences and license are kept through every update.
-Each version's changelog is available inside the app, in the **What's new**
-view.
+Your projects, preferences and license **are kept through every update**, and
+each version's changelog is available inside the app, in the **What's new** view.
+
+When a new version is available an **Update** button appears in two
+places: the foot of the Welcome rail and the Monitor's top bar. **It only exists
+when there is something to update** — a permanent button stops being read; one
+that appears gets noticed.
+
+When you press it, the app warns you about the one thing worth deciding: **it
+will close completely and stop watching**. Windows then asks for its own
+confirmation, a progress bar appears, and the app closes itself when it is done.
+**It does not reopen on its own**: until you open it, your network is not being
+watched — which is why you pick the moment.
+
+The check runs every 6 hours and **installs nothing by itself**: all it does is
+make the button appear.
+
+::: info 🖼️ Image pending — `actualizar.png`
+The Microsoft Store update dialog: the warning that the app will close and stop
+watching, and the **Update now** button.
+:::
+
+## Startup, tray and closing
+
+Three behaviours that changed in v1.3.0 and that you **will notice on day one**.
+
+### Closing the window does not close the watch
+
+With a project open, the **X** no longer kills the app: it **tucks it next to the
+clock**, in the taskbar, and it **keeps measuring and alerting**. It used to
+close it — and the watch with it — without saying anything.
+
+- **The first time it explains itself**, and that same notice lets you quit for
+  real: someone who genuinely wanted to close should not have to hunt for the
+  menu of an icon they don't yet know exists.
+- **With no project open, the X really closes.** The app stays resident only
+  when it has something to do.
+- The **tray icon** is a place to look, not just a shortcut: its first line says
+  **which project is open and its state**, it carries a red dot with pending
+  alerts, and from its menu you go back to the **Monitor** or the **Map**, or
+  quit altogether.
+- If you click a **Windows notification**, the app opens **on the device that
+  caused it** — not on the start screen.
+
+::: tip What if I want to stop watching without closing the app?
+**File → Close project.** And that project stays closed on the next launch,
+instead of reopening by itself.
+:::
+
+::: info 🖼️ Image pending — `bandeja.png`
+The tray icon menu: the header with the project name and its state, the Monitor
+and Map entries, and Quit.
+:::
+
+### Start with Windows
+
+In **Preferences → General → Startup**, the **"Start with Windows"** switch makes
+the app open by itself when you turn the PC on and land you **straight in the
+Monitor** of the network it was watching.
+
+Three things that do not do the obvious:
+
+- **It skips nothing.** Its usual loading screen still appears — that is where
+  the license is checked and your project is opened with its keys. All that
+  changes is which screen you land on.
+- **It does not reopen a project you closed by hand.** Then it leaves you on the
+  Welcome screen, with the project one click away.
+- **Windows can say no.** If you turned startup off from Task Manager or from
+  Settings → Apps → Startup, the app can no longer turn it back on — only you
+  can, from there. The checkbox tells you which case it is, instead of promising
+  a startup that will not happen.
+
+### Alerts do not depend on which screen you are looking at
+
+With the project open, the sentinel watches **wherever you are**: in the Monitor,
+in the Map, on the start screen — which now tells you whether it is watching and
+how many devices — or with the window tucked away in the tray.

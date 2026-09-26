@@ -43,7 +43,7 @@ without separators — and **the app sets the table for you**:
   **Map**, its card centered and its link highlighted.
 - Pick an **AP** → its row isolated and, above, its stations. On the **Map**,
   the view jumps to its node with its sector.
-- Pick a device from **Others** → its row in that table (not offered on the
+- Pick a device from **References** → its row in that table (not offered on the
   Map: the map does not draw third-party devices).
 
 It finds devices **even when a filter has them hidden** — it searches the
@@ -77,14 +77,16 @@ Every question has its click, no manual hunting:
 | AP, Stations cell | the **counter** | "who hangs off here?" → its stations |
 | AP, Stations cell | the **ping icon** | continuous ping to all its registered stations, already running |
 | A **sentinel alert** | the card | straight to the device (clearing the filter so it is not hidden) |
-| Detected / Others | "View in Others" / "View in Detected" on the notices | to the freshly moved device |
+| A **notice in the bell** | the line | to the device that notice was about |
+| A **Windows notification** | the toast | opens the app **on the device that caused it**, inside its project |
+| A notice that sends a device back to Detected | **"View in Detected"** | to the Detected table |
 
 ## Direct access on the rows
 
 - **The IP is a link**: it opens the radio's web interface in the browser.
   Next to it, the **ping button** opens a console with a continuous ping to
   that IP.
-- **"Mark OK"** pins the reference without leaving the row; the **×** removes
+- **"Mark"** pins the baseline without leaving the row; the **×** removes
   it.
 - The **Columns menu** hides what you don't use — fewer columns, faster
   reading; the choice is remembered per table.
@@ -93,8 +95,13 @@ Every question has its click, no manual hunting:
 
 - The **side search drives the view**: click a result and the map selects and
   centers (zooming in if needed, never out).
+- **`Ctrl` + click on an AP** leaves it **alone on screen**.
+- **`Esc`** closes the open card and exits the marking or node-placing modes.
+- A card header's **← arrow** **goes back to the previous card**: from a station
+  to its AP and back, without hunting for it again.
 - Each card's **Center** button (crosshair) re-frames the selection.
-- **Mark** drops an ephemeral pin to copy coordinates.
+- **Mark** drops an ephemeral pin to copy coordinates, measure the **distance to
+  a node** or **annotate the position** of a MikroTik station.
 
 ## Three diagnosis routes, chained
 

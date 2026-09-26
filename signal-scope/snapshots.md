@@ -8,10 +8,17 @@ muestro a alguien más.
 
 **Guardar snapshot** (`Ctrl+H`) captura el estado completo del momento:
 estaciones y AP con sus métricas, el veredicto del diagnóstico, las
-referencias que tenías puestas, el estado de sesión de cada equipo — y
-también tu inventario de **Otros**, con el nombre que les pusiste y si
-respondían a la vigilancia. La captura queda en el **strip de snapshots**,
-con su fecha.
+líneas base que tenías puestas, el estado de sesión de cada equipo — y
+también tu inventario de **Referentes**, con el nombre que les pusiste y **cómo
+respondían**: su tiempo de respuesta y su porcentaje de pérdida. La captura
+queda en el **strip de snapshots**, con su fecha.
+
+::: tip La captura dice cómo respondía, no solo si respondía
+Cada destino de Referentes se guarda con su **latencia y su pérdida**, así que
+la foto de hace tres días responde *cómo* respondía. Las capturas tomadas con
+una versión anterior a la 1.3 no traen ese dato, y su celda va con un guion
+apagado.
+:::
 
 - Un proyecto guarda **hasta 10 snapshots**: al guardar el undécimo, el más
   viejo se elimina solo.
@@ -37,7 +44,9 @@ semana pasada?"*.
 La herramienta de **comparar snapshots** (marcada **beta**: funciona, pero
 qué métricas compara y cómo las presenta puede cambiar en próximas versiones)
 cruza dos capturas —o una captura contra el estado en vivo— y lista altas,
-bajas y cambios por equipo. Los
+bajas y cambios por equipo. Si entre las dos reemplazaste un radio, la baja y
+el alta lo dicen: *"Reemplazado por …"* y *"Reemplaza a …"*, con la MAC del
+otro. Los
 cambios salen como chips agrupados por **qué los causa**, que es lo que
 importa al leerlos:
 
@@ -52,6 +61,26 @@ importa al leerlos:
 También avisa del **puerto Ethernet** (cable desconectado o reconectado,
 cambios de dúplex y velocidad, errores de cable) y de sesiones caídas o
 recuperadas entre una captura y otra.
+
+### Cuando las dos capturas son de épocas distintas
+
+Comparar una captura **anterior a la v1.2.0** con una de ahora ya no engaña. En
+aquella versión cambió **cómo se miden** la calidad de enlace, la capacidad, el
+consumo y la distancia, así que al cruzarlas salían diferencias que **ningún
+equipo tuvo**: el número estaba bien restado y no significaba nada.
+
+Ahora esas columnas —Link bajada, Link subida, Downlink y Uplink— **dejan de
+compararse** entre capturas de distinta época: sale una nota arriba diciendo
+cuáles y por qué, y en el menú de Métricas esas entradas aparecen apagadas. **No
+es un bloqueo**: todo lo demás —señal, modelo, firmware, AP, puerto,
+configuración— se sigue comparando igual.
+
+::: details Y la Modulación en equipos MikroTik
+Tampoco se compara, por un motivo distinto: RouterOS no publica índice de
+modulación, así que la columna muestra la tasa en Mbps — y esa **salta entre
+escalones de una lectura a la siguiente**. Se captura y se pinta; comparar dos
+lecturas instantáneas no diría nada del enlace.
+:::
 
 ::: details ¿Por qué no compara el tráfico ni el uptime?
 El tráfico es el **consumo** del cliente en ese instante — que descargara en
@@ -73,11 +102,37 @@ alcances:
 
 | Tipo | Qué incluye |
 |---|---|
-| **General** | Toda la red: estaciones + AP. |
+| **General** | Toda la red: estaciones + AP + **Referentes**. |
 | **Críticas** | Solo las estaciones en crítico. |
 | **Críticas + Atención** | La lista de trabajo del técnico. |
 | **Solo estaciones** | Todas las estaciones, sin tabla de AP. |
 | **Solo AP** | Únicamente los puntos de acceso. |
+
+### Qué llevan dentro
+
+Hasta **tres tablas**:
+
+- **Estaciones y AP**, con su **CPU y RAM libre**: un equipo que la app pinta
+  saturado sale igual en el PDF que le mandas al cliente.
+- **Referentes**, con sus mismas seis columnas —*Vigilancia · Latencia ·
+  Nombre · IP / dominio · MAC · Fabricante*— y con **todos** los destinos,
+  vigilados o no: cada fila de Referentes la pusiste tú, así que ninguna es
+  ruido, y una fila "Sin vigilar" dice con claridad que de ese equipo el
+  reporte no afirma nada.
+- **Si el reporte sale de una captura**, la tabla de Referentes dice **cómo
+  respondían aquel día**.
+
+Dos precisiones sobre esa tercera tabla: **solo sale en el tipo General** —los
+otros cuatro son recortes por el estado de los *radios*, y un destino de Referentes no
+tiene semáforo con el que entrar o quedarse fuera— y **no lleva color de
+semáforo** en ningún formato, ni siquiera en el Excel. Su columna *Vigilancia* lo
+dice en palabras.
+
+::: warning Las dos latencias del reporte no son comparables
+La de la tabla de Referentes **la mide SignalScope** (es un ping, y recorre todo el
+camino). La de la tabla de estaciones **la mide el radio** sobre su propio tramo
+aéreo. No comparten umbrales ni significado.
+:::
 
 Dos detalles pensados para que el reporte sea defendible:
 

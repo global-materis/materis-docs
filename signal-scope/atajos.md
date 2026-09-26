@@ -42,7 +42,7 @@ separadores — y **la app te deja la mesa puesta**:
   sector? En el **Mapa**, su tarjeta centrada y su enlace resaltado.
 - Eliges un **AP** → su fila aislada y, arriba, sus estaciones. En el
   **Mapa**, la vista salta a su nodo con su sector.
-- Eliges un equipo de **Otros** → su fila en esa tabla (en el Mapa no se
+- Eliges un equipo de **Referentes** → su fila en esa tabla (en el Mapa no se
   ofrece: el mapa no dibuja equipos ajenos).
 
 Encuentra los equipos **aunque un filtro los tenga escondidos** — busca en el
@@ -75,13 +75,15 @@ Cada pregunta tiene su clic, sin buscar a mano:
 | AP, celda Estaciones | el **contador** | "¿quiénes cuelgan de aquí?" → sus estaciones |
 | AP, celda Estaciones | el **icono de ping** | ping continuo a todas sus estaciones registradas, ya corriendo |
 | Una **alerta del centinela** | la tarjeta | va directo al equipo (y limpia el filtro para que no quede oculto) |
-| Detectados / Otros | "Ver en Otros" / "Ver en Detectados" de los avisos | al equipo recién movido |
+| Un **aviso de la campana** | la línea | al equipo del que hablaba ese aviso |
+| Una **notificación de Windows** | el aviso | abre la app **en el equipo que lo causó**, dentro de su proyecto |
+| Un aviso que devuelve un equipo a Detectados | **"Ver en Detectados"** | a la tabla Detectados |
 
 ## Accesos directos en las filas
 
 - **La IP es un enlace**: abre la interfaz web del radio en el navegador. A
   su lado, el **botón de ping** abre una consola con ping continuo a esa IP.
-- **"Marcar OK"** fija la referencia sin salir de la fila; la **×** la quita.
+- **"Marcar"** fija la línea base sin salir de la fila; la **×** la quita.
 - El **menú Columnas** oculta lo que no uses — menos columnas, lectura más
   rápida; la elección se recuerda por tabla.
 
@@ -89,8 +91,13 @@ Cada pregunta tiene su clic, sin buscar a mano:
 
 - El **buscador lateral lleva la vista**: clic en un resultado y el mapa
   selecciona y centra (acerca si hace falta, nunca aleja).
+- **`Ctrl` + clic sobre un AP** lo deja **solo en pantalla**.
+- **`Esc`** cierra la tarjeta abierta y sale de los modos de marcar o colocar.
+- La **flecha ←** de la cabecera de una tarjeta **vuelve a la anterior**: de una
+  estación a su AP y de vuelta, sin buscarla otra vez.
 - El botón **Centrar** (diana) de cada tarjeta reencuadra lo seleccionado.
-- **Marcar** deja un pin efímero para copiar coordenadas.
+- **Marcar** deja un pin efímero para copiar coordenadas, medir la **distancia a
+  un nodo** o **anotar la posición** de una estación MikroTik.
 
 ## Tres rutas de diagnóstico, encadenadas
 

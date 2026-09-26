@@ -7,10 +7,18 @@ someone else.
 ## Saving a snapshot
 
 **Save snapshot** (`Ctrl+H`) captures the complete state of the moment:
-stations and APs with their metrics, the diagnosis verdict, the references you
-had set, each device's session state — and also your **Others** inventory,
-with the names you gave them and whether they answered the watch. The capture
-lands on the **snapshot strip**, with its date.
+stations and APs with their metrics, the diagnosis verdict, the baselines you
+had set, each device's session state — and also your **References** inventory,
+with the names you gave them and **how they were answering**: their response
+time and their packet loss. The capture lands on the **snapshot strip**, with
+its date.
+
+::: tip The capture says how it answered, not only whether it did
+Each References target is stored with its **latency and its loss**, so a
+three-day-old picture answers *how* it was answering. Captures taken with a
+version older than 1.3 do not carry that data, and their cell shows a dimmed
+dash.
+:::
 
 - A project keeps **up to 10 snapshots**: saving the eleventh silently removes
   the oldest.
@@ -35,7 +43,9 @@ last week?"*.
 The **snapshot compare** tool (marked **beta**: it works, but which metrics
 it compares and how it presents them may change in future versions) crosses
 two captures — or one capture against the live state — and lists additions,
-removals and changes per device. Changes
+removals and changes per device. If you replaced a radio in between, the removal
+and the addition say so: *"Replaced by …"* and *"Replaces …"*, with the other
+one's MAC. Changes
 come out as chips grouped by **what causes them**, which is what matters when
 reading:
 
@@ -50,6 +60,26 @@ reading:
 It also flags the **Ethernet port** (cable unplugged or reconnected, duplex
 and speed changes, cable errors) and sessions dropped or recovered between one
 capture and the other.
+
+### When the two captures come from different eras
+
+Comparing a capture from **before v1.2.0** with a current one no longer misleads
+you. In that version **how** link quality, capacity, consumption and distance are
+measured changed, so crossing them produced differences **no device ever had**:
+the number was correctly subtracted and meant nothing.
+
+Those columns — Link down, Link up, Downlink and Uplink — **stop being compared**
+between captures from different eras: a note at the top says which ones and why,
+and in the Metrics menu those entries appear disabled. **It is not a block**:
+everything else — signal, model, firmware, AP, port, configuration — is still
+compared as usual.
+
+::: details And Modulation on MikroTik devices
+It is not compared either, for a different reason: RouterOS publishes no
+modulation index, so the column shows the rate in Mbps — and that **jumps between
+steps from one reading to the next**. It is captured and painted; comparing two
+instantaneous readings would say nothing about the link.
+:::
 
 ::: details Why doesn't it compare traffic or uptime?
 Traffic is the customer's **consumption** at that instant — that they were
@@ -70,11 +100,37 @@ a double click in a Spanish-locale Excel, no import wizard. Five scopes:
 
 | Type | What it includes |
 |---|---|
-| **General** | The whole network: stations + APs. |
+| **General** | The whole network: stations + APs + **References**. |
 | **Critical** | Only stations in critical state. |
 | **Critical + Attention** | The technician's work list. |
 | **Stations only** | Every station, without the AP table. |
 | **APs only** | Access points alone. |
+
+### What they carry inside
+
+Up to **three tables**:
+
+- **Stations and APs**, with their **CPU and free RAM**: a device the app paints
+  as saturated reads the same in the PDF you send the customer.
+- **References**, with its same six columns — *Monitoring · Latency · Name ·
+  IP / domain · MAC · Manufacturer* — and with **every** target, monitored or
+  not: every row in References was put there by you, so none of them is noise,
+  and a "Not monitored" row states clearly that the report claims nothing about
+  that device.
+- **If the report comes from a capture**, the References table says **how they
+  were answering that day**.
+
+Two clarifications about that third table: **it only appears in the General
+type** — the other four are cuts by the state of the *radios*, and a target in
+References has no traffic light to enter or fall outside of — and it **carries no
+traffic-light color** in any format, not even in Excel. Its *Monitoring* column
+says it in words.
+
+::: warning The report's two latencies are not comparable
+The one in the References table **is measured by SignalScope** (it is a ping, and it
+crosses the whole path). The one in the stations table **is measured by the
+radio** over its own air segment. They share no thresholds and no meaning.
+:::
 
 Two details meant to make the report defensible:
 

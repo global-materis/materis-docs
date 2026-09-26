@@ -9,7 +9,7 @@ Each station's color is the verdict of the **full diagnosis** — the worst of
 its seven axes rules (see below). Its main axis, signal, is judged in two
 modes, and the difference matters:
 
-**Without a reference** — the absolute dBm value is judged:
+**Without a baseline** — the absolute dBm value is judged:
 
 | State | Signal |
 |---|---|
@@ -17,40 +17,46 @@ modes, and the difference matters:
 | 🟡 Attention | −55 to −67 dBm |
 | 🔴 Critical | < −67 dBm |
 
-**With a reference** — what is judged is how far it drifted from the reference
+**With a baseline** — what is judged is how far it dropped from the baseline
 you set (Δ dB):
 
 | State | Drift |
 |---|---|
-| 🟢 On reference | up to −3 dB |
-| 🟡 Dropped vs ref | −3 to −8 dB |
+| 🟢 Stable | up to −3 dB |
+| 🟡 Dropped vs baseline | −3 to −8 dB |
 | 🔴 Check link | more than −8 dB |
 
+The diagnosis says it with the number: *"Signal −10 dB vs its baseline
+(−54 dBm)"*.
+
 An **Absent** station is not a critical one: it lost its session and keeps its
-last reading, with the reason in the tooltip.
+last reading, with the reason in the tooltip. What its chip says while the app
+gets it back is in [When a device goes absent](./interface/stations#when-a-device-goes-absent).
 
-## References: compare against your own network
+## Baseline: compare against your own network
 
-Even without a reference, the app does not judge blindly: it uses the
+<a id="references-compare-against-your-own-network"></a>
+
+Even without a baseline, the app does not judge blindly: it uses the
 **signal expected at each link's distance** (computed by the radio itself)
-and, only as a last resort, the absolute threshold. The reference adds what
+and, only as a last resort, the absolute threshold. The baseline adds what
 no automatism can know: **how that link was when the installer left it
 right** — its alignment, its cable, its obstacles. It is your criterion, and
 it wins over the other two.
 
-When a link is **the way it should be**, click **"Mark OK"**: that moment's
+When a link is **the way it should be**, click **"Mark"**: that moment's
 signal becomes **that** antenna's healthy point, and from then on the signal
 axis judges the drift against it (Δ dB) instead of the absolute value.
 
-- The reference is **per antenna** and survives reboots and IP changes.
-- With a reference, the cell shows `ref −58 dBm` and an **×**. To update it
-  (after a realignment, for example), **remove it with the × and click
-  "Mark OK" again** — it is two gestures: while a reference is set, the
-  button is not shown.
+- The baseline is **per antenna** and survives reboots and IP changes.
+- With a baseline, the **Baseline** column shows the value (`−58 dBm`) and an
+  **×** (*"Remove baseline"*). To update it (after a realignment, for example),
+  **remove it with the × and click "Mark" again** — it is two gestures:
+  while a baseline is set, the button is not shown.
 
 ::: tip Mark while the link is stable
-"Mark OK" stores the reading **at the instant of the click**, without
-averaging. Marking during a fade pins a bad point as the reference.
+"Mark" stores the reading **at the instant of the click**, without
+averaging. Marking during a fade pins a bad point as the baseline.
 :::
 
 ## Why signal alone is not enough
@@ -63,7 +69,7 @@ words**, shown when hovering the signal cell.
 
 ## The seven axes
 
-1. **Signal in context.** With a reference, the drift against it; otherwise,
+1. **Signal in context.** With a baseline, the drift against it; otherwise,
    against the signal **expected at that distance** (computed by the radio
    itself); as a last resort, the absolute threshold.
 2. **Channel quality.** The margin between signal and noise floor (SNR) or, on
@@ -85,6 +91,13 @@ words**, shown when hovering the signal cell.
    for non-payment, not a link fault — the fact shows in the Ports column and
    the sentinel notifies the change. Speed is only mentioned when it
    **limits** what the radio could deliver.
+   - **This axis applies to APs too**, with the same two rules and the same
+     boundary: an AP whose uplink port negotiates badly strangles its whole
+     sector.
+   - **And when the port is the only thing wrong, the signal is not painted
+     red**: the device stays critical and the row stays tinted, but the signal
+     number is painted for what it is worth. The problem is pointed at by the
+     Ports column and this axis, which is where it gets fixed.
 6. **Chain imbalance.** The antenna's two polarities should receive almost the
    same; a difference of 5 dB or more betrays a **rotated antenna, crossed
    polarization or a damaged chain** — with the total signal looking normal.
@@ -101,11 +114,23 @@ the alignment — before climbing to the roof.
 
 ![A critical station's diagnosis tooltip: SNR, latency, distance and port in the header, and below the causes — signal below expected, low link quality and downlink well below expected](/signal-scope/diagnostico.png)
 
+## The blind spot no axis sees
+
+The seven axes describe **how the device receives**. None of them looks the other
+way — and a radio can receive perfectly and **transmit at the slowest modulation
+there is**, with a pristine signal and balanced chains.
+
+That is what the **Modulation** column betrays, showing
+[both directions](./interface/stations#modulation-both-directions). It is
+informational — it does not change the traffic light — but it is the only thing
+that sees that case: looking only at the downstream, everything would seem fine
+about an antenna that is not.
+
 ## The AP is judged differently
 
 An AP does not have "one link" to judge: it has fifteen. Its State column
-combines channel load, radio health and its sector's latency — the detail is
-in [Access points](./interface/access-points).
+combines channel load, radio health, its sector's latency and its
+uplink port — the detail is in [Access points](./interface/access-points).
 
 ## About the thresholds
 
@@ -118,3 +143,16 @@ The app itself tells how they were set: **Help → "How calibration works"**
 sums up the method behind each limit, with real cases — and the invitation to
 report yours to **support@materis.io**, which is where the adjustments come
 from.
+
+::: warning On MikroTik, the traffic light is not calibrated yet
+A RouterOS device's thresholds are **currently airMAX's**. They were audited axis
+by axis — signal, chains, CPU and memory are physics and percentages, not
+vendor-dependent — but they have not been contrasted against real MikroTik links.
+
+The known bias: SNR comes from subtracting signal − noise, and **noise floors are
+not comparable between manufacturers**. With the same signal, a MikroTik scores
+**7–11 dB better** than an airMAX. It is not corrected with an invented number —
+that would turn a known bias into a hidden error — so the risk falls on the
+benign side: **less detection, not invented alarms**. Read it with reservation,
+and tell us what you see.
+:::

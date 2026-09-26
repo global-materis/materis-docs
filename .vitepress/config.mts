@@ -27,6 +27,7 @@ export default defineConfig({
                 { text: 'Introducción', link: '/signal-scope/' },
                 { text: 'Instalación y activación', link: '/signal-scope/instalacion' },
                 { text: 'Primeros pasos', link: '/signal-scope/primeros-pasos' },
+                { text: 'Equipos compatibles', link: '/signal-scope/compatibilidad' },
               ],
             },
             {
@@ -35,7 +36,7 @@ export default defineConfig({
                 { text: 'Panorama', link: '/signal-scope/interfaz/' },
                 { text: 'Estaciones', link: '/signal-scope/interfaz/estaciones' },
                 { text: 'Puntos de acceso', link: '/signal-scope/interfaz/puntos-de-acceso' },
-                { text: 'Detectados y Otros', link: '/signal-scope/interfaz/detectados-y-otros' },
+                { text: 'Detectados y Referentes', link: '/signal-scope/interfaz/detectados-y-otros' },
                 { text: 'Mapa de cobertura', link: '/signal-scope/interfaz/mapa' },
               ],
             },
@@ -90,6 +91,7 @@ export default defineConfig({
                 { text: 'Introduction', link: '/en/signal-scope/' },
                 { text: 'Installation and activation', link: '/en/signal-scope/installation' },
                 { text: 'First steps', link: '/en/signal-scope/first-steps' },
+                { text: 'Supported devices', link: '/en/signal-scope/supported-devices' },
               ],
             },
             {
@@ -98,7 +100,7 @@ export default defineConfig({
                 { text: 'Overview', link: '/en/signal-scope/interface/' },
                 { text: 'Stations', link: '/en/signal-scope/interface/stations' },
                 { text: 'Access points', link: '/en/signal-scope/interface/access-points' },
-                { text: 'Detected and Others', link: '/en/signal-scope/interface/detected-and-others' },
+                { text: 'Detected and References', link: '/en/signal-scope/interface/detected-and-others' },
                 { text: 'Coverage map', link: '/en/signal-scope/interface/map' },
               ],
             },
