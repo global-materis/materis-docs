@@ -1,14 +1,14 @@
 # La interfaz
 
-El panel de monitoreo es una sola pantalla vertical: arriba el panel de
-escaneo y las acciones, luego los contadores, y debajo las tablas de equipos.
-Esta sección la recorre por partes:
+El panel de monitoreo es una sola pantalla vertical. Arriba están el panel de
+escaneo y las acciones, luego los contadores y, debajo, las tablas de equipos.
+Cada parte tiene su página:
 
-- [Estaciones](./estaciones) — la tabla principal: tus antenas de cliente.
-- [Puntos de acceso](./puntos-de-acceso) — tus estaciones base.
-- [Detectados y Referentes](./detectados-y-otros) — la cola del escaneo y el
+- [Estaciones](./estaciones): la tabla principal, con tus antenas de cliente.
+- [Puntos de acceso](./puntos-de-acceso): tus estaciones base.
+- [Detectados y Referentes](./detectados-y-otros): la cola del escaneo y el
   inventario de lo que no gestionas pero miras para contrastar.
-- [Mapa de cobertura](./mapa) — la otra vista principal: nodos, sectores y
+- [Mapa de cobertura](./mapa): la otra vista principal, con nodos, sectores y
   estaciones sobre el mapa.
 
 ![El panel completo: redes registradas y acciones arriba, los contadores del parque, el historial de snapshots y la tabla de estaciones en vivo](/signal-scope/monitor-en-vivo.jpg)
@@ -16,56 +16,57 @@ Esta sección la recorre por partes:
 ## El panel de arriba
 
 Además del escaneo y la sesión en cascada (vistos en
-[Primeros pasos](../primeros-pasos)), ahí viven:
+[Primeros pasos](../primeros-pasos)), ahí están:
 
-- **Guardar snapshot** (`Ctrl+H`) — captura el estado actual de la red al
+- **Guardar snapshot** (`Ctrl+H`), que guarda el estado actual de la red en el
   historial.
-- **Reporte** — exporta a PDF, Excel o CSV, con un selector de alcance: General,
-  Críticas, Críticas + Atención, Solo estaciones o Solo AP.
-- **El strip de snapshots** — las capturas guardadas, cada una con su fecha;
-  desde ahí se comparan, se comparten y se protegen.
-- **Actualizar** — a la izquierda del nombre del proyecto, y **solo cuando hay
-  una versión nueva** ([cómo funciona](../instalacion#actualizaciones)).
+- **Reporte**, que exporta a PDF, Excel o CSV. El tipo de reporte se elige
+  entre General (toda la red), Críticas, Críticas + Atención, Solo estaciones y
+  Solo AP; este último se desactiva cuando no hay ningún AP a la vista.
+- La tira de snapshots, con los snapshots guardados y la fecha de cada uno.
+  Desde ahí se comparan, se comparten y se protegen.
+- **Actualizar**, a la izquierda del nombre del proyecto. Solo aparece cuando
+  hay una versión nueva ([cómo funciona](../instalacion#actualizaciones)).
 
 ## Los dos indicadores de la esquina
 
-Arriba a la derecha, siempre en el mismo sitio en el **Monitor** y en el
-**Mapa**, viven dos controles vecinos que cuentan **cosas distintas**. Vale la
-pena no confundirlos:
+Arriba a la derecha, en el mismo sitio en el **Monitor** y en el **Mapa**, hay
+dos controles vecinos que cuentan cosas distintas:
 
 | | Qué dice | Cuándo se vacía |
 |---|---|---|
-| 🔔 **La campana** (bandeja de avisos) | Lo que la app te avisó **mientras trabajabas**, con su hora. Su contador es de **no leídos**. | Al abrirla. Un aviso se lee y no vuelve. |
-| 💓 **El latido** (centinela de servicio) | Qué está **roto ahora mismo**, y cuántos equipos. | Sola, cuando la falla se resuelve. No se descarta a mano. |
+| **La campana** (bandeja de avisos) | Lo que la app te avisó mientras trabajabas, con su hora. Su contador es de avisos **no leídos**. | Al abrirla. Un aviso leído no vuelve. |
+| **El latido** (centinela de servicio) | Qué está roto ahora mismo, y en cuántos equipos. | Solo, cuando la falla se resuelve. No se descarta a mano. |
 
-Un aviso de "volvió a conectarse" ya ocurrió y no deja de haber ocurrido; un
-cable suelto sigue suelto aunque lo mires. Por eso son dos y no uno. Ambos
-llevan al equipo con un clic, y **ninguno aparece dentro del visor de una
-captura** compartida: una captura congelada no genera eventos.
+Un aviso de "volvió a conectarse" describe algo que ya ocurrió, y leerlo no lo
+deshace. Un cable suelto, en cambio, sigue suelto aunque lo mires. Por eso hay
+dos indicadores. Los dos llevan al equipo con un clic, y ninguno aparece en el
+visor de un snapshot compartido, porque un snapshot congelado no genera
+eventos.
 
-Los detalles de cada uno están en
-[Centinela y calificación](../centinela).
+El detalle de cada uno está en [Centinela y calificación](../centinela).
 
 ## Los contadores son filtros
 
-La fila de contadores —**Estaciones / Buenas / Atención / Críticas /
-Ausentes**— no es solo un resumen: **un clic filtra la tabla de estaciones** a
-ese grupo, sin congelar el refresco. **Ausentes** filtra por sesión perdida,
-no por semáforo: una estación ausente conserva su última lectura.
+Un clic en la fila de contadores (**Estaciones**, **Buenas**, **Atención**,
+**Críticas** y **Ausentes**) filtra la tabla de estaciones a ese grupo, sin
+congelar el refresco; **Estaciones** quita el filtro. **Ausentes** filtra por
+sesión perdida y no por semáforo, porque una estación ausente conserva su
+última lectura.
 
-Los contadores de **AP** y **Referentes** son informativos.
+Los contadores de **AP** y **Referentes** no filtran: un clic lleva a su tabla.
 
 ## El riel inferior
 
-Una barra flotante con:
+Es una barra flotante con:
 
-- **Anclas** a cada tabla visible (Estaciones, AP, Referentes, Detectados) para saltar sin
-  hacer scroll — también con `Ctrl+↓` / `Ctrl+↑`.
-- **Equipo (+)** — registrar un radio a mano por IP (para segmentos que no
-  puedes escanear).
-- **Limpiar filtro** — aparece cuando hay un filtro activo.
-- **Congelar / Reanudar** — pausa el refresco visual para leer con calma;
-  **el monitoreo de fondo sigue**, solo se detiene el repintado.
+- Anclas a cada tabla visible (Estaciones, AP, Referentes, Detectados) para
+  saltar sin desplazarte, también con `Ctrl+↓` / `Ctrl+↑`.
+- **Equipo (+)**, para registrar un radio a mano por su IP en segmentos que no
+  puedes escanear.
+- **Limpiar filtro**, que aparece cuando hay un filtro activo.
+- **Congelar / Reanudar**, que pausa el refresco visual para leer con calma. El
+  monitoreo de fondo sigue; solo se detiene el repintado.
 
 ::: info 🖼️ Imagen pendiente — `barra-indicadores.png`
 La esquina derecha de la barra: la lupa del buscador, la **campana** con su
@@ -75,8 +76,10 @@ equipos en falla.
 
 ## Común a todas las tablas
 
-- **Buscador propio** por tabla (nombre, IP, MAC, modelo, AP…).
-- **Cabeceras clicables** para ordenar.
-- **Menú "Columnas"** para ocultar las que no uses — la elección se recuerda.
-- **Clic en el nombre de una fila** (estación o AP) la aísla en su propia
-  tabla; otro clic en el mismo sitio deshace el filtro.
+- Un buscador propio por tabla (nombre, IP, MAC, modelo, AP…).
+- Cabeceras clicables para ordenar.
+- El menú **Columnas**, para ocultar las que no uses. La elección se recuerda.
+- Un clic en el nombre de una fila (estación o AP) la aísla en su tabla, y otro
+  clic en el mismo sitio deshace el filtro. Si ocultas la columna Nombre, este
+  gesto se va con ella, pero el buscador sigue encontrando la fila por su
+  nombre.

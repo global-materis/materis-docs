@@ -1,15 +1,15 @@
 # Semáforo y diagnóstico
 
-El semáforo dice **cuál** enlace mirar; el diagnóstico dice **por qué**. Esta
-guía explica cómo juzga cada uno.
+El semáforo dice **cuál** enlace mirar y el diagnóstico dice **por qué**.
+Los dos se juzgan como se explica a continuación.
 
 ## El semáforo
 
-El color de cada estación es el veredicto del **diagnóstico completo** — el
-peor de sus siete ejes manda (ver abajo). Su eje principal, la señal, se
-juzga en dos modos, y la diferencia importa:
+El color de cada estación es el veredicto del **diagnóstico completo**: manda
+el peor de sus siete ejes (ver abajo). El eje principal, la señal, se juzga de
+dos maneras según haya o no línea base.
 
-**Sin línea base** — se juzga el valor absoluto en dBm:
+**Sin línea base** se juzga el valor absoluto en dBm:
 
 | Estado | Señal |
 |---|---|
@@ -17,8 +17,8 @@ juzga en dos modos, y la diferencia importa:
 | 🟡 Atención | −55 a −67 dBm |
 | 🔴 Crítica | < −67 dBm |
 
-**Con línea base** — se juzga cuánto bajó respecto a la línea base que tú
-fijaste (Δ dB):
+**Con línea base** se juzga cuánto bajó la señal respecto a la línea base que
+tú fijaste (Δ dB):
 
 | Estado | Desvío |
 |---|---|
@@ -29,131 +29,138 @@ fijaste (Δ dB):
 El diagnóstico lo dice con el número: *"Señal −10 dB vs su línea base
 (−54 dBm)"*.
 
-Una estación **Ausente** no es una crítica: perdió la sesión y conserva su
-última lectura, con el motivo en el tooltip. Qué dice su chip mientras la app
-la recupera está en [Cuando un equipo se ausenta](./interfaz/estaciones#cuando-un-equipo-se-ausenta).
+Una estación **Ausente** no cuenta como crítica. Perdió la sesión y conserva
+su última lectura, con el motivo en el tooltip. Qué dice su chip mientras la
+app la recupera está en [Cuando un equipo se ausenta](./interfaz/estaciones#cuando-un-equipo-se-ausenta).
 
 ## Línea base: comparar contra tu propia red
 
 <a id="referencias-comparar-contra-tu-propia-red"></a>
 
-Aun sin línea base, la app no juzga a ciegas: usa la **señal esperada a la
-distancia** de cada enlace (la calcula el propio radio) y, solo en último
-recurso, el umbral absoluto. La línea base añade lo que ningún automatismo
-puede saber: **cómo quedó ese enlace cuando el instalador lo dejó bien** — su
-alineación, su cable, sus obstáculos. Es tu criterio, y gana sobre los otros
-dos.
+Sin línea base, la app compara la señal con la **señal esperada a la
+distancia** de cada enlace, que calcula el propio radio, y solo si el radio no
+la da recurre al umbral absoluto. La línea base aporta lo que la app no puede
+calcular: **cómo quedó ese enlace cuando el instalador lo dejó bien**, con su
+alineación, su cable y sus obstáculos. Es tu criterio, y tiene prioridad sobre
+los otros dos.
 
-Cuando un enlace está **como debe estar**, pulsa **"Marcar"**: la señal de
+Cuando un enlace está **como debe estar**, pulsa **"Marcar"**. La señal de
 ese momento queda como el punto sano de **esa** antena, y desde entonces el
-eje de señal juzga el desvío contra ella (Δ dB) en vez del valor absoluto.
+eje de señal juzga el desvío contra ella (Δ dB) en lugar del valor absoluto.
 
 - La línea base es **por antena** y sobrevive a reinicios y cambios de IP.
 - Con línea base, la columna **Línea base** muestra el valor (`−58 dBm`) y una
-  **×** (*"Quitar línea base"*). Para actualizarla (tras un realineamiento, por
-  ejemplo), **quítala con la × y vuelve a pulsar "Marcar"** — son dos
-  gestos: mientras hay línea base, el botón no se muestra.
+  **×** (*"Quitar línea base"*). Mientras hay línea base el botón "Marcar" no
+  aparece, así que actualizarla (tras un realineamiento, por ejemplo) lleva
+  dos gestos: **quitarla con la × y volver a pulsar "Marcar"**.
 
 ::: tip Marca con el enlace estable
 "Marcar" guarda la lectura **del instante del clic**, sin promediar. Si
-marcas durante un desvanecimiento, fijas un punto malo como línea base.
+marcas durante un desvanecimiento, la línea base queda en un punto malo.
 :::
 
 ## Por qué la señal sola no basta
 
-Una señal de −54 dBm a 1.5 km puede ser excelente — y un enlace con señal
-"buena" puede estar sufriendo ruido, interferencia o capacidad hundida. Por
-eso el diagnóstico no mira un número: **combina siete ejes y el peor de ellos
-manda**. El resultado es el color de la fila más una **lista de causas en
-palabras**, visible al pasar el puntero por la celda de señal.
+Una señal de −54 dBm a 1.5 km puede ser excelente, y un enlace con señal
+"buena" puede tener ruido, interferencia o la capacidad hundida. Por eso el
+diagnóstico **combina siete ejes y manda el peor**. El resultado es el color
+de la fila más una **lista de causas en palabras**, que aparece al pasar el
+puntero por la celda de señal.
 
 ## Los siete ejes
 
-1. **Señal en contexto.** Con línea base, el desvío contra ella; si no, contra
-   la señal **esperada a esa distancia** (la calcula el propio radio); en
-   último término, el umbral absoluto.
-2. **Calidad del canal.** El margen entre la señal y el piso de ruido (SNR) o,
-   en equipos que lo reportan, el CINR — que además ve la **interferencia de
-   otros transmisores en el canal**. De ahí salen causas como *"Interferencia
-   en el canal: la señal se ve bien, el canal no"*.
+1. **Señal en contexto.** Con línea base, el desvío contra ella. Sin línea
+   base, la diferencia con la señal **esperada a esa distancia** (atención a
+   más de 3 dB por debajo, crítica a más de 7 dB). Si el radio no da la
+   esperada, el umbral absoluto de la tabla de arriba.
+2. **Calidad del canal.** El margen entre la señal y el piso de ruido (SNR)
+   o, en los equipos que lo reportan, el CINR, que además ve la
+   **interferencia de otros transmisores en el canal**. Atención por debajo de
+   24 dB y crítica por debajo de 15 dB. De aquí salen causas como
+   *"Interferencia en el canal: CINR … dB (la señal se ve bien, el canal no)"*.
 3. **Calidad de enlace.** El indicador airMAX, promediado para no alarmar por
-   ráfagas: bajo 90 % pide atención, bajo 70 % es crítico. Incluye la
-   **latencia del aire** medida por el radio: alta sostenida o con picos
-   recurrentes degrada el veredicto (*"canal congestionado, la señal está
-   bien"*).
-4. **Capacidad real vs. esperada.** Si el enlace entrega mucho menos de lo que
-   su modulación promete (bajo el 65 %), algo lo frena: saturación o
-   modulación degradada.
-5. **Puerto Ethernet.** El tramo cableado hasta el conector del radio: el
-   **half duplex** marca Atención y un puerto negociando **10 Mbps** marca
-   Crítica — cable dañado, humedad en el conector o PoE flojo; ningún airMAX
-   trae 10 de fábrica. Un puerto **sin cable no cambia el color**: puede ser
-   el router apagado de noche o un corte por mora, no una avería del enlace —
-   el hecho se ve en la columna Puertos y el centinela avisa del cambio. La
-   velocidad solo se menciona cuando **limita** lo que la radio podría
-   entregar.
+   ráfagas: por debajo del 90 % pide atención y por debajo del 70 % es
+   crítico. Incluye la **latencia del aire** que mide el radio. Una media
+   sostenida por encima de 12 ms pide atención y por encima de 24 ms es
+   crítica, y los picos recurrentes también degradan el veredicto
+   (*"canal congestionado, la señal está bien"*).
+4. **Capacidad real contra la esperada.** Si el enlace entrega menos del 65 %
+   de lo que promete su modulación, en bajada o en subida, algo lo frena:
+   saturación o modulación degradada. Por debajo del 40 % es crítico.
+5. **Puerto Ethernet.** El tramo cableado hasta el conector del radio. El
+   **half duplex** marca Atención y un puerto que negocia **10 Mbps** marca
+   Crítica: cable dañado, humedad en el conector o PoE flojo. Ningún airMAX
+   trae 10 Mbps como máximo de fábrica. Un puerto **sin cable no cambia el
+   color**, porque puede ser el router apagado de noche o un corte por mora y
+   no una avería del enlace. Ese hecho se ve en la columna Puertos y el
+   centinela avisa del cambio. La velocidad del puerto solo aparece en el
+   diagnóstico cuando **limita** lo que la radio podría entregar.
+   - La app lee **todos los puertos** del equipo. El diagnóstico juzga el
+     puerto que vigila el centinela (el primero de ellos, si vigilas varios),
+     y cuáles se vigilan lo eliges en la pestaña
+     [Puertos](./interfaz/estaciones#puertos-que-vigila-el-centinela) de la
+     ventana de sesión. Sin elección, se vigila el primero.
    - **Este eje vale también para los AP**, con las mismas dos reglas y la
-     misma frontera: un AP cuyo puerto de subida negocia mal estrangula a todo
-     su sector.
-   - **Y cuando lo único malo es el puerto, la señal no se pinta en rojo**: el
-     equipo sigue en crítica y la fila teñida, pero el número de la señal se
-     pinta por lo que vale. El problema lo señalan la columna Puertos y este
-     eje, que es donde se arregla.
+     misma frontera. Un AP cuyo puerto de subida negocia a 10 Mbps o en half
+     duplex estrangula a todo su sector.
+   - **Cuando lo único malo es el puerto, el número de la señal no se pinta
+     en rojo.** El equipo sigue en Crítica y la fila sigue teñida, pero la
+     señal se pinta por lo que vale. El problema lo señalan la columna Puertos
+     y este eje, que es donde se arregla.
 6. **Desbalance entre cadenas.** Las dos polaridades de la antena deberían
-   recibir casi lo mismo; una diferencia de 5 dB o más delata **antena rotada,
-   polarización cruzada o una cadena dañada** — con la señal total viéndose
-   normal. Ningún otro eje lo ve.
-7. **Salud del radio.** CPU saturada o memoria agotada: un radio ahogado tira
-   paquetes sin tocar la señal.
+   recibir casi lo mismo. Una diferencia de 5 dB o más (crítica desde 10 dB)
+   delata una **antena rotada, polarización cruzada o una cadena dañada**,
+   aunque la señal total se vea normal. Ningún otro eje lo detecta.
+7. **Salud del radio.** CPU saturada o memoria agotada: atención desde el
+   80 % de CPU o con el 10 % o menos de memoria libre, crítica desde el 95 %
+   de CPU o con el 5 % o menos de memoria. Un radio ahogado tira paquetes sin que cambie la señal.
 
 ::: tip Cómo leer una causa
 Cada causa nombra el hecho y su contexto: *"Señal 12 dB por debajo de la
 esperada a su distancia"*, *"Ruido alto: SNR 14 dB"*, *"Downlink muy por
-debajo de lo esperado: 23 de 80 Mbps"*. La causa te dice **dónde mirar** — el
-cable, el canal, la alineación — antes de subir al techo.
+debajo de lo esperado: 23 de 80 Mbps"*. Así sabes **dónde mirar** (el cable,
+el canal o la alineación) antes de subir al techo.
 :::
 
-![El tooltip de diagnóstico de una estación crítica: SNR, latencia, distancia y puerto en la cabecera, y debajo las causas — señal bajo la esperada, calidad de enlace baja y downlink muy por debajo de lo esperado](/signal-scope/diagnostico.png)
+![El tooltip de diagnóstico de una estación crítica: SNR, latencia, distancia y puerto en la cabecera, y debajo las causas (señal bajo la esperada, calidad de enlace baja y downlink muy por debajo de lo esperado)](/signal-scope/diagnostico.png)
 
 ## El AP se juzga distinto
 
-Un AP no tiene "un enlace" que juzgar: tiene quince. Su columna Estado combina
-carga del canal, salud del radio y la latencia de su sector — el detalle está
-en [Puntos de acceso](./interfaz/puntos-de-acceso).
+Un AP no tiene "un enlace" que juzgar, tiene quince. Su columna Estado combina
+la carga del canal, la salud del radio, la latencia de su sector y su puerto
+de subida. El detalle está en [Puntos de acceso](./interfaz/puntos-de-acceso).
 
 ## El punto ciego que ningún eje ve
 
-Los siete ejes describen **cómo recibe** el equipo. Ninguno mira la dirección
-contraria — y un radio puede recibir perfecto y **transmitir en la modulación
-más lenta que existe**, con la señal impecable y las cadenas equilibradas.
+Los siete ejes describen **cómo recibe** el equipo y ninguno mira la dirección
+contraria. Un radio puede recibir perfecto y **transmitir en la modulación más
+lenta que existe**, con la señal impecable y las cadenas equilibradas.
 
-Eso lo delata la columna **Modulación**, que enseña
+Ese caso lo delata la columna **Modulación**, que enseña
 [las dos direcciones](./interfaz/estaciones#modulacion-las-dos-direcciones).
-Es informativa —no cambia el semáforo— pero es lo único que ve ese caso:
-mirando solo la bajada, todo parecería ir bien sobre una antena que no va
-bien.
+Es informativa y no cambia el semáforo, pero es lo único que lo ve: mirando
+solo la bajada, esa antena parecería estar bien.
 
 ## Sobre los umbrales
 
 Los números de esta guía son los de la versión actual, calibrados con parques
-reales. Algunos —los de latencia en particular— siguen en calibración de
-campo y pueden ajustarse entre versiones; el tooltip siempre muestra los
-valores medidos, así que puedes juzgar con tu propio criterio además del de la
-app.
+reales. Algunos, en particular los de latencia, siguen en calibración de campo
+y pueden cambiar entre versiones. El tooltip siempre muestra los valores
+medidos, así que puedes juzgar con tu propio criterio además del de la app.
 
-La propia app cuenta cómo se fijaron: **Ayuda → "Cómo se calibra"** resume el
-método detrás de cada límite, con casos reales — y la invitación a reportar
-los tuyos a **support@materis.io**, que es de donde salen los ajustes.
+**Ayuda → "Cómo se calibra"** resume el método detrás de cada límite, con
+casos reales, e invita a reportar los tuyos a **support@materis.io**. De esos
+reportes salen los ajustes.
 
 ::: warning En MikroTik, el semáforo todavía no está calibrado
-Los umbrales de un equipo RouterOS son **hoy los de airMAX**. Están auditados
-eje por eje —señal, cadenas, CPU y memoria son física y porcentajes, no dependen
-del fabricante— pero no se han contrastado contra enlaces MikroTik reales.
+Los umbrales de un equipo RouterOS son **hoy los de airMAX**. Se revisaron eje
+por eje (señal, cadenas, CPU y memoria son física y porcentajes, y no dependen
+del fabricante), pero no se han contrastado contra enlaces MikroTik reales.
 
-El sesgo conocido: el SNR sale de restar señal − ruido, y **los pisos de ruido
-no son comparables entre fabricantes**. Con la misma señal, un MikroTik puntúa
-**7–11 dB mejor** que un airMAX. No se corrige con un número inventado — eso
-convertiría un sesgo conocido en un error escondido—, así que el riesgo cae del
-lado benigno: **se detecta de menos, no se inventan alarmas**. Léelo con reserva
-y cuéntanos lo que veas.
+Hay un sesgo conocido. El SNR sale de restar el ruido a la señal, y **los
+pisos de ruido no son comparables entre fabricantes**: con la misma señal, un
+MikroTik puntúa **entre 7 y 11 dB mejor** que un airMAX. No se corrige con un
+número inventado, porque eso convertiría un sesgo conocido en un error
+escondido. El riesgo queda del lado benigno: **se detecta de menos, pero no se
+inventan alarmas**. Léelo con reserva y cuéntanos lo que veas.
 :::

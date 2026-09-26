@@ -46,13 +46,15 @@ cada una, por si se prioriza:
 
 | Archivo | Qué quedó desactualizado |
 |---|---|
-| `monitor-en-vivo.jpg` | La barra no tiene campana; Modulación enseña una sola dirección; Puertos, un solo conector. **Y el tema oscuro se rehízo entero.** |
-| `tabla-estaciones.png` | Modulación en par (`8x/1x`), tira de varios puertos, columna **Línea base** (`−58 dBm` + ×), marcas de sesión apagada / silenciada / aviso de reconexión. |
-| `tabla-ap.png` | El **puerto de subida** ya entra en la columna Estado. |
+| `monitor-en-vivo.jpg` | El contador y el riel dicen «Otros», la columna «Referencia» con «Marcar OK». La barra no tiene campana; Modulación enseña una sola dirección; Puertos, un solo conector. **Y el tema oscuro se rehízo entero.** |
+| `tabla-estaciones.png` | Cabecera «REFERENCIA», «Marcar OK» y riel con «Otros»; falta la columna **Link sub.**. Modulación en par (`8x/1x`), tira de varios puertos, columna **Línea base** (`−58 dBm` + ×), marcas de sesión apagada / silenciada / aviso de reconexión. |
+| `tabla-ap.png` | El **puerto de subida** ya entra en la columna Estado, y el riel dice «Otros». |
 | `escaneo-detectados.jpg` | El botón dice **"Llevar a Referentes…"** y la Sugerencia distingue **Radio MikroTik**. |
-| `mapa-cobertura.jpg` | Mapa base OpenFreeMap (ya no sale el cartel de API key) y modo **Huella** por defecto. |
+| `mapa-cobertura.jpg` | Mapa base OpenFreeMap (la atribución aún dice CARTO), modo **Huella** por defecto, el selector **Cobertura** en la barra y la campana. |
 | `centinela-panel.jpg` | Falta el bloque de **equipos silenciados** al pie. |
-| `bienvenida.jpg` | Botón **Actualizar** en el pie del rail, y el estado "vigilando N equipos". |
+| `bienvenida.jpg` | Botón **Actualizar** en el pie del rail, el estado "vigilando N equipos" y el subtítulo con «líneas base». |
 | `reporte-pdf.png` | El General lleva **tercera tabla (Referentes)** y CPU/RAM en las otras dos. |
-| `pantalla-licencia.png` | El chip de compatibilidad — **ojo: la app todavía dice "MikroTik · pronto"**, que contradice a la documentación. Rehacer la captura DESPUÉS de corregir ese texto en la app. |
-| `vista-snapshot.jpg`, `visor-ssnap.jpg` | La tabla **Referentes** de una captura lleva **Latencia y pérdida**. |
+| `pantalla-licencia.png` | El recuadro de compatibilidad: la app ya dice **"MikroTik · beta"**. |
+| `sesion-cascada.png` | Falta el selector **Sistema** de la cascada. |
+| `mensajeria.png` | Comprobar que muestre «Por dónde», «Avisos que pides tú» y «Qué se envía». |
+| `vista-snapshot.jpg`, `visor-ssnap.jpg` | La tabla **Referentes** de un Snapshot lleva **Latencia y pérdida**. |
