@@ -5,10 +5,10 @@ detail, with links to each feature's guide.
 
 ## 1.3.0 · September 2026
 
-**[MikroTik RouterOS, in beta](./supported-devices).** MikroTik devices
-connect like airMAX ones and land in the same tables. A box with two radios
-takes one row per radio. You pick the system (airOS or RouterOS) when you log
-in, because the MAC's vendor isn't enough to tell them apart.
+**[MikroTik RouterOS](./supported-devices).** MikroTik devices connect like
+airMAX ones and land in the same tables. A box with two radios takes one row
+per radio. You pick the system (airOS or RouterOS) when you log in, because
+the MAC's vendor isn't enough to tell them apart.
 
 **SignalScope in the background.** You can close the window without stopping
 the diagnosis: the app stays in the system tray and the sentinel keeps

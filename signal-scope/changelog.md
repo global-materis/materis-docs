@@ -5,10 +5,10 @@ el detalle, con enlaces a la guía de cada función.
 
 ## 1.3.0 · Septiembre 2026
 
-**[MikroTik RouterOS, en beta](./compatibilidad).** Los equipos MikroTik se
-conectan como los airMAX y caen en las mismas tablas. Una caja con dos radios
-ocupa una fila por radio. El sistema (airOS o RouterOS) lo eliges al iniciar
-sesión, porque el fabricante de la MAC no alcanza para distinguirlos.
+**[MikroTik RouterOS](./compatibilidad).** Los equipos MikroTik se conectan
+como los airMAX y caen en las mismas tablas. Una caja con dos radios ocupa una
+fila por radio. El sistema (airOS o RouterOS) lo eliges al iniciar sesión,
+porque el fabricante de la MAC no alcanza para distinguirlos.
 
 **SignalScope en segundo plano.** Puedes cerrar la ventana sin detener el
 diagnóstico: la app queda en la bandeja del sistema y el centinela sigue
