@@ -9,26 +9,22 @@ with its own name and an availability watch.
 | System | Status | Since |
 |---|---|---|
 | **Ubiquiti airOS** (airMAX M and AC) | Supported | v1.0.0 |
-| **MikroTik RouterOS 6 and 7** | **Beta** | v1.3.0 |
+| **MikroTik RouterOS 6 and 7** | Supported | v1.3.0 |
 | **Ubiquiti LTU** | Under evaluation | — |
 | **TP-Link** | Planned | — |
 
-## What "beta" means here
-
-Beta means **tested on fewer models than airMAX**. It does not mean unstable,
-nor that it will break anything. The RouterOS driver was built and verified
-field by field against real hardware, and whatever the device does not publish
-is left **empty** rather than invented. What is missing is mileage across the
-catalog: an SXT, an LHG, a Basebox.
-
-If something does not add up on one of your devices, write to
-**support@materis.io**. That is exactly the information needed to remove the
-beta mark.
+:::info Note on MikroTik RouterOS
+MikroTik support has been tested on fewer models than airMAX: verified on two
+hAPs (ac² and ac lite) with versions 6.48, 6.49 and 7.23. Any claim about an
+SXT, an LHG, or a Basebox is an assumption. Devices with ax chips (the new
+RouterOS 7 `wifi` package) are not read — the app cannot see their radios. If
+you use another model, contact us at **support@materis.io**.
+:::
 
 ::: info 🖼️ Image pending: `splash.png`
 The v1.3.0 splash screen: the two systems as the two ends of a link ("Ubiquiti ·
-airOS" and "MikroTik · RouterOS" with its **beta** mark), with SignalScope in the
-middle and the loading state on the thread that joins them.
+airOS" and "MikroTik · RouterOS"), with SignalScope in the middle and the loading
+state on the thread that joins them.
 :::
 
 ## Choosing the system when logging in
@@ -129,9 +125,9 @@ Two things worth being clear about:
 registered on the radio itself (Location/GPS in its interface), where they are
 useful to any tool and not just SignalScope.
 
-## The honest limits of the beta
+## Technical details
 
-Worth knowing before you go out to the field:
+Some aspects worth knowing:
 
 - **Verified against two hAPs (ac² and ac lite)** running RouterOS 6.48, 6.49
   and 7.23. Any claim about an SXT, an LHG or a Basebox is still an assumption.

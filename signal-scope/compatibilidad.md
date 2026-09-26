@@ -9,25 +9,22 @@ con nombre propio y vigilancia de disponibilidad.
 | Sistema | Estado | Desde |
 |---|---|---|
 | **Ubiquiti airOS** (airMAX M y AC) | Compatible | v1.0.0 |
-| **MikroTik RouterOS 6 y 7** | **Beta** | v1.3.0 |
+| **MikroTik RouterOS 6 y 7** | Compatible | v1.3.0 |
 | **Ubiquiti LTU** | En evaluación | — |
 | **TP-Link** | En los planes | — |
 
-## Qué significa "beta" aquí
-
-Beta quiere decir **probado en menos modelos que airMAX**. No significa que sea
-inestable ni que vaya a romper algo. El driver de RouterOS se construyó y se
-verificó campo a campo contra equipo real, y lo que el equipo no publica la app
-lo deja **vacío** en vez de inventarlo. Lo que falta es recorrido por el
-catálogo: un SXT, un LHG, un Basebox.
-
-Si algo no te cuadra en un equipo tuyo, escríbenos a **support@materis.io**.
-Esa es justo la información que hace falta para retirar la marca de beta.
+:::info Nota sobre MikroTik RouterOS
+El soporte de MikroTik lleva menos recorrido por el catálogo de modelos que el de
+airMAX: se verificó en dos hAP (ac² y ac lite) con las versiones 6.48, 6.49 y
+7.23. Cualquier afirmación sobre un SXT, un LHG o un Basebox es una suposición.
+Los equipos con chips ax (paquete `wifi` nuevo de RouterOS 7) no se leen — la app
+no ve sus radios. Si usas otro modelo, contáctanos en **support@materis.io**.
+:::
 
 ::: info 🖼️ Imagen pendiente: `splash.png`
 La pantalla de arranque de v1.3.0: los dos sistemas como los extremos de un
-enlace ("Ubiquiti · airOS" y "MikroTik · RouterOS" con su marca **beta**), con
-SignalScope en medio y el estado de carga en el hilo que los une.
+enlace ("Ubiquiti · airOS" y "MikroTik · RouterOS"), con SignalScope en medio y
+el estado de carga en el hilo que los une.
 :::
 
 ## Elegir el sistema al iniciar sesión
@@ -130,9 +127,9 @@ En **airMAX ese botón no existe, a propósito**. Ahí las coordenadas se regist
 en el propio radio (Location/GPS de su interfaz), donde valen para cualquier
 herramienta y no solo para SignalScope.
 
-## Los límites honestos de la beta
+## Detalles técnicos
 
-Conviene conocerlos antes de salir a campo:
+Algunos aspectos a tener en cuenta:
 
 - **Verificado contra dos hAP (ac² y ac lite)** con RouterOS 6.48, 6.49 y
   7.23. Cualquier afirmación sobre un SXT, un LHG o un Basebox es todavía una
