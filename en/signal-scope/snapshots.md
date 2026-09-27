@@ -38,7 +38,7 @@ you see how much it changed between the Snapshot and this instant, if the
 device has a session now. It is the fastest way to answer *"was this link
 like this last week?"*. **Back to live data** leaves the view.
 
-![The snapshot view: the snapshot history, the banner comparing against live data, sessions showing Historical and the "vs current" drift under each signal](/signal-scope/vista-snapshot.jpg)
+![The snapshot view: the snapshot history, the banner comparing against live data, sessions showing Historical and the "vs current" drift under each signal](/signal-scope/vista-snapshot.png)
 
 ## Comparing two moments
 

@@ -11,8 +11,6 @@ its own page:
 - [Coverage map](./map): the other main view, with nodes, sectors and stations
   on the map.
 
-![The full panel: registered networks and actions on top, the network counters, the snapshot history and the live stations table](/signal-scope/monitor-en-vivo.jpg)
-
 ## The top panel
 
 Besides scanning and the cascade session (covered in
@@ -25,13 +23,11 @@ Besides scanning and the cascade session (covered in
   only; the last one is disabled when there is no AP in view.
 - The snapshot strip, with your saved snapshots and the date of each one. From
   there you compare, share and protect them.
-- **Update**, to the left of the project name. It only appears when a new
-  version is available ([how it works](../installation#updates)).
 
 ## The two indicators in the corner
 
 Top right, in the same spot in the **Monitor** and in the **Map**, there are two
-neighbouring controls that count different things:
+neighboring controls that count different things:
 
 | | What it says | When it empties |
 |---|---|---|
@@ -68,12 +64,6 @@ It is a floating bar with:
 - **Clear filter**, which appears when a filter is active.
 - **Freeze / Resume**, which pauses the visual refresh so you can read calmly.
   Background monitoring continues; only the repainting stops.
-
-::: info 🖼️ Image pending — `barra-indicadores.png`
-The right-hand corner of the bar: the search magnifier, the **bell** with its
-unread-notice counter and the sentinel's **pulse** with the number of devices in
-fault.
-:::
 
 ## Common to every table
 

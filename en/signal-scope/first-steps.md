@@ -10,8 +10,7 @@ On the welcome screen, click **New project**. You choose its name and where to
 save it, and it is created as a **`.sscope`** file.
 
 That file is your whole network (devices, encrypted credentials, baselines,
-Snapshots and history) and it **autosaves** as you work. Next time, the welcome
-screen offers it under **Recent files** with a summary of its state.
+Snapshots and history) and it **autosaves** as you work.
 
 ![The create project dialog: name, location and the path of the .sscope file to be created](/signal-scope/crear-proyecto.png)
 
@@ -59,7 +58,7 @@ not register a device without one, because it would be open to anyone.
   account is read-only, use HTTP, because airOS does not give SSH to those
   accounts.
 - With **RouterOS** the transport is forced to **SSH** and the HTTP option is
-  disabled: v6 has no REST API. See [Supported devices](./supported-devices).
+  disabled for compatibility.
 
 There are two ways to do it:
 
@@ -76,24 +75,12 @@ Upon connecting, **each radio reports its mode and classifies itself** as a
 Credentials are stored (encrypted inside the project) and the app uses them to
 reconnect automatically in future sessions.
 
-Anything you will not manage (an ONU, a switch, the customer's router) goes to
-References with **"Move to References…"**, which asks for its name and whether
-you want to watch it, as explained in the
-[introduction](./#how-your-devices-are-organized).
-
-::: warning If a device rejects your credentials, the app stops trying
-Insisting makes the device itself close access (**airOS locks it for half a
-minute after several failed attempts**) and ends up locking **you** out too,
-terminal included. The notice repeats what the radio said, in its own words, so
-you can fix the detail that is wrong.
-:::
+Anything you will not manage (an ONU, a switch, other routers) goes to
+References with **"Move to References…"**. It asks for its name if you want to
+watch it, as explained in the [introduction](./#how-your-devices-are-organized).
 
 ![The cascade session: protocol, one set of credentials and the queue of radios connecting one by one](/signal-scope/sesion-cascada.png)
-
-::: info 🖼️ Image pending: `login-sistema.png`
-The login dialog with the **System** selector (airOS / RouterOS) visible, and the
-HTTP button disabled when RouterOS is picked, with its reason in the tooltip.
-:::
+![The sign-in dialog with the **System** selector (airOS / RouterOS) visible, and the HTTP button disabled](/signal-scope/login-sistema.png)
 
 ::: details A MikroTik with two radios leaves two rows
 That is expected: a box with its 2.4 GHz AP and its 5 GHz station takes **one

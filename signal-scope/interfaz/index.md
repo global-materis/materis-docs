@@ -11,8 +11,6 @@ Cada parte tiene su página:
 - [Mapa de cobertura](./mapa): la otra vista principal, con nodos, sectores y
   estaciones sobre el mapa.
 
-![El panel completo: redes registradas y acciones arriba, los contadores del parque, el historial de snapshots y la tabla de estaciones en vivo](/signal-scope/monitor-en-vivo.jpg)
-
 ## El panel de arriba
 
 Además del escaneo y la sesión en cascada (vistos en
@@ -25,8 +23,6 @@ Además del escaneo y la sesión en cascada (vistos en
   Solo AP; este último se desactiva cuando no hay ningún AP a la vista.
 - La tira de snapshots, con los snapshots guardados y la fecha de cada uno.
   Desde ahí se comparan, se comparten y se protegen.
-- **Actualizar**, a la izquierda del nombre del proyecto. Solo aparece cuando
-  hay una versión nueva ([cómo funciona](../instalacion#actualizaciones)).
 
 ## Los dos indicadores de la esquina
 
@@ -67,12 +63,6 @@ Es una barra flotante con:
 - **Limpiar filtro**, que aparece cuando hay un filtro activo.
 - **Congelar / Reanudar**, que pausa el refresco visual para leer con calma. El
   monitoreo de fondo sigue; solo se detiene el repintado.
-
-::: info 🖼️ Imagen pendiente — `barra-indicadores.png`
-La esquina derecha de la barra: la lupa del buscador, la **campana** con su
-contador de avisos sin leer y el **latido** del centinela con el número de
-equipos en falla.
-:::
 
 ## Común a todas las tablas
 

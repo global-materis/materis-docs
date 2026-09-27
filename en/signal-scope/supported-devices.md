@@ -2,8 +2,8 @@
 
 SignalScope manages two radio systems: **airOS** (Ubiquiti airMAX) and
 **RouterOS** (MikroTik). Everything else on your network, such as switches,
-ONUs, customer routers and even targets outside your network, is registered in
-[**References**](./interface/detected-and-others#references-what-you-look-at-for-contrast)
+ONUs, customer routers and even targets outside your network, can be registered
+in [**References**](./interface/detected-and-others#references-what-you-look-at-for-contrast)
 with its own name and an availability watch.
 
 | System | Status | Since |
@@ -14,17 +14,10 @@ with its own name and an availability watch.
 | **TP-Link** | Planned | — |
 
 :::info Note on MikroTik RouterOS
-MikroTik support has been tested on fewer models than airMAX: verified on two
-hAPs (ac² and ac lite) with versions 6.48, 6.49 and 7.23. Any claim about an
-SXT, an LHG, or a Basebox is an assumption. Devices with ax chips (the new
-RouterOS 7 `wifi` package) are not read — the app cannot see their radios. If
-you use another model, contact us at **support@materis.io**.
-:::
-
-::: info 🖼️ Image pending: `splash.png`
-The v1.3.0 splash screen: the two systems as the two ends of a link ("Ubiquiti ·
-airOS" and "MikroTik · RouterOS"), with SignalScope in the middle and the loading
-state on the thread that joins them.
+MikroTik support has been tested on fewer models than airMAX.
+Devices with ax chips (the new RouterOS 7 `wifi` package) are not read — the app
+cannot see their radios. If you use those models, contact us at
+**support@materis.io**.
 :::
 
 ## Choosing the system when logging in
@@ -35,17 +28,12 @@ changes with one click.
 
 ::: tip Why you choose it instead of the app guessing
 A MAC tells you the **manufacturer**, not the operating system, and MikroTik
-runs RouterOS across its entire catalog, from a desktop router to a tower
-sector. To guess it, the app would have to be right twice: the manufacturer
-table would have to be up to date (it is a fixed list, and the IEEE hands out
-new blocks without warning) and manufacturer and system would have to match.
-They do not.
+runs RouterOS across its entire catalog, which makes it hard to guess.
 :::
 
 With **RouterOS** the transport is forced to **SSH** and the HTTP option is
-disabled, with the reason in its tooltip. RouterOS 6 has **no REST API** (it
-arrived in v7), and what you see open on the web port is WebFig, a browser
-interface that cannot be queried. The app connects over SSH on both versions.
+disabled. RouterOS is not supported over HTTP, and what you see open on the web
+port is WebFig, a browser interface that cannot be queried.
 
 ## One device, one row per radio
 
@@ -67,9 +55,9 @@ So as not to misread it:
 - A **disabled radio produces no row**, because showing it with no data would
   paint it red forever. One that is on but not yet connected **does show**: a
   station hunting for a network is exactly what you want to see.
-- A MikroTik **with no wireless module** (a switch, an edge router) produces no
-  radio row at all. The sign-in says so, the device stays in Detected, and its
-  place is **References**.
+- A MikroTik **with no wireless module** (a switch, a CCR) produces no radio row
+  at all. The sign-in says so, the device stays in Detected, and its place is
+  **References**.
 
 ## What you see from a MikroTik, and what you do not
 
@@ -89,7 +77,7 @@ empty cell tells the truth; an invented number does not.
 |---|---|
 | **Link latency** | RouterOS does not measure latency over the air segment. On airOS the radio itself provides it. |
 | **Airtime** | It does not publish channel occupancy, and without latency its AP has no Spikes column either. |
-| **Distance** | What RouterOS calls `current-distance` is the ack-timeout setting, not a measurement: it read 1 over a link of a few metres. |
+| **Distance** | What RouterOS calls `current-distance` is the *ack-timeout* setting, not a measurement: it read 1 over a link of a few meters. |
 | **Sessions** | It is the kernel's conntrack, which describes something else. |
 | **Remote signal** | A MikroTik station does not know how its AP hears it. If that AP is also in the app, its own client row carries the signal it hears. |
 | **Downlink / Uplink** | RouterOS gives a single expected-throughput figure, with no direction. |
@@ -97,10 +85,10 @@ empty cell tells the truth; an invented number does not.
 
 Two readings change form but keep their meaning:
 
-- **Link quality.** RouterOS does not compute the airMAX linkscore, so the column
-  shows **CCQ** instead, labelled and **without colour**: it has no calibrated
-  thresholds, so it is reported but not judged. An AP with no associated clients
-  publishes no CCQ and the cell stays empty.
+- **Link quality.** RouterOS does not compute the airMAX *linkscore*, so the
+  column shows **CCQ** instead, labeled and **without color**: it has no
+  calibrated thresholds, so it is reported but not judged. An AP with no
+  associated clients publishes no CCQ and the cell stays empty.
 - **Modulation.** RouterOS publishes no `8x`-style index in either direction, so
   the column shows **both rates in Mbps**. For the same reason, on these devices
   that column **is not compared between two Snapshots**: the PHY rate jumps
@@ -129,8 +117,6 @@ useful to any tool and not just SignalScope.
 
 Some aspects worth knowing:
 
-- **Verified against two hAPs (ac² and ac lite)** running RouterOS 6.48, 6.49
-  and 7.23. Any claim about an SXT, an LHG or a Basebox is still an assumption.
 - **Devices with ax chips are not read.** They use the new RouterOS 7 `wifi`
   package, which has no `/interface wireless`, so the app doesn't see their
   radios.

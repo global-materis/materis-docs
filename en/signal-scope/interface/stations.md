@@ -11,7 +11,7 @@ MikroTik the row is a radio, as explained
 | Column | What it shows |
 |---|---|
 | **Session** | The state of the connection to the radio (SSH, HTTPS or HTTP) and, if it is absent, [what is going on](#when-a-device-goes-absent). It also carries the marks of what you decided about that device: session switched off, alerts muted, reconnection notice set. One click opens the [session window](#the-session-window). An HTTP session is painted amber with an open padlock, because on that network the username, the password and the metrics travel as plain text. |
-| **Signal · local / remote** | The core reading. Local is what the station receives; remote (in grey) is what the AP receives from it. The meter bar carries the traffic-light color. |
+| **Signal · local / remote** | The core reading. Local is what the station receives; remote (in gray) is what the AP receives from it. The meter bar carries the traffic-light color. |
 | **Baseline** | The **Mark** button pins the current signal as that antenna's baseline, and the cell then shows that value (`−58 dBm`) with an **×** to remove it. With a baseline, the signal axis judges how far it dropped from it rather than the absolute value, and the status reads **Stable**, **Dropped vs baseline** or **Check link**. To update it, remove it first with the **×**. See [Traffic light and diagnostics](../diagnostics#baseline-compare-against-your-own-network). |
 | **IP** | A link that opens the radio's web UI, plus a **ping** button that opens a terminal with a continuous ping. |
 | **Latency** | The link latency measured by the radio itself toward its AP. It is not a ping from your PC; see [below](#latency-the-average-and-the-peak). |
@@ -166,10 +166,16 @@ exit. You know which one it is, which is why you choose it.
 ### The session log
 
 The **Log** tab is that device's record: **what the app tried and how it
-ended**, line by line and in order, each with its date and time. It shows the
-lost session, each connection attempt with its address and result, each ping,
-where its AP sees it and each IP update. With it you know what happened without
-waiting to see whether the row comes back.
+ended**, line by line and in order, each with its date and time. With it you
+know what happened without waiting to see whether the row comes back.
+
+```
+24/09/2026 20:14:03  Session lost
+24/09/2026 20:14:03  Attempt (after losing the session) → 10.10.1.62 · HTTPS:443 · no answer, timed out
+24/09/2026 20:14:11  Ping to 10.10.1.62 · no answer
+24/09/2026 20:14:12  Its AP SP-PSA60-17 sees it at 10.10.1.88
+24/09/2026 20:14:13  IP updated 10.10.1.62 → 10.10.1.88 (its AP)
+```
 
 - It keeps the **last 100 entries** per device **while the app is open**. It is
   not saved in the project and does not travel in a snapshot.
@@ -281,7 +287,7 @@ Each RJ45 connector summarizes its own port's state:
 
 | Look | Meaning |
 |---|---|
-| Grey | No data (not a fault) |
+| Gray | No data (not a fault) |
 | Slashed connector, amber | No cable |
 | Amber | Half duplex |
 | Red | ≤ 10 Mbps: damaged cable or split pair |
@@ -312,10 +318,7 @@ antenna is fine.
 Which ports the sentinel watches is chosen in the
 [Ports](#ports-the-sentinel-watches) tab of the session window.
 
-::: info 🖼️ Image pending — `puertos-vigilados.png`
-The Ports tab of the session window: one card per port with its real state (no
-cable, 1 Gbps full duplex, half duplex) and its switch.
-:::
+![The Ports tab of the session window](/signal-scope/puertos-vigilados.png)
 
 The column also exists in the [AP table](./access-points), where degradation
 weighs even more.

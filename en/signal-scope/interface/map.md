@@ -7,7 +7,7 @@ you do, live monitoring keeps running in the background.
 It is a **design plan** meant as a field view. At a glance it shows where your
 nodes are, what each AP covers and how its stations are doing.
 
-![The coverage map: a node with its sectors painted by band, stations with their diagnosis color, one station's card with its metrics and the layers panel](/signal-scope/mapa-cobertura.jpg)
+![The coverage map](/signal-scope/mapa-cobertura.png)
 
 ## Nodes: the site, not the device
 
@@ -46,10 +46,10 @@ cannot verify.
 
 ## Three ways of drawing coverage
 
-With dozens of sectors over the same neighbourhood, the semi-transparent wedges
-add up, and where four of them cross, the colour belongs to none of them. On top
+With dozens of sectors over the same neighborhood, the semi-transparent wedges
+add up, and where four of them cross, the color belongs to none of them. On top
 of that, the fill speaks of **band** while the dots and links speak of
-**state**: two questions in the same colour language.
+**state**: two questions in the same color language.
 
 That is why you choose **how it is drawn** with the **"Coverage"** selector in
 the top bar, next to "Base map". The button shows the current mode without
@@ -57,7 +57,7 @@ opening it:
 
 | Mode | What it answers |
 |---|---|
-| **Footprint** (the default) | *"How far do I reach?"* Every sector merges into **a single surface in a single tone**. Two overlapping wedges no longer darken each other, and colour is left to the traffic light alone. The range arc stays crisp, so you can still read where each sector ends inside the mass. |
+| **Footprint** (the default) | *"How far do I reach?"* Every sector merges into **a single surface in a single tone**. Two overlapping wedges no longer darken each other, and color is left to the traffic light alone. The range arc stays crisp, so you can still read where each sector ends inside the mass. |
 | **Focus** | *"What does this one cover?"* The AP you are looking at is painted in full and the rest stay as a one-stroke outline. |
 | **Detail** | **Each sector by its band**, the full drawing. |
 
@@ -66,11 +66,11 @@ Four details about these modes:
 - **The focused AP is painted in full in all three modes.** Focus comes from the
   AP you pick as much as from the station you pick (in that case, its own AP is
   painted).
-- **Outside Detail, links dim.** The state colour is reserved for what is
-  focused and the rest turns context grey. Each station's dot still says its
+- **Outside Detail, links dim.** The state color is reserved for what is
+  focused and the rest turns context gray. Each station's dot still says its
   state, and that never dims.
 - **Footprint has a cost**: the frequency band can no longer be read on the
-  map. It is still in the coloured dot of the side list, in the AP's card and
+  map. It is still in the colored dot of the side list, in the AP's card and
   in the [frequency planner](../tools#frequency-planner).
 - **A planned AP does not join the footprint**, because the footprint claims
   *"I reach this far"* and there is no device there yet. It stays as a dashed
@@ -78,11 +78,6 @@ Four details about these modes:
 
 If you switch off the "AP coverage" layer in the **Layers** panel, the selector
 is disabled in place (it does not vanish) and the tooltip says why.
-
-::: info 🖼️ Image pending: `cobertura-modos.png`
-The same node with many sectors, in **Footprint** and in **Detail**, side by
-side, and the top bar's "Coverage" selector open with its three options.
-:::
 
 ## Planning an AP that does not exist yet
 
@@ -121,7 +116,7 @@ you annotate the position by hand:
    **"Annotate here"**. You can also start from its card, with **"Annotate the
    position on the map"**.
 
-The app honours two rules:
+The app honors two rules:
 
 - **What you annotate is stored in the project, not on the device.** The app
   says exactly that: *"SignalScope publishes it, not the device"*.
@@ -130,11 +125,6 @@ The app honours two rules:
 
 On airMAX that option **does not exist, and that is deliberate**: there
 coordinates are registered on the radio itself.
-
-::: info 🖼️ Image pending: `anotar-posicion.png`
-The marked point's bubble with the "Annotate the position of" dropdown and the
-**Annotate here** button, over a MikroTik with no coordinates.
-:::
 
 ### What the map says with its drawing
 
@@ -207,7 +197,7 @@ The **"Base map"** menu has up to four options. The privacy detail is in
 |---|---|
 | **Automatic** | Follows the app's theme. |
 | **Light** / **Dark** | The two street plans, served by **OpenFreeMap**, with no key, no registration and no quota. |
-| **Satellite** | **Google Maps** imagery. It only appears if you supplied your own API key (see below). |
+| **Satellite** | **Google Maps** imagery. It only appears if you supplied your own key (see below). |
 
 Underneath, separated by a line, there is a separate checkbox:
 
@@ -220,28 +210,16 @@ Underneath, separated by a line, there is a separate checkbox:
 
 #### Satellite with your own Google key
 
-The Satellite option **only exists once you configure a Google API key** with
+The Satellite option **only exists once you configure a Google key** with
 the Map Tiles API enabled, in **Preferences → Map**. The key is yours and bills
 to your Google account, which carries its usage. SignalScope checks it before
 accepting it and stores it in the Windows credential vault; **it is not saved
-in or shared with the project**. When you use the satellite view, Google
-receives the map area you are looking at, never data from your network.
+in or shared with the project**.
 
 With a key active, the field to type one does not appear: to change it, press
 **"Remove"** first.
 
-::: details Why isn't one included?
-There is no free satellite imagery with rooftop resolution at world scale. The
-previous provider cut off outside cities and returned, with a correct response
-and no error to catch, a *"Map data not yet available"* label exactly where the
-operator needed to look, and that read as a SignalScope failure. That is why
-satellite only comes with a key of your own.
-:::
-
-::: info 🖼️ Image pending: `mapa-base.png`
-The **Base map** menu open: Automatic, Light, Dark, Satellite (when a key is
-present) and, separated by a line, the **Terrain relief** checkbox.
-:::
+![The **Base map** menu open: Automatic, Light, Dark, Satellite.](/signal-scope/mapa-base.png)
 
 ## The map travels in Snapshots
 

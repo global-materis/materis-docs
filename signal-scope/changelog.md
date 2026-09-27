@@ -42,6 +42,10 @@ llamarse Referentes y admite destinos añadidos a mano, como una IP pública o
 un dominio, con su estado y su latencia. La referencia de señal de cada
 estación pasa a llamarse **línea base**, y funciona igual que antes.
 
+**Modulación en las dos direcciones.** La columna Modulación muestra la de
+bajada y la de subida (`8x/1x`), porque un radio puede recibir perfecto y
+transmitir muy mal.
+
 **Reportes más completos.** Los reportes en PDF, Excel y CSV incluyen el uso
 de CPU y la RAM libre de cada equipo, y tus Referentes con su estado, tiempo
 de respuesta y pérdida.
@@ -190,5 +194,6 @@ directo a Proyectos, Novedades y Licencia.
 Primera versión: escaneo de la red sin drivers (ping y ARP), sesión SSH o
 HTTP con los radios airMAX y clasificación automática en Estaciones y AP,
 semáforo de señal con
-[referencias por antena](./diagnostico#referencias-comparar-contra-tu-propia-red),
+[referencias por antena](./diagnostico#linea-base-comparar-contra-tu-propia-red)
+(hoy, líneas base),
 Snapshots y reportes en PDF y Excel.

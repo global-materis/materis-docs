@@ -33,7 +33,7 @@ way:
 | **Antenna misaligned** | Imbalance between the two polarities from **6 dB**, the limit Ubiquiti itself recommends. It points to an aiming or polarization problem. |
 | **Radio saturated** | CPU at 95 % or free memory below 5 %: the radio drops packets with the signal intact. It applies to stations and APs. |
 | **Sector with high latency** | Most of one AP's online stations (at least three, and half or more) answer slowly at the same time. It is reported once for the node, and its stations do not report one by one. *(Inherits the "High latency" switch.)* |
-| **High latency** · **BETA** | A client with a pristine signal that still answers with **sustained** delay. See below. |
+| **High latency** · **BETA** | A client with a pristine signal that still answers with **sustained** delay. |
 
 Notices stack **by severity**. First comes what leaves a whole cell without
 service, then what affects one client, then what degrades it, and last what
@@ -44,31 +44,6 @@ Which ports the sentinel watches on each device is chosen in the
 window. The app reads every port on the device; if you make no choice, it
 watches the first one, which on an airMAX is the only one. Even if two watched
 ports fail, there is one notice per device, and it names the affected port.
-
-::: tip "High latency", and why it is marked beta
-A client with a pristine link that **no radio metric can find anything wrong
-with** and that still answers slowly is exactly the case the sentinel exists
-for.
-
-It is also the event with **the most potential to become noise**, because
-latency is the only magnitude in the catalog that rises on its own at peak
-hour. That is why it carries three filters no other event needs:
-
-- It judges the **sustained average** over 90 s, not the spikes. It notifies
-  when the average goes above 12 ms, and the notice clears when it drops below
-  9 ms.
-- **It goes quiet if it has already warned you about the cause**: antenna
-  misaligned or radio saturated, the two faults that produce this very
-  symptom.
-- **If several stations of the same AP are affected, it warns once for the
-  node** with "Sector with high latency". In that case the problem is that
-  cell's air rather than one client, and the AP gives you the triage. In the
-  same way, the sector notice stays quiet while that AP already has "Radio
-  saturated" open.
-
-It is marked **BETA** while it is calibrated. If you find it noisy, switch it
-off in **Preferences → Alerts**.
-:::
 
 ### What it does NOT watch, on purpose
 
@@ -163,11 +138,7 @@ at once.
   because it refers to a device on **this** network. It is lost when you
   forget the device.
 
-::: info 🖼️ Image pending — `silenciar.png`
-The **Mute alerts** card with its row of periods (1 hour, 8 hours, 1 day,
-3 days, 1 week, No end date) and, beside it, its state once set: "Muted
-until… · 8 h left" with the Unmute button.
-:::
+![The **Mute alerts** card with its row of periods (1 hour, 8 hours, 1 day, 3 days, 1 week, No end date)](/signal-scope/silenciar.png)
 
 ### Notify on reconnection
 
@@ -264,11 +235,6 @@ Which of these notices also go out as Windows notifications or to your
 messaging is chosen in the *"Notices you ask for"* block, found in
 **Preferences → Alerts** and in **Preferences → Messaging**.
 
-::: info 🖼️ Image pending — `bandeja-avisos.png`
-The bell open next to the sentinel's pulse: the list of notices with their
-time ("came back online") and the unread dot.
-:::
-
 ## Three channels for the same notice
 
 The sentinel **always watches everything**. What you choose is **what leaves
@@ -358,7 +324,7 @@ it. Choose the group route knowing who is in it.
 
 ![Preferences → Messaging: the switch to send alerts, the three routes (WhatsApp, Telegram to a user, Telegram to a group), the test message and the selection of which events go to this destination](/signal-scope/mensajeria.png)
 
-![The sentinel panel: Session down notices stacked with each one's reason, and at the foot the reminder that it watches while the app is open](/signal-scope/centinela-panel.jpg)
+![The sentinel panel: Session down notices stacked with each one's reason, and at the foot the reminder that it watches while the app is open](/signal-scope/centinela-panel.png)
 
 ## The network score
 

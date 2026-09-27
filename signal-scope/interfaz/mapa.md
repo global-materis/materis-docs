@@ -7,7 +7,7 @@ cambiar, el monitoreo en vivo sigue corriendo de fondo.
 Es un **plano de diseño** pensado como vista de campo. De un vistazo muestra
 dónde están tus nodos, qué cubre cada AP y cómo están sus estaciones.
 
-![El Mapa de cobertura: un nodo con sus sectores pintados por banda, las estaciones con su color de diagnóstico, la tarjeta de una estación con sus métricas y el panel de capas](/signal-scope/mapa-cobertura.jpg)
+![El Mapa de cobertura](/signal-scope/mapa-cobertura.png)
 
 ## Nodos: el sitio, no el equipo
 
@@ -78,11 +78,6 @@ Cuatro detalles de estos modos:
 Si apagas la capa «Cobertura AP» en el panel **Capas**, el selector se
 deshabilita en su sitio (no desaparece) y el tooltip dice por qué.
 
-::: info 🖼️ Imagen pendiente: `cobertura-modos.png`
-El mismo nodo con muchos sectores, en **Huella** y en **Detalle**, lado a lado,
-y el selector «Cobertura» de la barra superior abierto con las tres opciones.
-:::
-
 ## Planificar un AP que aún no existe
 
 En la tarjeta del nodo, **«Añadir AP planificado»** dibuja el sector de un
@@ -129,11 +124,6 @@ La app respeta dos reglas:
 
 En airMAX esa opción **no existe, y es a propósito**: ahí las coordenadas se
 registran en el propio radio.
-
-::: info 🖼️ Imagen pendiente: `anotar-posicion.png`
-La burbuja del punto marcado con el desplegable «Anotar la posición de» y el
-botón **Anotar aquí**, sobre un MikroTik sin coordenadas.
-:::
 
 ### Qué dice el mapa con el dibujo
 
@@ -223,24 +213,12 @@ La opción Satélite **solo existe si configuras una clave de Google** con la Ma
 Tiles API habilitada, en **Preferencias → Mapa**. La clave es tuya y va a tu
 cuenta de Google, que es la que asume su consumo. SignalScope la comprueba
 antes de aceptarla y la guarda en el almacén de credenciales de Windows; **no
-se guarda ni viaja con el proyecto**. Cuando usas la vista satelital, Google
-recibe la zona del mapa que miras, nunca datos de tu red.
+se guarda ni viaja con el proyecto**.
 
 Con una clave activa, el campo para escribirla no aparece: para cambiarla,
 primero pulsa **«Quitar»**.
 
-::: details ¿Por qué no viene puesta?
-No hay ninguna imagen de satélite libre con resolución de tejado a escala
-mundial. El proveedor anterior se cortaba fuera de las ciudades y devolvía, con
-una respuesta correcta y sin error que capturar, un cartel de *«Map data not yet
-available»* justo donde el operador necesitaba mirar, y eso se leía como una
-falla de SignalScope. Por eso el satélite solo llega con una clave propia.
-:::
-
-::: info 🖼️ Imagen pendiente: `mapa-base.png`
-El menú **Mapa base** desplegado: Automático, Claro, Oscuro, Satélite (cuando
-hay clave) y, separada por una línea, la casilla **Relieve del terreno**.
-:::
+![El menú **Mapa base** desplegado: Automático, Claro, Oscuro, Satélite.](/signal-scope/mapa-base.png)
 
 ## El mapa viaja en los Snapshots
 

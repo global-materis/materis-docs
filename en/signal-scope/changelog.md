@@ -41,6 +41,10 @@ called References and accepts destinations you add by hand, such as a public
 IP or a domain, with their status and latency. Each station's signal
 reference is now called its **baseline**, and it works as before.
 
+**Modulation in both directions.** The Modulation column shows downlink and
+uplink (`8x/1x`), because a radio can receive perfectly and transmit very
+badly.
+
 **Fuller reports.** PDF, Excel and CSV reports include each device's CPU use
 and free RAM, and your References with their status, response time and loss.
 
@@ -188,5 +192,6 @@ access to Projects, What's new and License.
 First version: driverless network scanning (ping and ARP), SSH or HTTP
 sessions with airMAX radios and automatic classification into Stations and
 APs, a signal traffic light with
-[per-antenna references](./diagnostics#references-compare-against-your-own-network),
+[per-antenna references](./diagnostics#baseline-compare-against-your-own-network)
+(now called baselines),
 Snapshots and PDF and Excel reports.

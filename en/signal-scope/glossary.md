@@ -95,7 +95,8 @@ without a MAC.
 measures whether a device answers and how fast.
 
 **SSH / HTTPS / HTTP**: the means by which the app signs in to a radio. SSH
-and HTTPS are **encrypted**. HTTP is not, and the app marks it amber.
+and HTTPS are **encrypted**. HTTP is not, and the app marks it amber. With
+RouterOS only SSH is available.
 
 **SNMP**: a protocol for querying identity and state. The app uses it only if
 you configure it, and only in read mode.
@@ -114,6 +115,15 @@ which data arrives.
 **RouterOS**: MikroTik's system, which runs across **its whole** catalog, from
 a desktop router to a tower sector. Knowing a device is a MikroTik does not
 tell you what it is: the device itself says so when you sign in.
+
+**WebFig**: MikroTik's web interface, meant to be used from a browser. It is
+what answers on a RouterOS device's web port, and the app does not use it to
+read the device.
+
+**Wi-Fi 6 (ax) and the `wifi` package**: MikroTik Wi-Fi 6 devices use the
+RouterOS 7 `wifi` package, which differs from the classic wireless one. The app
+**cannot read their radios yet**. Details in
+[Supported devices](./supported-devices).
 
 **Chassis**: the physical box, when it holds more than one radio. The app
 opens **one session per chassis** and draws **one row per radio**. The
@@ -139,10 +149,11 @@ absolute value, and the chip says *Stable*, *Dropped vs baseline* or *Check
 link*.
 
 **Detected**: the queue of what the scan found and you have not resolved yet.
-It empties as you sign in to each device or move it to References.
+It empties as you sign in to each device, move it to References or remove
+it.
 
 **References**: the table of what you do not manage but look at for contrast,
-such as the node's router, your provider or a domain like Google. Each row is
+such as the node's router, your provider or a web domain. Each row is
 a **target**, and you can monitor whether it answers. Details in
 [Detected and References](./interface/detected-and-others).
 
@@ -207,7 +218,19 @@ merges them all into a single surface, **Focus** paints only the AP you are
 looking at in full, and **Detail** shows each sector by its band.
 
 **Transfer code**: the key (`XXXX-XXXX-XXXX`) that unlocks a project on
-another PC. Details in [Sharing](./sharing).
+another computer. Details in [Sharing](./sharing).
+
+## The license
+
+**Trial**: 30 days with every feature, no email or sign-up. There is one per
+machine, and reinstalling does not reset it.
+
+**Full license**: the paid annual license, with your email and your key. It is
+bought at [sscope.materis.io](https://sscope.materis.io/en#licencia) and takes
+one slot per machine.
+
+**Customer portal**: [panel.materis.io](https://panel.materis.io/), where you
+see your purchases and renewal dates, renew, and add machines to your license.
 
 **HWID**: your machine's identifier, used by the license to know which machine
 it is active on.

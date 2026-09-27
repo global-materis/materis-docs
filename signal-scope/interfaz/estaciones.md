@@ -316,10 +316,7 @@ está bien.
 Qué puertos vigila el centinela se elige en la pestaña
 [Puertos](#puertos-que-vigila-el-centinela) de la ventana de sesión.
 
-::: info 🖼️ Imagen pendiente — `puertos-vigilados.png`
-La pestaña Puertos de la ventana de sesión: una tarjeta por puerto con su estado
-real (sin cable, 1 Gbps full duplex, half duplex) y su interruptor.
-:::
+![La pestaña Puertos de la ventana de sesión](/signal-scope/puertos-vigilados.png)
 
 La columna existe también en la [tabla de AP](./puntos-de-acceso), donde la
 degradación pesa aún más.

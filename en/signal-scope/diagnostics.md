@@ -121,7 +121,7 @@ of 80 Mbps"*. That tells you **where to look** (the cable, the channel or the
 alignment) before climbing to the roof.
 :::
 
-![A critical station's diagnosis tooltip: SNR, latency, distance and port in the header, and below the causes (signal below expected, low link quality and downlink well below expected)](/signal-scope/diagnostico.png)
+![A critical station's diagnosis tooltip: SNR, latency, distance and port in the header, and below the causes (signal below expected, low link quality and downlink well below expected)](/signal-scope/diagnostico.webp)
 
 ## The AP is judged differently
 
@@ -157,10 +157,5 @@ axis by axis (signal, chains, CPU and memory are physics and percentages and
 do not depend on the vendor), but they have not been checked against real
 MikroTik links.
 
-There is a known bias. SNR comes from subtracting noise from signal, and
-**noise floors are not comparable between manufacturers**: with the same
-signal, a MikroTik scores **7 to 11 dB better** than an airMAX. It is not
-corrected with an invented number, because that would turn a known bias into
-a hidden error. The risk stays on the benign side: **less detection, but no
-invented alarms**. Read it with reservation, and tell us what you see.
+Send us any report at support@materis.io.
 :::

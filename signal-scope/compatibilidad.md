@@ -2,7 +2,7 @@
 
 SignalScope gestiona dos sistemas de radio: **airOS** (Ubiquiti airMAX) y
 **RouterOS** (MikroTik). Todo lo demás de tu red, como switches, ONU, routers de
-cliente e incluso destinos fuera de tu red, se registra en
+cliente e incluso destinos fuera de tu red, puedes registrar en
 [**Referentes**](./interfaz/detectados-y-otros#referentes-lo-que-miras-para-contrastar)
 con nombre propio y vigilancia de disponibilidad.
 
@@ -15,16 +15,9 @@ con nombre propio y vigilancia de disponibilidad.
 
 :::info Nota sobre MikroTik RouterOS
 El soporte de MikroTik lleva menos recorrido por el catálogo de modelos que el de
-airMAX: se verificó en dos hAP (ac² y ac lite) con las versiones 6.48, 6.49 y
-7.23. Cualquier afirmación sobre un SXT, un LHG o un Basebox es una suposición.
+airMAX.
 Los equipos con chips ax (paquete `wifi` nuevo de RouterOS 7) no se leen — la app
-no ve sus radios. Si usas otro modelo, contáctanos en **support@materis.io**.
-:::
-
-::: info 🖼️ Imagen pendiente: `splash.png`
-La pantalla de arranque de v1.3.0: los dos sistemas como los extremos de un
-enlace ("Ubiquiti · airOS" y "MikroTik · RouterOS"), con SignalScope en medio y
-el estado de carga en el hilo que los une.
+no ve sus radios. Si usas esos modelos, contáctanos en **support@materis.io**.
 :::
 
 ## Elegir el sistema al iniciar sesión
@@ -35,17 +28,12 @@ la MAC, y se cambia de un clic.
 
 ::: tip Por qué lo eliges tú y no lo adivina la app
 La MAC dice el **fabricante**, no el sistema operativo, y MikroTik corre
-RouterOS en todo su catálogo, desde un router de escritorio hasta un sector de
-torre. Para adivinarlo, la app tendría que acertar dos veces: que la tabla de
-fabricantes esté al día (es una lista fija, y la IEEE entrega bloques nuevos sin
-avisar) y que fabricante y sistema coincidan. No coinciden.
+RouterOS en todo su catálogo por eso es complicado adivinar.
 :::
 
 Con **RouterOS** el transporte se fuerza a **SSH** y la opción HTTP queda
-deshabilitada, con el motivo en su tooltip. RouterOS 6 **no tiene API REST**
-(llegó en la v7), y lo que se ve abierto en el puerto web es WebFig, una
-interfaz para navegador que no se puede consultar. La app entra por SSH en las
-dos versiones.
+deshabilitada. RouterOS no tiene soporte y lo que se ve abierto en el puerto web es WebFig, una
+interfaz para navegador que no se puede consultar.
 
 ## Un equipo, una fila por radio
 
@@ -67,7 +55,7 @@ Para no leerlo mal:
 - Un radio **deshabilitado no produce fila**, porque mostrarlo sin datos lo
   pintaría de rojo para siempre. Uno encendido que todavía no conecta **sí
   sale**: una estación buscando red es justo lo que hay que ver.
-- Un MikroTik **sin módulo inalámbrico** (un switch, un router de borde) no da
+- Un MikroTik **sin módulo Wireless** (un switch, un CCR) no da
   ninguna fila de radio. El inicio de sesión lo dice, el equipo se queda en
   Detectados y su sitio es **Referentes**.
 
@@ -131,9 +119,6 @@ herramienta y no solo para SignalScope.
 
 Algunos aspectos a tener en cuenta:
 
-- **Verificado contra dos hAP (ac² y ac lite)** con RouterOS 6.48, 6.49 y
-  7.23. Cualquier afirmación sobre un SXT, un LHG o un Basebox es todavía una
-  suposición.
 - **Los equipos con chips ax no se leen.** Usan el paquete `wifi` nuevo de
   RouterOS 7, que no tiene `/interface wireless`, y la app no ve sus radios.
 - **El semáforo de un MikroTik usa hoy los umbrales de airMAX.** Se auditaron eje

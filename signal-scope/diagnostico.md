@@ -122,7 +122,7 @@ debajo de lo esperado: 23 de 80 Mbps"*. Así sabes **dónde mirar** (el cable,
 el canal o la alineación) antes de subir al techo.
 :::
 
-![El tooltip de diagnóstico de una estación crítica: SNR, latencia, distancia y puerto en la cabecera, y debajo las causas (señal bajo la esperada, calidad de enlace baja y downlink muy por debajo de lo esperado)](/signal-scope/diagnostico.png)
+![El tooltip de diagnóstico de una estación crítica: SNR, latencia, distancia y puerto en la cabecera, y debajo las causas (señal bajo la esperada, calidad de enlace baja y downlink muy por debajo de lo esperado)](/signal-scope/diagnostico.webp)
 
 ## El AP se juzga distinto
 
@@ -157,10 +157,5 @@ Los umbrales de un equipo RouterOS son **hoy los de airMAX**. Se revisaron eje
 por eje (señal, cadenas, CPU y memoria son física y porcentajes, y no dependen
 del fabricante), pero no se han contrastado contra enlaces MikroTik reales.
 
-Hay un sesgo conocido. El SNR sale de restar el ruido a la señal, y **los
-pisos de ruido no son comparables entre fabricantes**: con la misma señal, un
-MikroTik puntúa **entre 7 y 11 dB mejor** que un airMAX. No se corrige con un
-número inventado, porque eso convertiría un sesgo conocido en un error
-escondido. El riesgo queda del lado benigno: **se detecta de menos, pero no se
-inventan alarmas**. Léelo con reserva y cuéntanos lo que veas.
+Cualquier reporte haz sabernos en support@materis.io
 :::

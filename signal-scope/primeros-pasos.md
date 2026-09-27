@@ -10,8 +10,7 @@ En la pantalla de bienvenida pulsa **Nuevo proyecto**. Eliges su nombre y dónde
 guardarlo, y se crea como un archivo **`.sscope`**.
 
 Ese archivo es tu red completa (equipos, credenciales cifradas, líneas base,
-Snapshots e historial) y **se autoguarda** mientras trabajas. La próxima vez, la
-bienvenida te lo ofrece en **Archivos recientes** con un resumen de su estado.
+Snapshots e historial) y **se autoguarda** mientras trabajas.
 
 ![El diálogo de crear proyecto: nombre, ubicación y la ruta del archivo .sscope que se creará](/signal-scope/crear-proyecto.png)
 
@@ -60,8 +59,7 @@ abierto a cualquiera.
   Si tu cuenta es de solo lectura, usa HTTP, porque airOS no da SSH a esas
   cuentas.
 - Con **RouterOS** el transporte se fuerza a **SSH** y la opción HTTP queda
-  deshabilitada: la v6 no tiene API REST. Ver
-  [Equipos compatibles](./compatibilidad).
+  deshabilitada por compatibilidad.
 
 Hay dos maneras de hacerlo:
 
@@ -78,25 +76,12 @@ Al conectar, **cada radio reporta su modo y se clasifica solo** en
 mano. Las credenciales quedan guardadas (cifradas dentro del proyecto) y la app
 las usa para reconectar automáticamente en las próximas sesiones.
 
-Lo que no vayas a gestionar (una ONU, un switch, el router del cliente) se pasa
-a Referentes con **"Llevar a Referentes…"**, que te pide su nombre y si quieres
-vigilarlo, como se explica en la
-[introducción](./#como-se-organizan-tus-equipos).
-
-::: warning Si un equipo rechaza tus credenciales, la app deja de intentarlo
-Insistir hace que el propio equipo cierre el acceso (airOS lo bloquea medio
-minuto tras varios intentos fallidos) y acaba dejándote fuera **también a ti,
-hasta con tu terminal**. El aviso te repite lo que dijo el radio, con sus
-palabras, para que corrijas el dato que falla.
-:::
+Lo que no vayas a gestionar (una ONU, un switch, otros router's) se pasa
+a Referentes con **"Llevar a Referentes…"**. Te pidirá su nombre si quieres
+vigilarlo, como se explica en la [introducción](./#como-se-organizan-tus-equipos).
 
 ![La sesión en cascada: protocolo, credenciales únicas y la cola de radios conectándose uno a uno](/signal-scope/sesion-cascada.png)
-
-::: info 🖼️ Imagen pendiente: `login-sistema.png`
-El modal de inicio de sesión con el selector **Sistema** (airOS / RouterOS)
-visible, y el botón de HTTP deshabilitado al elegir RouterOS con su motivo en el
-tooltip.
-:::
+![El modal de inicio de sesión con el selector **Sistema** (airOS / RouterOS) visible, y el botón de HTTP deshabilitado](/signal-scope/login-sistema.png)
 
 ::: details Un MikroTik con dos radios deja dos filas
 Es lo esperado: una caja con su AP de 2,4 GHz y su estación de 5 GHz ocupa **una

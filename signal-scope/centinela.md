@@ -32,7 +32,7 @@ otra forma:
 | **Antena desalineada** | Desbalance entre las dos polaridades desde **6 dB**, el límite que recomienda el propio Ubiquiti. Apunta a un problema de apunte o de polarización. |
 | **Radio saturado** | CPU al 95 % o memoria disponible por debajo del 5 %: el radio tira paquetes con la señal intacta. Vale para estaciones y AP. |
 | **Sector con latencia alta** | La mayoría de las estaciones en línea de un mismo AP (al menos tres, y la mitad o más) responden con retraso a la vez. Se avisa una vez por el nodo y sus estaciones no avisan una a una. *(Hereda el interruptor de "Latencia alta".)* |
-| **Latencia alta** · **BETA** | Un cliente con la señal impecable que aun así responde con retraso **sostenido**. Ver abajo. |
+| **Latencia alta** · **BETA** | Un cliente con la señal impecable que aun así responde con retraso **sostenido**. |
 
 Los avisos se apilan **por gravedad**. Primero va lo que deja una celda entera
 sin servicio, luego lo que afecta a un cliente, después lo que lo degrada y al
@@ -43,28 +43,6 @@ Qué puertos vigila el centinela en cada equipo se elige en la pestaña
 de sesión. La app lee todos los puertos del equipo; si no eliges, vigila el
 primero, que en un airMAX es el único. Aunque fallen dos puertos vigilados, el
 aviso es uno por equipo y nombra el puerto afectado.
-
-::: tip "Latencia alta", y por qué va marcado beta
-Un cliente con el enlace impecable al que **ninguna métrica de radio le
-encuentra nada** y que aun así responde lento es exactamente el caso para el
-que existe el centinela.
-
-También es el evento con **más riesgo de volverse ruido**, porque la latencia
-es la única magnitud del catálogo que sube sola en hora punta. Por eso lleva
-tres filtros que ningún otro evento necesita:
-
-- Juzga la **media sostenida** durante 90 s y no los picos. Avisa con la media
-  por encima de 12 ms, y el aviso se retira cuando baja de 9 ms.
-- **Se calla si ya te avisó de la causa**: antena desalineada o radio
-  saturado, las dos averías que producen este mismo síntoma.
-- **Si son varias estaciones del mismo AP, avisa una vez por el nodo** con
-  "Sector con latencia alta". En ese caso el problema es el aire de esa celda
-  y no un cliente, y el AP te da el triage. Del mismo modo, el aviso del
-  sector se calla si ese AP ya tiene abierto "Radio saturado".
-
-Va marcado **BETA** mientras se calibra. Si te resulta ruidoso, apágalo en
-**Preferencias → Alertas**.
-:::
 
 ### Qué NO vigila, a propósito
 
@@ -156,11 +134,7 @@ la notificación de Windows y tu mensajería, los tres a la vez.
 - Se guarda **en el proyecto** y no en las preferencias del puesto, porque se
   refiere a un equipo de **esta** red. Se pierde al olvidar el equipo.
 
-::: info 🖼️ Imagen pendiente — `silenciar.png`
-La tarjeta **Silenciar avisos** con la fila de plazos (1 hora, 8 horas, 1 día,
-3 días, 1 semana, Sin vencimiento) y, al lado, su estado ya puesto: "Callado
-hasta el… · quedan 8 h" con el botón Reactivar.
-:::
+![La tarjeta **Silenciar avisos** con la fila de plazos (1 hora, 8 horas, 1 día, 3 días, 1 semana, Sin vencimiento)](/signal-scope/silenciar.png)
 
 ### Avisar la reconexión
 
@@ -254,11 +228,6 @@ Cuáles de estos avisos salen también como notificación de Windows o a tu
 mensajería se elige en el bloque *"Avisos que pides tú"*, que aparece en
 **Preferencias → Alertas** y en **Preferencias → Mensajería**.
 
-::: info 🖼️ Imagen pendiente — `bandeja-avisos.png`
-La campana abierta junto al latido del centinela: la lista de avisos con su
-hora ("volvió a conectarse") y el punto de los no leídos.
-:::
-
 ## Tres canales para el mismo aviso
 
 El centinela **siempre vigila todo**. Lo que eliges tú es **qué sale de la app
@@ -350,7 +319,7 @@ Elige la vía de grupo sabiendo quién está en él.
 
 ![Preferencias → Mensajería: el interruptor de enviar avisos, las tres vías (WhatsApp, Telegram a usuario, Telegram a grupo), el mensaje de prueba y la selección de qué eventos se mandan a este destino](/signal-scope/mensajeria.png)
 
-![El panel del centinela: avisos de Sesión caída apilados con el motivo de cada uno, y al pie el recordatorio de que vigila mientras la app está abierta](/signal-scope/centinela-panel.jpg)
+![El panel del centinela: avisos de Sesión caída apilados con el motivo de cada uno, y al pie el recordatorio de que vigila mientras la app está abierta](/signal-scope/centinela-panel.png)
 
 ## La calificación de la red
 

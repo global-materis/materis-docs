@@ -39,7 +39,7 @@ de cada estación aparece cuánto cambió entre el Snapshot y este instante, si 
 equipo tiene sesión ahora. Es la forma más rápida de responder *"¿este enlace
 estaba así la semana pasada?"*. **Volver a datos en vivo** sale de la vista.
 
-![La vista de un snapshot: el historial de snapshots, el aviso de comparación con los datos en vivo, las sesiones en Histórico y el desvío "vs actual" bajo cada señal](/signal-scope/vista-snapshot.jpg)
+![La vista de un snapshot: el historial de snapshots, el aviso de comparación con los datos en vivo, las sesiones en Histórico y el desvío "vs actual" bajo cada señal](/signal-scope/vista-snapshot.png)
 
 ## Comparar dos momentos
 

@@ -94,7 +94,8 @@ local. No cruza routers, y por eso un equipo "ruteado" llega sin MAC.
 equipo responde y en cuánto tiempo.
 
 **SSH / HTTPS / HTTP**: los medios por los que la app abre sesión en un radio.
-SSH y HTTPS van **cifrados**. HTTP no, y la app lo marca en ámbar.
+SSH y HTTPS van **cifrados**. HTTP no, y la app lo marca en ámbar. Con RouterOS
+solo está disponible SSH.
 
 **SNMP**: un protocolo de consulta de identidad y estado. La app lo usa solo
 si tú lo configuras, y únicamente en modo lectura.
@@ -113,6 +114,14 @@ llegan.
 **RouterOS**: el sistema de MikroTik, que corre en **todo** su catálogo, desde
 un router de escritorio hasta un sector de torre. Saber que un equipo es
 MikroTik no dice qué es: eso lo dice el propio equipo al iniciar sesión.
+
+**WebFig**: la interfaz web de MikroTik, pensada para usarse desde el
+navegador. Es lo que responde en el puerto web de un RouterOS, y la app no la
+usa para leer el equipo.
+
+**Wi-Fi 6 (ax) y el paquete `wifi`**: los MikroTik Wi-Fi 6 usan el paquete
+`wifi` de RouterOS 7, distinto del inalámbrico clásico. La app **todavía no lee
+sus radios**. El detalle está en [Equipos compatibles](./compatibilidad).
 
 **Chasis**: la caja física, cuando lleva más de un radio dentro. La app abre
 **una sesión por chasis** y dibuja **una fila por radio**. Los datos del
@@ -136,11 +145,11 @@ base, el eje de señal juzga cuánto bajó respecto a ella en lugar del valor
 absoluto, y el chip dice *Estable*, *Bajó vs base* o *Revisar enlace*.
 
 **Detectados**: la cola de lo que encontró el escaneo y todavía no has
-resuelto. Se vacía a medida que inicias sesión en cada equipo o lo llevas a
-Referentes.
+resuelto. Se vacía a medida que inicias sesión en cada equipo, lo llevas a
+Referentes o lo retiras.
 
 **Referentes**: la tabla de lo que no gestionas pero miras para contrastar,
-como el router del nodo, tu proveedor o un dominio como Google. Cada fila es
+como el router del nodo, tu proveedor o un dominio web. Cada fila es
 un **destino**, y puedes vigilar si responde. El detalle está en
 [Detectados y Referentes](./interfaz/detectados-y-otros).
 
@@ -205,7 +214,19 @@ inalámbrico.
 AP que miras y **Detalle** muestra cada sector con su banda.
 
 **Código de transferencia**: la llave (`XXXX-XXXX-XXXX`) que desbloquea un
-proyecto en otra PC. El detalle está en [Compartir](./compartir).
+proyecto en otra computadora. El detalle está en [Compartir](./compartir).
+
+## La licencia
+
+**Versión de prueba**: 30 días con todas las funciones, sin correo ni
+registro. Hay una por equipo, y reinstalar no la reinicia.
+
+**Licencia Full**: la licencia anual de pago, con tu correo y tu clave. Se
+compra en [sscope.materis.io](https://sscope.materis.io/es#licencia) y ocupa un
+cupo por máquina.
+
+**Panel de cliente**: [panel.materis.io](https://panel.materis.io/), donde ves
+tus compras y vencimientos, renuevas y añades máquinas a tu licencia.
 
 **HWID**: el identificador de tu equipo que usa la licencia para saber en qué
 máquina está activa.
