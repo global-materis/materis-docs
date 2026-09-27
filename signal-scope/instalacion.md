@@ -30,7 +30,7 @@ las dos dan acceso completo a todas las funciones:
 | Requiere correo | No | Sí (el del titular) |
 | Equipos | La máquina donde se instaló | Según el cupo de tu licencia |
 
-![La pantalla de licencia: correo y clave para activar la Full, o el botón ámbar de continuar con la versión de prueba](/signal-scope/pantalla-licencia.png)
+![La pantalla de licencia: correo y clave para activar la Full, o el botón ámbar de continuar con la versión de prueba](/signal-scope/pantalla-licencia.webp)
 
 ## Versión de prueba (30 días)
 
@@ -92,7 +92,7 @@ Tres comportamientos que conviene conocer desde el primer día.
 Usa **Archivo → Cerrar proyecto**: deja de vigilar y vuelve a la Bienvenida.
 :::
 
-![El menú del icono de bandeja: la cabecera con el nombre del proyecto y su estado, los accesos a Monitor y Mapa, y Salir](/signal-scope/bandeja.png)
+![El menú del icono de bandeja: la cabecera con el nombre del proyecto y su estado, los accesos a Monitor y Mapa, y Salir](/signal-scope/bandeja.webp)
 
 ### Iniciar con Windows
 

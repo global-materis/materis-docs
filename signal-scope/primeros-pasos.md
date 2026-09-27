@@ -12,7 +12,7 @@ guardarlo, y se crea como un archivo **`.sscope`**.
 Ese archivo es tu red completa (equipos, credenciales cifradas, líneas base,
 Snapshots e historial) y **se autoguarda** mientras trabajas.
 
-![El diálogo de crear proyecto: nombre, ubicación y la ruta del archivo .sscope que se creará](/signal-scope/crear-proyecto.png)
+![El diálogo de crear proyecto: nombre, ubicación y la ruta del archivo .sscope que se creará](/signal-scope/crear-proyecto.webp)
 
 ## 2. Registra tus redes
 
@@ -80,8 +80,8 @@ Lo que no vayas a gestionar (una ONU, un switch, otros router's) se pasa
 a Referentes con **"Llevar a Referentes…"**. Te pidirá su nombre si quieres
 vigilarlo, como se explica en la [introducción](./#como-se-organizan-tus-equipos).
 
-![La sesión en cascada: protocolo, credenciales únicas y la cola de radios conectándose uno a uno](/signal-scope/sesion-cascada.png)
-![El modal de inicio de sesión con el selector **Sistema** (airOS / RouterOS) visible, y el botón de HTTP deshabilitado](/signal-scope/login-sistema.png)
+![La sesión en cascada: protocolo, credenciales únicas y la cola de radios conectándose uno a uno](/signal-scope/sesion-cascada.webp)
+![El modal de inicio de sesión con el selector **Sistema** (airOS / RouterOS) visible, y el botón de HTTP deshabilitado](/signal-scope/login-sistema.webp)
 
 ::: details Un MikroTik con dos radios deja dos filas
 Es lo esperado: una caja con su AP de 2,4 GHz y su estación de 5 GHz ocupa **una

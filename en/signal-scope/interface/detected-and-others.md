@@ -95,7 +95,7 @@ The form has three fields:
    the sentinel's custody from the moment you save. Turn it off if you only want
    it on record.
 
-![The "Add to References" form: the IP or domain field, the mandatory name and the "Monitor this target" switch.](/signal-scope/escaneo-detectados.png)
+![The "Add to References" form: the IP or domain field, the mandatory name and the "Monitor this target" switch.](/signal-scope/escaneo-detectados.webp)
 
 ### Monitoring: "is it still alive, and how does it answer?"
 

@@ -10,7 +10,7 @@ with shortcuts and advanced search.
 
 It is **strictly read-only**: it never changes your radios' configuration.
 
-![The live monitor: the stations table with signal in dBm, traffic light, latency, model and AP, with the network counters and snapshot history on top](/signal-scope/monitor-en-vivo.png)
+![The live monitor: the stations table with signal in dBm, traffic light, latency, model and AP, with the network counters and snapshot history on top](/signal-scope/monitor-en-vivo.webp)
 
 ## How it helps
 
@@ -112,7 +112,7 @@ monitoring without you noticing.
    light, the diagnosis and the sentinel work on that data.
 6. **Record and share** with Snapshots, reports and the project file itself.
 
-![The welcome screen: recent projects and reports with their station summaries, and the entries for What's new, License and Preferences](/signal-scope/home.png)
+![The welcome screen: recent projects and reports with their station summaries, and the entries for What's new, License and Preferences](/signal-scope/home.webp)
 
 ## Requirements
 

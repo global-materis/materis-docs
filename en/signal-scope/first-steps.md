@@ -12,7 +12,7 @@ save it, and it is created as a **`.sscope`** file.
 That file is your whole network (devices, encrypted credentials, baselines,
 Snapshots and history) and it **autosaves** as you work.
 
-![The create project dialog: name, location and the path of the .sscope file to be created](/signal-scope/crear-proyecto.png)
+![The create project dialog: name, location and the path of the .sscope file to be created](/signal-scope/crear-proyecto.webp)
 
 ## 2. Register your networks
 
@@ -79,8 +79,8 @@ Anything you will not manage (an ONU, a switch, other routers) goes to
 References with **"Move to References…"**. It asks for its name if you want to
 watch it, as explained in the [introduction](./#how-your-devices-are-organized).
 
-![The cascade session: protocol, one set of credentials and the queue of radios connecting one by one](/signal-scope/sesion-cascada.png)
-![The sign-in dialog with the **System** selector (airOS / RouterOS) visible, and the HTTP button disabled](/signal-scope/login-sistema.png)
+![The cascade session: protocol, one set of credentials and the queue of radios connecting one by one](/signal-scope/sesion-cascada.webp)
+![The sign-in dialog with the **System** selector (airOS / RouterOS) visible, and the HTTP button disabled](/signal-scope/login-sistema.webp)
 
 ::: details A MikroTik with two radios leaves two rows
 That is expected: a box with its 2.4 GHz AP and its 5 GHz station takes **one

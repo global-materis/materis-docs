@@ -16,7 +16,7 @@ más: el visor no escanea, no abre sesiones ni toca tu red.
 El `.ssnap` **no lleva secretos**: nunca contiene credenciales de radios ni
 llaves. Por eso abrirlo no pide nada.
 
-![El visor de un .ssnap: el banner "Snapshot compartido del proyecto · solo lectura", los contadores del Snapshot y las tablas en modo Histórico, con el botón Reporte disponible](/signal-scope/visor-ssnap.png)
+![El visor de un .ssnap: el banner "Snapshot compartido del proyecto · solo lectura", los contadores del Snapshot y las tablas en modo Histórico, con el botón Reporte disponible](/signal-scope/visor-ssnap.webp)
 
 ### Proteger los datos sensibles
 

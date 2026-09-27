@@ -4,7 +4,7 @@ The main table. **One row is one customer antenna**, refreshing live. On a
 MikroTik the row is a radio, as explained
 [further down](#mikrotik-devices-one-row-per-radio).
 
-![The live stations table: per-row traffic light, local and remote signal, pinned baselines, latency, CPU and free RAM, with the diagnosis tooltip open on one row](/signal-scope/tabla-estaciones.png)
+![The live stations table: per-row traffic light, local and remote signal, pinned baselines, latency, CPU and free RAM, with the diagnosis tooltip open on one row](/signal-scope/tabla-estaciones.webp)
 
 ## The columns
 
@@ -318,7 +318,7 @@ antenna is fine.
 Which ports the sentinel watches is chosen in the
 [Ports](#ports-the-sentinel-watches) tab of the session window.
 
-![The Ports tab of the session window](/signal-scope/puertos-vigilados.png)
+![The Ports tab of the session window](/signal-scope/puertos-vigilados.webp)
 
 The column also exists in the [AP table](./access-points), where degradation
 weighs even more.

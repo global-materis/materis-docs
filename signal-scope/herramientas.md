@@ -46,7 +46,7 @@ configuración del radio.
 Los ajustes del planificador se conservan al cerrarlo, porque el uso habitual
 es entrar, elegir un canal, ir a comprobarlo en la tabla y volver.
 
-![El planificador de frecuencias en la banda de 5 GHz: el espectro ocupado por AP con un canal de 40 MHz escogido, la tira libre/ocupado, los canales sugeridos y la lista de AP agrupada por nodo](/signal-scope/planificador-frecuencias.png)
+![El planificador de frecuencias en la banda de 5 GHz: el espectro ocupado por AP con un canal de 40 MHz escogido, la tira libre/ocupado, los canales sugeridos y la lista de AP agrupada por nodo](/signal-scope/planificador-frecuencias.webp)
 
 ::: tip El plan es tan bueno como sus lecturas
 Un AP sin sesión todavía no reporta frecuencia: aparece atenuado dentro de su

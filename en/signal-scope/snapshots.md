@@ -38,7 +38,7 @@ you see how much it changed between the Snapshot and this instant, if the
 device has a session now. It is the fastest way to answer *"was this link
 like this last week?"*. **Back to live data** leaves the view.
 
-![The snapshot view: the snapshot history, the banner comparing against live data, sessions showing Historical and the "vs current" drift under each signal](/signal-scope/vista-snapshot.png)
+![The snapshot view: the snapshot history, the banner comparing against live data, sessions showing Historical and the "vs current" drift under each signal](/signal-scope/vista-snapshot.webp)
 
 ## Comparing two moments
 
@@ -158,7 +158,7 @@ Two details make the report defensible:
 When it finishes, the notice carries an **Open** button that opens the
 generated file.
 
-![The Report menu: the five types (General, Critical, Critical + Warning, Stations only, APs only) and the three formats PDF, Excel and CSV](/signal-scope/reporte-pdf.png)
+![The Report menu: the five types (General, Critical, Critical + Warning, Stations only, APs only) and the three formats PDF, Excel and CSV](/signal-scope/reporte-pdf.webp)
 
 ## And for sharing
 

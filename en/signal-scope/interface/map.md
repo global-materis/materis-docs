@@ -7,7 +7,7 @@ you do, live monitoring keeps running in the background.
 It is a **design plan** meant as a field view. At a glance it shows where your
 nodes are, what each AP covers and how its stations are doing.
 
-![The coverage map](/signal-scope/mapa-cobertura.png)
+![The coverage map](/signal-scope/mapa-cobertura.webp)
 
 ## Nodes: the site, not the device
 
@@ -95,7 +95,7 @@ removes the planned one, all in a single operation. Since it overwrites a real
 device's settings and there is no undo, it asks for confirmation showing
 exactly what will be replaced.
 
-![A planned AP's card: azimuth, design range and beamwidth with its presets, the sector color, and the buttons to pass the settings to an AP or delete it, with the notice that it does not exist yet and is not diagnosed](/signal-scope/ap-planificado.png)
+![A planned AP's card: azimuth, design range and beamwidth with its presets, the sector color, and the buttons to pass the settings to an AP or delete it, with the notice that it does not exist yet and is not diagnosed](/signal-scope/ap-planificado.webp)
 
 ## Stations on the map
 
@@ -219,7 +219,7 @@ in or shared with the project**.
 With a key active, the field to type one does not appear: to change it, press
 **"Remove"** first.
 
-![The **Base map** menu open: Automatic, Light, Dark, Satellite.](/signal-scope/mapa-base.png)
+![The **Base map** menu open: Automatic, Light, Dark, Satellite.](/signal-scope/mapa-base.webp)
 
 ## The map travels in Snapshots
 

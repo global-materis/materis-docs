@@ -39,7 +39,7 @@ de cada estación aparece cuánto cambió entre el Snapshot y este instante, si 
 equipo tiene sesión ahora. Es la forma más rápida de responder *"¿este enlace
 estaba así la semana pasada?"*. **Volver a datos en vivo** sale de la vista.
 
-![La vista de un snapshot: el historial de snapshots, el aviso de comparación con los datos en vivo, las sesiones en Histórico y el desvío "vs actual" bajo cada señal](/signal-scope/vista-snapshot.png)
+![La vista de un snapshot: el historial de snapshots, el aviso de comparación con los datos en vivo, las sesiones en Histórico y el desvío "vs actual" bajo cada señal](/signal-scope/vista-snapshot.webp)
 
 ## Comparar dos momentos
 
@@ -157,7 +157,7 @@ Dos detalles hacen que el reporte se pueda defender:
 
 Al terminar, el aviso trae un botón **Abrir** que abre el archivo generado.
 
-![El menú Reporte: los cinco tipos (General, Críticas, Críticas + Atención, Solo estaciones, Solo AP) y los tres formatos PDF, Excel y CSV](/signal-scope/reporte-pdf.png)
+![El menú Reporte: los cinco tipos (General, Críticas, Críticas + Atención, Solo estaciones, Solo AP) y los tres formatos PDF, Excel y CSV](/signal-scope/reporte-pdf.webp)
 
 ## Y para compartir
 

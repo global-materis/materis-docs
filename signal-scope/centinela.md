@@ -134,7 +134,7 @@ la notificación de Windows y tu mensajería, los tres a la vez.
 - Se guarda **en el proyecto** y no en las preferencias del puesto, porque se
   refiere a un equipo de **esta** red. Se pierde al olvidar el equipo.
 
-![La tarjeta **Silenciar avisos** con la fila de plazos (1 hora, 8 horas, 1 día, 3 días, 1 semana, Sin vencimiento)](/signal-scope/silenciar.png)
+![La tarjeta **Silenciar avisos** con la fila de plazos (1 hora, 8 horas, 1 día, 3 días, 1 semana, Sin vencimiento)](/signal-scope/silenciar.webp)
 
 ### Avisar la reconexión
 
@@ -317,9 +317,9 @@ El aviso lo lee todo el grupo, con los nombres e IPs de tus clientes dentro.
 Elige la vía de grupo sabiendo quién está en él.
 :::
 
-![Preferencias → Mensajería: el interruptor de enviar avisos, las tres vías (WhatsApp, Telegram a usuario, Telegram a grupo), el mensaje de prueba y la selección de qué eventos se mandan a este destino](/signal-scope/mensajeria.png)
+![Preferencias → Mensajería: el interruptor de enviar avisos, las tres vías (WhatsApp, Telegram a usuario, Telegram a grupo), el mensaje de prueba y la selección de qué eventos se mandan a este destino](/signal-scope/mensajeria.webp)
 
-![El panel del centinela: avisos de Sesión caída apilados con el motivo de cada uno, y al pie el recordatorio de que vigila mientras la app está abierta](/signal-scope/centinela-panel.png)
+![El panel del centinela: avisos de Sesión caída apilados con el motivo de cada uno, y al pie el recordatorio de que vigila mientras la app está abierta](/signal-scope/centinela-panel.webp)
 
 ## La calificación de la red
 
@@ -349,4 +349,4 @@ La tarjeta agrupa la información en tres bloques (la red, la salud de los
 enlaces y la disponibilidad) y sale idéntica en cualquier equipo, en tema
 claro u oscuro.
 
-![La tarjeta de calificación lista para compartir: 76 % Red estable, calificado sobre 169 de 189 estaciones, con los bloques de la red, salud de los enlaces y disponibilidad](/signal-scope/calificacion-red.png)
+![La tarjeta de calificación lista para compartir: 76 % Red estable, calificado sobre 169 de 189 estaciones, con los bloques de la red, salud de los enlaces y disponibilidad](/signal-scope/calificacion-red.webp)

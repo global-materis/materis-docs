@@ -7,7 +7,7 @@ cambiar, el monitoreo en vivo sigue corriendo de fondo.
 Es un **plano de diseño** pensado como vista de campo. De un vistazo muestra
 dónde están tus nodos, qué cubre cada AP y cómo están sus estaciones.
 
-![El Mapa de cobertura](/signal-scope/mapa-cobertura.png)
+![El Mapa de cobertura](/signal-scope/mapa-cobertura.webp)
 
 ## Nodos: el sitio, no el equipo
 
@@ -94,7 +94,7 @@ elimina el planificado, todo en una sola operación. Como sobrescribe los
 ajustes de un equipo real y no hay deshacer, pide confirmación mostrando
 exactamente qué se va a pisar.
 
-![La tarjeta de un AP planificado: azimut, alcance de diseño y apertura del haz con sus atajos, el color del sector, y los botones de pasar los ajustes a un AP o eliminarlo, con el aviso de que aún no existe y no se diagnostica](/signal-scope/ap-planificado.png)
+![La tarjeta de un AP planificado: azimut, alcance de diseño y apertura del haz con sus atajos, el color del sector, y los botones de pasar los ajustes a un AP o eliminarlo, con el aviso de que aún no existe y no se diagnostica](/signal-scope/ap-planificado.webp)
 
 ## Estaciones sobre el mapa
 
@@ -218,7 +218,7 @@ se guarda ni viaja con el proyecto**.
 Con una clave activa, el campo para escribirla no aparece: para cambiarla,
 primero pulsa **«Quitar»**.
 
-![El menú **Mapa base** desplegado: Automático, Claro, Oscuro, Satélite.](/signal-scope/mapa-base.png)
+![El menú **Mapa base** desplegado: Automático, Claro, Oscuro, Satélite.](/signal-scope/mapa-base.webp)
 
 ## El mapa viaja en los Snapshots
 

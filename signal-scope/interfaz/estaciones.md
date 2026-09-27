@@ -4,7 +4,7 @@ La tabla principal. **Una fila es una antena de cliente**, con su estado
 refrescándose en vivo. En un MikroTik la fila es un radio, como se explica
 [más abajo](#equipos-mikrotik-una-fila-por-radio).
 
-![La tabla de estaciones en vivo: semáforo por fila, señal local y remota, líneas base fijadas, latencia, CPU y RAM libre, con el tooltip de diagnóstico abierto en una fila](/signal-scope/tabla-estaciones.png)
+![La tabla de estaciones en vivo: semáforo por fila, señal local y remota, líneas base fijadas, latencia, CPU y RAM libre, con el tooltip de diagnóstico abierto en una fila](/signal-scope/tabla-estaciones.webp)
 
 ## Las columnas
 
@@ -316,7 +316,7 @@ está bien.
 Qué puertos vigila el centinela se elige en la pestaña
 [Puertos](#puertos-que-vigila-el-centinela) de la ventana de sesión.
 
-![La pestaña Puertos de la ventana de sesión](/signal-scope/puertos-vigilados.png)
+![La pestaña Puertos de la ventana de sesión](/signal-scope/puertos-vigilados.webp)
 
 La columna existe también en la [tabla de AP](./puntos-de-acceso), donde la
 degradación pesa aún más.

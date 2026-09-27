@@ -9,7 +9,7 @@ Gestiona tus radios Ubiquiti airMAX o MikroTik RouterOS e identifica rápido los
 
 Es **estrictamente de solo lectura**: nunca modifica la configuración de tus radios.
 
-![El monitor en vivo: la tabla de estaciones con su señal en dBm, semáforo, latencia, modelo y AP, con los contadores del parque y el historial de snapshots arriba](/signal-scope/monitor-en-vivo.png)
+![El monitor en vivo: la tabla de estaciones con su señal en dBm, semáforo, latencia, modelo y AP, con los contadores del parque y el historial de snapshots arriba](/signal-scope/monitor-en-vivo.webp)
 
 ## Como resuelve
 
@@ -107,7 +107,7 @@ monitoreo sin que te enteres.
    diagnóstico y el centinela trabajan sobre esos datos.
 6. **Registras y compartes** con Snapshots, reportes y el archivo del proyecto.
 
-![La bienvenida: proyectos y reportes recientes con su resumen de estaciones, y los accesos a Novedades, Licencia y Preferencias](/signal-scope/home.png)
+![La bienvenida: proyectos y reportes recientes con su resumen de estaciones, y los accesos a Novedades, Licencia y Preferencias](/signal-scope/home.webp)
 
 ## Requisitos
 

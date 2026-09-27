@@ -45,7 +45,7 @@ radio's configuration.
 The planner keeps its settings when you close it, because the usual routine is
 to go in, pick a channel, check it against the table and come back.
 
-![The frequency planner on the 5 GHz band: the spectrum occupied per AP with a 40 MHz channel selected, the free/occupied strip, the suggested channels and the AP list grouped by node](/signal-scope/planificador-frecuencias.png)
+![The frequency planner on the 5 GHz band: the spectrum occupied per AP with a 40 MHz channel selected, the free/occupied strip, the suggested channels and the AP list grouped by node](/signal-scope/planificador-frecuencias.webp)
 
 ::: tip The plan is only as good as its readings
 An AP without a session does not report a frequency yet: it appears dimmed

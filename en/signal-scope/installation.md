@@ -32,7 +32,7 @@ give full access to every feature:
 | Needs an email | No | Yes (the license holder's) |
 | Devices | The machine it was installed on | Up to your license's device quota |
 
-![The license screen: email and key to activate the Full license, or the amber button to continue with the trial](/signal-scope/pantalla-licencia.png)
+![The license screen: email and key to activate the Full license, or the amber button to continue with the trial](/signal-scope/pantalla-licencia.webp)
 
 ## Trial (30 days)
 
@@ -97,7 +97,7 @@ Use **File → Close project**: it stops watching and returns to the Welcome
 screen.
 :::
 
-![The tray icon menu: the header with the project name and its state, the Monitor and Map entries, and Quit](/signal-scope/bandeja.png)
+![The tray icon menu: the header with the project name and its state, the Monitor and Map entries, and Quit](/signal-scope/bandeja.webp)
 
 ### Start with Windows
 

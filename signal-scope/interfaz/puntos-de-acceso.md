@@ -4,7 +4,7 @@ Tus estaciones base. **Una fila es un AP**, con el estado del sector completo.
 En un MikroTik la fila es un radio: cada radio en modo AP tiene la suya
 ([cómo se reparten](./estaciones#equipos-mikrotik-una-fila-por-radio)).
 
-![La tabla de AP: Estado por sector (Operativo, Inestable, Carga alta), SSID, frecuencia y canal, estaciones conectadas, Picos, Airtime y CPU](/signal-scope/tabla-ap.png)
+![La tabla de AP: Estado por sector (Operativo, Inestable, Carga alta), SSID, frecuencia y canal, estaciones conectadas, Picos, Airtime y CPU](/signal-scope/tabla-ap.webp)
 
 ## Estado: el veredicto del sector
 

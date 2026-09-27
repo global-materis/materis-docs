@@ -93,7 +93,7 @@ El formulario tiene tres campos:
    custodia del centinela desde que lo guardas. Apágalo si solo quieres tenerlo
    anotado.
 
-![El formulario «Añadir a Referentes»: el campo de IP o dominio, el nombre obligatorio y el interruptor de «Vigilar este destino».](/signal-scope/escaneo-detectados.png)
+![El formulario «Añadir a Referentes»: el campo de IP o dominio, el nombre obligatorio y el interruptor de «Vigilar este destino».](/signal-scope/escaneo-detectados.webp)
 
 ### La vigilancia: «¿sigue vivo, y cómo responde?»
 

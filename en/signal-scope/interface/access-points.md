@@ -4,7 +4,7 @@ Your base stations. **One row is one AP**, with the state of the whole sector.
 On a MikroTik the row is a radio: each radio in AP mode gets its own
 ([how they are split](./stations#mikrotik-devices-one-row-per-radio)).
 
-![The AP table: per-sector Status (Operational, Unstable, High load), SSID, frequency and channel, connected stations, Spikes, Airtime and CPU](/signal-scope/tabla-ap.png)
+![The AP table: per-sector Status (Operational, Unstable, High load), SSID, frequency and channel, connected stations, Spikes, Airtime and CPU](/signal-scope/tabla-ap.webp)
 
 ## Status: the sector's verdict
 

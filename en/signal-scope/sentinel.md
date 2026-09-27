@@ -138,7 +138,7 @@ at once.
   because it refers to a device on **this** network. It is lost when you
   forget the device.
 
-![The **Mute alerts** card with its row of periods (1 hour, 8 hours, 1 day, 3 days, 1 week, No end date)](/signal-scope/silenciar.png)
+![The **Mute alerts** card with its row of periods (1 hour, 8 hours, 1 day, 3 days, 1 week, No end date)](/signal-scope/silenciar.webp)
 
 ### Notify on reconnection
 
@@ -322,9 +322,9 @@ The notice is read by the whole group, with your customers' names and IPs in
 it. Choose the group route knowing who is in it.
 :::
 
-![Preferences → Messaging: the switch to send alerts, the three routes (WhatsApp, Telegram to a user, Telegram to a group), the test message and the selection of which events go to this destination](/signal-scope/mensajeria.png)
+![Preferences → Messaging: the switch to send alerts, the three routes (WhatsApp, Telegram to a user, Telegram to a group), the test message and the selection of which events go to this destination](/signal-scope/mensajeria.webp)
 
-![The sentinel panel: Session down notices stacked with each one's reason, and at the foot the reminder that it watches while the app is open](/signal-scope/centinela-panel.png)
+![The sentinel panel: Session down notices stacked with each one's reason, and at the foot the reminder that it watches while the app is open](/signal-scope/centinela-panel.webp)
 
 ## The network score
 
@@ -356,4 +356,4 @@ The card groups the information into three blocks (the network, link health
 and availability) and comes out identical on any machine, in light or dark
 theme.
 
-![The share-ready score card: 76 % Stable network, scored over 169 of 189 stations, with the blocks for the network, link health and availability](/signal-scope/calificacion-red.png)
+![The share-ready score card: 76 % Stable network, scored over 169 of 189 stations, with the blocks for the network, link health and availability](/signal-scope/calificacion-red.webp)
