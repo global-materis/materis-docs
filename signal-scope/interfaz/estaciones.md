@@ -10,7 +10,7 @@ refrescándose en vivo. En un MikroTik la fila es un radio, como se explica
 
 | Columna | Qué muestra |
 |---|---|
-| **Sesión** | El estado de la conexión al radio (SSH, HTTPS o HTTP) y, si está ausente, [qué le pasa](#cuando-un-equipo-se-ausenta). Lleva además las marcas de lo que decidiste sobre ese equipo: sesión apagada, avisos silenciados, aviso de reconexión. Un clic abre la [ventana de sesión](#la-ventana-de-sesion). Una sesión HTTP se pinta en ámbar con un candado abierto, porque en esa red el usuario, la contraseña y las métricas viajan en texto plano. |
+| **Sesión** | El estado de la conexión al radio (SSH, HTTPS o HTTP) y, si está ausente, [qué le pasa](#cuando-un-equipo-se-ausenta). Lleva además las marcas de lo que decidiste sobre ese equipo: sesión apagada, notificaciones silenciadas, notificación de reconexión. Un clic abre la [ventana de sesión](#la-ventana-de-sesion). Una sesión HTTP se pinta en ámbar con un candado abierto, porque en esa red el usuario, la contraseña y las métricas viajan en texto plano. |
 | **Señal · local / remota** | El dato principal. Local es lo que la estación recibe; remota (en gris) es lo que el AP recibe de ella. La barra de medición lleva el color del semáforo. |
 | **Línea base** | El botón **Marcar** fija la señal actual como línea base de esa antena, y la celda pasa a mostrar ese valor (`−58 dBm`) con una **×** para quitarla. Con línea base, el eje de señal juzga cuánto bajó respecto a ella y no el valor absoluto, y el estado se lee **Estable**, **Bajó vs base** o **Revisar enlace**. Para actualizarla, primero se quita con la **×**. Ver [Semáforo y diagnóstico](../diagnostico#linea-base-comparar-contra-tu-propia-red). |
 | **IP** | Un enlace que abre la web del radio, y un botón de **ping** que abre una terminal con ping continuo. |
@@ -57,9 +57,9 @@ un vistazo.
 
 | Marca | Significa | Dónde se pone |
 |---|---|---|
-| **Sesión apagada** | La app **deja de conectarse** a ese equipo, así que no le gasta CPU ni te llena de avisos, pero **conserva sus credenciales y su ficha**. Sigue apagada aunque cierres la app. Un clic en la celda la vuelve a encender. | Ventana de sesión → *Acciones*, encima de Olvidar equipo |
-| **Avisos silenciados** | El equipo **se sigue midiendo**. Lo que se calla es la salida (panel, Windows y mensajería) durante el plazo que elijas: 1 hora, 8 horas, 1 día, 3 días, 1 semana o Sin vencimiento. Al vencer el plazo vuelve a avisar solo; antes, lo reactivas con **Reactivar**. | Ventana de sesión → *Acciones* |
-| **Aviso de reconexión puesto** | La app te avisará cuando ese equipo vuelva a conectarse. | Ventana de sesión → *Acciones* |
+| **Sesión apagada** | La app **deja de conectarse** a ese equipo, así que no le gasta CPU ni te llena de notificaciones, pero **conserva sus credenciales y su ficha**. Sigue apagada aunque cierres la app. Un clic en la celda la vuelve a encender. | Ventana de sesión → *Acciones*, encima de Olvidar equipo |
+| **Notificaciones silenciadas** | El equipo **se sigue midiendo**. Lo que se calla es la salida (panel, Windows y mensajería) durante el plazo que elijas: 1 hora, 8 horas, 1 día, 3 días, 1 semana o Sin vencimiento. Al vencer el plazo vuelve a avisar solo; antes, lo reactivas con **Reactivar**. | Ventana de sesión → *Acciones* |
+| **Notificación de reconexión puesta** | La app te avisará cuando ese equipo vuelva a conectarse. | Ventana de sesión → *Acciones* |
 
 Las tres se explican en [Centinela y calificación](../centinela#lo-que-decides-por-equipo).
 
@@ -75,7 +75,7 @@ con cuatro pestañas:
 
 | Pestaña | Para qué |
 |---|---|
-| **Acciones** | Lo que decides sobre el equipo: motivo de la ausencia, silenciar avisos, avisar la reconexión, apagar la sesión y olvidar el equipo. La ventana se abre en esta pestaña. |
+| **Acciones** | Lo que decides sobre el equipo: motivo de la ausencia, silenciar notificaciones, avisar la reconexión, apagar la sesión y olvidar el equipo. La ventana se abre en esta pestaña. |
 | **Puertos** | Qué puertos Ethernet vigila el centinela. Ver [abajo](#puertos-que-vigila-el-centinela). |
 | **Log** | Qué intentó la app con ese equipo y cómo terminó cada intento. Ver [abajo](#el-log-de-la-sesion). |
 | **Conexión** | IP, sistema, protocolo, puerto y cuenta, para corregirlos. **Actualizar** vuelve a conectar con esos datos. La contraseña guardada no se muestra, así que hay que escribirla. |
@@ -92,21 +92,21 @@ la app). La celda de Sesión muestra tu etiqueta en lugar de «Ausente».
   deje de intentarlo, usa **Apagar sesión**.
 - Con un motivo puesto, la app no te pide intervenir por ese equipo, porque ya
   sabes lo que pasa.
-- Se guarda en el proyecto y **se quita sola cuando el equipo vuelve**, con un
-  aviso en la campana: *"Volvió un equipo etiquetado"*.
+- Se guarda en el proyecto y **se quita sola cuando el equipo vuelve**, con una
+  notificación en la campana: *"Volvió un equipo etiquetado"*.
 
 ### Avisar la reconexión
 
 Marcas el equipo y la app te avisa cuando vuelva a conectarse, en uno de dos
 modos: **Una vez**, que avisa y se quita solo, o **Siempre**, que avisa en cada
-caída y vuelta hasta que lo quites. Si el equipo está silenciado, el aviso
-espera a que reactives sus avisos. El detalle está en
+caída y vuelta hasta que lo quites. Si el equipo está silenciado, la notificación
+espera a que reactives sus notificaciones. El detalle está en
 [Centinela](../centinela#avisar-la-reconexion).
 
 ### Cuando la app necesita que intervengas
 
 Hay tres casos que la app no puede resolver sola. En los tres **pausa la
-sesión**, pinta el chip de Sesión en **violeta**, deja un aviso en la
+sesión**, pinta el chip de Sesión en **violeta**, deja una notificación en la
 [campana](../centinela#la-campana-lo-que-te-aviso-mientras-trabajabas) y
 muestra en *Acciones* lo que necesita de ti: la tarjeta **"Requiere tu
 intervención"** con **Reintentar**, o la comparación de un posible reemplazo.
@@ -118,7 +118,7 @@ intervención"** con **Reintentar**, o la comparación de un posible reemplazo.
 | **Posible reemplazo** | En su IP contesta **otro equipo con su mismo nombre**. | Decides en la comparación de abajo. |
 
 **Reintentar** reanuda la sesión con los datos guardados. Si el equipo vuelve
-por su cuenta, la petición se retira y el aviso se queda en la campana.
+por su cuenta, la petición se retira y la notificación se queda en la campana.
 
 #### Posible reemplazo
 
@@ -127,7 +127,7 @@ por hecho. Pone **los dos lado a lado** (nombre, MAC, modelo y firmware, IP, AP
 y cuándo se vio por última vez) y marca lo que no coincide.
 
 - Con **"Sí, reemplaza al anterior"**, el nuevo **hereda su puesto**: nombre,
-  línea base, puertos, coordenadas, silencios y avisos, y la credencial. Los
+  línea base, puertos, coordenadas, silencios y notificaciones, y la credencial. Los
   snapshots anteriores conservan al viejo con su MAC, y al compararlos verás
   *"Reemplazado por …"* / *"Reemplaza a …"*.
 - Con **"No, son equipos distintos"**, el que contestó pasa a **Detectados** y
@@ -145,14 +145,14 @@ puerto: apagar el único lo saca de la vigilancia.
   la pestaña te advierte de la consecuencia, pero no te lo impide.
 - El cambio se aplica al pulsar.
 - **Los que no vigilas se siguen viendo** en la columna Puertos, con su estado
-  en el tooltip, pero **sin color de severidad** y sin generar avisos.
-- **Un aviso por equipo**, aunque caigan dos puertos vigilados.
+  en el tooltip, pero **sin color de severidad** y sin generar notificaciones.
+- **Una notificación por equipo**, aunque caigan dos puertos vigilados.
 - **La elección es del equipo y no de la fila**: en un router con dos radios
   vale para las dos filas.
 
 ::: tip Ponles nombre en el equipo
 Cada puerto se muestra con el nombre de su interfaz. Si la renombraste en el
-equipo, el aviso del centinela usa **ese nombre** en vez de `ether3`, y
+equipo, la notificación del centinela usa **ese nombre** en vez de `ether3`, y
 *"Sector norte quedó sin cable"* se entiende sin ir a mirar.
 :::
 
@@ -192,7 +192,7 @@ lectura y **la app se encarga de recuperarlo**:
 - Si **cambió de IP**, lo busca en la lista de estaciones de su AP, en la de los
   demás AP y por ARP en la red de esta PC. Si lo encuentra, y al entrar
   confirma que es el mismo equipo, se reconecta solo en la IP nueva y te lo
-  dice. Si el que cambió de IP es un **AP**, además deja un aviso en la
+  dice. Si el que cambió de IP es un **AP**, además deja una notificación en la
   campana, porque en un AP no es lo normal. Una etiqueta de ausencia puesta a
   mano no impide la búsqueda, y se quita sola cuando el equipo vuelve.
 
@@ -205,7 +205,7 @@ Mientras tanto, el chip de Sesión dice qué está pasando:
 | **Posible corte** | Su AP la ve conectada con su Fallback IP (un probable corte administrativo, como el de PPPoE por mora), o el equipo **cae y vuelve** una y otra vez. El problema no es el enlace. |
 | **Bloqueado en el AP** | La lista de acceso de su AP no la deja conectarse. No es una avería ni un apagado. En airOS solo se detecta con una cuenta de acceso completo en el AP. |
 | **Cortado en su AP** | Una regla del firewall de su AP (un MikroTik que rutea) descarta su tráfico. |
-| **Sin red en esta PC** | La que perdió la red es tu PC. En ese caso llega **un solo aviso**, *"Esta PC perdió la red"*, en vez de uno por equipo, y otro cuando vuelve. |
+| **Sin red en esta PC** | La que perdió la red es tu PC. En ese caso llega **una sola notificación**, *"La PC perdió la red"*, en vez de una por equipo, y otra cuando vuelve. |
 | **Sin servicio** | Un radio de un equipo con varios desapareció de su lectura: está deshabilitado o sin servicio, y el resto del equipo sigue en línea. |
 | **Ausente** | No hay más pistas: está apagado o sin ruta. |
 

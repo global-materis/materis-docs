@@ -78,14 +78,14 @@ Three behaviors worth knowing from day one.
 
 ### Diagnostics in the background
 
-- The first time, the **"SignalScope in the background"** notice appears. It
+- The first time, the **"SignalScope in the background"** notification appears. It
   explains where the app went and how to close it for real.
 - To close SignalScope completely, use **File → Quit SignalScope** or
   right-click its tray icon and choose **"Quit SignalScope"**.
 - Left-clicking the tray icon shows or hides the window. Right-clicking opens
   its menu, whose first line says which project is open and its state (for
-  example, how many devices it is watching or how many alerts it has). The icon
-  carries a red dot while there are pending alerts; alerts from muted devices do
+  example, how many devices it is watching or how many notifications it has). The icon
+  carries a red dot while there are pending notifications; notifications from muted devices do
   not count. From the menu you can **"Open SignalScope"**, go to the Monitor or
   the Map (**"Go to Monitor"**, **"Go to Map"**), **"Save project"** or quit.
 - If you click a Windows notification, the app opens on the device that caused

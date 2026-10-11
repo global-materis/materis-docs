@@ -111,7 +111,7 @@ antenna and saturated radio. With Windows notifications on, notices reach the
 desktop even with the app minimized, and clicking one takes you to the
 device.
 
-**[Phone notices](./sentinel#phone-notices-whatsapp-or-telegram).** The
+**[Phone notices](./sentinel#phone-notifications-whatsapp-or-telegram).** The
 failures the sentinel detects can reach you on WhatsApp or Telegram (via
 CallMeBot). You choose which events go through each channel, and each type
 groups and spaces its messages by urgency.

@@ -21,7 +21,7 @@ Eleven events with eight switches. Three events have no switch of their own
 and inherit their partner's, because they are the same watch told a different
 way:
 
-| Notice | What it detects |
+| Notification | What it detects |
 |---|---|
 | **Access point down** | An AP that was online stops answering. It is reported **once for the node**, with how many stations it drags along, instead of one alert per client. *(Inherits the "Session down" switch.)* |
 | **References not answering** | A target in [References](./interface/detected-and-others#references-what-you-look-at-for-contrast) with monitoring on stopped answering the ping. It reports after two failed checks in a row, and never for one that has never answered. |
@@ -35,7 +35,7 @@ way:
 | **Sector with high latency** | Most of one AP's online stations (at least three, and half or more) answer slowly at the same time. It is reported once for the node, and its stations do not report one by one. *(Inherits the "High latency" switch.)* |
 | **High latency** · **BETA** | A client with a pristine signal that still answers with **sustained** delay. |
 
-Notices stack **by severity**. First comes what leaves a whole cell without
+Notifications stack **by severity**. First comes what leaves a whole cell without
 service, then what affects one client, then what degrades it, and last what
 anticipates a problem.
 
@@ -43,7 +43,7 @@ Which ports the sentinel watches on each device is chosen in the
 [Ports](./interface/stations#ports-the-sentinel-watches) tab of its session
 window. The app reads every port on the device; if you make no choice, it
 watches the first one, which on an airMAX is the only one. Even if two watched
-ports fail, there is one notice per device, and it names the affected port.
+ports fail, there is one notification per device, and it names the affected port.
 
 ### What it does NOT watch, on purpose
 
@@ -68,7 +68,7 @@ does not produce. Latency is the only exception, measured and filtered.
   unless the value has got worse.
 - **It reports the cause, not the consequence.** If an AP drops, the AP is
   reported and its stations **go quiet**, so a downed node does not bury the
-  panel under fifty notices.
+  panel under fifty notifications.
 - **Missing data is never a fault.** If a firmware does not report the port,
   that axis is not evaluated for that device. That is what happens with
   several metrics on RouterOS.
@@ -108,11 +108,11 @@ With the device absent, the same tab also offers the
 Technical, Retired), an informational label that clears itself when the
 device comes back.
 
-### Mute alerts
+### Mute notifications
 
 A device with a fault **you already know about** (three days of roadworks, a
 customer who has not paid, an antenna you are swapping on Thursday) fills the
-panel with notices that inform nothing and hide the ones that do.
+panel with notifications that inform nothing and hide the ones that do.
 
 **Muting is not ceasing to watch.** The device keeps connecting and the
 sentinel keeps measuring it. The only thing that goes quiet is the
@@ -132,13 +132,13 @@ at once.
 - **The panel reminds you whom you muted.** At its foot there is a grey,
   folded block with the number of muted devices; opening it with **"show"**
   lists their period and their **Unmute** button. It counts every muted
-  device, whether or not it has alerts today, because what must be remembered
+  device, whether or not it has notifications today, because what must be remembered
   is the decision.
 - It is stored **in the project** and not in the workstation's preferences,
   because it refers to a device on **this** network. It is lost when you
   forget the device.
 
-![The **Mute alerts** card with its row of periods (1 hour, 8 hours, 1 day, 3 days, 1 week, No end date)](/signal-scope/silenciar.webp)
+![The **Mute notifications** card with its row of periods (1 hour, 8 hours, 1 day, 3 days, 1 week, No end date)](/signal-scope/silenciar.webp)
 
 ### Notify on reconnection
 
@@ -156,14 +156,14 @@ the card states the mode and one click on it **removes** it.
 | **Always** | For the device you want to watch continuously: it notifies **on every drop and recovery**, until you remove it. |
 
 The permanent mode does not turn into noise thanks to the **cycle**, with no
-need for a minimum time between notices. After notifying it goes back to
+need for a minimum time between notifications. After notifying it goes back to
 waiting for a drop, so to sound again the device has to genuinely drop again.
 **It notifies once per incident, not once per reading**, and neither mode
 notifies twice for the same drop.
 
 Three details prevent false expectations:
 
-- **On a device that is online**, the notice first waits to see it drop. It
+- **On a device that is online**, the notification first waits to see it drop. It
   does not notify you now, but when it drops and comes back.
 - **It cannot be set on something that is not being measured**: a muted
   device, a target in References without monitoring on, or a monitored one
@@ -173,13 +173,13 @@ Three details prevent false expectations:
 
 The output is governed by the **"Came back online"** switch, found in
 **Preferences → Alerts** for Windows and in **Preferences → Messaging** for
-each destination. That switch turns off the **output**; the notices you set
+each destination. That switch turns off the **output**; the notifications you set
 on each device are kept.
 
 ### Switch a device's session off
 
 Switching the session off is not forgetting the device. The app **stops
-connecting** to it, so it costs no CPU and does not flood you with alerts, but
+connecting** to it, so it costs no CPU and does not flood you with notifications, but
 it **keeps its credentials and its record**. You switch it off from its session
 window, above Forget, and back on with one click on its Session cell. **It
 stays off even after you close the app.**
@@ -195,7 +195,7 @@ press.
 
 ## The bell: what it told you while you were working
 
-To the left of the sentinel's pulse sits the **notice tray**, with a bell
+To the left of the sentinel's pulse sits the **notification tray**, with a bell
 icon. It keeps **everything the app told you**, with the time, and clicking
 each line takes you to the device.
 
@@ -206,13 +206,13 @@ why they were not merged into one:
   themselves** when the fault goes away. Its counter does not drop because you
   looked.
 - The **bell** says what **happened while you were not looking**, and its
-  notices **are read and do not come back**. Its counter is of unread items and
+  notifications **are read and do not come back**. Its counter is of unread items and
   **disappears when you open it**.
 
 A reconnection that already happened still happened, and a loose cable is
 still loose no matter how long you look at it.
 
-- The bell shows **the time**, not "how long ago", because a notice is read by
+- The bell shows **the time**, not "how long ago", because a notification is read by
   **when it happened**, which is what you cross-check against what you were
   doing. A sentinel alert is read the other way round, by how long it has been
   broken.
@@ -223,19 +223,19 @@ still loose no matter how long you look at it.
 
 What reaches the bell:
 
-| Notice | When |
+| Notification | When |
 |---|---|
 | **Came back online** | A device you set [Notify on reconnection](#notify-on-reconnection) on came back. |
 | **Needs your attention** | The app paused a session it cannot solve on its own: unknown IP, account rejected or possible replacement. See [what to do](./interface/stations#when-the-app-needs-you-to-step-in). |
 | **A labeled device came back** | A device with a [reason for absence](./interface/stations#reason-for-absence) came back; the label clears itself. |
 | **An AP changed its IP** | The app found the AP at its new IP and reconnected on its own. For an AP that is not normal: check whether its address should be fixed. |
-| **This PC lost its network** | Your PC has no active network. It is **a single notice** instead of one per device that stops answering, and another arrives when the network is back. |
+| **The PC lost its network** | Your PC has no active network. It is **a single notification** instead of one per device that stops answering, and another arrives when the network is back. |
 
-Which of these notices also go out as Windows notifications or to your
-messaging is chosen in the *"Notices you ask for"* block, found in
+Which of these notifications also go out as Windows notifications or to your
+messaging is chosen in the *"Notifications you ask for"* block, found in
 **Preferences → Alerts** and in **Preferences → Messaging**.
 
-## Three channels for the same notice
+## Three channels for the same notification
 
 The sentinel **always watches everything**. What you choose is **what leaves
 the app and through which channel**:
@@ -247,12 +247,12 @@ the app and through which channel**:
   project**, not to the start screen. They are turned on with the **"Windows
   notifications"** switch in **Preferences → Alerts**, and in the same place,
   under *"What reaches the desktop"*, you pick which events arrive.
-- **The phone** gets notices by WhatsApp or Telegram, with its own event
+- **The phone** gets notifications by WhatsApp or Telegram, with its own event
   selection (see below). Alerts and Messaging are **independent** settings:
   you may want everything on the desktop and only the serious ones on the
   phone.
 
-### Phone notices (WhatsApp or Telegram)
+### Phone notifications (WhatsApp or Telegram)
 
 The same alerts can reach your phone, so you learn about an outage **without
 being in front of the screen**. There are three routes, all through
@@ -260,7 +260,7 @@ being in front of the screen**. There are three routes, all through
 
 You enable it in **Preferences → Messaging**:
 
-1. Turn on **"Send alerts by messaging"** and choose the route under
+1. Turn on **"Send notifications by messaging"** and choose the route under
    *"Through where"*. Each route asks for its own details. WhatsApp needs the
    phone and the key; Telegram to a user, just your `@username`; Telegram to a
    group, just the key (the key *is* the group). The **"How to get these
@@ -269,9 +269,9 @@ You enable it in **Preferences → Messaging**:
 2. **Send the test message** with **"Send a test message"**. It is not
    optional: CallMeBot validates nothing until a real send, and without the
    test you would find out about a mistyped key on the day a link goes down
-   and no notice arrives.
+   and no notification arrives.
 3. In **"What goes to this destination"**, pick the events. Below it, under
-   *"Notices you ask for"*, pick which of the bell's notices also go out
+   *"Notifications you ask for"*, pick which of the bell's notifications also go out
    through this destination.
 
 With the destination configured, the summary shows your number and key
@@ -300,31 +300,31 @@ the app, in the *"What gets sent"* dropdown under Messaging.
 - **It watches while the app runs.** Closing the window does not stop it: the
   app stays in the system tray, next to the clock, measuring. The first time
   you close it with a project open, the **"SignalScope in the background"**
-  notice explains this, and its **"Quit for good"** button does close the app.
+  notification explains this, and its **"Quit for good"** button does close the app.
   To close it completely at any other time, use **File → Quit SignalScope** or
-  right-click its icon in the tray. With notices arriving on your phone it is
+  right-click its icon in the tray. With notifications arriving on your phone it is
   easy to believe this is a service running on somebody's server, but it runs
   on your machine.
 - **CallMeBot is a free third-party service**, and it may be slow or fail. Do
   not use it as the only alerting mechanism for a critical service.
-- **Notices go out over your own internet.** If your own link goes down, so do
-  the notices.
+- **Notifications go out over your own internet.** If your own link goes down, so do
+  the notifications.
 - **You do not pick devices, only event types.** A list of specific stations
   in Preferences would take your network's identifiers outside the encrypted
-  file. To silence ONE device there is [muting](#mute-alerts).
+  file. To silence ONE device there is [muting](#mute-notifications).
 - **It does not send what was already failing when you opened the project.**
   After a weekend the sentinel may detect forty outages at once, and none of
   them is news.
 :::
 
 ::: tip A Telegram group is an audience
-The notice is read by the whole group, with your customers' names and IPs in
+The notification is read by the whole group, with your customers' names and IPs in
 it. Choose the group route knowing who is in it.
 :::
 
-![Preferences → Messaging: the switch to send alerts, the three routes (WhatsApp, Telegram to a user, Telegram to a group), the test message and the selection of which events go to this destination](/signal-scope/mensajeria.webp)
+![Preferences → Messaging: the switch to send notifications, the three routes (WhatsApp, Telegram to a user, Telegram to a group), the test message and the selection of which events go to this destination](/signal-scope/mensajeria.webp)
 
-![The sentinel panel: Session down notices stacked with each one's reason, and at the foot the reminder that it watches while the app is open](/signal-scope/centinela-panel.webp)
+![The sentinel panel: Session down notifications stacked with each one's reason, and at the foot the reminder that it watches while the app is open](/signal-scope/centinela-panel.webp)
 
 ## The network score
 

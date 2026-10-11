@@ -20,7 +20,7 @@ Once eventos con ocho interruptores. Tres eventos no tienen interruptor
 propio y heredan el de su pareja, porque son la misma vigilancia contada de
 otra forma:
 
-| Aviso | Qué detecta |
+| Notificación | Qué detecta |
 |---|---|
 | **Punto de acceso caído** | Un AP que estaba en línea deja de responder. Se avisa **una vez por el nodo**, con cuántas estaciones arrastra, en lugar de una alerta por cada cliente. *(Hereda el interruptor de "Sesión caída".)* |
 | **Referentes sin respuesta** | Un destino de [Referentes](./interfaz/detectados-y-otros#referentes-lo-que-miras-para-contrastar) con la vigilancia encendida dejó de responder al ping. Avisa tras dos comprobaciones fallidas seguidas, y nunca de uno que no haya respondido nunca. |
@@ -34,15 +34,15 @@ otra forma:
 | **Sector con latencia alta** | La mayoría de las estaciones en línea de un mismo AP (al menos tres, y la mitad o más) responden con retraso a la vez. Se avisa una vez por el nodo y sus estaciones no avisan una a una. *(Hereda el interruptor de "Latencia alta".)* |
 | **Latencia alta** · **BETA** | Un cliente con la señal impecable que aun así responde con retraso **sostenido**. |
 
-Los avisos se apilan **por gravedad**. Primero va lo que deja una celda entera
+Las notificaciones se apilan **por gravedad**. Primero va lo que deja una celda entera
 sin servicio, luego lo que afecta a un cliente, después lo que lo degrada y al
 final lo que anticipa un problema.
 
 Qué puertos vigila el centinela en cada equipo se elige en la pestaña
 [Puertos](./interfaz/estaciones#puertos-que-vigila-el-centinela) de su ventana
 de sesión. La app lee todos los puertos del equipo; si no eliges, vigila el
-primero, que en un airMAX es el único. Aunque fallen dos puertos vigilados, el
-aviso es uno por equipo y nombra el puerto afectado.
+primero, que en un airMAX es el único. Aunque fallen dos puertos vigilados, la
+notificación es una por equipo y nombra el puerto afectado.
 
 ### Qué NO vigila, a propósito
 
@@ -67,7 +67,7 @@ produce. La latencia es la única excepción, medida y filtrada.
   salvo que el valor haya empeorado.
 - **Avisa de la causa y no de la consecuencia.** Si cae un AP, se avisa del AP
   y **se callan** sus estaciones, para que un nodo caído no entierre el panel
-  bajo cincuenta avisos.
+  bajo cincuenta notificaciones.
 - **La ausencia de dato nunca es falla.** Si un firmware no reporta el puerto,
   ese eje no se evalúa para ese equipo. Es lo que pasa con varias métricas en
   RouterOS.
@@ -107,10 +107,10 @@ Con el equipo ausente, la misma pestaña ofrece además el
 (Suspendido, Técnico, De baja), una etiqueta informativa que se quita sola
 cuando el equipo vuelve.
 
-### Silenciar avisos
+### Silenciar notificaciones
 
 Un equipo con una avería **que ya conoces** (una obra de tres días, un cliente
-que no paga, una antena que cambias el jueves) llena el panel de avisos que ya
+que no paga, una antena que cambias el jueves) llena el panel de notificaciones que ya
 no informan de nada y tapan los que sí.
 
 **Silenciar no es dejar de vigilar.** El equipo se sigue conectando y el
@@ -130,11 +130,11 @@ la notificación de Windows y tu mensajería, los tres a la vez.
 - **El panel te recuerda a quién callaste.** Al pie hay un bloque gris,
   plegado, con el número de equipos silenciados; al abrirlo con **"ver"**
   aparecen su plazo y su botón **Reactivar**. Cuenta a todos los silenciados,
-  tengan o no avisos hoy, porque lo que hay que recordar es la decisión.
+  tengan o no notificaciones hoy, porque lo que hay que recordar es la decisión.
 - Se guarda **en el proyecto** y no en las preferencias del puesto, porque se
   refiere a un equipo de **esta** red. Se pierde al olvidar el equipo.
 
-![La tarjeta **Silenciar avisos** con la fila de plazos (1 hora, 8 horas, 1 día, 3 días, 1 semana, Sin vencimiento)](/signal-scope/silenciar.webp)
+![La tarjeta **Silenciar notificaciones** con la fila de plazos (1 hora, 8 horas, 1 día, 3 días, 1 semana, Sin vencimiento)](/signal-scope/silenciar.webp)
 
 ### Avisar la reconexión
 
@@ -152,14 +152,14 @@ puesto, la tarjeta dice el modo y un clic en ella lo **quita**.
 | **Siempre** | Para el equipo que quieres vigilar de continuo: avisa **en cada caída y vuelta**, hasta que lo quites. |
 
 El modo permanente no se vuelve ruido gracias al **ciclo**, sin necesidad de
-un tiempo mínimo entre avisos. Después de avisar vuelve a esperar la caída,
+un tiempo mínimo entre notificaciones. Después de avisar vuelve a esperar la caída,
 así que para sonar otra vez el equipo tiene que caerse otra vez de verdad.
 **Avisa una vez por incidencia y no una por lectura**, y ninguno de los dos
 modos avisa dos veces por la misma caída.
 
 Tres detalles evitan expectativas falsas:
 
-- **Sobre un equipo que está en línea**, el aviso espera primero a verlo
+- **Sobre un equipo que está en línea**, la notificación espera primero a verlo
   caer. No avisa ahora, sino cuando se caiga y vuelva.
 - **No se puede poner sobre lo que no se está midiendo**: un equipo
   silenciado, un destino de Referentes sin la vigilancia encendida o uno
@@ -170,13 +170,13 @@ Tres detalles evitan expectativas falsas:
 
 La salida se gobierna con el interruptor **"Volvió a conectarse"**, que está
 en **Preferencias → Alertas** para Windows y en **Preferencias → Mensajería**
-para cada destino. Ese interruptor apaga la **salida**; los avisos que pusiste
+para cada destino. Ese interruptor apaga la **salida**; las notificaciones que pusiste
 en cada equipo se conservan.
 
 ### Apagar la sesión de un equipo
 
 Apagar la sesión no es olvidar el equipo. La app **deja de conectarse** a él,
-así que no le gasta CPU ni te llena de avisos, pero **conserva sus
+así que no le gasta CPU ni te llena de notificaciones, pero **conserva sus
 credenciales y su ficha**. Se apaga desde su ventana de sesión, encima de
 Olvidar, y se vuelve a encender con un clic en su celda de Sesión. **Sigue
 apagado aunque cierres la app.**
@@ -191,7 +191,7 @@ u olvidar **vale para las dos filas**. La app te lo avisa antes de que pulses.
 
 ## La campana: lo que te avisó mientras trabajabas
 
-A la izquierda del latido del centinela está la **bandeja de avisos**, con el
+A la izquierda del latido del centinela está la **bandeja de notificaciones**, con el
 icono de una campana. Guarda **todo lo que la app te avisó**, con su hora, y
 al pulsar cada línea vas al equipo.
 
@@ -200,13 +200,13 @@ fundieron en uno:
 
 - El **latido** dice qué está **roto ahora**, y sus alertas **se resuelven
   solas** cuando la falla desaparece. Su contador no baja porque lo mires.
-- La **campana** dice qué **pasó mientras no mirabas**, y sus avisos **se leen
+- La **campana** dice qué **pasó mientras no mirabas**, y sus notificaciones **se leen
   y no vuelven**. Su contador es de no leídos y **desaparece al abrirla**.
 
 Una reconexión que ya ocurrió sigue habiendo ocurrido, y un cable suelto sigue
 suelto aunque lo mires.
 
-- La campana muestra **la hora** y no el "hace cuánto", porque un aviso se lee
+- La campana muestra **la hora** y no el "hace cuánto", porque una notificación se lee
   por **cuándo ocurrió**, que es lo que cruzas con lo que estabas haciendo. Una
   alerta del centinela se lee al revés, por cuánto tiempo lleva rota.
 - **Se guarda mientras la app esté abierta**, y el panel vacío lo dice. No
@@ -216,19 +216,19 @@ suelto aunque lo mires.
 
 Lo que llega a la campana:
 
-| Aviso | Cuándo |
+| Notificación | Cuándo |
 |---|---|
 | **Volvió a conectarse** | Volvió un equipo al que le pusiste [Avisar la reconexión](#avisar-la-reconexion). |
 | **Requiere tu intervención** | La app pausó una sesión que no puede resolver sola: IP desconocida, cuenta rechazada o posible reemplazo. Ver [qué hacer](./interfaz/estaciones#cuando-la-app-necesita-que-intervengas). |
 | **Volvió un equipo etiquetado** | Volvió un equipo con [motivo de la ausencia](./interfaz/estaciones#motivo-de-la-ausencia); la etiqueta se quita sola. |
 | **Un AP cambió de IP** | La app encontró al AP en su IP nueva y se reconectó sola. En un AP no es lo normal: revisa si su dirección debería ser fija. |
-| **Esta PC perdió la red** | Tu PC se quedó sin ninguna red activa. Es **un solo aviso** en lugar de uno por cada equipo que deja de contestar, y llega otro cuando la red vuelve. |
+| **La PC perdió la red** | Tu PC se quedó sin ninguna red activa. Es **una sola notificación** en lugar de una por cada equipo que deja de contestar, y llega otra cuando la red vuelve. |
 
-Cuáles de estos avisos salen también como notificación de Windows o a tu
-mensajería se elige en el bloque *"Avisos que pides tú"*, que aparece en
+Cuáles de estas notificaciones salen también a Windows o a tu
+mensajería se elige en el bloque *"Notificaciones que pides tú"*, que aparece en
 **Preferencias → Alertas** y en **Preferencias → Mensajería**.
 
-## Tres canales para el mismo aviso
+## Tres canales para la misma notificación
 
 El centinela **siempre vigila todo**. Lo que eliges tú es **qué sale de la app
 y por dónde**:
@@ -240,12 +240,12 @@ y por dónde**:
   de su proyecto**, no a la pantalla de inicio. Se activan con el interruptor
   **"Notificaciones en Windows"** de **Preferencias → Alertas**, y en el mismo
   sitio, bajo *"Qué sale al escritorio"*, eliges qué eventos llegan.
-- **El teléfono** recibe los avisos por WhatsApp o Telegram, con su propia
+- **El teléfono** recibe las notificaciones por WhatsApp o Telegram, con su propia
   selección de eventos (ver abajo). Alertas y Mensajería son ajustes
   **independientes**: puedes querer todo en el escritorio y solo lo grave en
   el teléfono.
 
-### Avisos al teléfono (WhatsApp o Telegram)
+### Notificaciones al teléfono (WhatsApp o Telegram)
 
 Las mismas alertas pueden llegarte al teléfono, para enterarte de una caída
 **sin estar delante de la pantalla**. Hay tres vías, todas mediante
@@ -253,7 +253,7 @@ Las mismas alertas pueden llegarte al teléfono, para enterarte de una caída
 
 Se enciende en **Preferencias → Mensajería**:
 
-1. Activa **"Enviar avisos por mensajería"** y elige la vía en *"Por
+1. Activa **"Enviar notificaciones por mensajería"** y elige la vía en *"Por
    dónde"*. Cada vía pide sus datos. WhatsApp pide el teléfono y la clave;
    Telegram a un usuario, solo tu `@usuario`; Telegram a un grupo, solo la
    clave (la clave *es* el grupo). El enlace **"Cómo obtener estos datos"**
@@ -262,9 +262,9 @@ Se enciende en **Preferencias → Mensajería**:
 2. **Envía el mensaje de prueba** con **"Enviar mensaje de prueba"**. No es
    opcional: CallMeBot no valida nada hasta un envío real, y sin la prueba te
    enterarías de una clave mal puesta el día que se caiga un enlace y no
-   llegue el aviso.
+   llegue la notificación.
 3. En **"Qué se manda a este destino"**, elige los eventos. Debajo, en
-   *"Avisos que pides tú"*, eliges cuáles de los avisos de la campana salen
+   *"Notificaciones que pides tú"*, eliges cuáles de las notificaciones de la campana salen
    también por este destino.
 
 Con el destino configurado, el resumen muestra tu número y la clave
@@ -293,33 +293,33 @@ también está en la app, en el desplegable *"Qué se envía"* de Mensajería.
 ::: warning Los límites, de frente
 - **Vigila mientras la app corre.** Cerrar la ventana no la detiene: la app
   sigue en la bandeja del sistema, junto al reloj, midiendo. La primera vez
-  que la cierras con un proyecto abierto te lo explica el aviso **"SignalScope
+  que la cierras con un proyecto abierto te lo explica la notificación **"SignalScope
   en segundo plano"**, cuyo botón **"Salir del todo"** sí la cierra. Para
   cerrarla por completo en cualquier otro momento, usa **Archivo → Salir de
-  SignalScope** o haz clic derecho en su icono de la bandeja. Con los avisos
+  SignalScope** o haz clic derecho en su icono de la bandeja. Con las notificaciones
   llegando al teléfono es fácil creer que es un servicio que corre en el
   servidor de alguien, pero corre en tu máquina.
 - **CallMeBot es un servicio gratuito de terceros**, y puede tardar o fallar.
   No lo uses como único mecanismo de alerta de un servicio crítico.
-- **Los avisos salen por tu internet.** Si se cae tu propio enlace, también se
-  caen los avisos.
+- **Las notificaciones salen por tu internet.** Si se cae tu propio enlace,
+  también se caen las notificaciones.
 - **No se eligen equipos, solo tipos de evento.** Una lista de estaciones
   concretas en Preferencias sacaría identificadores de tu red fuera del
   archivo cifrado. Para callar a UN equipo está
-  [silenciar](#silenciar-avisos).
+  [silenciar](#silenciar-notificaciones).
 - **No manda lo que ya estaba fallando al abrir el proyecto.** Tras un fin de
   semana el centinela puede detectar cuarenta caídas de golpe, y ninguna es
   una novedad.
 :::
 
 ::: tip Un grupo de Telegram es una audiencia
-El aviso lo lee todo el grupo, con los nombres e IPs de tus clientes dentro.
+La notificación la lee todo el grupo, con los nombres e IPs de tus clientes dentro.
 Elige la vía de grupo sabiendo quién está en él.
 :::
 
-![Preferencias → Mensajería: el interruptor de enviar avisos, las tres vías (WhatsApp, Telegram a usuario, Telegram a grupo), el mensaje de prueba y la selección de qué eventos se mandan a este destino](/signal-scope/mensajeria.webp)
+![Preferencias → Mensajería: el interruptor de enviar notificaciones, las tres vías (WhatsApp, Telegram a usuario, Telegram a grupo), el mensaje de prueba y la selección de qué eventos se mandan a este destino](/signal-scope/mensajeria.webp)
 
-![El panel del centinela: avisos de Sesión caída apilados con el motivo de cada uno, y al pie el recordatorio de que vigila mientras la app está abierta](/signal-scope/centinela-panel.webp)
+![El panel del centinela: notificaciones de Sesión caída apiladas con el motivo de cada uno, y al pie el recordatorio de que vigila mientras la app está abierta](/signal-scope/centinela-panel.webp)
 
 ## La calificación de la red
 

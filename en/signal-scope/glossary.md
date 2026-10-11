@@ -188,7 +188,7 @@ axis of its diagnosis, with signal as the main axis. Details in
 such as a loose cable, a port in half duplex or a fallen AP. Details in
 [Sentinel and network score](./sentinel).
 
-**Notice tray (the bell)**: the list of what the app told you **while you were
+**Notification tray (the bell)**: the list of what the app told you **while you were
 working**, with the time. It differs from the sentinel in that the sentinel
 says what is broken now and resolves itself, while the bell says what happened
 and is read once.
@@ -196,7 +196,7 @@ and is read once.
 **Notify on reconnection**: the mark you put on a device so the app tells you
 when it connects again, **Once** or **Always**.
 
-**Mute**: silencing **one** device's alerts for a period without ceasing to
+**Mute**: silencing **one** device's notifications for a period without ceasing to
 measure it.
 
 **Switch session off**: stopping the connection to a device. It keeps its

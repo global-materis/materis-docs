@@ -31,11 +31,11 @@ dos controles vecinos que cuentan cosas distintas:
 
 | | Qué dice | Cuándo se vacía |
 |---|---|---|
-| **La campana** (bandeja de avisos) | Lo que la app te avisó mientras trabajabas, con su hora. Su contador es de avisos **no leídos**. | Al abrirla. Un aviso leído no vuelve. |
+| **La campana** (bandeja de notificaciones) | Lo que la app te avisó mientras trabajabas, con su hora. Su contador es de notificaciones **no leídas**. | Al abrirla. Una notificación leída no vuelve. |
 | **El latido** (centinela de servicio) | Qué está roto ahora mismo, y en cuántos equipos. | Solo, cuando la falla se resuelve. No se descarta a mano. |
 
-Un aviso de "volvió a conectarse" describe algo que ya ocurrió, y leerlo no lo
-deshace. Un cable suelto, en cambio, sigue suelto aunque lo mires. Por eso hay
+Una notificación de "volvió a conectarse" describe algo que ya ocurrió, y
+leerla no lo deshace. Un cable suelto, en cambio, sigue suelto aunque lo mires. Por eso hay
 dos indicadores. Los dos llevan al equipo con un clic, y ninguno aparece en el
 visor de un snapshot compartido, porque un snapshot congelado no genera
 eventos.

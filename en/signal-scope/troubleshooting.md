@@ -36,7 +36,7 @@ The app looks for it on its own in its AP's station list, in the other APs'
 lists and via ARP on this PC's network. If it finds it, it reconnects at the
 new IP without losing name, baseline or credentials, because each device's
 identity is its **MAC**. A scan that sees it at another IP does the same. When
-the device that changed its IP is an AP, you also get the notice *"An AP
+the device that changed its IP is an AP, you also get the notification *"An AP
 changed its IP"*: for an AP that is unusual, and it is worth checking whether
 its address should be fixed.
 
@@ -83,7 +83,7 @@ states are in
 
 ::: details Several devices go absent at once and the chip says "No network on this PC"
 The one that lost its network is your PC, and your devices are as they were.
-You get a single notice, *"This PC lost its network"*, instead of one per
+You get a single notification, *"The PC lost its network"*, instead of one per
 device, and the app looks for nobody until the network is back. Then the
 devices reconnect on their own.
 :::
@@ -169,9 +169,9 @@ stops when you turn it off or close the app.
 ::: details I closed the window and SignalScope is still running
 With a project open, the **X** hides the window and leaves the app in the
 system tray, next to the clock, measuring and alerting. The first time it
-explains this with the **"SignalScope in the background"** notice. If you
+explains this with the **"SignalScope in the background"** notification. If you
 press **"Got it, keep it watching"**, it does not show again. **"Quit for
-good"** closes the app without marking the notice as seen, so the next X
+good"** closes the app without marking the notification as seen, so the next X
 explains it again. With no project open, the X closes the app.
 
 To close SignalScope completely you have two ways: **File → Quit
@@ -201,7 +201,7 @@ to update. What happens when you press it depends on how you installed the
 app:
 
 - **Installer downloaded from the web.** The button says **"Update to v…"**
-  and opens a notice with **Download v…**: the installer downloads in your
+  and opens a notification with **Download v…**: the installer downloads in your
   browser and, when you run it, reinstalls over the current version (it is
   normal for it to uninstall the previous one first). Your projects, license
   and data are kept. In the installer, leave "Remove application data"
@@ -373,7 +373,7 @@ or activate, everything is right where it was.
 **Does it send WhatsApp or email notifications?**
 **WhatsApp and Telegram**, yes. The sentinel's alerts can reach your phone,
 and you choose which events and with what urgency
-([how to enable it](./sentinel#phone-notices-whatsapp-or-telegram)). The limit
+([how to enable it](./sentinel#phone-notifications-whatsapp-or-telegram)). The limit
 is that it watches **while the app runs on your machine**: closing the window
 does not stop it, but switching the PC off or quitting with **Quit
 SignalScope** does. A continuous, independent watch will come with the future

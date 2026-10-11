@@ -50,7 +50,7 @@ vista.
 Al terminar, el escaneo te dice cuántos equipos respondieron y te lleva a esta
 tabla. Un hallazgo con MAC se presenta aunque otro de tus equipos haya tenido
 antes esa misma dirección, algo normal donde las IP se reparten solas. Cuando
-es un AP el que declara sus estaciones, su aviso separa las nuevas que añadió a
+es un AP el que declara sus estaciones, su notificación separa las nuevas que añadió a
 Detectados de las que ya tenías.
 
 ## Referentes: lo que miras para contrastar
@@ -87,7 +87,7 @@ El formulario tiene tres campos:
 1. **Dirección IP o dominio**, solo en el alta manual. Acepta una IPv4 o un
    nombre. No acepta IPv6 ni un puerto, porque solo se comprueba si el destino
    responde.
-2. **Nombre**, obligatorio y único. Es como te lo van a nombrar los avisos a las
+2. **Nombre**, obligatorio y único. Es como te lo van a nombrar las notificaciones a las
    tres de la mañana, y dos «Router» en un mensaje de WhatsApp no sirven de nada.
 3. **Vigilar este destino**, que viene encendido. Así el destino queda en
    custodia del centinela desde que lo guardas. Apágalo si solo quieres tenerlo
@@ -107,7 +107,7 @@ cada una es un hecho distinto, no un grado de lo mismo:
 | **Sin vigilar** (apagado) | Nadie comprueba si responde. Queda así si apagaste la vigilancia al añadirlo o desde sus acciones. |
 | **Comprobando…** | Encendido, todavía sin el primer ping. |
 | **Vigilando** (verde) | Responde, y la app verificó que quien responde es **ese** equipo. |
-| **Otro equipo** / **No resuelve** (ámbar) | *Otro equipo*: esa IP la ocupa otro dispositivo; un escaneo reencuentra al tuyo en su dirección nueva. *No resuelve*: el nombre no se pudo traducir a una dirección, así que la pregunta no llegó a hacerse. No cuenta como caída ni genera aviso; lo que hay que mirar está en tu máquina. |
+| **Otro equipo** / **No resuelve** (ámbar) | *Otro equipo*: esa IP la ocupa otro dispositivo; un escaneo reencuentra al tuyo en su dirección nueva. *No resuelve*: el nombre no se pudo traducir a una dirección, así que la pregunta no llegó a hacerse. No cuenta como caída ni genera notificación; lo que hay que mirar está en tu máquina. |
 | **Sin respuesta · hace 5 min** (rojo) | No contesta, con el «hace cuánto» pegado. |
 
 ::: tip El porcentaje de pérdida es la mitad que importa

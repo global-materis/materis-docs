@@ -63,7 +63,7 @@ fila.
 
 | Columna | Qué muestra |
 |---|---|
-| **Sesión** | El estado de conexión, igual que en estaciones. Un clic abre la [ventana de sesión](./estaciones#la-ventana-de-sesion), con sus pestañas Acciones, Puertos, Log y Conexión, y desde *Acciones* puedes apagar la sesión, silenciar sus avisos o pedir el aviso de reconexión. Si el AP se ausenta, el chip dice [qué le pasa](./estaciones#cuando-un-equipo-se-ausenta). |
+| **Sesión** | El estado de conexión, igual que en estaciones. Un clic abre la [ventana de sesión](./estaciones#la-ventana-de-sesion), con sus pestañas Acciones, Puertos, Log y Conexión, y desde *Acciones* puedes apagar la sesión, silenciar sus notificaciones o pedir la notificación de reconexión. Si el AP se ausenta, el chip dice [qué le pasa](./estaciones#cuando-un-equipo-se-ausenta). |
 | **SSID** | El nombre de red que difunde el AP. |
 | **Picos** | `3/14` indica cuántas de sus estaciones en línea tienen picos de latencia. Se enciende en ámbar cuando la mayoría (y al menos 3) los tienen: si un cliente tiene picos, el problema es ese cliente; si los tiene la mayoría del sector, es el aire compartido. Con menos de 3 estaciones en línea muestra `—`. |
 | **Airtime** | El aire ocupado del canal (%), el dato crudo detrás del Estado. |
@@ -75,7 +75,7 @@ fila.
 
 ::: tip Si un AP cambia de IP
 La app lo busca por la IP que declaran sus estaciones (airOS) o por ARP en la
-red de esta PC, se reconecta sola y deja un aviso en la campana:
+red de esta PC, se reconecta sola y deja una notificación en la campana:
 *"&lt;AP&gt; cambió de IP"*. En un AP no es lo normal, así que conviene revisar
 si su dirección debería ser fija. Mientras un AP está ausente, sus estaciones
 esperan a que vuelva.

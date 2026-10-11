@@ -73,14 +73,14 @@ Tres comportamientos que conviene conocer desde el primer día.
 
 ### Diagnostico en segundo plano
 
-- La primera vez aparece el aviso **"SignalScope en segundo plano"**, que
+- La primera vez aparece la notificación **"SignalScope en segundo plano"**, que
   explica dónde queda la app y cómo cerrarla del todo.
 - Para cerrar SignalScope por completo usa **Archivo → Salir de SignalScope**
   o haz clic derecho en su icono de la bandeja y elige **"Salir de SignalScope"**.
 - El clic izquierdo en el icono de la bandeja muestra u oculta la ventana. El
   clic derecho abre su menú, cuya primera línea dice qué proyecto está abierto y
-  su estado (por ejemplo, cuántos equipos vigila o cuántos avisos tiene). El icono
-  lleva un punto rojo mientras haya avisos pendientes; los de equipos
+  su estado (por ejemplo, cuántos equipos vigila o cuántas notificaciones tiene). El icono
+  lleva un punto rojo mientras haya notificaciones pendientes; las de equipos
   silenciados no cuentan. Desde el menú puedes **"Abrir SignalScope"**, ir al
   Monitor o al Mapa (**"Ir al Monitor"**, **"Ir al Mapa"**), **"Guardar
   proyecto"** o salir.

@@ -47,7 +47,7 @@ metrics into a state that is clear and easy to read.
 | 🛎️ **Service sentinel** | Warns about faults the signal does not reveal: a loose LAN cable, half duplex, a port down to 10 Mbps, a misaligned antenna, a saturated radio, a slow link. |
 | 🔕 **Mutes what you already know about** | A device with a known fault stops alerting for a set period, and it keeps being measured. |
 | 🔔 **Tells you when something comes back** | Mark a device that went down and the app notifies you the moment it answers, once or every time. |
-| 📱 **Phone notices** | The sentinel's alerts can reach you on WhatsApp or Telegram. You choose which events and with what urgency. |
+| 📱 **Phone notifications** | The sentinel's alerts can reach you on WhatsApp or Telegram. You choose which events and with what urgency. |
 | 🧾 **Watches what you don't manage** | A switch, an ONU, the router, and also a public IP or a domain outside your network. They live in **References** with their own name and a watch that measures their latency and packet loss. |
 | 📸 **Keeps history** | Snapshots of the network state at a fixed point in time. |
 | 📄 **Exports** | PDF, Excel and CSV reports for the customer or for your own records. |

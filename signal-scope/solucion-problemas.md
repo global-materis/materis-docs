@@ -35,7 +35,7 @@ La app lo busca sola en la lista de estaciones de su AP, en la de los demás AP
 y por ARP en la red de esta PC. Si lo encuentra, se reconecta en la IP nueva
 sin perder nombre, línea base ni credenciales, porque la identidad de cada
 equipo es su **MAC**. Un escaneo que lo vea en otra IP hace lo mismo. Cuando el
-que cambió de IP es un AP, además te llega el aviso *"Un AP cambió de IP"*: en
+que cambió de IP es un AP, además te llega la notificación *"Un AP cambió de IP"*: en
 un AP no es lo normal, y conviene revisar si su dirección debería ser fija.
 
 Si no hay forma de encontrarlo, la app pausa la sesión y te pide la IP nueva:
@@ -79,8 +79,8 @@ chip están en
 :::
 
 ::: details Varios equipos salen ausentes a la vez y el chip dice "Sin red en esta PC"
-La que perdió la red es tu PC, y tus equipos siguen como estaban. Recibes un
-solo aviso, *"Esta PC perdió la red"*, en lugar de uno por equipo, y la app no
+La que perdió la red es tu PC, y tus equipos siguen como estaban. Recibes una
+sola notificación, *"La PC perdió la red"*, en lugar de una por equipo, y la app no
 busca a nadie hasta que la red vuelve. Al volver, los equipos se reconectan
 solos.
 :::
@@ -165,9 +165,9 @@ encendido, y deja de hacerlo al apagarlo o al cerrar la app.
 ::: details Cerré la ventana y SignalScope sigue abierto
 Con un proyecto abierto, la **X** esconde la ventana y deja la app en la
 bandeja del sistema, junto al reloj, midiendo y avisando. La primera vez te lo
-explica con el aviso **"SignalScope en segundo plano"**. Si pulsas
+explica con la notificación **"SignalScope en segundo plano"**. Si pulsas
 **"Entendido, dejarla vigilando"**, no vuelve a salir. **"Salir del todo"**
-cierra la app sin dar el aviso por visto, así que la próxima X te lo vuelve a
+cierra la app sin dar la notificación por vista, así que la próxima X te lo vuelve a
 explicar. Sin proyecto abierto, la X cierra la app.
 
 Para cerrar SignalScope por completo tienes dos caminos: **Archivo → Salir de
@@ -198,7 +198,7 @@ Bienvenida y en la barra del Monitor. Si no lo ves, no hay nada que
 actualizar. Lo que pasa al pulsarlo depende de cómo instalaste la app:
 
 - **Instalador descargado de la web.** El botón dice **"Actualizar a v…"** y
-  abre un aviso con **Descargar v…**: el instalador se descarga en tu navegador y,
+  abre una notificación con **Descargar v…**: el instalador se descarga en tu navegador y,
   al ejecutarlo, se reinstala sobre la versión actual (es normal que primero
   desinstale la anterior). Tus proyectos, tu licencia y tus datos se conservan.
   En el instalador, deja **sin marcar** "Eliminar los datos de aplicación".
@@ -369,7 +369,7 @@ activar, todo sigue donde estaba.
 **¿Envía notificaciones por WhatsApp o correo?**
 Por **WhatsApp y Telegram**, sí. Las alertas del centinela pueden llegarte al
 teléfono, y eliges qué eventos y con qué urgencia
-([cómo encenderlo](./centinela#avisos-al-telefono-whatsapp-o-telegram)). El
+([cómo encenderlo](./centinela#notificaciones-al-telefono-whatsapp-o-telegram)). El
 límite es que vigila **mientras la app corre en tu máquina**: cerrar la
 ventana no la detiene, pero apagar la PC o salir con **Salir de SignalScope**
 sí. Una vigilancia continua e independiente llegará con la futura **edición

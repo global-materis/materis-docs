@@ -155,7 +155,7 @@ Two details make the report defensible:
 - Each row's verdict is the **same as the on-screen diagnosis**: the report
   never contradicts what the app shows.
 
-When it finishes, the notice carries an **Open** button that opens the
+When it finishes, the notification carries an **Open** button that opens the
 generated file.
 
 ![The Report menu: the five types (General, Critical, Critical + Warning, Stations only, APs only) and the three formats PDF, Excel and CSV](/signal-scope/reporte-pdf.webp)

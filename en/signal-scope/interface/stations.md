@@ -10,7 +10,7 @@ MikroTik the row is a radio, as explained
 
 | Column | What it shows |
 |---|---|
-| **Session** | The state of the connection to the radio (SSH, HTTPS or HTTP) and, if it is absent, [what is going on](#when-a-device-goes-absent). It also carries the marks of what you decided about that device: session switched off, alerts muted, reconnection notice set. One click opens the [session window](#the-session-window). An HTTP session is painted amber with an open padlock, because on that network the username, the password and the metrics travel as plain text. |
+| **Session** | The state of the connection to the radio (SSH, HTTPS or HTTP) and, if it is absent, [what is going on](#when-a-device-goes-absent). It also carries the marks of what you decided about that device: session switched off, notifications muted, reconnection notification set. One click opens the [session window](#the-session-window). An HTTP session is painted amber with an open padlock, because on that network the username, the password and the metrics travel as plain text. |
 | **Signal · local / remote** | The core reading. Local is what the station receives; remote (in gray) is what the AP receives from it. The meter bar carries the traffic-light color. |
 | **Baseline** | The **Mark** button pins the current signal as that antenna's baseline, and the cell then shows that value (`−58 dBm`) with an **×** to remove it. With a baseline, the signal axis judges how far it dropped from it rather than the absolute value, and the status reads **Stable**, **Dropped vs baseline** or **Check link**. To update it, remove it first with the **×**. See [Traffic light and diagnostics](../diagnostics#baseline-compare-against-your-own-network). |
 | **IP** | A link that opens the radio's web UI, plus a **ping** button that opens a terminal with a continuous ping. |
@@ -57,9 +57,9 @@ remind you at a glance.
 
 | Mark | What it means | Where it is set |
 |---|---|---|
-| **Session switched off** | The app **stops connecting** to that device, so it costs no CPU and sends you no alerts, but it **keeps its credentials and its record**. It stays off even after you close the app. One click on the cell switches it back on. | Session window → *Actions*, above Forget device |
-| **Alerts muted** | The device **keeps being measured**. What goes quiet is the output (panel, Windows and messaging) for the period you choose: 1 hour, 8 hours, 1 day, 3 days, 1 week or No end date. When the period ends it alerts again on its own; before that, you turn it back on with **Unmute**. | Session window → *Actions* |
-| **Reconnection notice set** | The app will tell you when that device reconnects. | Session window → *Actions* |
+| **Session switched off** | The app **stops connecting** to that device, so it costs no CPU and sends you no notifications, but it **keeps its credentials and its record**. It stays off even after you close the app. One click on the cell switches it back on. | Session window → *Actions*, above Forget device |
+| **Notifications muted** | The device **keeps being measured**. What goes quiet is the output (panel, Windows and messaging) for the period you choose: 1 hour, 8 hours, 1 day, 3 days, 1 week or No end date. When the period ends it alerts again on its own; before that, you turn it back on with **Unmute**. | Session window → *Actions* |
+| **Reconnection notification set** | The app will tell you when that device reconnects. | Session window → *Actions* |
 
 All three are explained in [Sentinel and network score](../sentinel#what-you-decide-per-device).
 
@@ -75,7 +75,7 @@ window, with four tabs:
 
 | Tab | What for |
 |---|---|
-| **Actions** | What you decide about the device: reason for absence, mute alerts, notify on reconnection, switch the session off and forget the device. The window opens on this tab. |
+| **Actions** | What you decide about the device: reason for absence, mute notifications, notify on reconnection, switch the session off and forget the device. The window opens on this tab. |
 | **Ports** | Which Ethernet ports the sentinel watches. See [below](#ports-the-sentinel-watches). |
 | **Log** | What the app tried with that device and how each attempt ended. See [below](#the-session-log). |
 | **Connection** | IP, system, protocol, port and account, to correct them. **Update** reconnects with that data. The saved password is not shown, so you type it again. |
@@ -93,20 +93,20 @@ says it). The Session cell shows your label instead of "Absent".
 - With a reason set, the app does not ask you to step in for that device,
   because you already know what is going on.
 - It is saved in the project and **clears itself when the device comes back**,
-  with a notice in the bell: *"A labeled device came back"*.
+  with a notification in the bell: *"A labeled device came back"*.
 
 ### Notify on reconnection
 
 You mark the device and the app tells you when it reconnects, in one of two
 modes: **Once**, which notifies and clears itself, or **Always**, which
 notifies on every drop and recovery until you remove it. If the device is
-muted, the notice waits until you unmute it. Details in
+muted, the notification waits until you unmute it. Details in
 [Sentinel](../sentinel#notify-on-reconnection).
 
 ### When the app needs you to step in
 
 There are three cases the app cannot solve on its own. In all three it **pauses
-the session**, paints the Session chip **violet**, leaves a notice in the
+the session**, paints the Session chip **violet**, leaves a notification in the
 [bell](../sentinel#the-bell-what-it-told-you-while-you-were-working) and shows
 in *Actions* what it needs from you: the **"Needs your attention"** card with
 **Try again**, or the comparison of a possible replacement.
@@ -118,7 +118,7 @@ in *Actions* what it needs from you: the **"Needs your attention"** card with
 | **Possible replacement** | **Another device with the same name** answers at its IP. | You decide in the comparison below. |
 
 **Try again** resumes the session with the saved data. If the device comes back
-on its own, the request is withdrawn and the notice stays in the bell.
+on its own, the request is withdrawn and the notification stays in the bell.
 
 #### Possible replacement
 
@@ -127,7 +127,7 @@ take it for granted. It puts **both side by side** (name, MAC, model and
 firmware, IP, AP and when it was last seen) and marks what does not match.
 
 - With **"Yes, it replaces the old one"**, the new one **inherits its place**:
-  name, baseline, ports, coordinates, silences and notices, and the credential.
+  name, baseline, ports, coordinates, silences and notifications, and the credential.
   Earlier snapshots keep the old one with its MAC, and when you compare them
   you will see *"Replaced by …"* / *"Replaces …"*.
 - With **"No, they are different devices"**, the one that answered goes to
@@ -146,14 +146,14 @@ the only one takes it out of the watch.
 - The change applies as soon as you press.
 - **Ports you do not watch are still drawn** in the Ports column, with their
   state in the tooltip, but **without severity color** and without raising
-  alerts.
-- **One alert per device**, even if two watched ports go down.
+  notifications.
+- **One notification per device**, even if two watched ports go down.
 - **The choice belongs to the device and not to the row**: on a router with two
   radios it applies to both rows.
 
 ::: tip Name them on the device
 Each port is shown with its interface name. If you renamed it on the device, the
-sentinel's alert uses **that name** instead of `ether3`, and *"Sector norte lost
+sentinel's notification uses **that name** instead of `ether3`, and *"Sector norte lost
 its cable"* is understood without going to look.
 :::
 
@@ -193,7 +193,7 @@ and **the app takes care of getting it back**:
   other APs' lists and via ARP on this PC's network. If it finds it, and on
   logging in confirms it is the same device, it reconnects at the new IP on its
   own and tells you. If the one that changed IP is an **AP**, it also leaves a
-  notice in the bell, because for an AP that is not normal. An absence label
+  notification in the bell, because for an AP that is not normal. An absence label
   you set by hand does not stop the search, and it clears itself when the
   device comes back.
 
@@ -206,7 +206,7 @@ Meanwhile, the Session chip says what is going on:
 | **Possible cut** | Its AP sees it connected with its Fallback IP (a likely administrative cut, like a PPPoE cutoff for non-payment), or the device **drops and comes back** over and over. The link is not the problem. |
 | **Blocked at the AP** | Its AP's access list does not let it connect. It is neither a fault nor a power-off. On airOS it is only detected with a full-access account on the AP. |
 | **Cut at its AP** | A firewall rule on its AP (a routing MikroTik) drops its traffic. |
-| **No network on this PC** | The one that lost its network is your PC. In that case you get **a single notice**, *"This PC lost its network"*, instead of one per device, and another when it is back. |
+| **No network on this PC** | The one that lost its network is your PC. In that case you get **a single notification**, *"The PC lost its network"*, instead of one per device, and another when it is back. |
 | **Out of service** | One radio of a multi-radio device vanished from its reading: it is disabled or out of service, and the rest of the device is still online. |
 | **Absent** | There are no further clues: it is off or unreachable. |
 

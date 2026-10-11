@@ -83,9 +83,9 @@ Every question has its click, no manual hunting:
 | AP, Stations cell | the **counter** | "who hangs off here?" → its stations |
 | AP, Stations cell | the **ping icon** | continuous ping to all its registered stations, already running |
 | A **sentinel alert** | the card | straight to the device (clearing the filter so it is not hidden) |
-| A **notice in the bell** | the line | to the device that notice was about |
+| A **notification in the bell** | the line | to the device that notification was about |
 | A **Windows notification** | the toast | opens the app **on the device that caused it**, inside its project |
-| The notice from an AP that added new stations to Detected | **"View in Detected"** | to the Detected table |
+| The notification from an AP that added new stations to Detected | **"View in Detected"** | to the Detected table |
 
 ## Direct access on the rows
 

@@ -184,7 +184,7 @@ de su diagnóstico, con la señal como eje principal. El detalle está en
 como un cable suelto, un puerto en half duplex o un AP caído. El detalle está
 en [Centinela y calificación](./centinela).
 
-**Bandeja de avisos (la campana)**: la lista de lo que la app te avisó
+**Bandeja de notificaciones (la campana)**: la lista de lo que la app te avisó
 **mientras trabajabas**, con su hora. Se diferencia del centinela en que el
 centinela dice qué está roto ahora y se resuelve solo, mientras que la
 campana dice qué pasó y se lee una vez.
@@ -192,7 +192,7 @@ campana dice qué pasó y se lee una vez.
 **Avisar la reconexión**: la marca que pones a un equipo para que la app te
 avise cuando vuelva a conectarse, **Una vez** o **Siempre**.
 
-**Silenciar**: callar los avisos de **un** equipo durante un plazo sin dejar
+**Silenciar**: callar las notificaciones de **un** equipo durante un plazo sin dejar
 de medirlo.
 
 **Apagar sesión**: dejar de conectarse a un equipo. Conserva su registro y lo

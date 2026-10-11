@@ -114,7 +114,7 @@ sesión caída, cable LAN suelto, half duplex, antena desalineada y radio
 saturado. Con las notificaciones de Windows activas, los avisos llegan al
 escritorio aunque la app esté minimizada, y el clic lleva al equipo.
 
-**[Avisos al teléfono](./centinela#avisos-al-telefono-whatsapp-o-telegram).**
+**[Avisos al teléfono](./centinela#notificaciones-al-telefono-whatsapp-o-telegram).**
 Las fallas que detecta el centinela pueden llegarte por WhatsApp o Telegram
 (vía CallMeBot). Eliges qué eventos salen por cada vía, y cada tipo agrupa y
 espacia sus mensajes según su urgencia.

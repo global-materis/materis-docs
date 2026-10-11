@@ -84,9 +84,9 @@ Cada pregunta tiene su clic, sin buscar a mano:
 | AP, celda Estaciones | el **contador** | «¿quiénes cuelgan de aquí?» → sus estaciones |
 | AP, celda Estaciones | el **icono de ping** | ping continuo a todas sus estaciones registradas, ya corriendo |
 | Una **alerta del centinela** | la tarjeta | va directo al equipo (y limpia el filtro para que no quede oculto) |
-| Un **aviso de la campana** | la línea | al equipo del que hablaba ese aviso |
-| Una **notificación de Windows** | el aviso | abre la app **en el equipo que lo causó**, dentro de su proyecto |
-| El aviso de un AP que añadió estaciones nuevas a Detectados | **«Ver en Detectados»** | a la tabla Detectados |
+| Una **notificación de la campana** | la línea | al equipo del que hablaba esa notificación |
+| Una **notificación de Windows** | la notificación | abre la app **en el equipo que lo causó**, dentro de su proyecto |
+| La notificación de un AP que añadió estaciones nuevas a Detectados | **«Ver en Detectados»** | a la tabla Detectados |
 
 ## Accesos directos en las filas
 

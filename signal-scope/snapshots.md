@@ -155,7 +155,7 @@ Dos detalles hacen que el reporte se pueda defender:
 - El veredicto de cada fila es el **mismo del diagnóstico en pantalla**: el
   reporte nunca contradice lo que muestra la app.
 
-Al terminar, el aviso trae un botón **Abrir** que abre el archivo generado.
+Al terminar, la notificación trae un botón **Abrir** que abre el archivo generado.
 
 ![El menú Reporte: los cinco tipos (General, Críticas, Críticas + Atención, Solo estaciones, Solo AP) y los tres formatos PDF, Excel y CSV](/signal-scope/reporte-pdf.webp)
 

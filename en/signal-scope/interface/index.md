@@ -31,10 +31,10 @@ neighboring controls that count different things:
 
 | | What it says | When it empties |
 |---|---|---|
-| **The bell** (notice tray) | What the app told you while you were working, with the time. Its counter is of **unread** notices. | When you open it. A notice you have read does not come back. |
+| **The bell** (notification tray) | What the app told you while you were working, with the time. Its counter is of **unread** notifications. | When you open it. A notification you have read does not come back. |
 | **The pulse** (service sentinel) | What is broken right now, and on how many devices. | On its own, when the fault clears. It is not dismissed by hand. |
 
-A "came back online" notice describes something that already happened, and
+A "came back online" notification describes something that already happened, and
 reading it does not undo it. A loose cable, on the other hand, stays loose no
 matter how long you look at it. That is why there are two indicators. Both
 take you to the device with one click, and neither appears in the viewer of a

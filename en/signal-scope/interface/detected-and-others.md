@@ -52,7 +52,7 @@ disappears from view.
 When it finishes, the scan tells you how many devices answered and takes you to
 this table. A finding with a MAC is presented even if another of your devices
 held that same address before, which is normal where IPs are handed out
-automatically. When it is an AP that declares its stations, its notice
+automatically. When it is an AP that declares its stations, its notification
 separates the new ones it added to Detected from the ones you already had.
 
 ## References: what you look at for contrast
@@ -89,7 +89,7 @@ The form has three fields:
 1. **IP address or domain**, only in the manual route. It accepts an IPv4
    address or a name. It does not accept IPv6 or a port, because it only checks
    whether the target answers.
-2. **Name**, mandatory and unique. It is how the alerts will name it at three in
+2. **Name**, mandatory and unique. It is how the notifications will name it at three in
    the morning, and two "Router"s in a WhatsApp message are no use to anybody.
 3. **Monitor this target**, which comes switched on. That way the target is in
    the sentinel's custody from the moment you save. Turn it off if you only want
@@ -109,7 +109,7 @@ distinct fact, not a degree of the same thing:
 | **Not monitored** (off) | Nobody is checking whether it answers. It stays like this if you turned monitoring off when adding it or from its actions. |
 | **Checking…** | On, but without the first ping yet. |
 | **Monitoring** (green) | It answers, and the app verified that whoever answers is **that** device. |
-| **Another device** / **Does not resolve** (amber) | *Another device*: that IP is now held by a different box; a scan finds yours again at its new address. *Does not resolve*: the name could not be resolved to an address, so the question was never asked. It does not count as an outage and raises no alert; what to look at is on your machine. |
+| **Another device** / **Does not resolve** (amber) | *Another device*: that IP is now held by a different box; a scan finds yours again at its new address. *Does not resolve*: the name could not be resolved to an address, so the question was never asked. It does not count as an outage and raises no notification; what to look at is on your machine. |
 | **No answer · 5 min ago** (red) | It does not reply, with the "how long ago" attached. |
 
 ::: tip The loss percentage is the half that matters
