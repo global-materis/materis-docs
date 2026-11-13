@@ -16,20 +16,24 @@ el Monitor y en el Mapa. Su número dice **cuántos equipos están rotos ahora**
 
 ### Qué vigila
 
-Once eventos con ocho interruptores. Tres eventos no tienen interruptor
+Quince eventos con diez interruptores. Cinco eventos no tienen interruptor
 propio y heredan el de su pareja, porque son la misma vigilancia contada de
 otra forma:
 
 | Notificación | Qué detecta |
 |---|---|
+| **Nodo caído** | Caen a la vez todos los AP de un nodo del Mapa, y son al menos dos. Se avisa **una vez por el nodo**, con cuántos equipos quedaron sin servicio, en lugar de una alerta por cada AP. *(Hereda el interruptor de "Sesión caída".)* |
 | **Punto de acceso caído** | Un AP que estaba en línea deja de responder. Se avisa **una vez por el nodo**, con cuántas estaciones arrastra, en lugar de una alerta por cada cliente. *(Hereda el interruptor de "Sesión caída".)* |
+| **AP sin estaciones** | El AP sigue respondiendo, pero se quedó sin ninguna de sus estaciones durante más de dos minutos. Solo avisa de un AP que tuvo al menos dos. Un cambio de canal por DFS vacía el sector un minuto y no llega a avisar. *(Hereda el interruptor de "Sesión caída".)* |
 | **Referentes sin respuesta** | Un destino de [Referentes](./interfaz/detectados-y-otros#referentes-lo-que-miras-para-contrastar) con la vigilancia encendida dejó de responder al ping. Avisa tras dos comprobaciones fallidas seguidas, y nunca de uno que no haya respondido nunca. |
 | **La IP de un equipo vigilado la ocupa otro** | Esa IP responde, pero detrás hay otra MAC. *(Hereda el interruptor de "Referentes sin respuesta".)* |
 | **Sesión caída** | Una estación que estaba en línea deja de responder. Lo que nunca llegó a conectar no se avisa. |
+| **Sesión inestable** | La sesión de una estación o de un AP se corta y vuelve **tres veces en diez minutos**. Un corte suelto no avisa; la repetición sí. |
 | **Sin cable LAN** | Un puerto vigilado quedó sin cable: el enlace por aire se ve bien, pero el servicio no sale por ahí. |
 | **LAN a 10 Mbps** | Un puerto vigilado negocia a 10 Mbps: cable dañado, humedad en el conector o PoE flojo. Ningún airMAX trae ese máximo de fábrica. **También en los AP**, donde el puerto de subida estrangula al sector entero. |
 | **LAN en half duplex** | Un puerto vigilado negoció mal y el servicio sale degradado sin que la señal lo muestre. También en los AP. |
 | **Antena desalineada** | Desbalance entre las dos polaridades desde **6 dB**, el límite que recomienda el propio Ubiquiti. Apunta a un problema de apunte o de polarización. |
+| **AP desalineada** | La mayoría de las estaciones medidas de un AP (al menos tres, y dos de cada tres) salen fuera de lo que su distancia o su línea base permiten. El patrón apunta a la antena del AP y no a cada cliente, así que se avisa **una vez por el AP**. |
 | **Radio saturado** | CPU al 95 % o memoria disponible por debajo del 5 %: el radio tira paquetes con la señal intacta. Vale para estaciones y AP. |
 | **Sector con latencia alta** | La mayoría de las estaciones en línea de un mismo AP (al menos tres, y la mitad o más) responden con retraso a la vez. Se avisa una vez por el nodo y sus estaciones no avisan una a una. *(Hereda el interruptor de "Latencia alta".)* |
 | **Latencia alta** · **BETA** | Un cliente con la señal impecable que aun así responde con retraso **sostenido**. |
@@ -55,15 +59,16 @@ produce. La latencia es la única excepción, medida y filtrada.
 ### Cómo se comporta
 
 - **Confirma antes de avisar.** Una condición debe sostenerse 10 segundos
-  (90 en la antena desalineada y en la latencia), así que un puerto que
+  (90 en la antena y la AP desalineadas y en la latencia, y dos minutos en el
+  AP sin estaciones), así que un puerto que
   parpadea durante un reinicio no genera una visita.
 - **Una alerta por equipo y condición** mientras dure. Al resolverse queda
   marcada como **"Resuelto"** y se retira sola a los diez minutos. Resolver
   exige **medir**: si lo que se cayó fue la sesión, la avería no se da por
   resuelta. Queda como **"Sin medir"** y vuelve a avisar en cuanto el equipo
   responde.
-- **No repite lo que ya dijo.** Tras resolverse, la antena desalineada no
-  vuelve a avisar del mismo equipo en 12 horas, y la latencia en una hora,
+- **No repite lo que ya dijo.** Tras resolverse, la antena y la AP
+  desalineadas no vuelven a avisar del mismo equipo en 12 horas, y la latencia en una hora,
   salvo que el valor haya empeorado.
 - **Avisa de la causa y no de la consecuencia.** Si cae un AP, se avisa del AP
   y **se callan** sus estaciones, para que un nodo caído no entierre el panel
@@ -94,6 +99,28 @@ todo"*.
 El **contador de la barra sigue contando todas las alertas**, porque refleja
 el estado de la red y no lo que muestra el filtro. Un filtro no puede bajar el
 número que dice cuántos clientes están caídos.
+
+### Los chips de cada tabla
+
+En el Monitor, cada tabla tiene encima una fila de chips con los avisos del
+centinela que aplican a ese tipo de equipo, y cuántas filas tiene cada uno.
+La tabla de Estaciones no muestra los avisos de AP, y al revés.
+
+- **Pulsa un chip** para ver solo las filas con ese aviso. Con varios chips
+  elegidos, ves las que tengan cualquiera de ellos. **Limpiar** quita la
+  selección.
+- Los chips están siempre a la vista, para que la tabla no salte. Uno sin
+  filas queda apagado.
+- Los chips solo filtran: el color de cada fila sigue siendo el del semáforo.
+
+Al final de la fila está **Ocultar apagadas**, con el número de sesiones
+apagadas de esa tabla. Esconde las filas con la [sesión
+apagada](#apagar-la-sesion-de-un-equipo), y vale solo para esa tabla: puedes
+ocultarlas en Estaciones y verlas en Puntos de acceso. Viene apagado, y la app
+recuerda cómo lo dejaste en cada tabla.
+
+En un Snapshot no hay chips ni interruptor, porque la captura muestra lo que
+había.
 
 ## Lo que decides por equipo
 
@@ -209,8 +236,8 @@ suelto aunque lo mires.
 - La campana muestra **la hora** y no el "hace cuánto", porque una notificación se lee
   por **cuándo ocurrió**, que es lo que cruzas con lo que estabas haciendo. Una
   alerta del centinela se lee al revés, por cuánto tiempo lleva rota.
-- **Se guarda mientras la app esté abierta**, y el panel vacío lo dice. No
-  sobrevive a cerrar la app.
+- **Se guarda en el proyecto.** Al cerrar la app y volver a abrir el
+  proyecto, la campana conserva lo que pasó.
 - **No enciende el punto rojo del icono de Windows.** Ese punto significa "tu
   red te necesita" y lo pone el centinela.
 
@@ -223,10 +250,34 @@ Lo que llega a la campana:
 | **Volvió un equipo etiquetado** | Volvió un equipo con [motivo de la ausencia](./interfaz/estaciones#motivo-de-la-ausencia); la etiqueta se quita sola. |
 | **Un AP cambió de IP** | La app encontró al AP en su IP nueva y se reconectó sola. En un AP no es lo normal: revisa si su dirección debería ser fija. |
 | **La PC perdió la red** | Tu PC se quedó sin ninguna red activa. Es **una sola notificación** en lugar de una por cada equipo que deja de contestar, y llega otra cuando la red vuelve. |
+| **Corte de luz** | Varios equipos se reiniciaron a la vez. Ver [abajo](#corte-de-luz). |
 
-Cuáles de estas notificaciones salen también a Windows o a tu
-mensajería se elige en el bloque *"Notificaciones que pides tú"*, que aparece en
-**Preferencias → Alertas** y en **Preferencias → Mensajería**.
+Cuáles de estas notificaciones salen también a Windows o a tu mensajería se
+elige en la pestaña **Notificaciones que pides tú**, en **Preferencias →
+Alertas** y en **Preferencias → Mensajería**. El corte de luz es la excepción:
+solo llega a la campana.
+
+### Corte de luz
+
+La app sabe que un equipo se reinició por su tiempo de actividad: si lleva
+encendido menos tiempo del que pasó desde la última lectura, se apagó y
+volvió. Por eso también detecta lo que pasó con la app cerrada, por ejemplo
+durante la noche.
+
+Agrupa los reinicios por sitio, que es el nodo del Mapa o, si el AP no tiene
+nodo, el AP. Reinicios del mismo sitio con menos de tres minutos de diferencia
+cuentan como un solo corte. Según quién se reinició, el título dice dónde se
+fue la luz:
+
+| Título | Qué pasó |
+|---|---|
+| **Corte de luz en** *sitio* | Se reiniciaron varios equipos, incluidos los de la torre. |
+| **Corte de luz cerca de** *sitio* | Se reiniciaron al menos tres clientes y su AP no: la luz se fue en las casas. |
+| *AP* **se reinició** | Se reinició un equipo de la torre y ningún otro. |
+
+La notificación dice a qué hora volvió la luz y, en los dos primeros casos,
+qué equipos se reiniciaron. Un solo cliente reiniciado no genera notificación:
+queda en su Log.
 
 ## Tres canales para la misma notificación
 
@@ -263,9 +314,9 @@ Se enciende en **Preferencias → Mensajería**:
    opcional: CallMeBot no valida nada hasta un envío real, y sin la prueba te
    enterarías de una clave mal puesta el día que se caiga un enlace y no
    llegue la notificación.
-3. En **"Qué se manda a este destino"**, elige los eventos. Debajo, en
-   *"Notificaciones que pides tú"*, eliges cuáles de las notificaciones de la campana salen
-   también por este destino.
+3. En la pestaña **Qué se manda a este destino**, elige los eventos. En la
+   pestaña **Notificaciones que pides tú**, eliges cuáles de las
+   notificaciones de la campana salen también por este destino.
 
 Con el destino configurado, el resumen muestra tu número y la clave
 **enmascarados**, para que no viajen en una captura de pantalla ni en una

@@ -17,20 +17,24 @@ now**.
 
 ### What it watches
 
-Eleven events with eight switches. Three events have no switch of their own
-and inherit their partner's, because they are the same watch told a different
+Fifteen events with ten switches. Five events have no switch of their own and
+inherit their partner's, because they are the same watch told a different
 way:
 
 | Notification | What it detects |
 |---|---|
+| **Node down** | All the APs of a Map node go down at once, and there are at least two. It is reported **once for the node**, with how many devices were left without service, instead of one alert per AP. *(Inherits the "Session down" switch.)* |
 | **Access point down** | An AP that was online stops answering. It is reported **once for the node**, with how many stations it drags along, instead of one alert per client. *(Inherits the "Session down" switch.)* |
+| **AP without stations** | The AP still answers, but has had none of its stations for more than two minutes. It only reports an AP that had at least two. A DFS channel change empties the sector for a minute and doesn't get to report. *(Inherits the "Session down" switch.)* |
 | **References not answering** | A target in [References](./interface/detected-and-others#references-what-you-look-at-for-contrast) with monitoring on stopped answering the ping. It reports after two failed checks in a row, and never for one that has never answered. |
 | **A watched device's IP is taken by another** | That IP answers, but there is a different MAC behind it. *(Inherits the "References not answering" switch.)* |
 | **Session down** | A station that was online stops answering. Anything that never connected is not reported. |
+| **Unstable session** | The session of a station or an AP drops and comes back **three times in ten minutes**. A single drop doesn't report; the repetition does. |
 | **LAN cable unplugged** | A watched port lost its cable: the air link looks fine, but service is not going out through it. |
 | **LAN at 10 Mbps** | A watched port negotiates at 10 Mbps: damaged cable, moisture in the connector or loose PoE. No airMAX ships with that maximum. **Also on APs**, where the uplink port strangles the whole sector. |
 | **LAN at half duplex** | A watched port negotiated badly and service goes out degraded without the signal showing it. Also on APs. |
 | **Antenna misaligned** | Imbalance between the two polarities from **6 dB**, the limit Ubiquiti itself recommends. It points to an aiming or polarization problem. |
+| **AP misaligned** | Most of an AP's measured stations (at least three, and two out of three) fall outside what their distance or their baseline allows. The pattern points to the AP's antenna and not to each client, so it is reported **once for the AP**. |
 | **Radio saturated** | CPU at 95 % or free memory below 5 %: the radio drops packets with the signal intact. It applies to stations and APs. |
 | **Sector with high latency** | Most of one AP's online stations (at least three, and half or more) answer slowly at the same time. It is reported once for the node, and its stations do not report one by one. *(Inherits the "High latency" switch.)* |
 | **High latency** · **BETA** | A client with a pristine signal that still answers with **sustained** delay. |
@@ -56,15 +60,16 @@ does not produce. Latency is the only exception, measured and filtered.
 ### How it behaves
 
 - **It confirms before warning.** A condition must hold for 10 seconds (90 for
-  antenna misaligned and for latency), so a port blinking during a reboot does
+  antenna and AP misaligned and for latency, and two minutes for AP without
+  stations), so a port blinking during a reboot does
   not trigger a site visit.
 - **One alert per device and condition** while it lasts. When it clears it is
   marked **"Resolved"** and retires itself after ten minutes. Clearing
   requires **measuring**: if what dropped was the session, the fault is not
   declared resolved. It stays as **"Unchecked"** and warns again as soon as the
   device answers.
-- **It does not repeat itself.** After clearing, antenna misaligned does not
-  warn again about the same device for 12 hours, and latency for one hour,
+- **It does not repeat itself.** After clearing, antenna and AP misaligned do
+  not warn again about the same device for 12 hours, and latency for one hour,
   unless the value has got worse.
 - **It reports the cause, not the consequence.** If an AP drops, the AP is
   reported and its stations **go quiet**, so a downed node does not bury the
@@ -95,6 +100,28 @@ show all"*.
 The **bar counter still counts every alert**, because it reflects the
 network's state and not what the filter shows. A filter cannot lower the
 number that says how many customers are down.
+
+### The chips on each table
+
+On the Monitor, each table has a row of chips above it with the sentinel
+alerts that apply to that kind of device, and how many rows have each one.
+The Stations table doesn't show AP alerts, and vice versa.
+
+- **Click a chip** to see only the rows with that alert. With several chips
+  selected, you see the rows that have any of them. **Clear** removes the
+  selection.
+- The chips are always visible, so the table doesn't jump. One with no rows
+  is dimmed.
+- The chips only filter: each row's color is still the traffic light's.
+
+At the end of the row is **Hide switched off**, with the number of switched-off
+sessions in that table. It hides the rows whose [session is switched
+off](#switch-a-device-s-session-off), and it applies only to that table:
+you can hide them in Stations and see them in Access points. It starts off,
+and the app remembers how you left it on each table.
+
+A Snapshot has no chips and no switch, because the capture shows what was
+there.
 
 ## What you decide per device
 
@@ -216,8 +243,8 @@ still loose no matter how long you look at it.
   **when it happened**, which is what you cross-check against what you were
   doing. A sentinel alert is read the other way round, by how long it has been
   broken.
-- **It is kept while the app is open**, and the empty panel says so. It does
-  not survive closing the app.
+- **It is kept in the project.** When you close the app and open the project
+  again, the bell still has what happened.
 - **It does not light the red dot on the Windows icon.** That dot means "your
   network needs you", and the sentinel puts it there.
 
@@ -230,10 +257,33 @@ What reaches the bell:
 | **A labeled device came back** | A device with a [reason for absence](./interface/stations#reason-for-absence) came back; the label clears itself. |
 | **An AP changed its IP** | The app found the AP at its new IP and reconnected on its own. For an AP that is not normal: check whether its address should be fixed. |
 | **The PC lost its network** | Your PC has no active network. It is **a single notification** instead of one per device that stops answering, and another arrives when the network is back. |
+| **Power outage** | Several devices restarted at once. See [below](#power-outage). |
 
 Which of these notifications also go out as Windows notifications or to your
-messaging is chosen in the *"Notifications you ask for"* block, found in
-**Preferences → Alerts** and in **Preferences → Messaging**.
+messaging is chosen in the **Notifications you ask for** tab, in
+**Preferences → Alerts** and in **Preferences → Messaging**. The power outage
+is the exception: it only reaches the bell.
+
+### Power outage
+
+The app knows a device restarted from its uptime: if it has been on for less
+time than has passed since the last reading, it powered off and came back.
+That's why it also catches what happened while the app was closed, for
+example overnight.
+
+It groups restarts by site, which is the Map node or, if the AP has no node,
+the AP. Restarts at the same site less than three minutes apart count as one
+outage. Depending on who restarted, the title says where the power went out:
+
+| Title | What happened |
+|---|---|
+| **Power outage at** *site* | Several devices restarted, including the tower's. |
+| **Power outage near** *site* | At least three clients restarted and their AP didn't: the power went out at the homes. |
+| *AP* **restarted** | One tower device restarted and no other. |
+
+The notification says what time the power came back and, in the first two
+cases, which devices restarted. A single client restarting generates no
+notification: it stays in its Log.
 
 ## Three channels for the same notification
 
@@ -270,9 +320,9 @@ You enable it in **Preferences → Messaging**:
    optional: CallMeBot validates nothing until a real send, and without the
    test you would find out about a mistyped key on the day a link goes down
    and no notification arrives.
-3. In **"What goes to this destination"**, pick the events. Below it, under
-   *"Notifications you ask for"*, pick which of the bell's notifications also go out
-   through this destination.
+3. In the **What goes to this destination** tab, pick the events. In the
+   **Notifications you ask for** tab, pick which of the bell's notifications
+   also go out through this destination.
 
 With the destination configured, the summary shows your number and key
 **masked**, so they do not travel in a screenshot or in a shared session.
