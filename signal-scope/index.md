@@ -95,8 +95,8 @@ monitoreo sin que te enteres.
 
 ## Cómo funciona, a grandes rasgos
 
-1. **Activas la licencia** con tu correo y tu clave, o eliges la versión de
-   prueba de 30 días.
+1. **Abres la app.** Sin licencia funciona en el plan Starter; con una clave,
+   en el plan que compraste ([Planes](./planes)).
 2. **Creas un proyecto**: un archivo `.sscope` que guarda tu red completa
    (equipos, credenciales cifradas, líneas base, historial). Todo se autoguarda.
 3. **Escaneas** las redes que registres. Lo encontrado cae en **Detectados**.
@@ -124,6 +124,6 @@ monitoreo sin que te enteres.
 
 SignalScope se obtiene en la
 [**Microsoft Store**](https://apps.microsoft.com/store/detail/9NPZ6VTKF989?cid=DevShareMCLPCS).
-Si es tu primera vez, la versión de prueba da acceso completo durante 30 días, sin registros.
+Sin licencia funciona en el plan [Starter](./planes), gratis y sin vencimiento.
 
 Consultas y licencias: **support@materis.io**

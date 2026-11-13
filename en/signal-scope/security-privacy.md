@@ -12,7 +12,7 @@ default**, carries your network's data:
 
 | Situation | What travels |
 |---|---|
-| **Activating and revalidating the Full license** | Your email, your license key and the machine identifier (HWID), to Materis's licensing system. Only that, and only for that. The **trial is 100 % local**: it sends nothing. |
+| **Activating and revalidating a license** | Your email, your license key and the machine identifier (HWID), to Materis's licensing system. Only that, and only for that. **Without a license** (Starter plan) nothing is sent. |
 | **Checking for a new version** | At startup and every six hours, a request to a public version file (on GitHub), like any web download. If you installed from the Microsoft Store, the check goes to the Store instead. |
 | **The Coverage map** | Map images are downloaded from public providers: **OpenFreeMap** (with OpenStreetMap data) for the street plans, and elevation data from **Terrain Tiles** (AWS Open Data) **only if you turn relief on**, which is off by default. The **Satellite** view uses **Google Maps**, and only with **your own API key**. These providers see what any web server sees: your IP and which map area you requested. They **never** receive your devices' locations, names or metrics, which stay in your project. If you don't open the Map, these requests never happen. |
 | **References outside your network** (if you monitor them) | If you add a public IP or a domain as a Reference and monitor it, the app pings it from your PC every few seconds, and resolves a domain with your system's DNS. That target sees your public IP, as with any ping, and **receives no data about your network**. It stops as soon as you remove it or turn its monitoring off. |

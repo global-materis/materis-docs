@@ -222,12 +222,20 @@ another computer. Details in [Sharing](./sharing).
 
 ## The license
 
-**Trial**: 30 days with every feature, no email or sign-up. There is one per
-machine, and reinstalling does not reset it.
+**Plan**: Starter, Expansion or Advanced. It sets how many records the project
+can hold and whether it includes the Topology and Snapshots. Details in
+[Plans](./plans).
 
-**Full license**: the paid annual license, with your email and your key. It is
-bought at [sscope.materis.io](https://sscope.materis.io/en#licencia) and takes
-one slot per machine.
+**Record**: each row in Access points, Stations or Referents. It is what
+counts toward your plan's limit; Assisted Stations don't count.
+
+**License**: your email and key, which activate a paid plan or the Expansion
+trial on one machine. It is bought at
+[sscope.materis.io](https://sscope.materis.io/en#licencia) and takes one slot
+per machine. Without a license, the app runs on Starter.
+
+**Full Access**: the license of those who bought SignalScope before the
+current plans. It has no limits.
 
 **Customer portal**: [panel.materis.io](https://panel.materis.io/), where you
 see your purchases and renewal dates, renew, and add machines to your license.

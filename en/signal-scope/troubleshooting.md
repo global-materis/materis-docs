@@ -286,10 +286,11 @@ cannot be reached, the app does not lock you out: "could not check" is never
 treated as "license rejected".
 :::
 
-::: details I reinstalled the app and the trial button is gone
-The trial is **one per machine**, and its countdown runs from the first launch
-after the first install. Reinstalling or deleting data does not reset it. If
-you tried it and it worked for you, the next step is the Full license.
+::: details It says "Your plan's limit" when I sign in to a radio
+The project filled your plan's records, and the app won't add another. Remove
+from the tables what you no longer manage, or move to a plan with more
+records. What you already had is left alone. Each plan's limits are in
+[Plans](./plans).
 :::
 
 ## Projects and Snapshots
@@ -358,17 +359,17 @@ nothing extra.
 No. Everything lives on your machine; the details are in
 [Security and privacy](./security-privacy).
 
-**Is the trial feature-limited?**
-No. It gives full access for 30 days, and the only difference is the
-duration.
+**Can I use SignalScope without a license?**
+Yes. Without a license it runs on the Starter plan, free and with no expiry,
+with up to 45 records. What each plan includes is in [Plans](./plans).
 
 **Can I use my license on more than one PC?**
 Up to your license's device quota, shown in the License view. To move
 machines, release the slot on the old one and activate on the new one.
 
 **What happens to my projects if my license expires?**
-Nothing is deleted. The app returns to the license screen and, once you renew
-or activate, everything is right where it was.
+Nothing is deleted. The app moves to the Starter plan and, once you renew or
+activate another key, everything is right where it was.
 
 **Does it send WhatsApp or email notifications?**
 **WhatsApp and Telegram**, yes. The sentinel's alerts can reach your phone,

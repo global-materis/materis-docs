@@ -218,12 +218,20 @@ proyecto en otra computadora. El detalle está en [Compartir](./compartir).
 
 ## La licencia
 
-**Versión de prueba**: 30 días con todas las funciones, sin correo ni
-registro. Hay una por equipo, y reinstalar no la reinicia.
+**Plan**: Starter, Expansion o Advanced. Decide cuántos registros admite el
+proyecto y si incluye la Topología y los Snapshots. Detalle en
+[Planes](./planes).
 
-**Licencia Full**: la licencia anual de pago, con tu correo y tu clave. Se
-compra en [sscope.materis.io](https://sscope.materis.io/es#licencia) y ocupa un
-cupo por máquina.
+**Registro**: cada fila de Puntos de acceso, Estaciones o Referentes. Es lo
+que cuenta para el tope de tu plan; las Estaciones Asistidas no cuentan.
+
+**Licencia**: tu correo y tu clave, que activan en una máquina un plan de
+pago o la prueba de Expansion. Se compra en
+[sscope.materis.io](https://sscope.materis.io/es#licencia) y ocupa un cupo por
+máquina. Sin licencia, la app funciona en Starter.
+
+**Full Access**: la licencia de quien compró SignalScope antes de los planes
+actuales. No tiene topes.
 
 **Panel de cliente**: [panel.materis.io](https://panel.materis.io/), donde ves
 tus compras y vencimientos, renuevas y añades máquinas a tu licencia.

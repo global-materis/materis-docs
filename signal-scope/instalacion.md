@@ -14,38 +14,29 @@ Cuando hay una versión nueva, la propia app te avisa (ver [Actualizaciones](#ac
 
 ## Primer arranque
 
-Al abrir SignalScope verás primero la pantalla de carga y, enseguida, la **pantalla de licencia**.
+Al abrir SignalScope verás la pantalla de carga y, enseguida, la
+**Bienvenida**, donde creas o abres un proyecto. No hace falta activar nada
+para empezar: sin licencia, la app funciona en el plan **Starter**. Qué
+permite cada plan está en [Planes](./planes).
 
 Los datos (proyectos recientes, preferencias, caché) se guardan en `%APPDATA%\SignalScope`.
 
-## La pantalla de licencia
+## Activar una licencia
 
-SignalScope requiere una licencia para funcionar. La pantalla ofrece dos vías, y
-las dos dan acceso completo a todas las funciones:
+Los planes Expansion y Advanced, y la prueba de Expansion, se activan con una
+clave. Se compran en [sscope.materis.io](https://sscope.materis.io/es#licencia).
 
-| | Versión de prueba | Licencia Full |
-|---|---|---|
-| Duración | 30 días | Anual |
-| Requiere internet | No | Solo para activar y revalidar |
-| Requiere correo | No | Sí (el del titular) |
-| Equipos | La máquina donde se instaló | Según el cupo de tu licencia |
+1. En la Bienvenida, abre la vista **Licencia**.
+2. Escribe el **correo electrónico** con que compraste y la **clave de
+   licencia**.
+3. Pulsa **"Activar licencia"**.
 
-![La pantalla de licencia: correo y clave para activar la Full, o el botón ámbar de continuar con la versión de prueba](/signal-scope/pantalla-licencia.webp)
-
-## Versión de prueba (30 días)
-
-Pulsa **"Continuar con la versión de prueba"** y entras con
-acceso completo, sin correo y sin conexión.
-
-El contador corre desde el primer arranque tras instalar.
-
-## Adquirir Licencia
-
-Obten tu licencia desde la web oficial [sscope.materis.io](https://sscope.materis.io/es#licencia)
+La activación y su revalidación periódica usan internet. El trabajo diario no
+lo necesita.
 
 ### Renovar
 
-La licencia es anual y la app te avisa con anticipación del vencimiento y si deseas renovar.
+La app te avisa con anticipación del vencimiento y te ofrece renovar desde la vista **Licencia**.
 Podrás ir tambien a tu [Panel](https://panel.materis.io/) para poder renovar.
 
 
@@ -54,7 +45,7 @@ Podrás ir tambien a tu [Panel](https://panel.materis.io/) para poder renovar.
 La licencia ocupa un cupo por máquina. Para mudarte:
 
 1. En la máquina vieja, abre la vista **Licencia** y pulsa **"Liberar licencia
-   de este equipo"**. Eso libera el cupo y te devuelve a la pantalla de activación.
+   de este equipo"**. Eso libera el cupo, y esa PC sigue en el plan Starter.
 2. En la máquina nueva, activa con el mismo correo y la misma clave.
 
 ::: warning Libera antes de formatear o desinstalar

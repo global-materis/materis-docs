@@ -26,6 +26,7 @@ export default defineConfig({
               items: [
                 { text: 'Introducción', link: '/signal-scope/' },
                 { text: 'Instalación y activación', link: '/signal-scope/instalacion' },
+                { text: 'Planes', link: '/signal-scope/planes' },
                 { text: 'Primeros pasos', link: '/signal-scope/primeros-pasos' },
                 { text: 'Equipos compatibles', link: '/signal-scope/compatibilidad' },
               ],
@@ -90,6 +91,7 @@ export default defineConfig({
               items: [
                 { text: 'Introduction', link: '/en/signal-scope/' },
                 { text: 'Installation and activation', link: '/en/signal-scope/installation' },
+                { text: 'Plans', link: '/en/signal-scope/plans' },
                 { text: 'First steps', link: '/en/signal-scope/first-steps' },
                 { text: 'Supported devices', link: '/en/signal-scope/supported-devices' },
               ],

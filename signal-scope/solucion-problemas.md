@@ -281,10 +281,10 @@ de esta PC. Y si el servidor no responde, la app no te bloquea: "no pude
 consultar" nunca se trata como "licencia rechazada".
 :::
 
-::: details Reinstalé la app y ya no aparece el botón de prueba
-La prueba es **una por equipo**, y su contador corre desde el primer arranque
-tras la primera instalación. Reinstalar o borrar los datos no la reinicia. Si
-la probaste y te sirvió, el paso siguiente es la licencia Full.
+::: details Dice «Límite de tu plan» al iniciar sesión en un radio
+El proyecto llenó los registros de tu plan y la app no añade otro. Retira de
+las tablas lo que ya no gestionas, o pasa a un plan con más registros. Lo que
+ya tenías no se toca. Los topes de cada plan están en [Planes](./planes).
 :::
 
 ## Proyectos y Snapshots
@@ -355,16 +355,17 @@ nada adicional.
 No. Todo vive en tu equipo; el detalle está en
 [Seguridad y privacidad](./seguridad-privacidad).
 
-**¿La versión de prueba tiene funciones recortadas?**
-No. Da acceso completo durante 30 días, y la única diferencia es la duración.
+**¿Puedo usar SignalScope sin licencia?**
+Sí. Sin licencia funciona en el plan Starter, gratis y sin vencimiento, con
+hasta 45 registros. Lo que permite cada plan está en [Planes](./planes).
 
 **¿Puedo usar mi licencia en más de una PC?**
 Según el cupo de equipos de tu licencia, que ves en la vista Licencia. Para
 mudarte de máquina, libera el cupo en la vieja y activa en la nueva.
 
 **¿Qué pasa con mis proyectos si mi licencia vence?**
-No se borra nada. La app vuelve a la pantalla de licencia y, al renovar o
-activar, todo sigue donde estaba.
+No se borra nada. La app pasa al plan Starter y, al renovar o activar otra
+clave, todo sigue donde estaba.
 
 **¿Envía notificaciones por WhatsApp o correo?**
 Por **WhatsApp y Telegram**, sí. Las alertas del centinela pueden llegarte al

@@ -15,41 +15,30 @@ When a new version is out, the app itself tells you (see [Updates](#updates)).
 ## First launch
 
 When you open SignalScope you first see the loading screen and, right after,
-the **license screen**.
+the **Welcome** screen, where you create or open a project. You don't need to
+activate anything to start: without a license, the app runs on the
+**Starter** plan. What each plan includes is in [Plans](./plans).
 
 App data (recent projects, preferences, cache) is stored in
 `%APPDATA%\SignalScope`.
 
-## The license screen
+## Activating a license
 
-SignalScope requires a license to run. The screen offers two paths, and both
-give full access to every feature:
-
-| | Trial | Full license |
-|---|---|---|
-| Duration | 30 days | Annual |
-| Needs internet | No | Only to activate and revalidate |
-| Needs an email | No | Yes (the license holder's) |
-| Devices | The machine it was installed on | Up to your license's device quota |
-
-![The license screen: email and key to activate the Full license, or the amber button to continue with the trial](/signal-scope/pantalla-licencia.webp)
-
-## Trial (30 days)
-
-Click **"Continue with the trial"** and you are in with full access, no email
-and no connection.
-
-The countdown starts on the first launch after installing.
-
-## Get a license
-
-Get your license from the official website,
+The Expansion and Advanced plans, and the Expansion trial, are activated with
+a key. They are bought at
 [sscope.materis.io](https://sscope.materis.io/en#licencia).
+
+1. On the Welcome screen, open the **License** view.
+2. Type the **email** you bought with and the **license key**.
+3. Click **"Activate license"**.
+
+Activation and its periodic revalidation use the internet. Day-to-day work
+doesn't need it.
 
 ### Renewing
 
-The license is annual, and the app warns you ahead of the expiration and asks
-whether you want to renew. You can also renew from your
+The app warns you ahead of the expiration and offers renewal from the
+**License** view. You can also renew from your
 [Panel](https://panel.materis.io/).
 
 ### Moving to another machine
@@ -57,8 +46,8 @@ whether you want to renew. You can also renew from your
 The license takes one slot per machine. To move:
 
 1. On the old machine, open the **License** view and click **"Release this
-   machine's license"**. That frees the slot and takes you back to the
-   activation screen.
+   machine's license"**. That frees the slot, and that PC stays on the Starter
+   plan.
 2. On the new machine, activate with the same email and key.
 
 ::: warning Release before formatting or uninstalling

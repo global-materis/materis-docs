@@ -99,8 +99,8 @@ monitoring without you noticing.
 
 ## How it works, broadly
 
-1. **Activate your license** with your email and key, or choose the 30-day
-   trial.
+1. **Open the app.** Without a license it runs on the Starter plan; with a
+   key, on the plan you bought ([Plans](./plans)).
 2. **Create a project**: a `.sscope` file holding your whole network (devices,
    encrypted credentials, baselines, history). Everything autosaves.
 3. **Scan** the networks you registered. Whatever is found lands in
@@ -129,7 +129,7 @@ monitoring without you noticing.
 
 SignalScope is available on the
 [**Microsoft Store**](https://apps.microsoft.com/store/detail/9NPZ6VTKF989?cid=DevShareMCLPCS).
-If it is your first time, the trial gives you full access for 30 days, with no
-sign-up.
+Without a license it runs on the [Starter](./plans) plan, free and with no
+expiry.
 
 Questions and licensing: **support@materis.io**

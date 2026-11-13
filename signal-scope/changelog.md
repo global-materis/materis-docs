@@ -13,18 +13,11 @@ interfaz de cada extremo, añades clouds, equipos no gestionables y
 anotaciones, y alineas varios equipos a la vez. La vista se descarga como
 imagen PNG o JPEG.
 
-**Planes Starter, Expansion y Advanced.** Sin licencia, la app entra en
-**Starter**: gratis, sin vencimiento, con hasta 45 registros (AP, Estaciones y
-Referentes) y un nodo en el Mapa, sin Topología ni Snapshots. **Expansion**
-sube a 200 registros y tiene una versión de prueba; **Advanced**, a 500. La
-versión de prueba local de 30 días ya no existe. Las licencias **Full Access**
-compradas antes de los planes conservan todo, sin topes. Un proyecto que ya
-pasa del tope de tu plan se abre igual: el tope solo impide añadir.
-
 **[Estaciones Asistidas](./interfaz/estaciones).** Las estaciones que tu AP
 lista y la app no alcanza —por ejemplo, detrás del router de su AP— aparecen
 en Estaciones con el chip **Asistida**, su señal y su estado, sin escanear.
-No cuentan en tu plan y siguen en la tabla aunque su AP deje de listarlas.
+Siguen en la tabla aunque su AP deje de listarlas. Como el AP ya las aporta
+solo, el **radar** de su fila, que se las preguntaba a mano, se retiró.
 Una que su AP listó por primera vez hace menos de 24 horas lleva la etiqueta
 **Nueva**. La tarjeta **Asistidas** del Monitor filtra la tabla a ellas. Los
 móviles y PC que listan tus AP también aparecen; el centinela solo los vigila

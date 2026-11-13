@@ -13,19 +13,12 @@ links by picking the interface at each end, add clouds, unmanaged devices and
 annotations, and align several devices at once. The view downloads as a PNG
 or JPEG image.
 
-**Starter, Expansion and Advanced plans.** Without a license, the app runs as
-**Starter**: free, with no expiry, up to 45 records (APs, Stations and
-Referents) and one Map node, without Topology or Snapshots. **Expansion**
-raises that to 200 records and has a trial; **Advanced**, to 500. The local
-30-day trial is gone. **Full Access** licenses bought before the plans keep
-everything, with no limits. A project already over your plan's limit still
-opens: the limit only stops you from adding more.
-
 **[Assisted Stations](./interface/stations).** Stations your AP lists but
 the app can't reach—for example, behind their AP's router—show up in Stations
 with the **Assisted** chip, their signal and their status, without scanning.
-They don't count toward your plan and stay in the table even if their AP
-stops listing them. One its AP listed for the first time less than 24 hours
+They stay in the table even if their AP stops listing them. Since the AP now
+provides them on its own, the **radar** in its row, which asked for them by
+hand, is gone. One its AP listed for the first time less than 24 hours
 ago carries the **New** label. The Monitor's **Assisted** card filters the
 table down to them. Phones and PCs your APs list show up too; the sentinel
 only watches them if you turn on **Watch phones and PCs** in Preferences →

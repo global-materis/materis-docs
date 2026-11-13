@@ -12,7 +12,7 @@ fábrica**, lleva datos de tu red:
 
 | Situación | Qué viaja |
 |---|---|
-| **Activar y revalidar la licencia Full** | Tu correo, tu clave de licencia y el identificador del equipo (HWID), hacia el sistema de licencias de Materis. Solo eso, y solo para eso. La **versión de prueba es 100 % local**: no envía nada. |
+| **Activar y revalidar una licencia** | Tu correo, tu clave de licencia y el identificador del equipo (HWID), hacia el sistema de licencias de Materis. Solo eso, y solo para eso. **Sin licencia** (plan Starter) no se envía nada. |
 | **Comprobar si hay versión nueva** | Al iniciar y cada seis horas, una consulta a un archivo público de versión (en GitHub), como cualquier descarga web. Si instalaste desde la Microsoft Store, la consulta se le hace a la Store. |
 | **El Mapa de cobertura** | Las imágenes del mapa se descargan de proveedores públicos: **OpenFreeMap** (con datos de OpenStreetMap) para los planos, y los datos de elevación de **Terrain Tiles** (AWS Open Data) **solo si enciendes el relieve**, que viene apagado. La vista **Satélite** usa **Google Maps**, y solo con **tu propia clave**. Esos proveedores ven lo que ve cualquier servidor web: tu IP y qué zona del mapa pediste. **Nunca** reciben las ubicaciones, los nombres ni las métricas de tus equipos, que se quedan en tu proyecto. Si no abres el Mapa, estas peticiones no ocurren. |
 | **Los Referentes fuera de tu red** (si los vigilas) | Si añades como Referente una IP pública o un dominio y lo vigilas, la app le envía un ping desde tu PC cada pocos segundos, y si es un dominio lo resuelve con el DNS de tu sistema. Ese destino ve tu IP pública, como con cualquier ping, y **no recibe ningún dato de tu red**. Se detiene en cuanto lo retiras o apagas su vigilancia. |
