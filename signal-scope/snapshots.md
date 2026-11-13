@@ -11,8 +11,8 @@ estaciones y AP con sus métricas, el veredicto del diagnóstico, las líneas
 base que tenías marcadas y el estado de sesión de cada equipo. También guarda
 tu tabla de **Referentes**, con el nombre que les pusiste y **cómo
 respondían**: su tiempo de respuesta y su porcentaje de pérdida. El Snapshot
-aparece en el **Historial de snapshots**, sobre las tablas, con su fecha y
-hora.
+aparece en el selector **Snapshots**, al final de la barra superior, con su
+fecha y hora. El selector también tiene **Tomar snapshot**.
 
 ::: tip El Snapshot dice cómo respondía cada Referente, no solo si respondía
 Cada destino de Referentes se guarda con su **latencia y su pérdida**, así que
@@ -22,22 +22,36 @@ apagado.
 :::
 
 - Un proyecto guarda **hasta 20 Snapshots**, y ninguno se borra solo. El
-  contador del historial (`{n} de 20`) avisa cuando está lleno. A partir de
-  ahí, para guardar otro hay que eliminar o exportar alguno.
+  selector dice cuántos llevas (`{n} de 20`). Con el historial lleno, para
+  guardar otro hay que eliminar o descargar alguno, salvo que actives
+  [el archivo automático](#archivar-el-mas-viejo-al-llenarse).
 - Los Snapshots viajan **dentro del archivo** `.sscope`, así que respaldar el
   proyecto respalda también el historial.
 
 Conviene guardar uno **cuando la red está sana**, por ejemplo después de un
 mantenimiento. Meses después será el mejor punto de comparación que tengas.
 
+### Archivar el más viejo al llenarse
+
+En **Preferencias → Snapshots**, con **Archivar el más viejo al llenarse**
+encendido, guardar un Snapshot con el historial lleno saca el más viejo a un
+archivo `.ssnap` y deja sitio al nuevo. El archivo va a la carpeta
+`snapshots`, junto al archivo del proyecto, y **Abrir carpeta** la abre. La
+app solo retira el Snapshot del proyecto después de comprobar que el archivo
+quedó bien escrito. Viene apagado.
+
+Por eso un proyecto nuevo, o uno guardado con **Guardar como…**, se crea en su
+propia carpeta: el proyecto y sus Snapshots archivados quedan juntos.
+
 ## Ver un snapshot
 
-Al seleccionar un Snapshot en el historial, las tablas muestran ese momento en
-modo solo lectura: la sesión de cada fila dice "Histórico" y un aviso indica
+Al elegir un Snapshot en el selector, o con `Ctrl+1` … `Ctrl+9`, el Monitor,
+el Mapa y la Topología muestran ese momento en modo solo lectura. En las
+tablas, la sesión de cada fila dice "Histórico" y un aviso indica
 que se está comparando con los datos en vivo (**Δ vs actual**). Bajo la señal
 de cada estación aparece cuánto cambió entre el Snapshot y este instante, si el
 equipo tiene sesión ahora. Es la forma más rápida de responder *"¿este enlace
-estaba así la semana pasada?"*. **Volver a datos en vivo** sale de la vista.
+estaba así la semana pasada?"*. **Volver a en vivo**, en el selector, o `Ctrl+0` sale de la vista.
 
 ![La vista de un snapshot: el historial de snapshots, el aviso de comparación con los datos en vivo, las sesiones en Histórico y el desvío "vs actual" bajo cada señal](/signal-scope/vista-snapshot.webp)
 

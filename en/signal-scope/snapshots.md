@@ -10,8 +10,9 @@ someone else.
 stations and APs with their metrics, the diagnosis verdict, the baselines you
 had set and each device's session state. It also stores your **References**
 table, with the names you gave them and **how they were answering**: their
-response time and their packet loss. The Snapshot appears in the **Snapshot
-history**, above the tables, with its date and time.
+response time and their packet loss. The Snapshot appears in the
+**Snapshots** selector, at the end of the top bar, with its date and time. The
+selector also has **Take snapshot**.
 
 ::: tip A Snapshot says how each Reference answered, not only whether it did
 Each References target is stored with its **latency and its loss**, so a
@@ -21,22 +22,36 @@ dimmed dash.
 :::
 
 - A project keeps **up to 20 Snapshots**, and none is ever removed on its own.
-  The history counter (`{n} of 20`) tells you when it is full. From then on,
-  to save another one you have to delete or export one.
+  The selector shows how many you have (`{n} of 20`). With the history full,
+  to save another one you have to delete or download one, unless you turn on
+  [automatic archiving](#archive-the-oldest-when-full).
 - Snapshots travel **inside the** `.sscope` **file**, so backing up the
   project also backs up the history.
 
 It pays to save one **while the network is healthy**, for example after
 maintenance. Months later it will be the best comparison point you have.
 
+### Archive the oldest when full
+
+In **Preferences → Snapshots**, with **Archive the oldest when full** on,
+saving a Snapshot with the history full moves the oldest one out to a `.ssnap`
+file and makes room for the new one. The file goes to the `snapshots` folder,
+next to the project file, and **Open folder** opens it. The app only removes
+the Snapshot from the project after checking the file was written correctly.
+It starts off.
+
+That's why a new project, or one saved with **Save as…**, is created in its
+own folder: the project and its archived Snapshots stay together.
+
 ## Viewing a snapshot
 
-When you select a Snapshot in the history, the tables show that moment in
-read-only mode: each row's session says "Historical" and a banner says it is
+When you pick a Snapshot in the selector, or with `Ctrl+1` … `Ctrl+9`, the
+Monitor, the Map and the Topology show that moment in read-only mode. In the
+tables, each row's session says "Historical" and a banner says it is
 being compared with live data (**Δ vs current**). Under each station's signal
 you see how much it changed between the Snapshot and this instant, if the
 device has a session now. It is the fastest way to answer *"was this link
-like this last week?"*. **Back to live data** leaves the view.
+like this last week?"*. **Back to live**, in the selector, or `Ctrl+0` leaves the view.
 
 ![The snapshot view: the snapshot history, the banner comparing against live data, sessions showing Historical and the "vs current" drift under each signal](/signal-scope/vista-snapshot.webp)
 

@@ -13,6 +13,22 @@ its own page:
 - [Topology](../topology): the third view, with the network drawn the way it
   hangs together.
 
+## The top bar
+
+The same bar sits above the Monitor, the Map and the Topology. From left to
+right:
+
+- The view selector: **Monitor**, **Map** and **Topology** (`Ctrl+Tab` moves
+  to the next one).
+- The **File**, **Tools** and **Help** menus.
+- If there's a new version, the notice to update.
+- The minimized tools. The continuous Ping, the Traceroute and the Speed test
+  keep running as a pill here; a click opens them again.
+- The project name. A click opens **About this project**.
+- The global search (`Ctrl+K`), the bell and the sentinel's heartbeat.
+- The **Snapshots** selector, which decides what the three views show: live
+  or a Snapshot. See [History, snapshots and reports](../snapshots).
+
 ## The top panel
 
 Besides scanning and the cascade session (covered in
@@ -23,12 +39,10 @@ Besides scanning and the cascade session (covered in
 - **Report**, which exports to PDF, Excel or CSV. You pick the report type from
   General (whole network), Critical, Critical + Warning, Stations only and APs
   only; the last one is disabled when there is no AP in view.
-- The snapshot strip, with your saved snapshots and the date of each one. From
-  there you compare, share and protect them.
 
 ## The two indicators in the corner
 
-Top right, in the same spot in the **Monitor** and in the **Map**, there are two
+Top right, in the same spot in the **Monitor**, the **Map** and the **Topology**, there are two
 neighboring controls that count different things:
 
 | | What it says | When it empties |

@@ -13,6 +13,23 @@ Cada parte tiene su página:
 - [Topología](../topologia): la tercera vista, con la red dibujada tal como
   cuelga.
 
+## La barra superior
+
+La misma barra está encima del Monitor, el Mapa y la Topología. De izquierda a
+derecha:
+
+- El selector de vista: **Monitor**, **Mapa** y **Topología** (`Ctrl+Tab`
+  pasa a la siguiente).
+- Los menús **Archivo**, **Herramientas** y **Ayuda**.
+- Si hay una versión nueva, el aviso para actualizar.
+- Las herramientas minimizadas. El Ping continuo, el Traceroute y la Prueba de
+  velocidad siguen corriendo como una píldora aquí; un clic las vuelve a
+  abrir.
+- El nombre del proyecto. Un clic abre **Sobre el proyecto**.
+- El buscador general (`Ctrl+K`), la campana y el latido del centinela.
+- El selector **Snapshots**, que decide qué muestran las tres vistas: en vivo
+  o un Snapshot. Ver [Historial, snapshots y reportes](../snapshots).
+
 ## El panel de arriba
 
 Además del escaneo y la sesión en cascada (vistos en
@@ -23,12 +40,10 @@ Además del escaneo y la sesión en cascada (vistos en
 - **Reporte**, que exporta a PDF, Excel o CSV. El tipo de reporte se elige
   entre General (toda la red), Críticas, Críticas + Atención, Solo estaciones y
   Solo AP; este último se desactiva cuando no hay ningún AP a la vista.
-- La tira de snapshots, con los snapshots guardados y la fecha de cada uno.
-  Desde ahí se comparan, se comparten y se protegen.
 
 ## Los dos indicadores de la esquina
 
-Arriba a la derecha, en el mismo sitio en el **Monitor** y en el **Mapa**, hay
+Arriba a la derecha, en el mismo sitio en el **Monitor**, el **Mapa** y la **Topología**, hay
 dos controles vecinos que cuentan cosas distintas:
 
 | | Qué dice | Cuándo se vacía |
