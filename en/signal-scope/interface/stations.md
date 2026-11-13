@@ -12,7 +12,7 @@ MikroTik the row is a radio, as explained
 |---|---|
 | **Session** | The state of the connection to the radio (SSH, HTTPS or HTTP) and, if it is absent, [what is going on](#when-a-device-goes-absent). It also carries the marks of what you decided about that device: session switched off, notifications muted, reconnection notification set. One click opens the [session window](#the-session-window). An HTTP session is painted amber with an open padlock, because on that network the username, the password and the metrics travel as plain text. |
 | **Signal · local / remote** | The core reading. Local is what the station receives; remote (in gray) is what the AP receives from it. The meter bar carries the traffic-light color. |
-| **Baseline** | The **Mark** button pins the current signal as that antenna's baseline, and the cell then shows that value (`−58 dBm`) with an **×** to remove it. With a baseline, the signal axis judges how far it dropped from it rather than the absolute value, and the status reads **Stable**, **Dropped vs baseline** or **Check link**. To update it, remove it first with the **×**. See [Traffic light and diagnostics](../diagnostics#baseline-compare-against-your-own-network). |
+| **Baseline** | The **Mark** button pins the current signal, local and remote, as that antenna's baseline, and the cell then shows both values (`−58 dBm / −61 dBm`) with an **×** to remove it. With a baseline, the signal axis judges how far it dropped from it rather than the absolute value, and the status reads **Stable**, **Dropped vs baseline** or **Check link**. To update it, remove it first with the **×**. See [Traffic light and diagnostics](../diagnostics#baseline-compare-against-your-own-network). |
 | **IP** | A link that opens the radio's web UI, plus a **ping** button that opens a terminal with a continuous ping. |
 | **Latency** | The link latency measured by the radio itself toward its AP. It is not a ping from your PC; see [below](#latency-the-average-and-the-peak). |
 | **Sessions** | The customer's simultaneous connections, counted by the radio when it works in router mode. Only available over SSH. It is informational: it tells a quiet customer from a busy one. |
@@ -363,10 +363,19 @@ Each RJ45 connector summarizes its own port's state:
 100 Mbps is deliberately not flagged as a problem, because many installs use
 Cat5 on purpose. What does warn is **degradation against the device's own
 history**. The app learns the top speed that device has ever negotiated and, if
-one day it negotiates less, an amber **`↓`** appears. If the change was
-legitimate (the cable was replaced), clicking the `↓` accepts that speed as the
-new normal. The exception is 10 Mbps: it is never an installation decision and
-cannot be accepted as normal.
+one day it negotiates less, an amber **`↓`** appears.
+
+Clicking the connector of a watched port opens its dialog, **"negotiation
+change"**, with the **Negotiated speed**, the **Device reference**, the duplex
+and the errors since the radio booted. **Like this since** says from what
+time it has been negotiating as it does now, and **Before**, how it
+negotiated: another speed or no cable. If the change happened while the app
+was closed, Like this since gives the interval it happened in, for example
+*between 22:10 and 07:45*.
+
+If the change was legitimate (the cable was replaced), under **Expected port
+speed** you pick the new normal speed: 100M, 1G, 2.5G or 10G. 10 Mbps isn't
+offered, because it is never an installation decision.
 
 There are two reading nuances. The **no cable** state shows here and the
 sentinel reports it, but it **does not change the row's color**, because a

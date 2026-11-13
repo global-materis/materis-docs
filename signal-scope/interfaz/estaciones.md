@@ -12,7 +12,7 @@ refrescándose en vivo. En un MikroTik la fila es un radio, como se explica
 |---|---|
 | **Sesión** | El estado de la conexión al radio (SSH, HTTPS o HTTP) y, si está ausente, [qué le pasa](#cuando-un-equipo-se-ausenta). Lleva además las marcas de lo que decidiste sobre ese equipo: sesión apagada, notificaciones silenciadas, notificación de reconexión. Un clic abre la [ventana de sesión](#la-ventana-de-sesion). Una sesión HTTP se pinta en ámbar con un candado abierto, porque en esa red el usuario, la contraseña y las métricas viajan en texto plano. |
 | **Señal · local / remota** | El dato principal. Local es lo que la estación recibe; remota (en gris) es lo que el AP recibe de ella. La barra de medición lleva el color del semáforo. |
-| **Línea base** | El botón **Marcar** fija la señal actual como línea base de esa antena, y la celda pasa a mostrar ese valor (`−58 dBm`) con una **×** para quitarla. Con línea base, el eje de señal juzga cuánto bajó respecto a ella y no el valor absoluto, y el estado se lee **Estable**, **Bajó vs base** o **Revisar enlace**. Para actualizarla, primero se quita con la **×**. Ver [Semáforo y diagnóstico](../diagnostico#linea-base-comparar-contra-tu-propia-red). |
+| **Línea base** | El botón **Marcar** fija la señal actual, local y remota, como línea base de esa antena, y la celda pasa a mostrar los dos valores (`−58 dBm / −61 dBm`) con una **×** para quitarla. Con línea base, el eje de señal juzga cuánto bajó respecto a ella y no el valor absoluto, y el estado se lee **Estable**, **Bajó vs base** o **Revisar enlace**. Para actualizarla, primero se quita con la **×**. Ver [Semáforo y diagnóstico](../diagnostico#linea-base-comparar-contra-tu-propia-red). |
 | **IP** | Un enlace que abre la web del radio, y un botón de **ping** que abre una terminal con ping continuo. |
 | **Latencia** | La latencia del enlace medida por el propio radio hacia su AP. No es un ping desde tu PC; ver [abajo](#latencia-la-media-y-el-pico). |
 | **Sesiones** | Conexiones simultáneas del cliente, contadas por el radio cuando trabaja en modo router. Solo llega por SSH. Es informativa: distingue a un cliente tranquilo de uno con mucho movimiento. |
@@ -363,9 +363,18 @@ Los 100 Mbps no se marcan como problema a propósito, porque muchas
 instalaciones usan Cat5 de forma deliberada. Lo que sí avisa es la
 **degradación frente a su propio historial**. La app aprende la velocidad
 máxima que ese equipo ha negociado y, si un día negocia menos, aparece un
-**`↓` ámbar**. Si el cambio fue legítimo (se cambió el cable), un clic sobre el
-`↓` acepta esa velocidad como la nueva normal. La excepción son los 10 Mbps:
-nunca son una decisión de instalación y no se pueden aceptar como normales.
+**`↓` ámbar**.
+
+Un clic en el conector de un puerto vigilado abre su diálogo, **"cambio de negociación"**, con la
+**Velocidad negociada**, la **Referencia del equipo**, el dúplex y los errores
+desde el arranque del radio. **Así desde** dice desde qué hora negocia como
+ahora, y **Antes**, cómo negociaba: otra velocidad o sin cable. Si el cambio
+ocurrió con la app cerrada, Así desde dice el intervalo en que pasó, por
+ejemplo *entre 22:10 y 07:45*.
+
+Si el cambio fue legítimo (se cambió el cable), en **Velocidad esperada del
+puerto** eliges la nueva velocidad normal: 100M, 1G, 2.5G o 10G. Los 10 Mbps
+no se ofrecen, porque nunca son una decisión de instalación.
 
 Hay dos matices de lectura. El estado **sin cable** se ve aquí y lo avisa el
 centinela, pero **no cambia el color de la fila**, porque un router apagado de

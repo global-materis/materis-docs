@@ -45,14 +45,20 @@ alineación, su cable y sus obstáculos. Es tu criterio, y tiene prioridad sobre
 los otros dos.
 
 Cuando un enlace está **como debe estar**, pulsa **"Marcar"**. La señal de
-ese momento queda como el punto sano de **esa** antena, y desde entonces el
-eje de señal juzga el desvío contra ella (Δ dB) en lugar del valor absoluto.
+ese momento queda como el punto sano de **esa** antena, en sus dos extremos:
+la local, que recibe la estación, y la remota, que su AP recibe de ella. Desde
+entonces el eje de señal juzga el desvío contra la línea base (Δ dB) en lugar
+del valor absoluto, y juzga el extremo que **peor** se aparta de la suya. Así,
+un enlace que cayó solo en un extremo también se nota.
 
 - La línea base es **por antena** y sobrevive a reinicios y cambios de IP.
-- Con línea base, la columna **Línea base** muestra el valor (`−58 dBm`) y una
+- Con línea base, la columna **Línea base** muestra los dos valores
+  (`−58 dBm / −61 dBm`) y una
   **×** (*"Quitar línea base"*). Mientras hay línea base el botón "Marcar" no
   aparece, así que actualizarla (tras un realineamiento, por ejemplo) lleva
   dos gestos: **quitarla con la × y volver a pulsar "Marcar"**.
+- Una línea base que se marcó solo con la señal local, sin la remota, sigue
+  juzgando solo la local. Para sumar la remota, quítala y vuelve a marcar.
 
 ::: tip Marca con el enlace estable
 "Marcar" guarda la lectura **del instante del clic**, sin promediar. Si

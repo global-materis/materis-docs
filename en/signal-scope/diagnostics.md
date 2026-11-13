@@ -45,14 +45,21 @@ right**, with its alignment, its cable and its obstacles. It is your
 criterion, and it takes priority over the other two.
 
 When a link is **the way it should be**, click **"Mark"**. That moment's
-signal becomes **that** antenna's healthy point, and from then on the signal
-axis judges the drift against it (Δ dB) instead of the absolute value.
+signal becomes **that** antenna's healthy point, at both ends: the local one,
+which the station receives, and the remote one, which its AP receives from
+it. From then on the signal axis judges the drift against the baseline (Δ dB)
+instead of the absolute value, and it judges the end that drifts **furthest**
+from its own. That way, a link that dropped at only one end shows up too.
 
 - The baseline is **per antenna** and survives reboots and IP changes.
-- With a baseline, the **Baseline** column shows the value (`−58 dBm`) and an
+- With a baseline, the **Baseline** column shows both values
+  (`−58 dBm / −61 dBm`) and an
   **×** (*"Remove baseline"*). While a baseline is set the "Mark" button is
   not shown, so updating it (after a realignment, for example) takes two
   gestures: **remove it with the × and click "Mark" again**.
+- A baseline marked with only the local signal, without the remote one, keeps
+  judging only the local one. To add the remote one, remove it and mark it
+  again.
 
 ::: tip Mark while the link is stable
 "Mark" stores the reading **at the instant of the click**, without
