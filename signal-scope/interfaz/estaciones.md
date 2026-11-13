@@ -48,6 +48,72 @@ que parece una medición sin serlo no la diría. La lista completa está en
 [Equipos compatibles](../compatibilidad#que-ves-de-un-mikrotik-y-que-no).
 :::
 
+## Estaciones Asistidas
+
+Una estación asistida es una que la app conoce por su AP, sin sesión propia.
+Mientras la app tiene sesión en un AP, lee la lista de estaciones asociadas a
+él. Cada estación de esa lista que el proyecto no tenía aparece en esta tabla
+con el chip **Asistida** en la columna Sesión, sin escanear. Vale para airMAX
+y para MikroTik.
+
+Así ves en la tabla dos tipos de estación que de otro modo faltarían:
+
+- Las que la app no alcanza, por ejemplo las que quedan detrás del router de
+  su AP.
+- Las recién instaladas en campo. Aparecen en cuanto su AP las asocia, y
+  durante sus primeras 24 horas llevan la etiqueta **Nueva** junto al chip.
+
+Para ver solo las asistidas, pulsa la tarjeta **Asistidas** del Monitor.
+Aparece cuando el proyecto tiene alguna.
+
+### Qué muestra la fila
+
+La fila muestra lo que su AP sabe de la estación: la señal, la IP, el nombre y
+los datos del enlace. El semáforo y el centinela la juzgan como a cualquier
+otra estación, con esos datos.
+
+Lo que solo da una sesión en la propia estación queda vacío: la latencia, el
+Link de bajada, PPPoE, CPU, RAM y los puertos. Si su AP solo oye la señal de
+subida, la fila muestra esa, y el tooltip del chip lo dice.
+
+### El chip Asistida
+
+En verde, su AP la lista ahora. Si su AP deja de listarla, el chip pasa a
+**Ausente** y la fila se queda en la tabla, como la de cualquier estación del
+proyecto.
+
+El tooltip del chip dice además si la estación responde en su IP:
+
+| Tooltip | Qué significa |
+|---|---|
+| **"Responde en su IP."** | Hay camino desde tu PC. Puedes iniciar sesión en ella. |
+| **"No responde en su IP: su AP está en modo router y la deja detrás de su red."** | Su AP la oculta tras su propia red. |
+| **"Enlazada a su AP pero no responde en su IP…"** | El enlace está arriba, pero lo que hay detrás puede estar apagado, o su gestión bloqueada. |
+| **"Su AP no informa su IP."** | No hay IP a la que llegar. |
+| **"Sin dato al día…"** | Su AP no está en línea, y lo que ves es lo último que contó. |
+
+### Iniciar sesión en una asistida
+
+Un clic en el chip abre la ventana **Estación asistida**. En la pestaña
+**Conexión** inicias sesión como en cualquier radio. Con sesión, la estación
+pasa a ser una más de la tabla y suma latencia, Link de bajada y PPPoE. Si no
+responde en su IP, puedes intentarlo igual.
+
+Una asistida no ocupa registro de tu plan; al iniciar sesión, sí. Ver
+[Planes](../planes#que-cuenta-como-registro).
+
+En la pestaña **Acciones** puedes silenciar sus notificaciones, pedir que te
+avise cuando vuelva, o **Olvidar equipo**. Si su AP la sigue listando después
+de olvidarla, vuelve a aparecer.
+
+### Móviles y PC
+
+Los AP también listan clientes que no son radios, como móviles y PC. Aparecen
+como asistidas, pero no admiten sesión. El centinela solo los vigila si
+enciendes **Vigilar móviles y PC** en Preferencias → Red.
+
+En un Snapshot, el chip de una asistida dice **Histórico · Asistida**.
+
 ## La celda de Sesión y lo que decidiste
 
 Además del estado de conexión, esta celda lleva las **marcas de lo que

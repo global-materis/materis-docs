@@ -15,8 +15,8 @@ Hay tres causas frecuentes. Revísalas en este orden:
 3. Está detrás de un router. El escaneo lo verá solo si su IP entra en una
    máscara registrada, y llegará sin MAC ("MAC no alcanzable").
 
-Para las estaciones de un AP con sesión hay un atajo mejor: el **radar** de la
-columna Estaciones le pregunta al propio AP y no depende del escaneo.
+Si es la estación de un AP con sesión, no hace falta escanearla: aparece sola
+en Estaciones como [asistida](./interfaz/estaciones#estaciones-asistidas).
 :::
 
 ::: details El escaneo falla con "Sin conexión de red"

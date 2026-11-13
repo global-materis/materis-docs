@@ -48,6 +48,72 @@ The full list is in
 [Supported devices](../supported-devices#what-you-see-from-a-mikrotik-and-what-you-do-not).
 :::
 
+## Assisted Stations
+
+An assisted station is one the app knows through its AP, without a session of
+its own. While the app has a session on an AP, it reads the list of stations
+associated with it. Each station on that list that the project didn't have
+shows up in this table with the **Assisted** chip in the Session column,
+without scanning. It works for airMAX and for MikroTik.
+
+That way the table shows two kinds of station that would otherwise be missing:
+
+- Those the app can't reach, for example the ones behind their AP's router.
+- Those just installed in the field. They show up as soon as their AP
+  associates them, and for their first 24 hours they carry the **New** label
+  next to the chip.
+
+To see only the assisted ones, click the Monitor's **Assisted** card. It
+appears when the project has any.
+
+### What the row shows
+
+The row shows what its AP knows about the station: the signal, the IP, the
+name and the link data. The traffic light and the sentinel judge it like any
+other station, with that data.
+
+What only a session on the station itself provides stays empty: latency,
+downlink Link, PPPoE, CPU, RAM and the ports. If its AP only hears the uplink
+signal, the row shows that one, and the chip's tooltip says so.
+
+### The Assisted chip
+
+In green, its AP lists it right now. If its AP stops listing it, the chip
+turns **Absent** and the row stays in the table, like any station in the
+project.
+
+The chip's tooltip also says whether the station answers at its IP:
+
+| Tooltip | What it means |
+|---|---|
+| **"Answers at its IP."** | There's a path from your PC. You can sign in to it. |
+| **"Doesn't answer at its IP: its AP is in router mode and keeps it behind its network."** | Its AP hides it behind its own network. |
+| **"Linked to its AP but doesn't answer at its IP…"** | The link is up, but what's behind it may be off, or its management blocked. |
+| **"Its AP doesn't report its IP."** | There's no IP to reach. |
+| **"Not current…"** | Its AP is offline, and what you see is the last it reported. |
+
+### Signing in to an assisted station
+
+Clicking the chip opens the **Assisted station** window. In the
+**Connection** tab you sign in as with any radio. With a session, the station
+becomes a regular row in the table and adds latency, downlink Link and PPPoE.
+If it doesn't answer at its IP, you can try anyway.
+
+An assisted station takes no record of your plan; once you sign in, it does.
+See [Plans](../plans#what-counts-as-a-record).
+
+In the **Actions** tab you can mute its notifications, ask to be told when it
+comes back, or **Forget device**. If its AP keeps listing it after you forget
+it, it shows up again.
+
+### Phones and PCs
+
+APs also list clients that aren't radios, such as phones and PCs. They show up
+as assisted, but they take no session. The sentinel only watches them if you
+turn on **Watch phones and PCs** in Preferences → Network.
+
+In a Snapshot, an assisted station's chip reads **Historical · Assisted**.
+
 ## The Session cell and what you decided
 
 Besides the connection state, this cell carries the **marks of what you

@@ -45,19 +45,21 @@ Un AP sin lectura muestra `—` en vez de un verde, porque sin medición no hay
 veredicto. El tooltip del Estado tiene el mismo formato de diagnóstico que el
 de las estaciones: el hecho, su contexto y las causas.
 
-## La celda Estaciones: tres gestos
+## La celda Estaciones: dos gestos
 
 Junto al número de clientes conectados (lo que el AP reporta de sí mismo) hay
-tres controles distintos:
+dos controles:
 
 | Control | Qué hace |
 |---|---|
 | El **número** (enlace) | Filtra la tabla de estaciones a las de este AP. Responde a *"¿quiénes cuelgan de aquí?"*. |
-| El **radar** | Le **pregunta al AP** qué estaciones tiene y agrega a **Detectados** las que el proyecto no conocía. No depende de las redes registradas, así que encuentra antenas en segmentos que el escaneo no alcanza, como una instalación nueva. Funciona igual en **airMAX y en MikroTik**, y al terminar te dice **cuántas son nuevas, cuántas ya tenías y cuáles ve el AP en otra dirección**. |
 | El **ping** | Abre el Ping continuo con las estaciones **registradas** de este AP ya marcadas. El tooltip dice cuántas son antes de abrirlo. |
 
 En la tabla de estaciones existe el camino inverso: la columna AP salta a esta
 fila.
+
+Las estaciones que lista el AP y que el proyecto no tenía aparecen solas en
+Estaciones, como [Estaciones Asistidas](./estaciones#estaciones-asistidas).
 
 ## Las demás columnas
 

@@ -44,18 +44,20 @@ An AP with no reading shows `—` instead of a green, because without a
 measurement there is no verdict. The Status tooltip uses the same diagnosis
 format as the stations: the fact, its context and the causes.
 
-## The Stations cell: three gestures
+## The Stations cell: two gestures
 
 Next to the number of connected clients (what the AP reports about itself)
-there are three distinct controls:
+there are two controls:
 
 | Control | What it does |
 |---|---|
 | The **number** (link) | Filters the stations table to this AP's stations. It answers *"who hangs off here?"*. |
-| The **radar** | **Asks the AP** which stations it has and adds to **Detected** the ones the project didn't know. It does not depend on registered networks, so it finds antennas in segments the scan cannot reach, such as a new install. It works the same on **airMAX and on MikroTik**, and when it finishes it tells you **how many are new, how many you already had, and which ones the AP sees at a different address**. |
 | The **ping** | Opens the continuous Ping with this AP's **registered** stations pre-selected. The tooltip says how many there are before you open it. |
 
 The stations table has the reverse path: its AP column jumps to this row.
+
+The stations the AP lists that the project didn't have show up on their own in
+Stations, as [Assisted Stations](./stations#assisted-stations).
 
 ## The other columns
 

@@ -67,8 +67,8 @@ Signal · chains (both polarities) · noise · SNR · SSID · real frequency and
 channel width · transmit power · model · firmware · CPU · free RAM · uptime ·
 TX/RX traffic · the state of **every** Ethernet port with its speed, duplex and
 the name you gave it · an AP's associated clients · a station's connection time ·
-and the **radar** in the Stations column, which asks the AP who is hanging off it
-so you can register them without scanning.
+and the stations each AP lists, which show up as
+[assisted](./interface/stations#assisted-stations) without scanning.
 
 The following comes out **empty** because RouterOS 6 does not publish it. An
 empty cell tells the truth; an invented number does not.

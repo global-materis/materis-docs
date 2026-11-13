@@ -67,8 +67,8 @@ Señal · cadenas (las dos polaridades) · ruido · SNR · SSID · frecuencia y 
 de canal real · potencia de transmisión · modelo · firmware · CPU · RAM libre ·
 uptime · tráfico TX/RX · estado de **todos** los puertos Ethernet con su
 velocidad, dúplex y el nombre que les hayas puesto · clientes asociados de un
-AP · tiempo de conexión de una estación · y el **radar** de la columna
-Estaciones, que le pregunta al AP quiénes cuelgan de él para darlos de alta sin
+AP · tiempo de conexión de una estación · y las estaciones que lista cada AP,
+que aparecen como [asistidas](./interfaz/estaciones#estaciones-asistidas) sin
 escanear.
 
 Lo siguiente **queda vacío** porque RouterOS 6 no lo publica. Una celda vacía

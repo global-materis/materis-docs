@@ -15,9 +15,9 @@ There are three frequent causes. Check them in this order:
 3. It sits behind a router. The scan will only see it if its IP falls inside a
    registered range, and it will arrive without a MAC ("MAC not reachable").
 
-For the stations of an AP with a session there is a better shortcut: the
-**radar** in the Stations column asks the AP itself and does not depend on the
-scan.
+If it's a station of an AP with a session, you don't need to scan for it: it
+shows up on its own in Stations as
+[assisted](./interface/stations#assisted-stations).
 :::
 
 ::: details The scan fails with "No network connection"
