@@ -114,7 +114,7 @@ between, and it is answered by the radio's CPU, which serves ICMP at the end
 of its queue. Neither one is wrong, and they need not match.
 
 To see both side by side, turn on **"Ping from SignalScope"** under
-Preferences → General → Network probe. The cell then shows both measurements,
+Preferences → Network → Network probe. The cell then shows both measurements,
 and the gap between them is already a diagnosis: the problem may be in the
 network or in the device's CPU, outside the wireless link.
 :::

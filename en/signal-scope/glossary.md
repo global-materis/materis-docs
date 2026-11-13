@@ -210,7 +210,7 @@ icon.
 
 **Ping from SignalScope**: the optional latency measurement the app itself
 takes against each station, on top of the one the radio reports. You turn it
-on under Preferences → General → Network probe, and it helps detect problems
+on under Preferences → Network → Network probe, and it helps detect problems
 that are in the network or in the device's CPU, outside the wireless link.
 
 **Coverage modes**: the three ways of drawing sectors on the Map. **Footprint**

@@ -265,7 +265,7 @@ The tooltip carries the detail: average, peak with its age, and the share of
 time spent over the threshold.
 
 There is an optional third number. With **Ping from SignalScope** switched on
-(Preferences → *General*, *Network probe* section; off by default), the cell
+(Preferences → *Network*, *Network probe* section; off by default), the cell
 adds the ping **from SignalScope** to each online station, with its loss, and
 then reads `2 ms / 57 ms`.
 

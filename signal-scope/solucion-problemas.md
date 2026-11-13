@@ -111,7 +111,7 @@ la CPU del radio, que atiende el ICMP al final de su cola. Ninguno de los dos
 está mal y no tienen por qué coincidir.
 
 Para ver ambos lado a lado, enciende **"Ping desde SignalScope"** en
-Preferencias → General → Sonda de red. La celda muestra entonces las dos
+Preferencias → Red → Sonda de red. La celda muestra entonces las dos
 mediciones, y la diferencia entre ellas ya es un diagnóstico: el problema
 puede estar en la red o en la CPU del equipo, fuera del enlace inalámbrico.
 :::

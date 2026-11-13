@@ -3,6 +3,73 @@
 The app's **What's new** view sums up each version in headlines. Here is the
 detail, with links to each feature's guide.
 
+## 1.4.0 · November 2026
+
+**Topology.** A third view, next to the Monitor and the Map, showing the
+network the way it hangs together: each AP with its stations, the referents
+and the links between them. The layout is saved in the project. A selector
+narrows it to the devices of one Map node. In **Edit** mode (Ctrl+E) you wire
+links by picking the interface at each end, add clouds, unmanaged devices and
+annotations, and align several devices at once. The view downloads as a PNG
+or JPEG image.
+
+**Starter, Expansion and Advanced plans.** Without a license, the app runs as
+**Starter**: free, with no expiry, up to 45 records (APs, Stations and
+Referents) and one Map node, without Topology or Snapshots. **Expansion**
+raises that to 200 records and has a trial; **Advanced**, to 500. The local
+30-day trial is gone. **Full Access** licenses bought before the plans keep
+everything, with no limits. A project already over your plan's limit still
+opens: the limit only stops you from adding more.
+
+**[Assisted Stations](./interface/stations).** Stations your AP lists but
+the app can't reach—for example, behind their AP's router—show up in Stations
+with the **Assisted** chip, their signal and their status, without scanning.
+They don't count toward your plan and stay in the table even if their AP
+stops listing them. One its AP listed for the first time less than 24 hours
+ago carries the **New** label. The Monitor's **Assisted** card filters the
+table down to them. Phones and PCs your APs list show up too; the sentinel
+only watches them if you turn on **Watch phones and PCs** in Preferences →
+Network.
+
+**[New sentinel alerts](./sentinel).** **Node down**: all the APs of a node
+go down at once, and you get one alert for the node. **AP without stations**:
+the AP answers, but has had none of its stations for more than two minutes.
+**Unstable session**: three drops in ten minutes. **AP misaligned**: most of
+its stations fall outside what their distance or baseline allows.
+
+**Power cut.** The bell tells you when several devices reboot at once, and
+whether it was the tower, a group of clients whose AP stayed on, or a single
+AP. The app works it out from each device's uptime, not from its connection.
+
+**Tables filtered by their alerts.** Each Monitor table has a row of chips
+with the sentinel's alerts and how many devices have each one; clicking one
+filters the table. At the end of that row, **Hide switched off** hides the
+sessions switched off, separately in Stations and in APs.
+
+**Baseline for both ends.** **Mark** pins the station's local and remote
+signal at once.
+
+**One bar for all three views.** Monitor, Map and Topology share the top bar,
+and you can view a Snapshot in any of them. Continuous ping, Traceroute and
+the Speed test minimize to a pill on that bar.
+
+**Projects in their own folder.** A new project, or one saved with **Save
+as**, lives in its own folder. In Preferences → Snapshots, **Archive the
+oldest when full** saves the oldest Snapshot as a `.ssnap` in that folder when
+the history is full, instead of losing it.
+
+**Since when a port negotiates like this.** A port's dialog tells you since
+what time it has negotiated as it does now, and what it had before. If it
+changed while the app was closed, it gives the interval in which it happened.
+
+**Preferences, rearranged.** The network probe, the internet check and the
+sentinel settings move to the **Network** tab. In **Alerts**, what reaches
+the desktop and the notifications you ask for sit in tabs.
+
+**[New shortcuts](./shortcuts).** Ctrl+T goes to Topology and back, Ctrl+Tab
+cycles through the views, and Ctrl+← / Ctrl+→ scroll the table you're looking
+at sideways.
+
 ## 1.3.0 · September 2026
 
 **[MikroTik RouterOS](./supported-devices).** MikroTik devices connect like

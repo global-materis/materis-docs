@@ -3,6 +3,75 @@
 La vista **Novedades** de la app resume cada versión en titulares. Aquí está
 el detalle, con enlaces a la guía de cada función.
 
+## 1.4.0 · Noviembre 2026
+
+**Topología.** Una tercera vista, junto al Monitor y el Mapa, con la red tal
+como cuelga: cada AP con sus estaciones, los referentes y los enlaces entre
+ellos. La disposición se guarda en el proyecto. Un selector la reduce a los
+equipos de un nodo del Mapa. En **Edición** (Ctrl+E) cableas eligiendo la
+interfaz de cada extremo, añades clouds, equipos no gestionables y
+anotaciones, y alineas varios equipos a la vez. La vista se descarga como
+imagen PNG o JPEG.
+
+**Planes Starter, Expansion y Advanced.** Sin licencia, la app entra en
+**Starter**: gratis, sin vencimiento, con hasta 45 registros (AP, Estaciones y
+Referentes) y un nodo en el Mapa, sin Topología ni Snapshots. **Expansion**
+sube a 200 registros y tiene una versión de prueba; **Advanced**, a 500. La
+versión de prueba local de 30 días ya no existe. Las licencias **Full Access**
+compradas antes de los planes conservan todo, sin topes. Un proyecto que ya
+pasa del tope de tu plan se abre igual: el tope solo impide añadir.
+
+**[Estaciones Asistidas](./interfaz/estaciones).** Las estaciones que tu AP
+lista y la app no alcanza —por ejemplo, detrás del router de su AP— aparecen
+en Estaciones con el chip **Asistida**, su señal y su estado, sin escanear.
+No cuentan en tu plan y siguen en la tabla aunque su AP deje de listarlas.
+Una que su AP listó por primera vez hace menos de 24 horas lleva la etiqueta
+**Nueva**. La tarjeta **Asistidas** del Monitor filtra la tabla a ellas. Los
+móviles y PC que listan tus AP también aparecen; el centinela solo los vigila
+si activas **Vigilar móviles y PC** en Preferencias → Red.
+
+**[Nuevos avisos del centinela](./centinela).** **Nodo caído**: todos los AP
+de un nodo caen a la vez, y se avisa una vez por el nodo. **AP sin
+estaciones**: el AP responde, pero se quedó sin ninguna estación durante más
+de dos minutos. **Sesión inestable**: tres cortes en diez minutos. **AP
+desalineada**: la mayoría de sus estaciones salen fuera de lo que su
+distancia o su línea base permiten.
+
+**Corte de luz.** La campana avisa cuando varios equipos se reinician a la
+vez, y distingue si fue la torre, un grupo de clientes cuyo AP siguió
+encendido o un solo AP. La app lo deduce del tiempo de actividad de cada equipo, no de su
+conexión.
+
+**Tablas que se filtran por sus avisos.** Cada tabla del Monitor tiene una
+fila de chips con los avisos del centinela y cuántos equipos tiene cada uno;
+pulsar uno filtra la tabla. Al final de esa fila, **Ocultar apagadas** esconde
+las sesiones apagadas, por separado en Estaciones y en AP.
+
+**Línea base de los dos extremos.** **Marcar** fija a la vez la señal local y
+la remota de la estación.
+
+**Una barra común para las tres vistas.** Monitor, Mapa y Topología comparten
+la barra superior, y un Snapshot se mira en cualquiera de las tres. El Ping
+continuo, el Traceroute y la Prueba de velocidad se minimizan a una píldora
+en esa barra.
+
+**Proyectos en su carpeta.** Un proyecto nuevo, o uno guardado con
+**Guardar como**, vive en su propia carpeta. En Preferencias → Snapshots,
+**Archivar el más viejo al llenarse** guarda como `.ssnap` en esa carpeta el
+Snapshot más viejo cuando el historial está lleno, en lugar de perderlo.
+
+**Desde cuándo negocia así un puerto.** El diálogo de un puerto dice desde
+qué hora negocia como ahora y qué tenía antes. Si cambió con la app cerrada,
+dice el intervalo en que ocurrió.
+
+**Preferencias, reordenadas.** La sonda de red, la comprobación de internet y
+los ajustes del centinela pasan a la pestaña **Red**. En **Alertas**, lo que
+sale al escritorio y las notificaciones que pides van en pestañas.
+
+**[Atajos nuevos](./atajos).** Ctrl+T va a la Topología y vuelve,
+Ctrl+Tab recorre las vistas y Ctrl+← / Ctrl+→ desplazan en horizontal la
+tabla que miras.
+
 ## 1.3.0 · Septiembre 2026
 
 **[MikroTik RouterOS](./compatibilidad).** Los equipos MikroTik se conectan

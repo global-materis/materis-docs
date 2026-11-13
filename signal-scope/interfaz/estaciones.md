@@ -263,7 +263,7 @@ El tooltip trae el detalle: media, pico con su antigüedad y el porcentaje del
 tiempo por encima del umbral.
 
 Hay un tercer número opcional. Con **Ping desde SignalScope** encendido
-(Preferencias → *General*, apartado *Sonda de red*; viene apagado), la celda
+(Preferencias → *Red*, apartado *Sonda de red*; viene apagado), la celda
 suma el ping **desde SignalScope** hasta cada estación en línea, con su
 pérdida, y pasa a leerse `2 ms / 57 ms`.
 

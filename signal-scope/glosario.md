@@ -205,7 +205,7 @@ el clic derecho en su icono de la bandeja.
 
 **Ping desde SignalScope**: la medición opcional de latencia que hace la
 propia app contra cada estación, además de la que reporta el radio. Se
-enciende en Preferencias → General → Sonda de red y sirve para detectar
+enciende en Preferencias → Red → Sonda de red y sirve para detectar
 problemas que están en la red o en la CPU del equipo, fuera del enlace
 inalámbrico.
 
