@@ -14,10 +14,15 @@ They work across the whole panel, and **F1** lists them inside the app:
 | `Ctrl+Space` | Freeze / resume the tables' live refresh |
 | `Ctrl+A` | Register a device manually by its IP |
 | `Ctrl+H` | Save a Snapshot of the current state |
-| `Ctrl+M` | Switch between the Monitor and the coverage Map |
+| `Ctrl+0` … `Ctrl+9` | View the Snapshot with that number in the list; `Ctrl+0` goes back to live |
+| `Ctrl+M` | Go to the coverage Map; from the Map, back to the Monitor |
+| `Ctrl+T` | Go to the [Topology](./topology); from the Topology, back to the Monitor |
+| `Ctrl+Tab` / `Ctrl+Shift+Tab` | Move to the next / previous view: Monitor, Map, Topology |
+| `Ctrl+Shift+↑` | Scroll to the top of the page |
 | `Ctrl+K` | **Global search** for devices (see below) |
 | `Ctrl+F` | Browser find on screen (highlights, does not filter) |
 | `Ctrl+↓` / `Ctrl+↑` | Jump to the next / previous table, with the cursor in its search box |
+| `Ctrl+←` / `Ctrl+→` | Scroll the columns of the table you're looking at left / right |
 | `Tab` | From a table's search box, each row's short path: IP, name and its AP |
 | `← ↑ ↓ →` | Inside a table: ←→ walk every action in the row; ↑↓ move between rows, headers (Enter sorts), search box and columns menu |
 | `Esc` | In layers (see below) |
@@ -85,7 +90,6 @@ Every question has its click, no manual hunting:
 | A **sentinel alert** | the card | straight to the device (clearing the filter so it is not hidden) |
 | A **notification in the bell** | the line | to the device that notification was about |
 | A **Windows notification** | the toast | opens the app **on the device that caused it**, inside its project |
-| The notification from an AP that added new stations to Detected | **"View in Detected"** | to the Detected table |
 
 ## Direct access on the rows
 
@@ -116,6 +120,20 @@ Every question has its click, no manual hunting:
   a node** or **annotate the position** of a MikroTik station.
 
 Each gesture is covered in detail in [Coverage map](./interface/map#searching-and-moving-around).
+
+## In the Topology
+
+| Shortcut | Action |
+|---|---|
+| `Ctrl+E` | Enter and leave Edit mode |
+| `Ctrl+drag` | In View: move a device aside for a moment to see better; it isn't saved |
+| `Ctrl+click` / `Ctrl+drag` | In Edit: mark several devices, one by one or with a box, to move or align them together |
+| `Ctrl+C` / `Ctrl+V` | In Edit: copy and paste clouds, unmanaged devices and annotations |
+| `Ctrl+B` | In Edit: clone the selection in one step |
+| `Del` | In Edit: delete the selection (clouds, unmanaged devices and annotations) |
+| `Ctrl+Z` / `Ctrl+Y` | In Edit: undo / redo canvas changes |
+
+The details are in [Topology](./topology#editing-the-layout).
 
 ## Three diagnosis routes, chained
 

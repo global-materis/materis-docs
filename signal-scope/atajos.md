@@ -14,10 +14,15 @@ Funcionan en todo el panel, y dentro de la app los lista **F1**:
 | `Ctrl+Espacio` | Congelar / reanudar el refresco de las tablas |
 | `Ctrl+A` | Registrar un equipo a mano por su IP |
 | `Ctrl+H` | Guardar un Snapshot del estado actual |
-| `Ctrl+M` | Cambiar entre el Monitor y el Mapa de cobertura |
+| `Ctrl+0` … `Ctrl+9` | Ver el Snapshot de ese número en la lista; `Ctrl+0` vuelve a en vivo |
+| `Ctrl+M` | Ir al Mapa de cobertura; desde el Mapa, volver al Monitor |
+| `Ctrl+T` | Ir a la [Topología](./topologia); desde la Topología, volver al Monitor |
+| `Ctrl+Tab` / `Ctrl+Shift+Tab` | Pasar a la vista siguiente / anterior: Monitor, Mapa, Topología |
+| `Ctrl+Shift+↑` | Subir al inicio de la página |
 | `Ctrl+K` | **Buscador general** de equipos (ver abajo) |
 | `Ctrl+F` | Búsqueda del navegador en pantalla (resalta, no filtra) |
 | `Ctrl+↓` / `Ctrl+↑` | Saltar a la tabla siguiente / anterior, con el cursor en su buscador |
+| `Ctrl+←` / `Ctrl+→` | Desplazar a la izquierda / derecha las columnas de la tabla que estás mirando |
 | `Tab` | Desde el buscador de una tabla, el camino corto de cada fila: IP, nombre y su AP |
 | `← ↑ ↓ →` | Dentro de una tabla: ←→ recorren todas las acciones de la fila; ↑↓ suben y bajan entre filas, encabezados (Enter ordena), buscador y menú de columnas |
 | `Esc` | Por capas (ver abajo) |
@@ -86,7 +91,6 @@ Cada pregunta tiene su clic, sin buscar a mano:
 | Una **alerta del centinela** | la tarjeta | va directo al equipo (y limpia el filtro para que no quede oculto) |
 | Una **notificación de la campana** | la línea | al equipo del que hablaba esa notificación |
 | Una **notificación de Windows** | la notificación | abre la app **en el equipo que lo causó**, dentro de su proyecto |
-| La notificación de un AP que añadió estaciones nuevas a Detectados | **«Ver en Detectados»** | a la tabla Detectados |
 
 ## Accesos directos en las filas
 
@@ -115,6 +119,20 @@ Cada pregunta tiene su clic, sin buscar a mano:
   un nodo** o **anotar la posición** de una estación MikroTik.
 
 El detalle de cada gesto está en [Mapa de cobertura](./interfaz/mapa#buscar-y-moverse).
+
+## En la Topología
+
+| Atajo | Acción |
+|---|---|
+| `Ctrl+E` | Entrar en la Edición y salir de ella |
+| `Ctrl+arrastrar` | En Vista: apartar un equipo un momento para ver mejor; no se guarda |
+| `Ctrl+clic` / `Ctrl+arrastrar` | En Edición: marcar varios equipos, uno a uno o con un recuadro, para moverlos o alinearlos juntos |
+| `Ctrl+C` / `Ctrl+V` | En Edición: copiar y pegar clouds, no gestionables y anotaciones |
+| `Ctrl+B` | En Edición: clonar lo elegido en un solo paso |
+| `Supr` | En Edición: borrar lo elegido (clouds, no gestionables y anotaciones) |
+| `Ctrl+Z` / `Ctrl+Y` | En Edición: deshacer / rehacer los cambios del lienzo |
+
+El detalle está en [Topología](./topologia#editar-el-diseno).
 
 ## Tres rutas de diagnóstico, encadenadas
 
