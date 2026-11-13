@@ -25,7 +25,7 @@ plans. It has no limits and includes everything Advanced does.
 
 ## What counts as a record
 
-Each row in the **Access points**, **Stations** and **Referents** tables
+Each row in the **Access points**, **Stations** and **References** tables
 takes one record. A device with two radios takes two, because it has one row
 per radio.
 
@@ -53,7 +53,7 @@ and the **Snapshots** selector in the top bar, and on **Snapshots** and
 When the project fills its records, the app won't add another. The sign-in
 window for a new radio says so before you try: **"You've reached your plan's
 limit of 45 records."** (with your plan's number). If you try anyway, or move
-a device to Referents, the **"Your plan's limit"** notice appears, with a
+a device to References, the **"Your plan's limit"** notice appears, with a
 **See plans** link. On Starter you can't register a second Map node either,
 and the app tells you your plan allows one node.
 

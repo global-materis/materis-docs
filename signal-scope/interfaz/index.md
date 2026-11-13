@@ -8,8 +8,10 @@ Cada parte tiene su página:
 - [Puntos de acceso](./puntos-de-acceso): tus estaciones base.
 - [Detectados y Referentes](./detectados-y-otros): la cola del escaneo y el
   inventario de lo que no gestionas pero miras para contrastar.
-- [Mapa de cobertura](./mapa): la otra vista principal, con nodos, sectores y
-  estaciones sobre el mapa.
+- [Mapa de cobertura](./mapa): la segunda vista principal, con nodos, sectores
+  y estaciones sobre el mapa.
+- [Topología](../topologia): la tercera vista, con la red dibujada tal como
+  cuelga.
 
 ## El panel de arriba
 

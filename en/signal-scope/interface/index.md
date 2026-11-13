@@ -8,8 +8,10 @@ its own page:
 - [Access points](./access-points): your base stations.
 - [Detected and References](./detected-and-others): the scan queue and the
   inventory of what you do not manage but look at for contrast.
-- [Coverage map](./map): the other main view, with nodes, sectors and stations
-  on the map.
+- [Coverage map](./map): the second main view, with nodes, sectors and
+  stations on the map.
+- [Topology](../topology): the third view, with the network drawn the way it
+  hangs together.
 
 ## The top panel
 

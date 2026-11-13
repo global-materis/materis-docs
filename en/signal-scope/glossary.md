@@ -226,7 +226,7 @@ another computer. Details in [Sharing](./sharing).
 can hold and whether it includes the Topology and Snapshots. Details in
 [Plans](./plans).
 
-**Record**: each row in Access points, Stations or Referents. It is what
+**Record**: each row in Access points, Stations or References. It is what
 counts toward your plan's limit; Assisted Stations don't count.
 
 **License**: your email and key, which activate a paid plan or the Expansion

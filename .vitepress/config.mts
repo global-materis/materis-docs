@@ -39,6 +39,7 @@ export default defineConfig({
                 { text: 'Puntos de acceso', link: '/signal-scope/interfaz/puntos-de-acceso' },
                 { text: 'Detectados y Referentes', link: '/signal-scope/interfaz/detectados-y-otros' },
                 { text: 'Mapa de cobertura', link: '/signal-scope/interfaz/mapa' },
+                { text: 'Topología', link: '/signal-scope/topologia' },
               ],
             },
             {
@@ -104,6 +105,7 @@ export default defineConfig({
                 { text: 'Access points', link: '/en/signal-scope/interface/access-points' },
                 { text: 'Detected and References', link: '/en/signal-scope/interface/detected-and-others' },
                 { text: 'Coverage map', link: '/en/signal-scope/interface/map' },
+                { text: 'Topology', link: '/en/signal-scope/topology' },
               ],
             },
             {

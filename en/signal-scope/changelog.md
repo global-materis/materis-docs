@@ -5,13 +5,13 @@ detail, with links to each feature's guide.
 
 ## 1.4.0 · November 2026
 
-**Topology.** A third view, next to the Monitor and the Map, showing the
-network the way it hangs together: each AP with its stations, the referents
+**[Topology](./topology).** A third view, next to the Monitor and the Map, showing the
+network the way it hangs together: each AP with its stations, the references
 and the links between them. The layout is saved in the project. A selector
 narrows it to the devices of one Map node. In **Edit** mode (Ctrl+E) you wire
 links by picking the interface at each end, add clouds, unmanaged devices and
-annotations, and align several devices at once. The view downloads as a PNG
-or JPEG image.
+annotations, and align several devices at once. The view downloads as a PNG,
+JPEG or SVG image.
 
 **[Assisted Stations](./interface/stations).** Stations your AP lists but
 the app can't reach—for example, behind their AP's router—show up in Stations

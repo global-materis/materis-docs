@@ -5,13 +5,13 @@ el detalle, con enlaces a la guía de cada función.
 
 ## 1.4.0 · Noviembre 2026
 
-**Topología.** Una tercera vista, junto al Monitor y el Mapa, con la red tal
+**[Topología](./topologia).** Una tercera vista, junto al Monitor y el Mapa, con la red tal
 como cuelga: cada AP con sus estaciones, los referentes y los enlaces entre
 ellos. La disposición se guarda en el proyecto. Un selector la reduce a los
 equipos de un nodo del Mapa. En **Edición** (Ctrl+E) cableas eligiendo la
 interfaz de cada extremo, añades clouds, equipos no gestionables y
 anotaciones, y alineas varios equipos a la vez. La vista se descarga como
-imagen PNG o JPEG.
+imagen PNG, JPEG o SVG.
 
 **[Estaciones Asistidas](./interfaz/estaciones).** Las estaciones que tu AP
 lista y la app no alcanza —por ejemplo, detrás del router de su AP— aparecen
