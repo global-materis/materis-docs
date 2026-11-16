@@ -109,8 +109,15 @@ it, it shows up again.
 ### Phones and PCs
 
 APs also list clients that aren't radios, such as phones and PCs. They show up
-as assisted, but they take no session. The sentinel only watches them if you
-turn on **Watch phones and PCs** in Preferences → Network.
+as assisted, but they take no session and **have no traffic light**: their
+signal depends on where the person is, in the living room or in the yard, and
+says nothing about the link. It shows in blue, as a fact, and doesn't count in
+Critical, Attention or the Network score. They take no baseline either.
+
+The sentinel doesn't watch them. If you turn on **Watch phones and PCs** in
+Preferences → Network, you get a notification each time a phone or PC the
+network didn't know connects to one of your APs. The first time an AP is read,
+its clients are recorded without notifying.
 
 In a Snapshot, an assisted station's chip reads **Historical · Assisted**.
 

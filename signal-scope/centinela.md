@@ -251,6 +251,7 @@ Lo que llega a la campana:
 | **Un AP cambió de IP** | La app encontró al AP en su IP nueva y se reconectó sola. En un AP no es lo normal: revisa si su dirección debería ser fija. |
 | **La PC perdió la red** | Tu PC se quedó sin ninguna red activa. Es **una sola notificación** en lugar de una por cada equipo que deja de contestar, y llega otra cuando la red vuelve. |
 | **Corte de luz** | Varios equipos se reiniciaron a la vez. Ver [abajo](#corte-de-luz). |
+| **Se conectó un móvil o una PC nuevos** | Un equipo que no es un radio y que la red no conocía se conectó a uno de tus AP. Solo con **Vigilar móviles y PC** encendido en Preferencias → Red. Ver [Móviles y PC](./interfaz/estaciones#moviles-y-pc). |
 
 Cuáles de estas notificaciones salen también a Windows o a tu mensajería se
 elige en la pestaña **Notificaciones que pides tú**, en **Preferencias →

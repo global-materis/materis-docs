@@ -20,8 +20,9 @@ Siguen en la tabla aunque su AP deje de listarlas. Como el AP ya las aporta
 solo, el **radar** de su fila, que se las preguntaba a mano, se retiró.
 Una que su AP listó por primera vez hace menos de 24 horas lleva la etiqueta
 **Nueva**. La tarjeta **Asistidas** del Monitor filtra la tabla a ellas. Los
-móviles y PC que listan tus AP también aparecen; el centinela solo los vigila
-si activas **Vigilar móviles y PC** en Preferencias → Red.
+móviles y PC que listan tus AP también aparecen, sin semáforo, porque su señal
+depende de dónde estén. Con **Vigilar móviles y PC** (Preferencias → Red) te
+avisa cuando se conecta uno que la red no conocía.
 
 **[Nuevos avisos del centinela](./centinela).** **Nodo caído**: todos los AP
 de un nodo caen a la vez, y se avisa una vez por el nodo. **AP sin

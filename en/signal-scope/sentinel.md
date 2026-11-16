@@ -258,6 +258,7 @@ What reaches the bell:
 | **An AP changed its IP** | The app found the AP at its new IP and reconnected on its own. For an AP that is not normal: check whether its address should be fixed. |
 | **The PC lost its network** | Your PC has no active network. It is **a single notification** instead of one per device that stops answering, and another arrives when the network is back. |
 | **Power outage** | Several devices restarted at once. See [below](#power-outage). |
+| **A new phone or PC connected** | A device that isn't a radio and that the network didn't know connected to one of your APs. Only with **Watch phones and PCs** on in Preferences → Network. See [Phones and PCs](./interface/stations#phones-and-pcs). |
 
 Which of these notifications also go out as Windows notifications or to your
 messaging is chosen in the **Notifications you ask for** tab, in

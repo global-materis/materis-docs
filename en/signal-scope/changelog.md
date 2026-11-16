@@ -20,9 +20,10 @@ They stay in the table even if their AP stops listing them. Since the AP now
 provides them on its own, the **radar** in its row, which asked for them by
 hand, is gone. One its AP listed for the first time less than 24 hours
 ago carries the **New** label. The Monitor's **Assisted** card filters the
-table down to them. Phones and PCs your APs list show up too; the sentinel
-only watches them if you turn on **Watch phones and PCs** in Preferences →
-Network.
+table down to them. Phones and PCs your APs list show up too, with no
+traffic light, because their signal depends on where they are. With **Watch
+phones and PCs** (Preferences → Network) it notifies you when one the network
+didn't know connects.
 
 **[New sentinel alerts](./sentinel).** **Node down**: all the APs of a node
 go down at once, and you get one alert for the node. **AP without stations**:

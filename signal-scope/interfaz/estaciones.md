@@ -109,8 +109,15 @@ de olvidarla, vuelve a aparecer.
 ### Móviles y PC
 
 Los AP también listan clientes que no son radios, como móviles y PC. Aparecen
-como asistidas, pero no admiten sesión. El centinela solo los vigila si
-enciendes **Vigilar móviles y PC** en Preferencias → Red.
+como asistidas, pero no admiten sesión y **no tienen semáforo**: su señal
+depende de dónde esté la persona, en la sala o en el patio, y no dice nada del
+enlace. Se muestra en azul, como dato, y no cuenta en Crítica, en Atención ni
+en la Calificación de la red. Tampoco admiten línea base.
+
+El centinela no los vigila. Si enciendes **Vigilar móviles y PC** en
+Preferencias → Red, recibes una notificación cada vez que se conecta a uno de
+tus AP un móvil o una PC que la red no conocía. La primera vez que se lee un AP,
+sus clientes se registran sin avisar.
 
 En un Snapshot, el chip de una asistida dice **Histórico · Asistida**.
 
