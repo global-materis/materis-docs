@@ -106,17 +106,23 @@ En la pestaña **Acciones** puedes silenciar sus notificaciones, pedir que te
 avise cuando vuelva, o **Olvidar equipo**. Si su AP la sigue listando después
 de olvidarla, vuelve a aparecer.
 
-### Móviles y PC
+### Otros dispositivos
 
-Los AP también listan clientes que no son radios, como móviles y PC. Aparecen
-como asistidas, pero no admiten sesión y **no tienen semáforo**: su señal
-depende de dónde esté la persona, en la sala o en el patio, y no dice nada del
-enlace. Se muestra en azul, como dato, y no cuenta en Crítica, en Atención ni
-en la Calificación de la red. Tampoco admiten línea base.
+Los AP también listan clientes que no son radios: móviles, PC y otros equipos
+con wifi. Aparecen como asistidas, pero no admiten sesión y **no tienen
+semáforo**: su señal depende de dónde esté la persona, en la sala o en el
+patio, y no dice nada del enlace. Se muestra en azul, como dato, y no cuenta en
+Crítica, en Atención ni en la Calificación de la red. Tampoco admiten línea
+base.
 
-El centinela no los vigila. Si enciendes **Vigilar móviles y PC** en
+Su ventana solo informa: la IP, el AP que lo ve, su señal, desde cuándo lo
+conoce la red y el fabricante. Si su MAC es **privada** —la que inventa un
+móvil para no ser rastreado—, la ventana lo dice: no tiene fabricante, y si el
+equipo la cambia, la red lo verá como nuevo.
+
+El centinela no los vigila. Si enciendes **Vigilar otros dispositivos** en
 Preferencias → Red, recibes una notificación cada vez que se conecta a uno de
-tus AP un móvil o una PC que la red no conocía. La primera vez que se lee un AP,
+tus AP un dispositivo que la red no conocía. La primera vez que se lee un AP,
 sus clientes se registran sin avisar.
 
 En un Snapshot, el chip de una asistida dice **Histórico · Asistida**.
@@ -172,8 +178,8 @@ la app). La celda de Sesión muestra tu etiqueta en lugar de «Ausente».
 
 Marcas el equipo y la app te avisa cuando vuelva a conectarse, en uno de dos
 modos: **Una vez**, que avisa y se quita solo, o **Siempre**, que avisa en cada
-caída y vuelta hasta que lo quites. Si el equipo está silenciado, la notificación
-espera a que reactives sus notificaciones. El detalle está en
+caída y vuelta hasta que lo quites. Mientras el equipo está silenciado, su
+vuelta no se avisa. El detalle está en
 [Centinela](../centinela#avisar-la-reconexion).
 
 ### Cuando la app necesita que intervengas

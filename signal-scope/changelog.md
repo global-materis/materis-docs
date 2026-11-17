@@ -20,9 +20,16 @@ Siguen en la tabla aunque su AP deje de listarlas. Como el AP ya las aporta
 solo, el **radar** de su fila, que se las preguntaba a mano, se retiró.
 Una que su AP listó por primera vez hace menos de 24 horas lleva la etiqueta
 **Nueva**. La tarjeta **Asistidas** del Monitor filtra la tabla a ellas. Los
-móviles y PC que listan tus AP también aparecen, sin semáforo, porque su señal
-depende de dónde estén. Con **Vigilar móviles y PC** (Preferencias → Red) te
-avisa cuando se conecta uno que la red no conocía.
+móviles, PC y otros dispositivos que listan tus AP también aparecen, sin
+semáforo, porque su señal depende de dónde estén. Con **Vigilar otros
+dispositivos** (Preferencias → Red) te avisa cuando se conecta uno que la red
+no conocía.
+
+**[Avisar cuando vuelve un equipo caído](./centinela#avisar-la-reconexion).**
+Un interruptor nuevo en Preferencias → Red avisa de la vuelta de todo equipo
+que el centinela dio por caído, sin marcarlos uno por uno. La vuelta la decide
+el centinela también para los equipos marcados: un corte de pocos segundos ya
+no avisa.
 
 **[Nuevos avisos del centinela](./centinela).** **Nodo caído**: todos los AP
 de un nodo caen a la vez, y se avisa una vez por el nodo. **AP sin

@@ -106,18 +106,24 @@ In the **Actions** tab you can mute its notifications, ask to be told when it
 comes back, or **Forget device**. If its AP keeps listing it after you forget
 it, it shows up again.
 
-### Phones and PCs
+### Other devices
 
-APs also list clients that aren't radios, such as phones and PCs. They show up
-as assisted, but they take no session and **have no traffic light**: their
-signal depends on where the person is, in the living room or in the yard, and
-says nothing about the link. It shows in blue, as a fact, and doesn't count in
-Critical, Attention or the Network score. They take no baseline either.
+APs also list clients that aren't radios: phones, PCs and other Wi-Fi devices.
+They show up as assisted, but they take no session and **have no traffic
+light**: their signal depends on where the person is, in the living room or in
+the yard, and says nothing about the link. It shows in blue, as a fact, and
+doesn't count in Critical, Attention or the Network score. They take no
+baseline either.
 
-The sentinel doesn't watch them. If you turn on **Watch phones and PCs** in
-Preferences → Network, you get a notification each time a phone or PC the
-network didn't know connects to one of your APs. The first time an AP is read,
-its clients are recorded without notifying.
+Their window only informs: the IP, the AP that sees it, its signal, how long
+the network has known it and the manufacturer. If its MAC is **private** —the
+one a phone makes up to avoid being tracked—, the window says so: it has no
+manufacturer, and if the device changes it, the network will see it as new.
+
+The sentinel doesn't watch them. If you turn on **Watch other devices** in
+Preferences → Network, you get a notification each time a device the network
+didn't know connects to one of your APs. The first time an AP is read, its
+clients are recorded without notifying.
 
 In a Snapshot, an assisted station's chip reads **Historical · Assisted**.
 
@@ -172,8 +178,8 @@ says it). The Session cell shows your label instead of "Absent".
 
 You mark the device and the app tells you when it reconnects, in one of two
 modes: **Once**, which notifies and clears itself, or **Always**, which
-notifies on every drop and recovery until you remove it. If the device is
-muted, the notification waits until you unmute it. Details in
+notifies on every drop and recovery until you remove it. While the device is
+muted, its return is not notified. Details in
 [Sentinel](../sentinel#notify-on-reconnection).
 
 ### When the app needs you to step in

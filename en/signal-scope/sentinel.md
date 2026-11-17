@@ -182,6 +182,12 @@ the card states the mode and one click on it **removes** it.
 | **Once** | A customer went down, you leave to deal with something else and want to know it came back. It notifies once and **clears itself**. |
 | **Always** | For the device you want to watch continuously: it notifies **on every drop and recovery**, until you remove it. |
 
+**The sentinel decides the return**: the same one that confirms the drop
+resolves the return. A cut of a few seconds, which the sentinel never takes as
+a drop, does not notify. If what dropped was its AP, the station notifies on
+its return too. And if the device was already down when the app opened, it
+notifies the first time it answers again.
+
 The permanent mode does not turn into noise thanks to the **cycle**, with no
 need for a minimum time between notifications. After notifying it goes back to
 waiting for a drop, so to sound again the device has to genuinely drop again.
@@ -197,6 +203,13 @@ Three details prevent false expectations:
   whose first reply has not arrived. The card says which of the three it is.
 - **It is lost when you forget the radio or remove the target**, because it
   travels with its record.
+
+To be notified about **every** device without marking them one by one, turn
+on **Notify when a fallen device comes back** in **Preferences → Network**. It
+notifies the return of every drop that had its own notification: an AP, a
+station or a Referent. Stations that dropped with their AP don't repeat it:
+they come back with it. A muted device doesn't notify, and a marked one
+notifies only once.
 
 The output is governed by the **"Came back online"** switch, found in
 **Preferences → Alerts** for Windows and in **Preferences → Messaging** for
@@ -252,13 +265,13 @@ What reaches the bell:
 
 | Notification | When |
 |---|---|
-| **Came back online** | A device you set [Notify on reconnection](#notify-on-reconnection) on came back. |
+| **Came back online** | A device you set [Notify on reconnection](#notify-on-reconnection) on came back, or any device with **Notify when a fallen device comes back** on. |
 | **Needs your attention** | The app paused a session it cannot solve on its own: unknown IP, account rejected or possible replacement. See [what to do](./interface/stations#when-the-app-needs-you-to-step-in). |
 | **A labeled device came back** | A device with a [reason for absence](./interface/stations#reason-for-absence) came back; the label clears itself. |
 | **An AP changed its IP** | The app found the AP at its new IP and reconnected on its own. For an AP that is not normal: check whether its address should be fixed. |
 | **The PC lost its network** | Your PC has no active network. It is **a single notification** instead of one per device that stops answering, and another arrives when the network is back. |
 | **Power outage** | Several devices restarted at once. See [below](#power-outage). |
-| **A new phone or PC connected** | A device that isn't a radio and that the network didn't know connected to one of your APs. Only with **Watch phones and PCs** on in Preferences → Network. See [Phones and PCs](./interface/stations#phones-and-pcs). |
+| **A new device connected** | A device that isn't a radio and that the network didn't know connected to one of your APs. Only with **Watch other devices** on in Preferences → Network. See [Other devices](./interface/stations#other-devices). |
 
 Which of these notifications also go out as Windows notifications or to your
 messaging is chosen in the **Notifications you ask for** tab, in

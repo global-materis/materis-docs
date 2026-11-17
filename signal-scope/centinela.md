@@ -178,6 +178,12 @@ puesto, la tarjeta dice el modo y un clic en ella lo **quita**.
 | **Una vez** | Se cayó un cliente, sales a atender otra cosa y quieres enterarte de que volvió. Avisa una vez y **se quita solo**. |
 | **Siempre** | Para el equipo que quieres vigilar de continuo: avisa **en cada caída y vuelta**, hasta que lo quites. |
 
+**La vuelta la decide el centinela**: el mismo que confirma la caída es el
+que da por resuelta la vuelta. Un corte de pocos segundos, que el centinela no
+llega a dar por caída, no avisa. Si lo que cayó fue su AP, la estación también
+avisa al volver. Y si el equipo ya estaba caído al abrir la app, avisa la
+primera vez que vuelva a responder.
+
 El modo permanente no se vuelve ruido gracias al **ciclo**, sin necesidad de
 un tiempo mínimo entre notificaciones. Después de avisar vuelve a esperar la caída,
 así que para sonar otra vez el equipo tiene que caerse otra vez de verdad.
@@ -194,6 +200,12 @@ Tres detalles evitan expectativas falsas:
   tres casos es.
 - **Se pierde al olvidar el radio o retirar el destino**, porque viaja con su
   ficha.
+
+Para que avise de **todos** los equipos sin marcarlos uno por uno, enciende
+**Avisar cuando vuelve un equipo caído** en **Preferencias → Red**. Avisa de la
+vuelta de toda caída que tuvo su propio aviso: un AP, una estación o un
+Referente. La de las estaciones que cayeron con su AP no se repite: vuelven con
+él. Un equipo silenciado no avisa, y uno marcado avisa una sola vez.
 
 La salida se gobierna con el interruptor **"Volvió a conectarse"**, que está
 en **Preferencias → Alertas** para Windows y en **Preferencias → Mensajería**
@@ -245,13 +257,13 @@ Lo que llega a la campana:
 
 | Notificación | Cuándo |
 |---|---|
-| **Volvió a conectarse** | Volvió un equipo al que le pusiste [Avisar la reconexión](#avisar-la-reconexion). |
+| **Volvió a conectarse** | Volvió un equipo al que le pusiste [Avisar la reconexión](#avisar-la-reconexion), o cualquiera con **Avisar cuando vuelve un equipo caído** encendido. |
 | **Requiere tu intervención** | La app pausó una sesión que no puede resolver sola: IP desconocida, cuenta rechazada o posible reemplazo. Ver [qué hacer](./interfaz/estaciones#cuando-la-app-necesita-que-intervengas). |
 | **Volvió un equipo etiquetado** | Volvió un equipo con [motivo de la ausencia](./interfaz/estaciones#motivo-de-la-ausencia); la etiqueta se quita sola. |
 | **Un AP cambió de IP** | La app encontró al AP en su IP nueva y se reconectó sola. En un AP no es lo normal: revisa si su dirección debería ser fija. |
 | **La PC perdió la red** | Tu PC se quedó sin ninguna red activa. Es **una sola notificación** en lugar de una por cada equipo que deja de contestar, y llega otra cuando la red vuelve. |
 | **Corte de luz** | Varios equipos se reiniciaron a la vez. Ver [abajo](#corte-de-luz). |
-| **Se conectó un móvil o una PC nuevos** | Un equipo que no es un radio y que la red no conocía se conectó a uno de tus AP. Solo con **Vigilar móviles y PC** encendido en Preferencias → Red. Ver [Móviles y PC](./interfaz/estaciones#moviles-y-pc). |
+| **Se conectó un dispositivo nuevo** | Un equipo que no es un radio y que la red no conocía se conectó a uno de tus AP. Solo con **Vigilar otros dispositivos** encendido en Preferencias → Red. Ver [Otros dispositivos](./interfaz/estaciones#otros-dispositivos). |
 
 Cuáles de estas notificaciones salen también a Windows o a tu mensajería se
 elige en la pestaña **Notificaciones que pides tú**, en **Preferencias →
