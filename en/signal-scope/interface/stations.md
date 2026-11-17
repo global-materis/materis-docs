@@ -116,9 +116,9 @@ doesn't count in Critical, Attention or the Network score. They take no
 baseline either.
 
 Their window only informs: the IP, the AP that sees it, its signal, how long
-the network has known it and the manufacturer. If its MAC is **private** —the
-one a phone makes up to avoid being tracked—, the window says so: it has no
-manufacturer, and if the device changes it, the network will see it as new.
+the network has known it and the manufacturer. A phone with a private MAC —the
+one it makes up to avoid being tracked— shows no manufacturer, and if it
+changes it, the network will see it as new.
 
 The sentinel doesn't watch them. If you turn on **Watch other devices** in
 Preferences → Network, you get a notification each time a device the network

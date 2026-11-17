@@ -116,9 +116,9 @@ Crítica, en Atención ni en la Calificación de la red. Tampoco admiten línea
 base.
 
 Su ventana solo informa: la IP, el AP que lo ve, su señal, desde cuándo lo
-conoce la red y el fabricante. Si su MAC es **privada** —la que inventa un
-móvil para no ser rastreado—, la ventana lo dice: no tiene fabricante, y si el
-equipo la cambia, la red lo verá como nuevo.
+conoce la red y el fabricante. Un móvil con MAC privada —la que inventa para no
+ser rastreado— no muestra fabricante, y si la cambia, la red lo verá como
+nuevo.
 
 El centinela no los vigila. Si enciendes **Vigilar otros dispositivos** en
 Preferencias → Red, recibes una notificación cada vez que se conecta a uno de

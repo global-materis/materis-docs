@@ -205,7 +205,9 @@ Para que avise de **todos** los equipos sin marcarlos uno por uno, enciende
 **Avisar cuando vuelve un equipo caído** en **Preferencias → Red**. Avisa de la
 vuelta de toda caída que tuvo su propio aviso: un AP, una estación o un
 Referente. La de las estaciones que cayeron con su AP no se repite: vuelven con
-él. Un equipo silenciado no avisa, y uno marcado avisa una sola vez.
+él. Un equipo silenciado no avisa. Mientras está encendido, **Avisar la
+reconexión** desaparece de las Acciones de cada equipo, porque ya avisa de
+todos; los que marcaste conservan su modo y vuelven a verse al apagarlo.
 
 La salida se gobierna con el interruptor **"Volvió a conectarse"**, que está
 en **Preferencias → Alertas** para Windows y en **Preferencias → Mensajería**

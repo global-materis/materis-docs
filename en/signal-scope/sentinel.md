@@ -208,8 +208,10 @@ To be notified about **every** device without marking them one by one, turn
 on **Notify when a fallen device comes back** in **Preferences → Network**. It
 notifies the return of every drop that had its own notification: an AP, a
 station or a Referent. Stations that dropped with their AP don't repeat it:
-they come back with it. A muted device doesn't notify, and a marked one
-notifies only once.
+they come back with it. A muted device doesn't notify. While it's on,
+**Notify on reconnection** disappears from each device's Actions, since it
+already notifies about all of them; the ones you marked keep their mode and
+show again when you turn it off.
 
 The output is governed by the **"Came back online"** switch, found in
 **Preferences → Alerts** for Windows and in **Preferences → Messaging** for
