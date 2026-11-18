@@ -40,8 +40,8 @@ router going down, and the network coming back is no longer notified.
 **[New sentinel alerts](./sentinel).** **Node down**: all the APs of a node
 go down at once, and you get one alert for the node. **AP without stations**:
 the AP answers, but has had none of its stations for more than two minutes.
-**Unstable session**: three drops in ten minutes. **AP misaligned**: most of
-its stations fall outside what their distance or baseline allows.
+**Unstable session**: three drops in ten minutes. **AP misaligned**: all of
+its connected stations fall outside what their distance or baseline allows.
 
 **Power cut.** The bell tells you when several devices reboot at once, and
 whether it was the tower, a group of clients whose AP stayed on, or a single

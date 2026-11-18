@@ -41,7 +41,7 @@ principal caído, y la vuelta de la red ya no se avisa.
 de un nodo caen a la vez, y se avisa una vez por el nodo. **AP sin
 estaciones**: el AP responde, pero se quedó sin ninguna estación durante más
 de dos minutos. **Sesión inestable**: tres cortes en diez minutos. **AP
-desalineada**: la mayoría de sus estaciones salen fuera de lo que su
+desalineada**: todas sus estaciones conectadas salen fuera de lo que su
 distancia o su línea base permiten.
 
 **Corte de luz.** La campana avisa cuando varios equipos se reinician a la

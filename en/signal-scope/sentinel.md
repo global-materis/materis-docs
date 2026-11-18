@@ -34,7 +34,7 @@ way:
 | **LAN at 10 Mbps** | A watched port negotiates at 10 Mbps: damaged cable, moisture in the connector or loose PoE. No airMAX ships with that maximum. **Also on APs**, where the uplink port strangles the whole sector. |
 | **LAN at half duplex** | A watched port negotiated badly and service goes out degraded without the signal showing it. Also on APs. |
 | **Antenna misaligned** | Imbalance between the two polarities from **6 dB**, the limit Ubiquiti itself recommends. It points to an aiming or polarization problem. |
-| **AP misaligned** | Most of an AP's measured stations (at least three, and two out of three) fall outside what their distance or their baseline allows. The pattern points to the AP's antenna and not to each client, so it is reported **once for the AP**. |
+| **AP misaligned** | **All** of an AP's connected stations (at least three) fall outside what their distance or their baseline allows. A misaligned AP lowers the signal of all its clients, so one station in its place is enough to rule it out. It is reported **once for the AP**. |
 | **Radio saturated** | CPU at 95 % or free memory below 5 %: the radio drops packets with the signal intact. It applies to stations and APs. |
 | **Sector with high latency** | Most of one AP's online stations (at least three, and half or more) answer slowly at the same time. It is reported once for the node, and its stations do not report one by one. *(Inherits the "High latency" switch.)* |
 | **High latency** · **BETA** | A client with a pristine signal that still answers with **sustained** delay. |

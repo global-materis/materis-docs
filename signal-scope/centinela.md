@@ -33,7 +33,7 @@ otra forma:
 | **LAN a 10 Mbps** | Un puerto vigilado negocia a 10 Mbps: cable dañado, humedad en el conector o PoE flojo. Ningún airMAX trae ese máximo de fábrica. **También en los AP**, donde el puerto de subida estrangula al sector entero. |
 | **LAN en half duplex** | Un puerto vigilado negoció mal y el servicio sale degradado sin que la señal lo muestre. También en los AP. |
 | **Antena desalineada** | Desbalance entre las dos polaridades desde **6 dB**, el límite que recomienda el propio Ubiquiti. Apunta a un problema de apunte o de polarización. |
-| **AP desalineada** | La mayoría de las estaciones medidas de un AP (al menos tres, y dos de cada tres) salen fuera de lo que su distancia o su línea base permiten. El patrón apunta a la antena del AP y no a cada cliente, así que se avisa **una vez por el AP**. |
+| **AP desalineada** | **Todas** las estaciones conectadas de un AP (al menos tres) salen fuera de lo que su distancia o su línea base permiten. Una AP desalineada baja la señal de todos sus clientes, así que basta una estación en su sitio para descartarla. Se avisa **una vez por el AP**. |
 | **Radio saturado** | CPU al 95 % o memoria disponible por debajo del 5 %: el radio tira paquetes con la señal intacta. Vale para estaciones y AP. |
 | **Sector con latencia alta** | La mayoría de las estaciones en línea de un mismo AP (al menos tres, y la mitad o más) responden con retraso a la vez. Se avisa una vez por el nodo y sus estaciones no avisan una a una. *(Hereda el interruptor de "Latencia alta".)* |
 | **Latencia alta** · **BETA** | Un cliente con la señal impecable que aun así responde con retraso **sostenido**. |
