@@ -33,6 +33,10 @@ notifies. Each device's **Notify on reconnection** keeps a single mode: it
 notifies every time the device comes back, until you remove it; devices marked
 «Once» move to that mode.
 
+**No internet access.** A new notification tells you when your local network
+answers but the internet doesn't. «Connection lost» now also covers the main
+router going down, and the network coming back is no longer notified.
+
 **[New sentinel alerts](./sentinel).** **Node down**: all the APs of a node
 go down at once, and you get one alert for the node. **AP without stations**:
 the AP answers, but has had none of its stations for more than two minutes.

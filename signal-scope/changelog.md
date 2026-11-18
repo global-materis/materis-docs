@@ -33,6 +33,10 @@ no avisa. **Avisar la reconexión** de cada equipo queda en un solo modo: avisa
 cada vez que vuelve, hasta que lo quites; los marcados con «Una vez» pasan a
 ese modo.
 
+**Sin acceso a internet.** Una notificación nueva avisa cuando tu red local
+responde pero internet no. «Se perdió conexión» cubre ahora también el router
+principal caído, y la vuelta de la red ya no se avisa.
+
 **[Nuevos avisos del centinela](./centinela).** **Nodo caído**: todos los AP
 de un nodo caen a la vez, y se avisa una vez por el nodo. **AP sin
 estaciones**: el AP responde, pero se quedó sin ninguna estación durante más
