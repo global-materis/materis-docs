@@ -287,7 +287,7 @@ outage. Depending on who restarted, the title says where the power went out:
 | Title | What happened |
 |---|---|
 | **Power outage at** *site* | Several devices restarted, including the tower's. |
-| **Power outage near** *site* | At least three clients restarted and their AP didn't: the power went out at the homes. |
+| **Power outage in** *AP*'s **coverage** (*node*) | At least three stations of an AP restarted and the AP didn't: the power went out at the homes. Without a node, the title carries only the AP. |
 | *AP* **restarted** | One tower device restarted and no other. |
 
 The notification says what time the power came back and, in the first two

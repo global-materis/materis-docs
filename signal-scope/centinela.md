@@ -280,7 +280,7 @@ fue la luz:
 | Título | Qué pasó |
 |---|---|
 | **Corte de luz en** *sitio* | Se reiniciaron varios equipos, incluidos los de la torre. |
-| **Corte de luz cerca de** *sitio* | Se reiniciaron al menos tres clientes y su AP no: la luz se fue en las casas. |
+| **Sin luz por la cobertura de** *AP* (*nodo*) | Se reiniciaron al menos tres estaciones de un AP y el AP no: la luz se fue en las casas. Sin nodo, el título lleva solo el AP. |
 | *AP* **se reinició** | Se reinició un equipo de la torre y ningún otro. |
 
 La notificación dice a qué hora volvió la luz y, en los dos primeros casos,
