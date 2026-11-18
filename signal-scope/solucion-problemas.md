@@ -80,7 +80,7 @@ chip están en
 
 ::: details Varios equipos salen ausentes a la vez y el chip dice "Sin red en esta PC"
 La que perdió la red es tu PC, y tus equipos siguen como estaban. Recibes una
-sola notificación, *"La PC perdió la red"*, en lugar de una por equipo, y la app no
+sola notificación, *"Se perdió conexión"*, en lugar de una por equipo, y la app no
 busca a nadie hasta que la red vuelve. Al volver, los equipos se reconectan
 solos.
 :::

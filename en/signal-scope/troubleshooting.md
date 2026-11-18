@@ -83,7 +83,7 @@ states are in
 
 ::: details Several devices go absent at once and the chip says "No network on this PC"
 The one that lost its network is your PC, and your devices are as they were.
-You get a single notification, *"The PC lost its network"*, instead of one per
+You get a single notification, *"Connection lost"*, instead of one per
 device, and the app looks for nobody until the network is back. Then the
 devices reconnect on their own.
 :::

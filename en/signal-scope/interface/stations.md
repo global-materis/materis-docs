@@ -285,7 +285,7 @@ Meanwhile, the Session chip says what is going on:
 | **Possible cut** | Its AP sees it connected with its Fallback IP (a likely administrative cut, like a PPPoE cutoff for non-payment), or the device **drops and comes back** over and over. The link is not the problem. |
 | **Blocked at the AP** | Its AP's access list does not let it connect. It is neither a fault nor a power-off. On airOS it is only detected with a full-access account on the AP. |
 | **Cut at its AP** | A firewall rule on its AP (a routing MikroTik) drops its traffic. |
-| **No network on this PC** | The one that lost its network is your PC. In that case you get **a single notification**, *"The PC lost its network"*, instead of one per device, and another when it is back. |
+| **No network on this PC** | The one that lost its network is your PC. In that case you get **a single notification**, *"Connection lost"*, instead of one per device. |
 | **Out of service** | One radio of a multi-radio device vanished from its reading: it is disabled or out of service, and the rest of the device is still online. |
 | **Absent** | There are no further clues: it is off or unreachable. |
 

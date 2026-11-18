@@ -255,7 +255,7 @@ Lo que llega a la campana:
 | **Requiere tu intervención** | La app pausó una sesión que no puede resolver sola: IP desconocida, cuenta rechazada o posible reemplazo. Ver [qué hacer](./interfaz/estaciones#cuando-la-app-necesita-que-intervengas). |
 | **Volvió un equipo etiquetado** | Volvió un equipo con [motivo de la ausencia](./interfaz/estaciones#motivo-de-la-ausencia); la etiqueta se quita sola. |
 | **Un AP cambió de IP** | La app encontró al AP en su IP nueva y se reconectó sola. En un AP no es lo normal: revisa si su dirección debería ser fija. |
-| **La PC perdió la red** | Tu PC se quedó sin ninguna red activa. Es **una sola notificación** en lugar de una por cada equipo que deja de contestar, y llega otra cuando la red vuelve. |
+| **Se perdió conexión** | Tu PC se quedó sin ninguna red activa. Es **una sola notificación** en lugar de una por cada equipo que deja de contestar. Cuando la red vuelve, los equipos se reconectan solos y no se avisa. |
 | **Corte de luz** | Varios equipos se reiniciaron a la vez. Ver [abajo](#corte-de-luz). |
 | **Se conectó un dispositivo nuevo** | Un equipo que no es un radio y que la red no conocía se conectó a uno de tus AP. Solo con **Vigilar otros dispositivos** encendido en Preferencias → Red. Ver [Otros dispositivos](./interfaz/estaciones#otros-dispositivos). |
 

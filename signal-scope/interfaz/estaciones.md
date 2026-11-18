@@ -284,7 +284,7 @@ Mientras tanto, el chip de Sesión dice qué está pasando:
 | **Posible corte** | Su AP la ve conectada con su Fallback IP (un probable corte administrativo, como el de PPPoE por mora), o el equipo **cae y vuelve** una y otra vez. El problema no es el enlace. |
 | **Bloqueado en el AP** | La lista de acceso de su AP no la deja conectarse. No es una avería ni un apagado. En airOS solo se detecta con una cuenta de acceso completo en el AP. |
 | **Cortado en su AP** | Una regla del firewall de su AP (un MikroTik que rutea) descarta su tráfico. |
-| **Sin red en esta PC** | La que perdió la red es tu PC. En ese caso llega **una sola notificación**, *"La PC perdió la red"*, en vez de una por equipo, y otra cuando vuelve. |
+| **Sin red en esta PC** | La que perdió la red es tu PC. En ese caso llega **una sola notificación**, *"Se perdió conexión"*, en vez de una por equipo. |
 | **Sin servicio** | Un radio de un equipo con varios desapareció de su lectura: está deshabilitado o sin servicio, y el resto del equipo sigue en línea. |
 | **Ausente** | No hay más pistas: está apagado o sin ruta. |
 

@@ -263,7 +263,7 @@ What reaches the bell:
 | **Needs your attention** | The app paused a session it cannot solve on its own: unknown IP, account rejected or possible replacement. See [what to do](./interface/stations#when-the-app-needs-you-to-step-in). |
 | **A labeled device came back** | A device with a [reason for absence](./interface/stations#reason-for-absence) came back; the label clears itself. |
 | **An AP changed its IP** | The app found the AP at its new IP and reconnected on its own. For an AP that is not normal: check whether its address should be fixed. |
-| **The PC lost its network** | Your PC has no active network. It is **a single notification** instead of one per device that stops answering, and another arrives when the network is back. |
+| **Connection lost** | Your PC has no active network. It is **a single notification** instead of one per device that stops answering. When the network is back, the devices reconnect on their own and nothing is notified. |
 | **Power outage** | Several devices restarted at once. See [below](#power-outage). |
 | **A new device connected** | A device that isn't a radio and that the network didn't know connected to one of your APs. Only with **Watch other devices** on in Preferences → Network. See [Other devices](./interface/stations#other-devices). |
 
