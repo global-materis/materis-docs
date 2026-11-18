@@ -194,7 +194,7 @@ says what is broken now and resolves itself, while the bell says what happened
 and is read once.
 
 **Notify on reconnection**: the mark you put on a device so the app tells you
-when it connects again, **Once** or **Always**.
+every time it connects again, until you remove it.
 
 **Mute**: silencing **one** device's notifications for a period without ceasing to
 measure it.

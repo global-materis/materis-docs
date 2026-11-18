@@ -190,7 +190,7 @@ centinela dice qué está roto ahora y se resuelve solo, mientras que la
 campana dice qué pasó y se lee una vez.
 
 **Avisar la reconexión**: la marca que pones a un equipo para que la app te
-avise cuando vuelva a conectarse, **Una vez** o **Siempre**.
+avise cada vez que vuelva a conectarse, hasta que la quites.
 
 **Silenciar**: callar las notificaciones de **un** equipo durante un plazo sin dejar
 de medirlo.

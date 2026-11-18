@@ -176,9 +176,9 @@ la app). La celda de Sesión muestra tu etiqueta en lugar de «Ausente».
 
 ### Avisar la reconexión
 
-Marcas el equipo y la app te avisa cuando vuelva a conectarse, en uno de dos
-modos: **Una vez**, que avisa y se quita solo, o **Siempre**, que avisa en cada
-caída y vuelta hasta que lo quites. Mientras el equipo está silenciado, su
+Marcas el equipo y la app te avisa cada vez que vuelva a conectarse, hasta que
+lo quites. Solo aparece con **Avisar cuando vuelve un equipo caído** apagado en
+Preferencias → Red. Mientras el equipo está silenciado, su
 vuelta no se avisa. El detalle está en
 [Centinela](../centinela#avisar-la-reconexion).
 

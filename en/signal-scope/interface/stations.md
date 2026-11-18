@@ -176,9 +176,9 @@ says it). The Session cell shows your label instead of "Absent".
 
 ### Notify on reconnection
 
-You mark the device and the app tells you when it reconnects, in one of two
-modes: **Once**, which notifies and clears itself, or **Always**, which
-notifies on every drop and recovery until you remove it. While the device is
+You mark the device and the app tells you every time it reconnects, until you
+remove it. It only shows with **Notify when a fallen device comes back** off in
+Preferences → Network. While the device is
 muted, its return is not notified. Details in
 [Sentinel](../sentinel#notify-on-reconnection).
 

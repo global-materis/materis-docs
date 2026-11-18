@@ -29,7 +29,9 @@ the network didn't know connects.
 A new switch in Preferences → Network notifies the return of every device the
 sentinel took as down, without marking them one by one. The sentinel also
 decides the return for marked devices: a cut of a few seconds no longer
-notifies.
+notifies. Each device's **Notify on reconnection** keeps a single mode: it
+notifies every time the device comes back, until you remove it; devices marked
+«Once» move to that mode.
 
 **[New sentinel alerts](./sentinel).** **Node down**: all the APs of a node
 go down at once, and you get one alert for the node. **AP without stations**:

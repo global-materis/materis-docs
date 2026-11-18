@@ -170,17 +170,9 @@ at once.
 ### Notify on reconnection
 
 This is the opposite of muting: here you ask for **more** attention on a
-device. On the **"Notify on reconnection"** card you pick a mode and the app
-tells you **when the device reconnects**, by Windows notification and through
-whatever messaging you have enabled.
-
-Neither mode comes preselected, because **choosing is the action**. Once set,
-the card states the mode and one click on it **removes** it.
-
-| Mode | What for |
-|---|---|
-| **Once** | A customer went down, you leave to deal with something else and want to know it came back. It notifies once and **clears itself**. |
-| **Always** | For the device you want to watch continuously: it notifies **on every drop and recovery**, until you remove it. |
+device. One click on the **"Notify on reconnection"** card and the app tells
+you **every time the device reconnects**, by Windows notification and through
+whatever messaging you have enabled, until you remove it with another click.
 
 **The sentinel decides the return**: the same one that confirms the drop
 resolves the return. A cut of a few seconds, which the sentinel never takes as
@@ -188,11 +180,11 @@ a drop, does not notify. If what dropped was its AP, the station notifies on
 its return too. And if the device was already down when the app opened, it
 notifies the first time it answers again.
 
-The permanent mode does not turn into noise thanks to the **cycle**, with no
+It does not turn into noise thanks to the **cycle**, with no
 need for a minimum time between notifications. After notifying it goes back to
 waiting for a drop, so to sound again the device has to genuinely drop again.
-**It notifies once per incident, not once per reading**, and neither mode
-notifies twice for the same drop.
+**It notifies once per incident, not once per reading**, and never twice for
+the same drop.
 
 Three details prevent false expectations:
 
@@ -210,8 +202,8 @@ notifies the return of every drop that had its own notification: an AP, a
 station or a Referent. Stations that dropped with their AP don't repeat it:
 they come back with it. A muted device doesn't notify. While it's on,
 **Notify on reconnection** disappears from each device's Actions, since it
-already notifies about all of them; the ones you marked keep their mode and
-show again when you turn it off.
+already notifies about all of them; the ones you marked stay marked and show
+again when you turn it off.
 
 The output is governed by the **"Came back online"** switch, found in
 **Preferences → Alerts** for Windows and in **Preferences → Messaging** for

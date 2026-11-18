@@ -29,7 +29,9 @@ no conocía.
 Un interruptor nuevo en Preferencias → Red avisa de la vuelta de todo equipo
 que el centinela dio por caído, sin marcarlos uno por uno. La vuelta la decide
 el centinela también para los equipos marcados: un corte de pocos segundos ya
-no avisa.
+no avisa. **Avisar la reconexión** de cada equipo queda en un solo modo: avisa
+cada vez que vuelve, hasta que lo quites; los marcados con «Una vez» pasan a
+ese modo.
 
 **[Nuevos avisos del centinela](./centinela).** **Nodo caído**: todos los AP
 de un nodo caen a la vez, y se avisa una vez por el nodo. **AP sin

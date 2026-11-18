@@ -165,18 +165,10 @@ la notificación de Windows y tu mensajería, los tres a la vez.
 
 ### Avisar la reconexión
 
-Es lo contrario del silencio: aquí pides **más** atención sobre un equipo. En
-la tarjeta **"Avisar la reconexión"** eliges un modo y la app te avisa
-**cuando el equipo vuelva a conectarse**, por notificación de Windows y por la
-mensajería que tengas activa.
-
-Ningún modo viene preseleccionado, porque **elegir es la acción**. Una vez
-puesto, la tarjeta dice el modo y un clic en ella lo **quita**.
-
-| Modo | Para qué |
-|---|---|
-| **Una vez** | Se cayó un cliente, sales a atender otra cosa y quieres enterarte de que volvió. Avisa una vez y **se quita solo**. |
-| **Siempre** | Para el equipo que quieres vigilar de continuo: avisa **en cada caída y vuelta**, hasta que lo quites. |
+Es lo contrario del silencio: aquí pides **más** atención sobre un equipo. Un
+clic en la tarjeta **"Avisar la reconexión"** y la app te avisa **cada vez que
+el equipo vuelva a conectarse**, por notificación de Windows y por la
+mensajería que tengas activa, hasta que lo quites con otro clic.
 
 **La vuelta la decide el centinela**: el mismo que confirma la caída es el
 que da por resuelta la vuelta. Un corte de pocos segundos, que el centinela no
@@ -184,11 +176,11 @@ llega a dar por caída, no avisa. Si lo que cayó fue su AP, la estación tambi�
 avisa al volver. Y si el equipo ya estaba caído al abrir la app, avisa la
 primera vez que vuelva a responder.
 
-El modo permanente no se vuelve ruido gracias al **ciclo**, sin necesidad de
+No se vuelve ruido gracias al **ciclo**, sin necesidad de
 un tiempo mínimo entre notificaciones. Después de avisar vuelve a esperar la caída,
 así que para sonar otra vez el equipo tiene que caerse otra vez de verdad.
-**Avisa una vez por incidencia y no una por lectura**, y ninguno de los dos
-modos avisa dos veces por la misma caída.
+**Avisa una vez por incidencia y no una por lectura**, y nunca dos veces por
+la misma caída.
 
 Tres detalles evitan expectativas falsas:
 
@@ -207,7 +199,7 @@ vuelta de toda caída que tuvo su propio aviso: un AP, una estación o un
 Referente. La de las estaciones que cayeron con su AP no se repite: vuelven con
 él. Un equipo silenciado no avisa. Mientras está encendido, **Avisar la
 reconexión** desaparece de las Acciones de cada equipo, porque ya avisa de
-todos; los que marcaste conservan su modo y vuelven a verse al apagarlo.
+todos; los que marcaste siguen marcados y vuelven a verse al apagarlo.
 
 La salida se gobierna con el interruptor **"Volvió a conectarse"**, que está
 en **Preferencias → Alertas** para Windows y en **Preferencias → Mensajería**
