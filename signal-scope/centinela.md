@@ -270,7 +270,12 @@ solo llega a la campana.
 La app sabe que un equipo se reinició por su tiempo de actividad: si lleva
 encendido menos tiempo del que pasó desde la última lectura, se apagó y
 volvió. Por eso también detecta lo que pasó con la app cerrada, por ejemplo
-durante la noche.
+durante la noche. El aviso llega cuando los equipos vuelven, porque es entonces
+cuando se sabe que se reiniciaron.
+
+Un equipo que vuelve con **otro firmware** no cuenta: se reinició para
+actualizarse, y una actualización programada reinicia muchos a la vez sin que
+se haya ido la luz.
 
 Agrupa los reinicios por sitio, que es el nodo del Mapa o, si el AP no tiene
 nodo, el AP. Reinicios del mismo sitio con menos de tres minutos de diferencia

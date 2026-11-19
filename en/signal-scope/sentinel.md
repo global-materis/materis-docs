@@ -278,7 +278,12 @@ is the exception: it only reaches the bell.
 The app knows a device restarted from its uptime: if it has been on for less
 time than has passed since the last reading, it powered off and came back.
 That's why it also catches what happened while the app was closed, for
-example overnight.
+example overnight. The notification arrives when the devices come back,
+because that is when it is known they restarted.
+
+A device that comes back with **another firmware** doesn't count: it
+restarted to update, and a scheduled update restarts many at once without the
+power going out.
 
 It groups restarts by site, which is the Map node or, if the AP has no node,
 the AP. Restarts at the same site less than three minutes apart count as one
