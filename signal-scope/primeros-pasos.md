@@ -65,18 +65,25 @@ Hay dos maneras de hacerlo:
 
 - **Individual**: el botón **Iniciar sesión** en la fila del equipo.
 - **Sesión en cascada**: la que ahorra tiempo en el primer arranque. Aplica las
-  mismas credenciales a todos los equipos sin sesión de una vez, con **Conectar
-  todos**. Los que fallen quedan marcados para reintentar de forma individual con
-  sus credenciales propias. El lote entero usa un solo sistema: si tienes
-  equipos airOS y RouterOS, corre la cascada una vez por cada uno, y la segunda
-  reintenta los que quedaron sin conectar.
+  mismas credenciales a los equipos marcados de una vez, con **Conectar**. A la
+  izquierda van el sistema y las credenciales; a la derecha, la lista de
+  equipos sin sesión: los Detectados que son radio y las
+  **Estaciones Asistidas**, que no necesitan escaneo. Cada
+  fila lleva la marca del equipo (Ubiquiti o MikroTik, si se sabe) y su AP.
 
-  Si un equipo usa otra cuenta, pulsa **Omitir** en su fila antes de conectar:
-  la cascada no lo intenta, y **Incluir** lo devuelve al lote. Conviene en airOS
-  8.7.18 o posterior, que bloquea el acceso 30 segundos tras varios intentos
-  fallidos. De cada equipo que no conecta se ve el motivo en una línea («No
-  contestó», «Rechazó la cuenta»…), y **Ver motivo** muestra lo que contestó el
-  equipo, tal cual.
+  Todos empiezan marcados. Desmarca los que usan otra cuenta: la cascada no los
+  intenta. Conviene en airOS 8.7.18 o posterior, que bloquea el acceso 30
+  segundos tras varios intentos fallidos. El filtro de arriba muestra solo los
+  equipos de un AP, y **Seleccionar todo** y **Limpiar** marcan o desmarcan los
+  que se ven. Solo se intenta lo marcado que está a la vista. Una asistida **sin
+  alcance** (no contesta en su IP, o su AP no informa la IP) aparece señalada y
+  no se puede marcar.
+
+  Cada **Conectar** quita de la lista los que ya conectaron y reintenta lo
+  marcado que falta. De cada equipo que no conecta se ve el motivo en una línea
+  («No contestó», «Rechazó la cuenta»…), y **Ver motivo** muestra lo que
+  contestó el equipo, tal cual. El lote entero usa un solo sistema: si tienes
+  equipos airOS y RouterOS, corre la cascada una vez por cada uno.
 
 Al conectar, **cada radio reporta su modo y se clasifica solo** en
 **Estaciones** o **Puntos de acceso**, así que no hay nada que clasificar a

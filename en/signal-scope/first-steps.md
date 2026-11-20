@@ -64,18 +64,26 @@ There are two ways to do it:
 
 - **Individually**: the **Sign in** button on the device's row.
 - **Cascade session**: the time-saver for the first run. It applies the same
-  credentials to every device without a session at once, with **Connect all**.
-  Those that fail are marked to retry individually with their own credentials.
-  The whole batch uses a single system: if you have both airOS and RouterOS
-  devices, run the cascade once for each, and the second run retries the ones
-  left unconnected.
+  credentials to the checked devices at once, with **Connect**. The system and
+  the credentials go on the left; on the right, the list of devices without a
+  session: the Detected devices that are radios and the
+  **Assisted Stations**, which need no scan. Each row shows
+  the device's brand (Ubiquiti or MikroTik, when known) and its AP.
 
-  If a device uses another account, press **Skip** on its row before
-  connecting: the cascade doesn't try it, and **Include** puts it back in the
-  batch. It helps with airOS 8.7.18 or later, which locks access for 30 seconds
-  after several failed attempts. For each device that doesn't connect you see
+  All start checked. Uncheck the ones that use another account: the cascade
+  doesn't try them. It helps with airOS 8.7.18 or later, which locks access for
+  30 seconds after several failed attempts. The filter at the top shows only
+  one AP's devices, and **Select all** and **Clear** check or uncheck the ones
+  in view. Only what is checked and in view is tried. An assisted station
+  **out of reach** (it doesn't answer at its IP, or its AP doesn't report the
+  IP) is flagged and can't be checked.
+
+  Each **Connect** removes the ones that already connected from the list and
+  retries what is still checked. For each device that doesn't connect you see
   the reason in one line ("Didn't answer", "Rejected the account"…), and **Show
-  reason** shows what the device answered, word for word.
+  reason** shows what the device answered, word for word. The whole batch uses a
+  single system: if you have both airOS and RouterOS devices, run the cascade
+  once for each.
 
 Upon connecting, **each radio reports its mode and classifies itself** as a
 **Station** or an **Access point**, so there is nothing to classify by hand.
