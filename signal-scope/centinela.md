@@ -251,21 +251,21 @@ Lo que llega a la campana:
 
 | Notificación | Cuándo |
 |---|---|
-| **Volvió a conectarse** | Volvió un equipo al que le pusiste [Avisar la reconexión](#avisar-la-reconexion), o cualquiera con **Avisar cuando vuelve un equipo caído** encendido. |
+| **Volvió a conectarse** | Volvió un equipo al que le pusiste [Avisar la reconexión](#avisar-la-reconexion), o cualquiera con **Avisar cuando vuelve un equipo caído** encendido. Los que vuelven de un [corte de energía](#corte-de-energia) no se avisan uno por uno: los nombra el aviso del corte. |
 | **Requiere tu intervención** | La app pausó una sesión que no puede resolver sola: IP desconocida, cuenta rechazada o posible reemplazo. Ver [qué hacer](./interfaz/estaciones#cuando-la-app-necesita-que-intervengas). |
 | **Volvió un equipo etiquetado** | Volvió un equipo con [motivo de la ausencia](./interfaz/estaciones#motivo-de-la-ausencia); la etiqueta se quita sola. |
 | **Un AP cambió de IP** | La app encontró al AP en su IP nueva y se reconectó sola. En un AP no es lo normal: revisa si su dirección debería ser fija. |
 | **Se perdió conexión** | No se puede acceder a ningún equipo: tu PC se quedó sin red, o casi todos los equipos cayeron a la vez y el router por el que se llega a ellos tampoco contesta. Es **una sola notificación** en lugar de una por cada equipo que deja de contestar. Cuando la red vuelve, los equipos se reconectan solos y no se avisa. |
 | **Sin acceso a internet** | Tu red local responde, pero internet no. Puede traer resultados inesperados con las sesiones o las inspecciones fuera de tu red. Se comprueba cada minuto y avisa tras dos fallos seguidos; la vuelta no se avisa. |
-| **Corte de luz** | Varios equipos se reiniciaron a la vez. Ver [abajo](#corte-de-luz). |
+| **Corte de energía** | Varios equipos se reiniciaron a la vez. Ver [abajo](#corte-de-energia). |
 | **Se conectó un dispositivo nuevo** | Un equipo que no es un radio y que la red no conocía se conectó a uno de tus AP. Solo con **Vigilar otros dispositivos** encendido en Preferencias → Red. Ver [Otros dispositivos](./interfaz/estaciones#otros-dispositivos). |
 
 Cuáles de estas notificaciones salen también a Windows o a tu mensajería se
 elige en la pestaña **Notificaciones que pides tú**, en **Preferencias →
-Alertas** y en **Preferencias → Mensajería**. El corte de luz es la excepción:
+Alertas** y en **Preferencias → Mensajería**. El corte de energía es la excepción:
 solo llega a la campana.
 
-### Corte de luz
+### Corte de energía
 
 La app sabe que un equipo se reinició por su tiempo de actividad: si lleva
 encendido menos tiempo del que pasó desde la última lectura, se apagó y
@@ -275,22 +275,35 @@ cuando se sabe que se reiniciaron.
 
 Un equipo que vuelve con **otro firmware** no cuenta: se reinició para
 actualizarse, y una actualización programada reinicia muchos a la vez sin que
-se haya ido la luz.
+se haya ido la energía.
 
 Agrupa los reinicios por sitio, que es el nodo del Mapa o, si el AP no tiene
-nodo, el AP. Reinicios del mismo sitio con menos de tres minutos de diferencia
-cuentan como un solo corte. Según quién se reinició, el título dice dónde se
-fue la luz:
+nodo, el AP. Dentro del sitio, los equipos que **cayeron** con menos de tres
+minutos de diferencia cuentan como un solo corte, aunque alguno arranque mucho
+después; por ejemplo, un cliente que bajó la palanca y la subió cuando sus
+vecinos le avisaron. La hora de caída solo se conoce si la app estaba abierta;
+si no, se agrupa por la hora en que arrancaron. Según quién se reinició, el
+título dice dónde se fue la energía:
 
 | Título | Qué pasó |
 |---|---|
-| **Corte de luz en** *sitio* | Se reiniciaron varios equipos, incluidos los de la torre. |
-| **Sin luz por la cobertura de** *AP* (*nodo*) | Se reiniciaron al menos tres estaciones de un AP y el AP no: la luz se fue en las casas. Sin nodo, el título lleva solo el AP. |
+| **Corte de energía en** *sitio* | Se reiniciaron varios equipos, incluidos los de la torre. |
+| **Corte de energía en la cobertura de** *AP* (*nodo*) | Se reiniciaron al menos tres estaciones de un AP y el AP no: la energía se fue en las casas. Sin nodo, el título lleva solo el AP. |
 | *AP* **se reinició** | Se reinició un equipo de la torre y ningún otro. |
 
-La notificación dice a qué hora volvió la luz y, en los dos primeros casos,
-qué equipos se reiniciaron. Un solo cliente reiniciado no genera notificación:
-queda en su Log.
+La notificación dice a qué hora volvió la energía y, en los dos primeros casos,
+qué equipos se reiniciaron. Sale unos dos minutos después del último que
+volvió. Si en ese momento alguno de los que cayeron con ellos todavía no
+vuelve, lo nombra en una última línea, **Aún sin volver**; esa línea solo
+puede salir si la app estaba abierta durante el corte. Un solo cliente
+reiniciado no genera notificación: queda en su Log.
+
+Con **Avisar cuando vuelve un equipo caído** encendido, los que vuelven de un
+corte no avisan uno por uno: la vuelta de un equipo que se reinició espera a
+saber si fue un corte, y si lo fue, la cuenta el aviso del corte. Si no lo
+fue, su «volvió a conectarse» llega con esos dos minutos de retraso. Lo que
+pediste para un equipo en sus Acciones sale siempre, y uno que vuelve después
+del aviso del corte avisa por su cuenta.
 
 ## Tres canales para la misma notificación
 
@@ -341,7 +354,7 @@ es la de la **primera alerta** y no la del envío, porque lo que importa es
 cuándo se quedó el cliente sin servicio.
 
 Cada tipo tiene su espera y su tolerancia. La espera sirve para **agrupar**:
-un corte de luz tumba varios AP con segundos de diferencia y eso debe llegar
+un corte de energía tumba varios AP con segundos de diferencia y eso debe llegar
 en un solo mensaje. La misma espera descarta las fallas pasajeras. La tabla
 también está en la app, en el desplegable *"Qué se envía"* de Mensajería.
 

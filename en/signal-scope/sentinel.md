@@ -259,7 +259,7 @@ What reaches the bell:
 
 | Notification | When |
 |---|---|
-| **Came back online** | A device you set [Notify on reconnection](#notify-on-reconnection) on came back, or any device with **Notify when a fallen device comes back** on. |
+| **Came back online** | A device you set [Notify on reconnection](#notify-on-reconnection) on came back, or any device with **Notify when a fallen device comes back** on. Devices coming back from a [power outage](#power-outage) are not notified one by one: the outage notification names them. |
 | **Needs your attention** | The app paused a session it cannot solve on its own: unknown IP, account rejected or possible replacement. See [what to do](./interface/stations#when-the-app-needs-you-to-step-in). |
 | **A labeled device came back** | A device with a [reason for absence](./interface/stations#reason-for-absence) came back; the label clears itself. |
 | **An AP changed its IP** | The app found the AP at its new IP and reconnected on its own. For an AP that is not normal: check whether its address should be fixed. |
@@ -286,8 +286,12 @@ restarted to update, and a scheduled update restarts many at once without the
 power going out.
 
 It groups restarts by site, which is the Map node or, if the AP has no node,
-the AP. Restarts at the same site less than three minutes apart count as one
-outage. Depending on who restarted, the title says where the power went out:
+the AP. Within the site, devices that **went down** less than three minutes
+apart count as one outage, even if one starts much later; for example, a
+client who switched off the breaker and turned it back on when the neighbours
+told them. The time they went down is only known if the app was open;
+otherwise, they are grouped by the time they started. Depending on who
+restarted, the title says where the power went out:
 
 | Title | What happened |
 |---|---|
@@ -296,8 +300,18 @@ outage. Depending on who restarted, the title says where the power went out:
 | *AP* **restarted** | One tower device restarted and no other. |
 
 The notification says what time the power came back and, in the first two
-cases, which devices restarted. A single client restarting generates no
+cases, which devices restarted. It arrives about two minutes after the last one
+came back. If at that moment any device that went down with them is still not
+back, it names it on a last line, **Still not back**; that line can only appear
+if the app was open during the outage. A single client restarting generates no
 notification: it stays in its Log.
+
+With **Notify when a fallen device comes back** on, devices coming back from an
+outage don't notify one by one: the return of a device that restarted waits to
+learn whether it was an outage, and if it was, the outage notification covers
+it. If it wasn't, its "came back online" arrives with that two-minute delay.
+What you asked for on a device in its Actions always goes out, and a device
+that comes back after the outage notification notifies on its own.
 
 ## Three channels for the same notification
 

@@ -44,10 +44,10 @@ de dos minutos. **Sesión inestable**: tres cortes en diez minutos. **AP
 desalineada**: todas sus estaciones conectadas salen fuera de lo que su
 distancia o su línea base permiten.
 
-**Corte de luz.** La campana avisa cuando varios equipos se reinician a la
+**Corte de energía.** La campana avisa cuando varios equipos se reinician a la
 vez, y distingue si fue la torre, un grupo de clientes cuyo AP siguió
 encendido o un solo AP. La app lo deduce del tiempo de actividad de cada equipo, no de su
-conexión.
+conexión, y nombra a los que cayeron con ellos y aún no vuelven.
 
 **Tablas que se filtran por sus avisos.** Cada tabla del Monitor tiene una
 fila de chips con los avisos del centinela y cuántos equipos tiene cada uno;

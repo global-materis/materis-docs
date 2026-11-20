@@ -43,9 +43,10 @@ the AP answers, but has had none of its stations for more than two minutes.
 **Unstable session**: three drops in ten minutes. **AP misaligned**: all of
 its connected stations fall outside what their distance or baseline allows.
 
-**Power cut.** The bell tells you when several devices reboot at once, and
+**Power outage.** The bell tells you when several devices reboot at once, and
 whether it was the tower, a group of clients whose AP stayed on, or a single
-AP. The app works it out from each device's uptime, not from its connection.
+AP. The app works it out from each device's uptime, not from its connection,
+and names the ones that went down with them and are still not back.
 
 **Tables filtered by their alerts.** Each Monitor table has a row of chips
 with the sentinel's alerts and how many devices have each one; clicking one
