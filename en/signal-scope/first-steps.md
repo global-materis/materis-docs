@@ -70,6 +70,13 @@ There are two ways to do it:
   devices, run the cascade once for each, and the second run retries the ones
   left unconnected.
 
+  If a device uses another account, press **Skip** on its row before
+  connecting: the cascade doesn't try it, and **Include** puts it back in the
+  batch. It helps with airOS 8.7.18 or later, which locks access for 30 seconds
+  after several failed attempts. For each device that doesn't connect you see
+  the reason in one line ("Didn't answer", "Rejected the account"…), and **Show
+  reason** shows what the device answered, word for word.
+
 Upon connecting, **each radio reports its mode and classifies itself** as a
 **Station** or an **Access point**, so there is nothing to classify by hand.
 Credentials are stored (encrypted inside the project) and the app uses them to

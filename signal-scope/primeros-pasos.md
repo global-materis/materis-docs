@@ -71,6 +71,13 @@ Hay dos maneras de hacerlo:
   equipos airOS y RouterOS, corre la cascada una vez por cada uno, y la segunda
   reintenta los que quedaron sin conectar.
 
+  Si un equipo usa otra cuenta, pulsa **Omitir** en su fila antes de conectar:
+  la cascada no lo intenta, y **Incluir** lo devuelve al lote. Conviene en airOS
+  8.7.18 o posterior, que bloquea el acceso 30 segundos tras varios intentos
+  fallidos. De cada equipo que no conecta se ve el motivo en una línea («No
+  contestó», «Rechazó la cuenta»…), y **Ver motivo** muestra lo que contestó el
+  equipo, tal cual.
+
 Al conectar, **cada radio reporta su modo y se clasifica solo** en
 **Estaciones** o **Puntos de acceso**, así que no hay nada que clasificar a
 mano. Las credenciales quedan guardadas (cifradas dentro del proyecto) y la app
