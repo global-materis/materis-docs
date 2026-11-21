@@ -10,7 +10,7 @@ MikroTik the row is a radio, as explained
 
 | Column | What it shows |
 |---|---|
-| **Session** | The state of the connection to the radio (SSH, HTTPS or HTTP) and, if it is absent, [what is going on](#when-a-device-goes-absent). It also carries the marks of what you decided about that device: session switched off, notifications muted, reconnection notification set. One click opens the [session window](#the-session-window). An HTTP session is painted amber with an open padlock, because on that network the username, the password and the metrics travel as plain text. |
+| **Session** | The state of the connection to the radio (SSH, HTTPS or HTTP) and, if it is absent, [what is going on](#when-a-device-goes-absent). It also carries the marks of what you decided about that device: notifications muted and reconnection notification set. One click opens the [session window](#the-session-window). An HTTP session is painted amber with an open padlock, because on that network the username, the password and the metrics travel as plain text. |
 | **Signal · local / remote** | The core reading. Local is what the station receives; remote (in gray) is what the AP receives from it. The meter bar carries the traffic-light color. |
 | **Baseline** | The **Mark** button pins the current signal, local and remote, as that antenna's baseline, and the cell then shows both values (`−58 dBm / −61 dBm`) with an **×** to remove it. With a baseline, the signal axis judges how far it dropped from it rather than the absolute value, and the status reads **Stable**, **Dropped vs baseline** or **Check link**. To update it, remove it first with the **×**. See [Traffic light and diagnostics](../diagnostics#baseline-compare-against-your-own-network). |
 | **IP** | A link that opens the radio's web UI, plus a **ping** button that opens a terminal with a continuous ping. |
@@ -154,7 +154,6 @@ glance.
 
 | Mark | What it means | Where it is set |
 |---|---|---|
-| **Session switched off** | The app **doesn't connect** to that device, but it **keeps its credentials and its record**. Only sessions switched off with an earlier version carry it. One click on the cell switches it back on. | No longer set: to stop connecting there is **Close session** |
 | **Notifications muted** | The device **keeps being measured**. What goes quiet is the output (panel, Windows and messaging) for the period you choose: 1 hour, 8 hours, 1 day, 3 days, 1 week or No end date. When the period ends it alerts again on its own; before that, you turn it back on with **Unmute**. | Session window → *Actions* |
 | **Reconnection notification set** | The app will tell you when that device reconnects. | Session window → *Actions* |
 

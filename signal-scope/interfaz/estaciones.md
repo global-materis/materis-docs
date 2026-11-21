@@ -10,7 +10,7 @@ refrescándose en vivo. En un MikroTik la fila es un radio, como se explica
 
 | Columna | Qué muestra |
 |---|---|
-| **Sesión** | El estado de la conexión al radio (SSH, HTTPS o HTTP) y, si está ausente, [qué le pasa](#cuando-un-equipo-se-ausenta). Lleva además las marcas de lo que decidiste sobre ese equipo: sesión apagada, notificaciones silenciadas, notificación de reconexión. Un clic abre la [ventana de sesión](#la-ventana-de-sesion). Una sesión HTTP se pinta en ámbar con un candado abierto, porque en esa red el usuario, la contraseña y las métricas viajan en texto plano. |
+| **Sesión** | El estado de la conexión al radio (SSH, HTTPS o HTTP) y, si está ausente, [qué le pasa](#cuando-un-equipo-se-ausenta). Lleva además las marcas de lo que decidiste sobre ese equipo: notificaciones silenciadas y notificación de reconexión. Un clic abre la [ventana de sesión](#la-ventana-de-sesion). Una sesión HTTP se pinta en ámbar con un candado abierto, porque en esa red el usuario, la contraseña y las métricas viajan en texto plano. |
 | **Señal · local / remota** | El dato principal. Local es lo que la estación recibe; remota (en gris) es lo que el AP recibe de ella. La barra de medición lleva el color del semáforo. |
 | **Línea base** | El botón **Marcar** fija la señal actual, local y remota, como línea base de esa antena, y la celda pasa a mostrar los dos valores (`−58 dBm / −61 dBm`) con una **×** para quitarla. Con línea base, el eje de señal juzga cuánto bajó respecto a ella y no el valor absoluto, y el estado se lee **Estable**, **Bajó vs base** o **Revisar enlace**. Para actualizarla, primero se quita con la **×**. Ver [Semáforo y diagnóstico](../diagnostico#linea-base-comparar-contra-tu-propia-red). |
 | **IP** | Un enlace que abre la web del radio, y un botón de **ping** que abre una terminal con ping continuo. |
@@ -154,7 +154,6 @@ un vistazo.
 
 | Marca | Significa | Dónde se pone |
 |---|---|---|
-| **Sesión apagada** | La app **no se conecta** a ese equipo, pero **conserva sus credenciales y su ficha**. Solo la llevan las sesiones que se apagaron con una versión anterior. Un clic en la celda la vuelve a encender. | Ya no se pone: para dejar de conectar está **Cerrar sesión** |
 | **Notificaciones silenciadas** | El equipo **se sigue midiendo**. Lo que se calla es la salida (panel, Windows y mensajería) durante el plazo que elijas: 1 hora, 8 horas, 1 día, 3 días, 1 semana o Sin vencimiento. Al vencer el plazo vuelve a avisar solo; antes, lo reactivas con **Reactivar**. | Ventana de sesión → *Acciones* |
 | **Notificación de reconexión puesta** | La app te avisará cuando ese equipo vuelva a conectarse. | Ventana de sesión → *Acciones* |
 

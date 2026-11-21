@@ -113,14 +113,7 @@ La tabla de Estaciones no muestra los avisos de AP, y al revés.
   filas queda apagado.
 - Los chips solo filtran: el color de cada fila sigue siendo el del semáforo.
 
-Al final de la fila está **Ocultar apagadas**, con el número de sesiones
-apagadas de esa tabla. Esconde las filas con la [sesión
-apagada](#apagar-la-sesion-de-un-equipo), y vale solo para esa tabla: puedes
-ocultarlas en Estaciones y verlas en Puntos de acceso. Viene apagado, y la app
-recuerda cómo lo dejaste en cada tabla.
-
-En un Snapshot no hay chips ni interruptor, porque la captura muestra lo que
-había.
+En un Snapshot no hay chips, porque la captura muestra lo que había.
 
 ## Lo que decides por equipo
 
@@ -206,20 +199,18 @@ en **Preferencias → Alertas** para Windows y en **Preferencias → Mensajería
 para cada destino. Ese interruptor apaga la **salida**; las notificaciones que pusiste
 en cada equipo se conservan.
 
-### Apagar la sesión de un equipo
+### Cerrar la sesión de un equipo
 
-Apagar la sesión no es olvidar el equipo. La app **deja de conectarse** a él,
-así que no le gasta CPU ni te llena de notificaciones, pero **conserva sus
-credenciales y su ficha**. Se apaga desde su ventana de sesión, encima de
-Olvidar, y se vuelve a encender con un clic en su celda de Sesión. **Sigue
-apagado aunque cierres la app.**
+**Cerrar sesión** hace que la app deje de conectarse al equipo y borra su
+credencial y su historia; los Snapshots conservan lo que capturaron. Si su AP
+lo ve, queda como estación asistida; si no, sale de la tabla.
 
 La diferencia con silenciar es que aquí el equipo **deja de medirse**. Si
 quieres calma sin perder de vista cómo está, silencia.
 
 ::: warning Las acciones se llevan la caja entera
-En un equipo de varios radios (dos filas, una sola sesión), apagar, silenciar
-u olvidar **vale para las dos filas**. La app te lo avisa antes de que pulses.
+En un equipo de varios radios (dos filas, una sola sesión), cerrar la sesión o
+silenciar **vale para las dos filas**. La app te lo avisa antes de que pulses.
 :::
 
 ## La campana: lo que te avisó mientras trabajabas

@@ -63,7 +63,7 @@ Stations, as [Assisted Stations](./stations#assisted-stations).
 
 | Column | What it shows |
 |---|---|
-| **Session** | The connection state, same as for stations. One click opens the [session window](./stations#the-session-window), with its Actions, Ports, Log and Connection tabs, and from *Actions* you can switch the session off, mute its notifications or ask for a reconnection notification. If the AP goes absent, the chip says [what is going on](./stations#when-a-device-goes-absent). |
+| **Session** | The connection state, same as for stations. One click opens the [session window](./stations#the-session-window), with its Actions, Ports, Log and Connection tabs, and from *Actions* you can mute its notifications, ask for a reconnection notification or close the session. If the AP goes absent, the chip says [what is going on](./stations#when-a-device-goes-absent). |
 | **SSID** | The network name the AP broadcasts. |
 | **Spikes** | `3/14` tells how many of its online stations have latency spikes. It lights amber when the majority (and at least 3) have them: if one client has spikes, the problem is that client; if most of the sector has them, it is the shared air. With fewer than 3 stations online it shows `—`. |
 | **Airtime** | The channel's air in use (%), the raw figure behind the Status. |

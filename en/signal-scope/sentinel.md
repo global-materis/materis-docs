@@ -114,14 +114,7 @@ The Stations table doesn't show AP alerts, and vice versa.
   is dimmed.
 - The chips only filter: each row's color is still the traffic light's.
 
-At the end of the row is **Hide switched off**, with the number of switched-off
-sessions in that table. It hides the rows whose [session is switched
-off](#switch-a-device-s-session-off), and it applies only to that table:
-you can hide them in Stations and see them in Access points. It starts off,
-and the app remembers how you left it on each table.
-
-A Snapshot has no chips and no switch, because the capture shows what was
-there.
+A Snapshot has no chips, because the capture shows what was there.
 
 ## What you decide per device
 
@@ -210,21 +203,18 @@ The output is governed by the **"Came back online"** switch, found in
 each destination. That switch turns off the **output**; the notifications you set
 on each device are kept.
 
-### Switch a device's session off
+### Close a device's session
 
-Switching the session off is not forgetting the device. The app **stops
-connecting** to it, so it costs no CPU and does not flood you with notifications, but
-it **keeps its credentials and its record**. You switch it off from its session
-window, above Forget, and back on with one click on its Session cell. **It
-stays off even after you close the app.**
+**Close session** makes the app stop connecting to the device and erases its
+credential and history; Snapshots keep what they captured. If its AP sees it,
+it stays as an assisted station; if not, it leaves the table.
 
 The difference from muting is that here the device **stops being measured**.
 If you want quiet without losing sight of how it is doing, mute it.
 
 ::: warning Actions take the whole box
-On a device with several radios (two rows, one session), switching off,
-muting or forgetting **applies to both rows**. The app warns you before you
-press.
+On a device with several radios (two rows, one session), closing the session
+or muting **applies to both rows**. The app warns you before you press.
 :::
 
 ## The bell: what it told you while you were working
