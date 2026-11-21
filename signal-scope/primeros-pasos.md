@@ -83,8 +83,13 @@ Hay dos maneras de hacerlo:
   Cada **Conectar** quita de la lista los que ya conectaron y reintenta lo
   marcado que falta. De cada equipo que no conecta se ve el motivo en una línea
   («No contestó», «Rechazó la cuenta»…), y **Ver motivo** muestra lo que
-  contestó el equipo, tal cual. El lote entero usa un solo sistema: si tienes
-  equipos airOS y RouterOS, corre la cascada una vez por cada uno.
+  contestó el equipo, tal cual.
+
+  El lote entero usa un solo **Sistema**, y la lista se ajusta a él: con airOS
+  muestra los equipos Ubiquiti; con RouterOS, los MikroTik; y con cualquiera, los
+  de marca desconocida, que se intentan con el sistema elegido. Cada botón dice
+  cuántos equipos conocidos de ese sistema esperan, y al abrir se elige el que
+  más tiene. Si tienes de los dos, corre la cascada una vez con cada uno.
 
 Al conectar, **cada radio reporta su modo y se clasifica solo** en
 **Estaciones** o **Puntos de acceso**, así que no hay nada que clasificar a

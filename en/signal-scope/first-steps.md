@@ -82,9 +82,14 @@ There are two ways to do it:
   Each **Connect** removes the ones that already connected from the list and
   retries what is still checked. For each device that doesn't connect you see
   the reason in one line ("Didn't answer", "Rejected the account"…), and **Show
-  reason** shows what the device answered, word for word. The whole batch uses a
-  single system: if you have both airOS and RouterOS devices, run the cascade
-  once for each.
+  reason** shows what the device answered, word for word.
+
+  The whole batch uses a single **System**, and the list adjusts to it: with
+  airOS it shows the Ubiquiti devices; with RouterOS, the MikroTik ones; and
+  with either, those of unknown brand, which are tried with the chosen system.
+  Each button shows how many known devices of that system are waiting, and the
+  one with the most is chosen on opening. If you have both, run the cascade once
+  with each.
 
 Upon connecting, **each radio reports its mode and classifies itself** as a
 **Station** or an **Access point**, so there is nothing to classify by hand.
