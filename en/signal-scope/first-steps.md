@@ -72,9 +72,10 @@ There are two ways to do it:
 
   All start checked. Uncheck the ones that use another account: the cascade
   doesn't try them. It helps with airOS 8.7.18 or later, which locks access for
-  30 seconds after several failed attempts. The filter at the top shows only
-  one AP's devices, and **Select all** and **Clear** check or uncheck the ones
-  in view. Only what is checked and in view is tried. An assisted station
+  30 seconds after several failed attempts. The **AP** filter shows only one
+  AP's devices (those that don't report one yet, under **Unknown**), and the
+  checkbox in the header checks or unchecks all the ones in view. Only what is
+  checked and in view is tried. An assisted station
   **out of reach** (it doesn't answer at its IP, or its AP doesn't report the
   IP) is flagged and can't be checked.
 

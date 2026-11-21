@@ -73,9 +73,10 @@ Hay dos maneras de hacerlo:
 
   Todos empiezan marcados. Desmarca los que usan otra cuenta: la cascada no los
   intenta. Conviene en airOS 8.7.18 o posterior, que bloquea el acceso 30
-  segundos tras varios intentos fallidos. El filtro de arriba muestra solo los
-  equipos de un AP, y **Seleccionar todo** y **Limpiar** marcan o desmarcan los
-  que se ven. Solo se intenta lo marcado que está a la vista. Una asistida **sin
+  segundos tras varios intentos fallidos. El filtro **AP** muestra solo los
+  equipos de un AP (los que aún no lo dicen, en **Desconocido**), y la casilla
+  de la cabecera marca o desmarca todos los que se ven. Solo se intenta lo
+  marcado que está a la vista. Una asistida **sin
   alcance** (no contesta en su IP, o su AP no informa la IP) aparece señalada y
   no se puede marcar.
 
