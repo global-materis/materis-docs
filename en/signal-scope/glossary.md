@@ -202,7 +202,7 @@ measure it.
 **Close session**: stopping the connection to a device and erasing its
 credential. If its AP sees it, it stays as an assisted station.
 
-**Hide**: removing an absent device from the table without erasing anything. It
+**Hide while absent**: removing an absent device from the table without erasing anything. It
 comes back by itself when the link returns.
 
 **Background**: the mode SignalScope is left in when you close the window with

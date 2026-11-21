@@ -198,7 +198,7 @@ de medirlo.
 **Cerrar sesión**: dejar de conectarse a un equipo y borrar su credencial. Si
 su AP lo ve, queda como estación asistida.
 
-**Ocultar**: quitar de la tabla un equipo ausente sin borrar nada. Vuelve solo
+**Ocultar Ausente**: quitar de la tabla un equipo ausente sin borrar nada. Vuelve solo
 cuando el enlace vuelve.
 
 **Segundo plano**: el modo en que queda SignalScope cuando cierras la ventana

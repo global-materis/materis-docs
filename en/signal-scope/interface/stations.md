@@ -103,7 +103,7 @@ An assisted station takes no record of your plan; once you sign in, it does.
 See [Plans](../plans#what-counts-as-a-record).
 
 In the **Actions** tab you can mute its notifications and ask to be told when
-it comes back. If it is absent, you can also **Hide** it: it leaves the table
+it comes back. If it is absent, you can also use **Hide while absent**: it leaves the table
 without erasing anything, and comes back by itself if its AP lists it again.
 
 ### When the session doesn't answer but its AP sees it
@@ -112,7 +112,12 @@ A station with a session can stop answering without losing its link: a cut for
 non-payment, a client without internet, or blocked management. If its AP keeps
 listing it, the row stays **online** with the **Assisted** mark and shows what
 its AP reports (signal, remote and link). The chip's tooltip says *"No session:
-the data comes from its AP"*.
+the data comes from its AP"*. The IP is the one its AP reports —after a cut
+for non-payment, usually the radio's fallback, `192.168.10.1`— and you can open
+it.
+
+The sentinel reports it as **Session down**, with the text *"The session
+doesn't answer, but its AP still sees the link"*.
 
 The row is still the same one, with its credentials, name, baseline and
 history. The app keeps looking for the session and, when the station answers
@@ -183,9 +188,9 @@ says it). The Session cell shows your label instead of "Absent".
 - The label is **informational**: the app keeps trying to connect. To make it
   stop, use **Close session**.
 
-### Hide and Close session
+### Hide while absent and Close session
 
-- **Hide** only shows up while the device is **absent**. It removes it from the
+- **Hide while absent** only shows up while the device is **absent**. It removes it from the
   table without erasing anything, and it comes back by itself as soon as the
   link returns. It is for the clients that left and you no longer want to see.
 - **Close session** stops connecting to the device and erases its credential

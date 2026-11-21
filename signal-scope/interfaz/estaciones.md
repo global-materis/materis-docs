@@ -103,7 +103,7 @@ Una asistida no ocupa registro de tu plan; al iniciar sesión, sí. Ver
 [Planes](../planes#que-cuenta-como-registro).
 
 En la pestaña **Acciones** puedes silenciar sus notificaciones y pedir que te
-avise cuando vuelva. Si está ausente, también puedes **Ocultarla**: sale de la
+avise cuando vuelva. Si está ausente, también puedes usar **Ocultar Ausente**: sale de la
 tabla sin borrar nada y vuelve sola si su AP la vuelve a listar.
 
 ### Cuando la sesión no contesta pero su AP la ve
@@ -112,7 +112,12 @@ Una estación con sesión puede dejar de contestar sin perder el enlace: un
 corte por falta de pago, un cliente sin internet o una gestión bloqueada. Si su
 AP la sigue listando, la fila sigue **en línea** con la marca **Asistida** y
 muestra lo que cuenta su AP (señal, remota y enlace). El tooltip del chip dice
-*«Sin sesión: los datos vienen de su AP»*.
+*«Sin sesión: los datos vienen de su AP»*. La IP es la que da su AP —en un
+corte por falta de pago, suele ser la de respaldo del radio, `192.168.10.1`— y
+puedes abrirla.
+
+El centinela la avisa como **Sesión caída**, con el texto *«La sesión no
+responde, pero su AP sigue viendo el enlace»*.
 
 La fila sigue siendo la misma, con sus credenciales, su nombre, su línea base y
 su historia. La app sigue buscando la sesión y, cuando la estación vuelve a
@@ -183,9 +188,9 @@ la app). La celda de Sesión muestra tu etiqueta en lugar de «Ausente».
 - La etiqueta es **informativa**: la app sigue intentando conectarse. Para que
   deje de intentarlo, usa **Cerrar sesión**.
 
-### Ocultar y Cerrar sesión
+### Ocultar Ausente y Cerrar sesión
 
-- **Ocultar** solo aparece con el equipo **ausente**. Lo quita de la tabla sin
+- **Ocultar Ausente** solo aparece con el equipo **ausente**. Lo quita de la tabla sin
   borrar nada, y vuelve solo en cuanto el enlace vuelve. Sirve para los
   clientes dados de baja que ya no quieres ver.
 - **Cerrar sesión** deja de conectarse al equipo y borra su credencial y su
