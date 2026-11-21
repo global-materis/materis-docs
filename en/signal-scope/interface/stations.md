@@ -102,9 +102,22 @@ If it doesn't answer at its IP, you can try anyway.
 An assisted station takes no record of your plan; once you sign in, it does.
 See [Plans](../plans#what-counts-as-a-record).
 
-In the **Actions** tab you can mute its notifications, ask to be told when it
-comes back, or **Forget device**. If its AP keeps listing it after you forget
-it, it shows up again.
+In the **Actions** tab you can mute its notifications and ask to be told when
+it comes back. If it is absent, you can also **Hide** it: it leaves the table
+without erasing anything, and comes back by itself if its AP lists it again.
+
+### When the session doesn't answer but its AP sees it
+
+A station with a session can stop answering without losing its link: a cut for
+non-payment, a client without internet, or blocked management. If its AP keeps
+listing it, the row stays **online** with the **Assisted** mark and shows what
+its AP reports (signal, remote and link). The chip's tooltip says *"No session:
+the data comes from its AP"*.
+
+The row is still the same one, with its credentials, name, baseline and
+history. The app keeps looking for the session and, when the station answers
+again, the row goes back to its own data. If its AP stops listing it, or its AP
+isn't registered, the row is **Absent**.
 
 ### Other devices
 
@@ -130,21 +143,21 @@ In a Snapshot, an assisted station's chip reads **Historical · Assisted**.
 ## The Session cell and what you decided
 
 Besides the connection state, this cell carries the **marks of what you
-decided** about that device. There are three, with the same glyph as in the
-actions window: there they appear with their text beside them, and here they
-remind you at a glance.
+decided** about that device, with the same glyph as in the actions window:
+there they appear with their text beside them, and here they remind you at a
+glance.
 
 | Mark | What it means | Where it is set |
 |---|---|---|
-| **Session switched off** | The app **stops connecting** to that device, so it costs no CPU and sends you no notifications, but it **keeps its credentials and its record**. It stays off even after you close the app. One click on the cell switches it back on. | Session window → *Actions*, above Forget device |
+| **Session switched off** | The app **doesn't connect** to that device, but it **keeps its credentials and its record**. Only sessions switched off with an earlier version carry it. One click on the cell switches it back on. | No longer set: to stop connecting there is **Close session** |
 | **Notifications muted** | The device **keeps being measured**. What goes quiet is the output (panel, Windows and messaging) for the period you choose: 1 hour, 8 hours, 1 day, 3 days, 1 week or No end date. When the period ends it alerts again on its own; before that, you turn it back on with **Unmute**. | Session window → *Actions* |
 | **Reconnection notification set** | The app will tell you when that device reconnects. | Session window → *Actions* |
 
-All three are explained in [Sentinel and network score](../sentinel#what-you-decide-per-device).
+They are explained in [Sentinel and network score](../sentinel#what-you-decide-per-device).
 
 ::: warning Actions take the whole box
-On a device with several radios (two rows, one session), switching off, muting
-or forgetting **applies to both rows**. The app warns you before you press.
+On a device with several radios (two rows, one session), closing the session
+or muting **applies to both rows**. The app warns you before you press.
 :::
 
 ## The session window
@@ -154,7 +167,7 @@ window, with four tabs:
 
 | Tab | What for |
 |---|---|
-| **Actions** | What you decide about the device: reason for absence, mute notifications, notify on reconnection, switch the session off and forget the device. The window opens on this tab. |
+| **Actions** | What you decide about the device: reason for absence, mute notifications, notify on reconnection, hide it and close the session. The window opens on this tab. |
 | **Ports** | Which Ethernet ports the sentinel watches. See [below](#ports-the-sentinel-watches). |
 | **Log** | What the app tried with that device and how each attempt ended. See [below](#the-session-log). |
 | **Connection** | IP, system, protocol, port and account, to correct them. **Update** reconnects with that data. The saved password is not shown, so you type it again. |
@@ -168,7 +181,16 @@ mark it as **Suspended**, **Technical** or **Retired** (with **Absent** the app
 says it). The Session cell shows your label instead of "Absent".
 
 - The label is **informational**: the app keeps trying to connect. To make it
-  stop, use **Switch session off**.
+  stop, use **Close session**.
+
+### Hide and Close session
+
+- **Hide** only shows up while the device is **absent**. It removes it from the
+  table without erasing anything, and it comes back by itself as soon as the
+  link returns. It is for the clients that left and you no longer want to see.
+- **Close session** stops connecting to the device and erases its credential
+  and history; Snapshots keep what they captured. If its AP sees it, it stays
+  as an assisted station; if not, it leaves the table.
 - With a reason set, the app does not ask you to step in for that device,
   because you already know what is going on.
 - It is saved in the project and **clears itself when the device comes back**,

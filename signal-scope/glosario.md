@@ -195,8 +195,11 @@ avise cada vez que vuelva a conectarse, hasta que la quites.
 **Silenciar**: callar las notificaciones de **un** equipo durante un plazo sin dejar
 de medirlo.
 
-**Apagar sesión**: dejar de conectarse a un equipo. Conserva su registro y lo
-excluye del diagnóstico hasta que vuelvas a encender la sesión.
+**Cerrar sesión**: dejar de conectarse a un equipo y borrar su credencial. Si
+su AP lo ve, queda como estación asistida.
+
+**Ocultar**: quitar de la tabla un equipo ausente sin borrar nada. Vuelve solo
+cuando el enlace vuelve.
 
 **Segundo plano**: el modo en que queda SignalScope cuando cierras la ventana
 con un proyecto abierto. La app sigue en la bandeja del sistema, midiendo y

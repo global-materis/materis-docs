@@ -102,9 +102,22 @@ responde en su IP, puedes intentarlo igual.
 Una asistida no ocupa registro de tu plan; al iniciar sesión, sí. Ver
 [Planes](../planes#que-cuenta-como-registro).
 
-En la pestaña **Acciones** puedes silenciar sus notificaciones, pedir que te
-avise cuando vuelva, o **Olvidar equipo**. Si su AP la sigue listando después
-de olvidarla, vuelve a aparecer.
+En la pestaña **Acciones** puedes silenciar sus notificaciones y pedir que te
+avise cuando vuelva. Si está ausente, también puedes **Ocultarla**: sale de la
+tabla sin borrar nada y vuelve sola si su AP la vuelve a listar.
+
+### Cuando la sesión no contesta pero su AP la ve
+
+Una estación con sesión puede dejar de contestar sin perder el enlace: un
+corte por falta de pago, un cliente sin internet o una gestión bloqueada. Si su
+AP la sigue listando, la fila sigue **en línea** con la marca **Asistida** y
+muestra lo que cuenta su AP (señal, remota y enlace). El tooltip del chip dice
+*«Sin sesión: los datos vienen de su AP»*.
+
+La fila sigue siendo la misma, con sus credenciales, su nombre, su línea base y
+su historia. La app sigue buscando la sesión y, cuando la estación vuelve a
+contestar, la fila vuelve a mostrar sus propios datos. Si su AP deja de
+listarla, o si su AP no está registrado, la fila queda **Ausente**.
 
 ### Otros dispositivos
 
@@ -130,21 +143,21 @@ En un Snapshot, el chip de una asistida dice **Histórico · Asistida**.
 ## La celda de Sesión y lo que decidiste
 
 Además del estado de conexión, esta celda lleva las **marcas de lo que
-decidiste** sobre ese equipo. Son tres, con el mismo glifo que en la ventana de
+decidiste** sobre ese equipo, con el mismo glifo que en la ventana de
 acciones: allí aparecen con su texto al lado y aquí sirven para recordarlas de
 un vistazo.
 
 | Marca | Significa | Dónde se pone |
 |---|---|---|
-| **Sesión apagada** | La app **deja de conectarse** a ese equipo, así que no le gasta CPU ni te llena de notificaciones, pero **conserva sus credenciales y su ficha**. Sigue apagada aunque cierres la app. Un clic en la celda la vuelve a encender. | Ventana de sesión → *Acciones*, encima de Olvidar equipo |
+| **Sesión apagada** | La app **no se conecta** a ese equipo, pero **conserva sus credenciales y su ficha**. Solo la llevan las sesiones que se apagaron con una versión anterior. Un clic en la celda la vuelve a encender. | Ya no se pone: para dejar de conectar está **Cerrar sesión** |
 | **Notificaciones silenciadas** | El equipo **se sigue midiendo**. Lo que se calla es la salida (panel, Windows y mensajería) durante el plazo que elijas: 1 hora, 8 horas, 1 día, 3 días, 1 semana o Sin vencimiento. Al vencer el plazo vuelve a avisar solo; antes, lo reactivas con **Reactivar**. | Ventana de sesión → *Acciones* |
 | **Notificación de reconexión puesta** | La app te avisará cuando ese equipo vuelva a conectarse. | Ventana de sesión → *Acciones* |
 
-Las tres se explican en [Centinela y calificación](../centinela#lo-que-decides-por-equipo).
+Se explican en [Centinela y calificación](../centinela#lo-que-decides-por-equipo).
 
 ::: warning Las acciones se llevan la caja entera
-En un equipo de varios radios (dos filas, una sola sesión), apagar, silenciar u
-olvidar **vale para las dos filas**. La app te lo avisa antes de que pulses.
+En un equipo de varios radios (dos filas, una sola sesión), cerrar la sesión o
+silenciar **vale para las dos filas**. La app te lo avisa antes de que pulses.
 :::
 
 ## La ventana de sesión
@@ -154,7 +167,7 @@ con cuatro pestañas:
 
 | Pestaña | Para qué |
 |---|---|
-| **Acciones** | Lo que decides sobre el equipo: motivo de la ausencia, silenciar notificaciones, avisar la reconexión, apagar la sesión y olvidar el equipo. La ventana se abre en esta pestaña. |
+| **Acciones** | Lo que decides sobre el equipo: motivo de la ausencia, silenciar notificaciones, avisar la reconexión, ocultarlo y cerrar la sesión. La ventana se abre en esta pestaña. |
 | **Puertos** | Qué puertos Ethernet vigila el centinela. Ver [abajo](#puertos-que-vigila-el-centinela). |
 | **Log** | Qué intentó la app con ese equipo y cómo terminó cada intento. Ver [abajo](#el-log-de-la-sesion). |
 | **Conexión** | IP, sistema, protocolo, puerto y cuenta, para corregirlos. **Actualizar** vuelve a conectar con esos datos. La contraseña guardada no se muestra, así que hay que escribirla. |
@@ -168,7 +181,16 @@ marcas como **Suspendido**, **Técnico** o **De baja** (con **Ausente** lo dice
 la app). La celda de Sesión muestra tu etiqueta en lugar de «Ausente».
 
 - La etiqueta es **informativa**: la app sigue intentando conectarse. Para que
-  deje de intentarlo, usa **Apagar sesión**.
+  deje de intentarlo, usa **Cerrar sesión**.
+
+### Ocultar y Cerrar sesión
+
+- **Ocultar** solo aparece con el equipo **ausente**. Lo quita de la tabla sin
+  borrar nada, y vuelve solo en cuanto el enlace vuelve. Sirve para los
+  clientes dados de baja que ya no quieres ver.
+- **Cerrar sesión** deja de conectarse al equipo y borra su credencial y su
+  historia; los Snapshots conservan lo que capturaron. Si su AP lo ve, queda
+  como estación asistida; si no, sale de la tabla.
 - Con un motivo puesto, la app no te pide intervenir por ese equipo, porque ya
   sabes lo que pasa.
 - Se guarda en el proyecto y **se quita sola cuando el equipo vuelve**, con una

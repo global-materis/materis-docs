@@ -199,9 +199,11 @@ every time it connects again, until you remove it.
 **Mute**: silencing **one** device's notifications for a period without ceasing to
 measure it.
 
-**Switch session off**: stopping the connection to a device. It keeps its
-record and leaves it out of the diagnosis until you switch the session back
-on.
+**Close session**: stopping the connection to a device and erasing its
+credential. If its AP sees it, it stays as an assisted station.
+
+**Hide**: removing an absent device from the table without erasing anything. It
+comes back by itself when the link returns.
 
 **Background**: the mode SignalScope is left in when you close the window with
 a project open. The app stays in the system tray, measuring and alerting. To
