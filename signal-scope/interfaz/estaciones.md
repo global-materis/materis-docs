@@ -110,9 +110,9 @@ tabla sin borrar nada y vuelve sola si su AP la vuelve a listar.
 
 Una estación con sesión puede dejar de contestar sin perder el enlace: un
 corte por falta de pago, un cliente sin internet o una gestión bloqueada. Si su
-AP la sigue listando, la fila sigue **en línea** con la marca **Asistida** y
-muestra lo que cuenta su AP (señal, remota y enlace). El tooltip del chip dice
-*«Sin sesión: los datos vienen de su AP»*. La IP es la que da su AP —en un
+AP la sigue listando, la fila sigue **en línea** con el chip **Sin sesión**,
+en ámbar, y muestra lo que cuenta su AP (señal, remota y enlace). No es una
+asistida: conserva su credencial y no entra en la tarjeta Asistidas. La IP es la que da su AP —en un
 corte por falta de pago, suele ser la de respaldo del radio, `192.168.10.1`— y
 puedes abrirla.
 

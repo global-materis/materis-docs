@@ -110,9 +110,9 @@ without erasing anything, and comes back by itself if its AP lists it again.
 
 A station with a session can stop answering without losing its link: a cut for
 non-payment, a client without internet, or blocked management. If its AP keeps
-listing it, the row stays **online** with the **Assisted** mark and shows what
-its AP reports (signal, remote and link). The chip's tooltip says *"No session:
-the data comes from its AP"*. The IP is the one its AP reports —after a cut
+listing it, the row stays **online** with the amber **No session** chip and shows
+what its AP reports (signal, remote and link). It is not an assisted station:
+it keeps its credential and doesn't count in the Assisted card. The IP is the one its AP reports —after a cut
 for non-payment, usually the radio's fallback, `192.168.10.1`— and you can open
 it.
 
