@@ -24,24 +24,28 @@ dimmed dash.
 - A project keeps **up to 20 Snapshots**, and none is ever removed on its own.
   The selector shows how many you have (`{n} of 20`). With the history full,
   to save another one you have to delete or download one, unless you turn on
-  [automatic archiving](#archive-the-oldest-when-full).
+  [automatic download](#download-the-oldest-when-full).
 - Snapshots travel **inside the** `.sscope` **file**, so backing up the
   project also backs up the history.
 
 It pays to save one **while the network is healthy**, for example after
 maintenance. Months later it will be the best comparison point you have.
 
-### Archive the oldest when full
+### Download the oldest when full
 
-In **Preferences → Snapshots**, with **Archive the oldest when full** on,
-saving a Snapshot with the history full moves the oldest one out to a `.ssnap`
+In **Preferences → Snapshots**, with **Download the oldest when full** on,
+saving a Snapshot with the history full downloads the oldest one as a `.ssnap`
 file and makes room for the new one. The file goes to the `snapshots` folder,
 next to the project file, and **Open folder** opens it. The app only removes
 the Snapshot from the project after checking the file was written correctly.
 It starts off.
 
 That's why a new project, or one saved with **Save as…**, is created in its
-own folder: the project and its archived Snapshots stay together.
+own folder: the project and its downloaded Snapshots stay together.
+
+In **Security → Snapshots**, **Protect automatic downloads** downloads them
+obfuscated with your privacy settings. It starts off, because that file is the
+only copy left: what is obfuscated can't be recovered.
 
 ## Viewing a snapshot
 

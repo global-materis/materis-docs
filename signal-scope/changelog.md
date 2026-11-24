@@ -64,7 +64,7 @@ en esa barra.
 
 **Proyectos en su carpeta.** Un proyecto nuevo, o uno guardado con
 **Guardar como**, vive en su propia carpeta. En Preferencias → Snapshots,
-**Archivar el más viejo al llenarse** guarda como `.ssnap` en esa carpeta el
+**Descargar el más viejo al llenarse** guarda como `.ssnap` en esa carpeta el
 Snapshot más viejo cuando el historial está lleno, en lugar de perderlo.
 
 **Desde cuándo negocia así un puerto.** El diálogo de un puerto dice desde

@@ -61,7 +61,7 @@ and you can view a Snapshot in any of them. Continuous ping, Traceroute and
 the Speed test minimize to a pill on that bar.
 
 **Projects in their own folder.** A new project, or one saved with **Save
-as**, lives in its own folder. In Preferences → Snapshots, **Archive the
+as**, lives in its own folder. In Preferences → Snapshots, **Download the
 oldest when full** saves the oldest Snapshot as a `.ssnap` in that folder when
 the history is full, instead of losing it.
 

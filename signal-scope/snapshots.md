@@ -24,24 +24,28 @@ apagado.
 - Un proyecto guarda **hasta 20 Snapshots**, y ninguno se borra solo. El
   selector dice cuántos llevas (`{n} de 20`). Con el historial lleno, para
   guardar otro hay que eliminar o descargar alguno, salvo que actives
-  [el archivo automático](#archivar-el-mas-viejo-al-llenarse).
+  [la descarga automática](#descargar-el-mas-viejo-al-llenarse).
 - Los Snapshots viajan **dentro del archivo** `.sscope`, así que respaldar el
   proyecto respalda también el historial.
 
 Conviene guardar uno **cuando la red está sana**, por ejemplo después de un
 mantenimiento. Meses después será el mejor punto de comparación que tengas.
 
-### Archivar el más viejo al llenarse
+### Descargar el más viejo al llenarse
 
-En **Preferencias → Snapshots**, con **Archivar el más viejo al llenarse**
-encendido, guardar un Snapshot con el historial lleno saca el más viejo a un
+En **Preferencias → Snapshots**, con **Descargar el más viejo al llenarse**
+encendido, guardar un Snapshot con el historial lleno descarga el más viejo como
 archivo `.ssnap` y deja sitio al nuevo. El archivo va a la carpeta
 `snapshots`, junto al archivo del proyecto, y **Abrir carpeta** la abre. La
 app solo retira el Snapshot del proyecto después de comprobar que el archivo
 quedó bien escrito. Viene apagado.
 
 Por eso un proyecto nuevo, o uno guardado con **Guardar como…**, se crea en su
-propia carpeta: el proyecto y sus Snapshots archivados quedan juntos.
+propia carpeta: el proyecto y sus Snapshots descargados quedan juntos.
+
+En **Seguridad → Snapshots**, **Proteger las descargas automáticas** los
+descarga ofuscados con tu privacidad. Viene apagado, porque ese archivo es la
+única copia que queda: lo ofuscado no se recupera.
 
 ## Ver un snapshot
 
