@@ -29,7 +29,11 @@ the file cannot leak:
 
 - IPs and names are trimmed (`10.•.•.20`, `tal•••`).
 - The MAC is hidden almost entirely, because its first pairs give away the
-  manufacturer.
+  manufacturer. It also carries a random tag that tells it apart within the
+  file (`••:••:••:••:••:33#A7F3`): each station stays linked to its AP and the
+  Topology travels whole, without the real MAC appearing anywhere. The tag is
+  made up on each download, so it can't be used to follow a device from one
+  file to another.
 - Model, firmware and the station count are removed.
 
 Devices in References follow the same switches as stations. If you trim the

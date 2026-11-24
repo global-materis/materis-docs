@@ -30,7 +30,11 @@ puede filtrar:
 
 - Las IPs y los nombres se recortan (`10.•.•.20`, `tal•••`).
 - La MAC se oculta casi entera, porque sus primeros pares delatan al
-  fabricante.
+  fabricante. Lleva además una marca al azar que la distingue dentro del
+  archivo (`••:••:••:••:••:33#A7F3`): cada estación sigue unida a su AP y la
+  Topología viaja completa, sin que la MAC real aparezca en ningún sitio. La
+  marca se inventa en cada descarga, así que no sirve para seguir a un equipo
+  de un archivo a otro.
 - El modelo, el firmware y el número de estaciones se eliminan.
 
 Los equipos de Referentes siguen los mismos interruptores que las estaciones.
