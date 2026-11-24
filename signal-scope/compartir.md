@@ -35,10 +35,10 @@ puede filtrar:
   Topología viaja completa, sin que la MAC real aparezca en ningún sitio. La
   marca se inventa en cada descarga, así que no sirve para seguir a un equipo
   de un archivo a otro.
-- El modelo, el firmware y el número de estaciones se eliminan.
+- El número de estaciones de un AP se elimina.
 
 Los equipos de Referentes siguen los mismos interruptores que las estaciones.
-Si recortas la MAC o eliminas el modelo, su fabricante también desaparece.
+Si recortas la MAC, su fabricante también desaparece.
 
 Hay dos formas de proteger. El **candado** de la tarjeta protege un Snapshot
 que ya existe (está deshabilitado mientras no marques al menos un campo

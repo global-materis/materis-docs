@@ -34,10 +34,10 @@ the file cannot leak:
   Topology travels whole, without the real MAC appearing anywhere. The tag is
   made up on each download, so it can't be used to follow a device from one
   file to another.
-- Model, firmware and the station count are removed.
+- An AP's station count is removed.
 
 Devices in References follow the same switches as stations. If you trim the
-MAC or remove the model, their vendor disappears too.
+MAC, their vendor disappears too.
 
 There are two ways to protect. The **padlock** on a card protects a Snapshot
 that already exists (it stays disabled until you mark at least one private
