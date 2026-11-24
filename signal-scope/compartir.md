@@ -24,7 +24,7 @@ Que no haya secretos no significa que no haya datos **sensibles para tu
 negocio**: IPs, MACs, nombres de clientes, el tamaño de tu red. En
 **Archivo → Seguridad**, pestaña **Snapshots** (**Privacidad de los
 Snapshots**), marcas qué campos son privados, por separado para
-**Estaciones** y para **Puntos de acceso · AP**. Al proteger un Snapshot, esos
+**Estaciones**, **Puntos de acceso · AP** y **Referentes**. Al proteger un Snapshot, esos
 datos se recortan **en el archivo mismo**, y lo que no está en el archivo no se
 puede filtrar:
 
@@ -35,10 +35,10 @@ puede filtrar:
   Topología viaja completa, sin que la MAC real aparezca en ningún sitio. La
   marca se inventa en cada descarga, así que no sirve para seguir a un equipo
   de un archivo a otro.
-- El número de estaciones de un AP se elimina.
+- El nombre y la MAC del AP también se recortan en la columna AP de sus
+  estaciones.
 
-Los equipos de Referentes siguen los mismos interruptores que las estaciones.
-Si recortas la MAC, su fabricante también desaparece.
+Si recortas la MAC de un Referente, su fabricante también desaparece.
 
 Hay dos formas de proteger. El **candado** de la tarjeta protege un Snapshot
 que ya existe (está deshabilitado mientras no marques al menos un campo

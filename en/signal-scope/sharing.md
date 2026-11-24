@@ -23,7 +23,7 @@ keys. That is why opening it asks for nothing.
 No secrets does not mean no data **sensitive to your business**: IPs, MACs,
 customer names, the size of your network. In **File → Security**, on the
 **Snapshots** tab (**Snapshot privacy**), you mark which fields are private,
-separately for **Stations** and for **Access points · AP**. When you protect
+separately for **Stations**, **Access points · AP** and **References**. When you protect
 a Snapshot, that data is trimmed **in the file itself**, and what is not in
 the file cannot leak:
 
@@ -34,10 +34,9 @@ the file cannot leak:
   Topology travels whole, without the real MAC appearing anywhere. The tag is
   made up on each download, so it can't be used to follow a device from one
   file to another.
-- An AP's station count is removed.
+- The AP's name and MAC are also trimmed in the AP column of its stations.
 
-Devices in References follow the same switches as stations. If you trim the
-MAC, their vendor disappears too.
+If you trim a Reference's MAC, its vendor disappears too.
 
 There are two ways to protect. The **padlock** on a card protects a Snapshot
 that already exists (it stays disabled until you mark at least one private
